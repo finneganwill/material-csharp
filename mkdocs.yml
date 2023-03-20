@@ -1,0 +1,25 @@
+site_name: CSharp学习之路
+
+site_url: https://example.com/
+
+nav:
+    - Home: index.md
+    - 入门: 
+      - '认知C#': '入门/00 认识CSharp.md'
+      - '数据类型': '入门/01 数据类型.md'
+      - '运算符': '入门/02 运算符.md'
+      - '控制语句': '入门/03 控制语句.md'
+      - '数据结构': '入门/04 数据结构.md'
+      - '类与对象': '入门/05 类与对象.md'
+      - '抽象类与接口': '入门/06 抽象类与接口.md'
+      - '异常处理': '入门/07 异常处理.md'
+
+theme:
+  name: material
+  palette: 
+    ## scheme: default
+    scheme: slate
+
+  # 导航样式
+  features:
+    - navigation.tabs
