@@ -154,6 +154,11 @@ markdown_extensions:
   - attr_list
   - md_in_html
 
+  # 列表
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
 
 # 插件
 plugins:
