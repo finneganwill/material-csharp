@@ -8,24 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "5de3fcc5cfd5cf15",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "06 抽象类与接口.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "6eeedb91d879d24a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "05 类与对象.md",
+                "file": "06 抽象类与接口.md",
                 "mode": "source",
                 "source": false
               }
@@ -158,14 +146,14 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "5de3fcc5cfd5cf15",
+  "active": "6eeedb91d879d24a",
   "lastOpenFiles": [
-    "05 类与对象.md",
+    "Pasted image 20230321144140.png",
     "06 抽象类与接口.md",
+    "05 类与对象.md",
     "03 控制语句.md",
     "04 数据结构.md",
     "07 异常处理.md",
-    "Pasted image 20230321144140.png",
     "03.md",
     "00 认识CSharp.md",
     "02 运算符.md",
