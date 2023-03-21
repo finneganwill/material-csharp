@@ -159,6 +159,11 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
 
+  # 内容选项卡
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+
 
 # 插件
 plugins:
