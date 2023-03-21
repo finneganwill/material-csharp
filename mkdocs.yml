@@ -113,6 +113,9 @@ extra:
             Thanks for your feedback! Help us improve this page by
             using our <a href="" target="_blank" rel="noopener">feedback form</a>.
 
+# mkdocs.yml 相关配置
+markdown_extensions:
+
 
 # MD扩展
 markdown_extensions:
@@ -123,6 +126,11 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
+  - pymdownx.superfences
+
+  # 提示与警告
+  - admonition
+  - pymdownx.details
   - pymdownx.superfences
 
   # 文本标记：下划线，高亮，删除
