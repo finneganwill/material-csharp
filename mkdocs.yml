@@ -73,7 +73,7 @@ theme:
       # emphasize
       accent: deep orange
       # header
-      primary: blue grey
+      primary: black
       # switch
       toggle:
         icon: material/brightness-4
