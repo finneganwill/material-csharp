@@ -15,7 +15,7 @@ copyright: Copyright &copy; 2022 - 2023 Finnegan Will
 nav:
     - Home: index.md
     - 入门: 
-      - '认知C#': '入门/00 认识CSharp.md'
+      - '认识C#': '入门/00 认识CSharp.md'
       - '数据类型': '入门/01 数据类型.md'
       - '运算符': '入门/02 运算符.md'
       - '控制语句': '入门/03 控制语句.md'
@@ -60,9 +60,9 @@ theme:
     # light 明亮模式
     - scheme: default
       # emphasize 强调颜色
-      accent: deep orange
+      accent: cyan
       # header 头
-      primary: blue grey
+      primary: orange
       # switch 开关
       toggle:
         icon: material/brightness-7 
@@ -71,7 +71,7 @@ theme:
     # dark
     - scheme: slate
       # emphasize
-      accent: deep orange
+      accent: orange
       # header
       primary: black
       # switch
@@ -155,6 +155,6 @@ plugins:
   # 时间插件
   - git-revision-date-localized:
       enabled: !ENV [CI, false]
-      type: timeago
+      type: datetime
       enable_creation_date: true
       fallback_to_build_date: true
