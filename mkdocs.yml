@@ -150,6 +150,11 @@ markdown_extensions:
       # 标题
       # title: Content
 
+  # 图像
+  - attr_list
+  - md_in_html
+
+
 # 插件
 plugins:
   # 时间插件
@@ -158,3 +163,6 @@ plugins:
       type: datetime
       enable_creation_date: true
       fallback_to_build_date: true
+
+  # 图像缩放插件
+  - glightbox
