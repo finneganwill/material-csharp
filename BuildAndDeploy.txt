@@ -1,0 +1,1 @@
+cmd /k "cd /d E:\Data\Obsidian\material-csharp&&mkdocs build&&mkdocs gh-deploy"
