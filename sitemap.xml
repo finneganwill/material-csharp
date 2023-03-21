@@ -6,6 +6,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://finneganwill.github.io/material-csharp/author/</loc>
+         <lastmod>2023-03-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://finneganwill.github.io/material-csharp/mkdocs/</loc>
+         <lastmod>2023-03-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://finneganwill.github.io/material-csharp/%E5%85%A5%E9%97%A8/00%20%E8%AE%A4%E8%AF%86CSharp/</loc>
          <lastmod>2023-03-21</lastmod>
          <changefreq>daily</changefreq>

@@ -7,6 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://finneganwill.github.io/material-csharp/%E5%85%A5%E9%97%A8/07%20%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" rel="canonical"/>
 <link href="../06%20%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%8E%E6%8E%A5%E5%8F%A3/" rel="prev"/>
+<link href="../../author/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
 <title>异常处理 - CSharp Material</title>
@@ -36,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#1">
+<a class="md-skip" href="#_1">
           跳转至
         </a>
 </div>
@@ -100,6 +101,11 @@
 <li class="md-tabs__item">
 <a class="md-tabs__link md-tabs__link--active" href="../00%20%E8%AE%A4%E8%AF%86CSharp/">
         入门
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../author/">
+        关于
       </a>
 </li>
 </ul>
@@ -182,8 +188,69 @@
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          异常处理
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
         异常处理
+      </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    一、异常概述
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    二、异常处理
+  </a>
+<nav aria-label="二、异常处理" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#01">
+    01 抛出异常
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#02">
+    02 捕获与处理异常
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          关于
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          关于
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../author/">
+        Author
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../mkdocs/">
+        MkDocs
       </a>
 </li>
 </ul>
@@ -198,16 +265,138 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    一、异常概述
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    二、异常处理
+  </a>
+<nav aria-label="二、异常处理" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#01">
+    01 抛出异常
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#02">
+    02 捕获与处理异常
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="1">1. 捕获异常<a class="headerlink" href="#1" title="Permanent link">⚓︎</a></h1>
-<h1 id="2">2. 抛出异常<a class="headerlink" href="#2" title="Permanent link">⚓︎</a></h1>
-<h1 id="3">3. 异常类<a class="headerlink" href="#3" title="Permanent link">⚓︎</a></h1>
-<h1 id="4">4. 自定义异常<a class="headerlink" href="#4" title="Permanent link">⚓︎</a></h1>
+<h1 id="_1">异常处理<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h1>
+<h2 id="_2">一、异常概述<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h2>
+<p>异常处理功能有助于处理在程序运行期间发生的任何意外或异常情况。</p>
+<p>异常处理功能使用 <code>try</code>、<code>catch</code> 和 <code>finally</code> 关键字来尝试执行可能失败的操作、在你确定合理的情况下处理故障，以及在事后清除资源。 </p>
+<p>公共语言运行时 (CLR)、.NET/第三方库或应用程序代码都可生成异常。 </p>
+<p>异常是最终全都派生自 <code>System.Exception</code> 的类型，并使用 <code>throw</code> 关键字创建而成。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>在许多情况下，异常并不是由代码直接调用的方法抛出，而是由调用堆栈中再往下的另一方法抛出。 如果发生这种异常，CLR 会展开堆栈，同时针对特定异常类型查找包含 <code>catch</code> 代码块的方法，并执行它找到的首个此类 <code>catch</code> 代码块。 如果在调用堆栈中找不到相应的 <code>catch</code> 代码块，将会终止进程并向用户显示消息。</p>
+</div>
+<h2 id="_3">二、异常处理<a class="headerlink" href="#_3" title="Permanent link">⚓︎</a></h2>
+<h3 id="01">01 抛出异常<a class="headerlink" href="#01" title="Permanent link">⚓︎</a></h3>
+<p>异常由从Exception派生的类表示。 此类标识异常的类型，并包含详细描述异常的属性。 引发异常涉及创建异常派生类的实例，配置异常的属性（可选），然后使用 <code>throw</code> 关键字引发该对象。 例如：
+<div class="language-csharp highlight"><span class="filename">抛出异常</span><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">// 自定义的异常类</span>
+</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">class</span><span class="w"> </span><span class="nc">CustomException</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Exception</span>
+</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p">{</span>
+</span><span id="__span-0-4"><a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">CustomException</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">message</span><span class="p">)</span>
+</span><span id="__span-0-5"><a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-0-6"><a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-7"><a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="p">}</span>
+</span><span id="__span-0-8"><a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="k">private</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">TestThrow</span><span class="p">()</span>
+</span><span id="__span-0-10"><a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="p">{</span>
+</span><span id="__span-0-11"><a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="c1">// 该方法通过 throw 抛出异常</span>
+</span><span id="__span-0-12"><a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">CustomException</span><span class="p">(</span><span class="s">"Custom exception in TestThrow()"</span><span class="p">);</span>
+</span><span id="__span-0-13"><a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<h3 id="02">02 捕获与处理异常<a class="headerlink" href="#02" title="Permanent link">⚓︎</a></h3>
+<p>异常由遇到错误的代码引发，由能够更正错误的代码捕捉。一旦引发了一个异常，此异常会在调用堆栈中传播，直到找到针对它的 <code>catch</code> 语句。 未捕获的异常由系统提供的通用异常处理程序处理，该处理程序会显示一个对话框。</p>
+<p>引发异常后，运行时将检查当前语句，以确定它是否在 <code>try</code> 块内。 如果在，则将检查与 <code>try</code> 块关联的所有 <code>catch</code> 块，以确定它们是否可以捕获该异常。 <code>Catch</code> 块通常会指定异常类型；如果该 <code>catch</code> 块的类型与异常或异常的基类的类型相同，则该 <code>catch</code> 块可处理该方法。 例如：
+<div class="language-csharp highlight"><span class="filename">捕获与处理异常</span><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">try</span>
+</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="p">{</span>
+</span><span id="__span-1-3"><a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="n">TestThrow</span><span class="p">();</span>
+</span><span id="__span-1-4"><a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="p">}</span>
+</span><span id="__span-1-5"><a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">CustomException</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span>
+</span><span id="__span-1-6"><a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="p">{</span>
+</span><span id="__span-1-7"><a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">ex</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span>
+</span><span id="__span-1-8"><a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<p>C# 程序员使用 try 块来对可能受异常影响的代码进行分区。 关联的 catch 块用于处理生成的任何异常。 finally 块包含无论 <code>try</code> 块中是否引发异常都会运行的代码，如发布 <code>try</code> 块中分配的资源。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ol>
+<li><code>try</code> 块需要一个或多个关联的 <code>catch</code> 块或一个 <code>finally</code> 块，或两者皆之；</li>
+<li>如果 try 块内的代码执行顺利，则不会程序跳转到catch块（如果有的话），而是执行catch块后面的代码，可能是finnaly块（如果有的话）也可能是后续代码。</li>
+</ol>
+</div>
+<p>语法：</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">try-catch</label><label for="__tabbed_1_2">try-finally</label><label for="__tabbed_1_3">try-catch-finally</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">try</span>
+</span><span id="__span-2-2"><a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="p">{</span>
+</span><span id="__span-2-3"><a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="c1">// Code to try goes here.</span>
+</span><span id="__span-2-4"><a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="p">}</span>
+</span><span id="__span-2-5"><a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SomeSpecificException</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span>
+</span><span id="__span-2-6"><a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="p">{</span>
+</span><span id="__span-2-7"><a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="c1">//处理异常的代码放在这里</span>
+</span><span id="__span-2-8"><a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="c1">//只捕获你知道如何处理的异常</span>
+</span><span id="__span-2-9"><a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="c1">//永远不要捕获基类系统。</span>
+</span><span id="__span-2-10"><a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="c1">//没有异常，在catch块的末尾重新抛出它.</span>
+</span><span id="__span-2-11"><a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="p">}</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">try</span>
+</span><span id="__span-3-2"><a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="p">{</span>
+</span><span id="__span-3-3"><a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="c1">// Code to try goes here.</span>
+</span><span id="__span-3-4"><a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="p">}</span>
+</span><span id="__span-3-5"><a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="k">finally</span>
+</span><span id="__span-3-6"><a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="p">{</span>
+</span><span id="__span-3-7"><a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="c1">// try块之后执行的代码在这里.</span>
+</span><span id="__span-3-8"><a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="p">}</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">try</span>
+</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="p">{</span>
+</span><span id="__span-4-3"><a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="c1">// try块</span>
+</span><span id="__span-4-4"><a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="p">}</span>
+</span><span id="__span-4-5"><a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SomeSpecificException</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span>
+</span><span id="__span-4-6"><a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="p">{</span>
+</span><span id="__span-4-7"><a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="c1">// 异常处理块</span>
+</span><span id="__span-4-8"><a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="p">}</span>
+</span><span id="__span-4-9"><a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SomeSpecificException</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span>
+</span><span id="__span-4-10"><a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="p">{</span>
+</span><span id="__span-4-11"><a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">    </span><span class="c1">// 异常处理块</span>
+</span><span id="__span-4-12"><a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="p">}</span>
+</span><span id="__span-4-13"><a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="k">finally</span>
+</span><span id="__span-4-14"><a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="p">{</span>
+</span><span id="__span-4-15"><a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">    </span><span class="c1">// 在try（可能还有catch）块之后执行的代码在这里。</span>
+</span><span id="__span-4-16"><a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="p">}</span>
+</span></code></pre></div>
+</div>
+</div>
+</input></input></input></div>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">
@@ -262,6 +451,19 @@
                 </span>
                 抽象类与接口
               </div>
+</div>
+</a>
+<a aria-label="下一页: Author" class="md-footer__link md-footer__link--next" href="../../author/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                  下一页
+                </span>
+                Author
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
 </div>
 </a>
 </nav>
