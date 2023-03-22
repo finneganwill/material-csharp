@@ -99,7 +99,7 @@
               "type": "backlink",
               "state": {
                 "file": "01 索引器.md",
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -142,12 +142,12 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -160,7 +160,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "8e3208552f135e7f",
+  "active": "7d6164f1910d4506",
   "lastOpenFiles": [
     "反射.md",
     "01 索引器.md"
