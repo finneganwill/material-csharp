@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "7f8bf2fd8069b819",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02 委托.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01 索引器.md",
+                "file": "02 委托.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01 索引器.md",
+                "file": "02 委托.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01 索引器.md"
+                "file": "02 委托.md"
               }
             }
           }
@@ -160,9 +172,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "8e3208552f135e7f",
+  "active": "7f8bf2fd8069b819",
   "lastOpenFiles": [
-    "反射.md",
-    "01 索引器.md"
+    "01 索引器.md",
+    "02 委托.md",
+    "反射.md"
   ]
 }

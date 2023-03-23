@@ -27,7 +27,7 @@ nav:
 
     - CSharp进阶: 
       - 索引器: 'CSharpAdvanced/01 索引器.md'
-#      - 委托: CSharpAdvanced/
+      - 委托: CSharpAdvanced/02 
 #      - 事件: CSharpAdvanced/
 #      - 集合: CSharpAdvanced/
 #      - 泛型: CSharpAdvanced/
