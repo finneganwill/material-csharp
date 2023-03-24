@@ -15,7 +15,7 @@ copyright: Copyright &copy; 2022 - 2023 Finnegan Will
 nav:
     - Home: index.md
 
-    - CSharp基础: 
+    - C#基础: 
       - 认识C#: 'CSharpFoundation/00 认识CSharp.md'
       - 数据类型: 'CSharpFoundation/01 数据类型.md'
       - 运算符: 'CSharpFoundation/02 运算符.md'
@@ -25,11 +25,10 @@ nav:
       - 抽象类与接口: 'CSharpFoundation/06 抽象类与接口.md'
       - 异常处理: 'CSharpFoundation/07 异常处理.md'
 
-    - CSharp进阶: 
+    - C#进阶: 
       - 索引器: 'CSharpAdvanced/01 索引器.md'
       - 委托: 'CSharpAdvanced/02 委托与事件.md'
-#      - 事件: CSharpAdvanced/
-#      - 集合: CSharpAdvanced/
+      - 集合: 'CSharpAdvanced/03 集合.md'
 #      - 泛型: CSharpAdvanced/
 #      - 匿名函数: CSharpAdvanced/
 #      - 指针变量: CSharpAdvanced/
