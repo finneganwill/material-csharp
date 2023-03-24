@@ -13,13 +13,38 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02 委托.md",
+                "file": "02 委托与事件.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c28e661de2301773",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "06 反射.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6ef96d8e3718ba37",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02 委托与事件.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -85,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "02 委托.md",
+                "file": "02 委托与事件.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "02 委托.md",
+                "file": "02 委托与事件.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02 委托.md"
+                "file": "02 委托与事件.md"
               }
             }
           }
@@ -147,10 +172,14 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "7f8bf2fd8069b819",
+  "active": "6ef96d8e3718ba37",
   "lastOpenFiles": [
-    "01 索引器.md",
-    "反射.md",
-    "02 委托.md"
+    "04 集合.md",
+    "05 泛型.md",
+    "03 事件.md",
+    "02 委托与事件.md",
+    "07 多线程.md",
+    "06 反射.md",
+    "01 索引器.md"
   ]
 }
