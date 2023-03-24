@@ -25,18 +25,6 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "06 反射.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6ef96d8e3718ba37",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "03 集合.md",
                 "mode": "source",
                 "source": false
@@ -44,7 +32,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -172,14 +160,15 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "6ef96d8e3718ba37",
+  "active": "c28e661de2301773",
   "lastOpenFiles": [
-    "02 委托与事件.md",
+    "06 反射.md",
+    "().md",
     "03 集合.md",
+    "02 委托与事件.md",
     "05 泛型.md",
     "03 事件.md",
     "07 多线程.md",
-    "06 反射.md",
     "01 索引器.md"
   ]
 }
