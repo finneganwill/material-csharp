@@ -6,4 +6,4 @@ hide:
   - footer
 ---
 
-# Welcome to CSharp Material
+# Welcome to .NET Material
