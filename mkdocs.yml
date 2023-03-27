@@ -30,10 +30,11 @@ nav:
       - 委托: 'CSharpAdvanced/02 委托与事件.md'
       - 泛型: 'CSharpAdvanced/03 泛型.md'
       - 集合: 'CSharpAdvanced/04 集合.md'
-      
+      - 反射: 'CSharpAdvanced/05 反射.md'
+      - 特性: 'CSharpAdvanced/06 特性.md'
 #      - 匿名函数: CSharpAdvanced/
 #      - 指针变量: CSharpAdvanced/
-#      - 反射: CSharpAdvanced/
+#      
 #      - 多线程: CSharpAdvanced/
 
 #    - ASP.NET Core: 
