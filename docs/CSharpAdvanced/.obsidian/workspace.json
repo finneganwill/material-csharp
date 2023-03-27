@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03 集合.md",
+                "file": "03 泛型.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "03 集合.md",
+                "file": "03 泛型.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "03 集合.md",
+                "file": "03 泛型.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03 集合.md"
+                "file": "03 泛型.md"
               }
             }
           }
@@ -149,13 +149,13 @@
   },
   "active": "c28e661de2301773",
   "lastOpenFiles": [
+    "06 多线程.md",
+    "05 反射.md",
+    "03 泛型.md",
+    "04 集合.md",
     "02 委托与事件.md",
-    "03 集合.md",
-    "06 反射.md",
     "().md",
-    "05 泛型.md",
     "03 事件.md",
-    "07 多线程.md",
     "01 索引器.md"
   ]
 }
