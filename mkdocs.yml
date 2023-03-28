@@ -32,6 +32,7 @@ nav:
       - 集合: 'CSharpAdvanced/04 集合.md'
       - 反射: 'CSharpAdvanced/05 反射.md'
       - 特性: 'CSharpAdvanced/06 特性.md'
+      - 文件处理: 'CSharpAdvanced/08 文件处理.md'
 #      - 匿名函数: CSharpAdvanced/
 #      - 指针变量: CSharpAdvanced/
 #      
