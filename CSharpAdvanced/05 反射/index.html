@@ -5,10 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://finneganwill.github.io/material-csharp/CSharpAdvanced/%28%29/" rel="canonical"/>
+<link href="https://finneganwill.github.io/material-csharp/CSharpAdvanced/05%20%E5%8F%8D%E5%B0%84/" rel="canonical"/>
+<link href="../04%20%E9%9B%86%E5%90%88/" rel="prev"/>
+<link href="../06%20%E7%89%B9%E6%80%A7/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
-<title>() - DotNet Material</title>
+<title>反射 - .Net Material</title>
 <link href="../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -35,12 +37,15 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          跳转至
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="页眉" class="md-header__inner md-grid">
-<a aria-label="DotNet Material" class="md-header__button md-logo" data-md-component="logo" href="../.." title="DotNet Material">
+<a aria-label=".Net Material" class="md-header__button md-logo" data-md-component="logo" href="../.." title=".Net Material">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -50,13 +55,13 @@
 <div class="md-header__ellipsis">
 <div class="md-header__topic">
 <span class="md-ellipsis">
-            DotNet Material
+            .Net Material
           </span>
 </div>
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              ()
+              反射
             
           </span>
 </div>
@@ -99,7 +104,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../01%20%E7%B4%A2%E5%BC%95%E5%99%A8/">
+<a class="md-tabs__link md-tabs__link--active" href="../01%20%E7%B4%A2%E5%BC%95%E5%99%A8/">
         C#进阶
       </a>
 </li>
@@ -118,10 +123,10 @@
 <div class="md-sidebar__inner">
 <nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="DotNet Material" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="DotNet Material">
+<a aria-label=".Net Material" class="md-nav__button md-logo" data-md-component="logo" href="../.." title=".Net Material">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
 </a>
-    DotNet Material
+    .Net Material
   </label>
 <div class="md-nav__source">
 <a class="md-source" data-md-component="source" href="https://github.com/finneganwill/material-csharp" title="前往仓库">
@@ -194,13 +199,13 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
           C#进阶
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
           C#进阶
@@ -217,8 +222,46 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../03%20%E9%9B%86%E5%90%88/">
+<a class="md-nav__link" href="../03%20%E6%B3%9B%E5%9E%8B/">
+        泛型
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../04%20%E9%9B%86%E5%90%88/">
         集合
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          反射
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        反射
+      </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#01">
+    01 反射概述
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#02">
+    02
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../06%20%E7%89%B9%E6%80%A7/">
+        特性
       </a>
 </li>
 </ul>
@@ -263,13 +306,31 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#01">
+    01 反射概述
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#02">
+    02
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>()</h1>
+<h1 id="_1">反射<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h1>
+<h2 id="01">01 反射概述<a class="headerlink" href="#01" title="Permanent link">⚓︎</a></h2>
+<h2 id="02">02<a class="headerlink" href="#02" title="Permanent link">⚓︎</a></h2>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">
@@ -312,6 +373,34 @@
           </button>
 </main>
 <footer class="md-footer">
+<nav aria-label="页脚" class="md-footer__inner md-grid">
+<a aria-label="上一页: 集合" class="md-footer__link md-footer__link--prev" href="../04%20%E9%9B%86%E5%90%88/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                  上一页
+                </span>
+                集合
+              </div>
+</div>
+</a>
+<a aria-label="下一页: 特性" class="md-footer__link md-footer__link--next" href="../06%20%E7%89%B9%E6%80%A7/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                  下一页
+                </span>
+                特性
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
