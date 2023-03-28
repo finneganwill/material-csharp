@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01 数据类型.md",
+                "file": "07 异常处理.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1a65c9840429794d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "08 常用类.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01 数据类型.md"
+                "file": "08 常用类.md"
               }
             }
           },
@@ -95,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01 数据类型.md",
+                "file": "08 常用类.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01 数据类型.md",
+                "file": "08 常用类.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -146,15 +159,16 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "1c7f179693285e64",
+  "active": "1a65c9840429794d",
   "lastOpenFiles": [
+    "07 异常处理.md",
+    "08 常用类.md",
+    "01 数据类型.md",
     "02 运算符.md",
     "05 类与对象.md",
     "04 数据结构.md",
     "03 控制语句.md",
-    "07 异常处理.md",
     "06 抽象类与接口.md",
-    "01 数据类型.md",
     "00 认识CSharp.md",
     "Pasted image 20230321144140.png",
     "03.md",
