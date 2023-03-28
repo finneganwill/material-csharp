@@ -2,11 +2,11 @@
 site_name: .Net Material
 
 # 站点URL
-site_url: https://finneganwill.github.io/material-csharp
+site_url: https://finneganwill.github.io/material-dotnet
 
 # 关联远程仓库
-repo_url: https://github.com/finneganwill/material-csharp
-repo_name: finneganwill/material-csharp
+repo_url: https://github.com/finneganwill/material-dotnet
+repo_name: finneganwill/material-dotnet
 
 # 版权声明
 copyright: Copyright &copy; 2022 - 2023 Finnegan Will
