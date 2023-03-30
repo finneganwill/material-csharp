@@ -8,36 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c28e661de2301773",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "09 其他.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "00f730243bbc0df0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "06 反射.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "36c244ab1453dc59",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "09 其他.md",
+                "file": "07 多线程.md",
                 "mode": "source",
                 "source": false
               }
@@ -104,57 +80,36 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c1ace06f2ea36d89",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "09 其他.md",
-                "collapseAll": true,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "378d02e44418314d",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "09 其他.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
             "id": "a291d72ca39ba4e0",
             "type": "leaf",
             "state": {
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
+                "useHierarchy": false
               }
             }
           },
           {
-            "id": "7d6164f1910d4506",
+            "id": "60d3e3cac25b1639",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "09 其他.md"
+                "file": "07 多线程.md"
               }
+            }
+          },
+          {
+            "id": "caf9ca3448b9c3aa",
+            "type": "leaf",
+            "state": {
+              "type": "quiet-outline",
+              "state": {}
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -168,21 +123,23 @@
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:新建 Excalidraw 绘图": false
     }
   },
-  "active": "c28e661de2301773",
+  "active": "36c244ab1453dc59",
   "lastOpenFiles": [
     "08 文件处理.md",
-    "09 其他.md",
     "07 多线程.md",
+    "01 索引器.md",
+    "03 泛型.md",
+    "09 其他.md",
+    "2023-03-30.md",
     "06 反射.md",
     "05 特性.md",
     "04 集合.md",
-    "03 泛型.md",
     "().md",
     "02 委托与事件.md",
-    "03 事件.md",
-    "01 索引器.md"
+    "03 事件.md"
   ]
 }
