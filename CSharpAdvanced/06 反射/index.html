@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://finneganwill.github.io/material-csharp/CSharpAdvanced/06%20%E7%89%B9%E6%80%A7/" rel="canonical"/>
-<link href="../05%20%E5%8F%8D%E5%B0%84/" rel="prev"/>
-<link href="../../author/" rel="next"/>
+<link href="https://finneganwill.github.io/material-dotnet/CSharpAdvanced/06%20%E5%8F%8D%E5%B0%84/" rel="canonical"/>
+<link href="../05%20%E7%89%B9%E6%80%A7/" rel="prev"/>
+<link href="../07%20%E5%A4%9A%E7%BA%BF%E7%A8%8B/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
-<title>特性 - .Net Material</title>
+<title>反射 - .Net Material</title>
 <link href="../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -61,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              特性
+              反射
             
           </span>
 </div>
@@ -78,12 +78,12 @@
 </label>
 </form>
 <div class="md-header__source">
-<a class="md-source" data-md-component="source" href="https://github.com/finneganwill/material-csharp" title="前往仓库">
+<a class="md-source" data-md-component="source" href="https://github.com/finneganwill/material-dotnet" title="前往仓库">
 <div class="md-source__icon md-icon">
 <svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
 </div>
 <div class="md-source__repository">
-    finneganwill/material-csharp
+    finneganwill/material-dotnet
   </div>
 </a>
 </div>
@@ -129,12 +129,12 @@
     .Net Material
   </label>
 <div class="md-nav__source">
-<a class="md-source" data-md-component="source" href="https://github.com/finneganwill/material-csharp" title="前往仓库">
+<a class="md-source" data-md-component="source" href="https://github.com/finneganwill/material-dotnet" title="前往仓库">
 <div class="md-source__icon md-icon">
 <svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
 </div>
 <div class="md-source__repository">
-    finneganwill/material-csharp
+    finneganwill/material-dotnet
   </div>
 </a>
 </div>
@@ -232,18 +232,18 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../05%20%E5%8F%8D%E5%B0%84/">
-        反射
+<a class="md-nav__link" href="../05%20%E7%89%B9%E6%80%A7/">
+        特性
       </a>
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          特性
+          反射
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        特性
+        反射
       </a>
 <nav aria-label="目录" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -252,41 +252,22 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-    一、特性概述
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-    二、预定义特性
-  </a>
-<nav aria-label="二、预定义特性" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#01-attributeusage">
-    01 AttributeUsage
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#02-conditional">
-    02 Conditional
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#03-obsolete">
-    03 Obsolete
+<a class="md-nav__link" href="#01">
+    01 反射概述
   </a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-    三、自定义特性
-  </a>
+<a class="md-nav__link" href="../07%20%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+        多线程
+      </a>
 </li>
-</ul>
-</nav>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../08%20%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/">
+        文件处理
+      </a>
 </li>
 </ul>
 </nav>
@@ -336,37 +317,8 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-    一、特性概述
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-    二、预定义特性
-  </a>
-<nav aria-label="二、预定义特性" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#01-attributeusage">
-    01 AttributeUsage
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#02-conditional">
-    02 Conditional
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#03-obsolete">
-    03 Obsolete
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
-    三、自定义特性
+<a class="md-nav__link" href="#01">
+    01 反射概述
   </a>
 </li>
 </ul>
@@ -376,143 +328,63 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="_1">特性<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h1>
-<h2 id="_2">一、特性概述<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h2>
-<p>特性（Attribute）是一种用于在程序运行时传递各种元素（例如类、方法、结构、枚举等）行为信息的声明性代码。使用特性可以将元数据（例如编译器指令、注释、描述、方法和类等信息）添加到程序中。</p>
-<p>在 C# 中，特性具有以下属性：  </p>
+<h1 id="_1">反射<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h1>
+<h2 id="01">01 反射概述<a class="headerlink" href="#01" title="Permanent link">⚓︎</a></h2>
+<p>反射（Reflection）是指程序可以访问、检测和修改它本身状态或行为的一种能力。程序集包含模块、模块包含类型，而类型包含成员。 反射提供了封装程序集、模块和类型的对象，可以使用反射动态地创建类型的实例，将类型绑定到现有对象，或从现有对象中获取类型，然后，调用类型的方法或访问其字段和属性。 </p>
+<p>C# 中反射具有以下用途：  </p>
 <ul>
-<li>使用特性可以向程序中添加元数据，元数据是指程序中各种元素的相关信息，所有 .NET 程序中都包含一组指定的元数据；</li>
-<li>可以将一个或多个特性应用于整个程序、模块或者较小的程序元素（例如类和属性）中；</li>
-<li>特性可以像方法和属性一样接受自变量；</li>
-<li>程序可使用反射来检查自己的元数据或其他程序中的元数据。</li>
+<li>在运行时查看视图属性信息；</li>
+<li>检查装配中的各种类型并实例化这些类型；</li>
+<li>在后期绑定到方法和属性；</li>
+<li>在运行时创建新类型，然后使用这些类型执行一些任务。</li>
 </ul>
-<p>.Net 提供了两种类型的特性，分别是预定义特性和自定义特性。</p>
-<ol>
-<li>预定义特性<ul>
-<li><code>AttributeUsage</code> ：用于自定义特性，其中定义了可以应用特性的项目类型；</li>
-<li><code>Conditional</code> ：用来标记一个方法，它的执行依赖于指定的预处理标识符；</li>
-<li><code>Obsolete</code> ：用来标记废弃的程序，可以使用它来通知编译器放弃某个目标元素。</li>
-</ul>
-</li>
-<li>自定义特性<ul>
-<li>按规则和需要使用 <code>AttributeUsage</code> 实现特性自定义。</li>
-</ul>
-</li>
-</ol>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>如果你熟知 Java 语言，你可以认为它和 Java 中的元注解具有相同的功能。</p>
-</div>
-<h2 id="_3">二、预定义特性<a class="headerlink" href="#_3" title="Permanent link">⚓︎</a></h2>
-<h3 id="01-attributeusage">01 AttributeUsage<a class="headerlink" href="#01-attributeusage" title="Permanent link">⚓︎</a></h3>
-<p>使用 <code>AttributeUsage</code> 可以实现自定义特性，它的语法格式如下：</p>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="na">[AttributeUsage(</span>
-</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="na">    AttributeTargets, </span>
-</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="na">    Inherited, </span>
-</span><span id="__span-0-4"><a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="na">    AllowMultiple)]</span>
-</span></code></pre></div>
-<p>参数说明：</p>
-<ol>
-<li><code>AttributeTargets</code> ：用于指定自定义的特性应用的目标位置，AttributeTargets.ALL 表示对程序中的所有成员都可用，Class 表示应用于类，Method 表示应用于方法，Constructor 表示应用于构造器，Field 表示应用于字段，Property 表示应用于属性。可以同时指定多个 AttributeTargets，此时，应该使用符号 <code>|</code> 分隔开。</li>
-<li><code>Inherited</code> ：用于指定自定义的特性是否可以被派生类继承，取值为 true （默认）或 false。</li>
-<li><code>AllowMultiple</code> ：用于指定一个元素是否可以被标记多个自定义特性的实例，取值为 true 或 false（默认）。</li>
-</ol>
-<h3 id="02-conditional">02 Conditional<a class="headerlink" href="#02-conditional" title="Permanent link">⚓︎</a></h3>
-<p>使用 <code>Conditional</code> 用来标记一个方法，它的执行依赖于指定的预处理标识符。例如当值为 Debug 或 Trace 时，会在调试代码时显示变量的值。它的语法格式如下：
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="na">[Conditional(TAG)]</span><span class="w"> </span><span class="c1">// TAG 为预处理标识符</span>
-</span></code></pre></div></p>
-<p>示例：
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="na">[Conditional("DEBUG")]</span>
-</span><span id="__span-2-2"><a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Message</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">msg</span><span class="p">)</span>
-</span><span id="__span-2-3"><a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">{</span>
-</span><span id="__span-2-4"><a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
-</span><span id="__span-2-5"><a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="p">}</span>
-</span></code></pre></div></p>
-<h3 id="03-obsolete">03 Obsolete<a class="headerlink" href="#03-obsolete" title="Permanent link">⚓︎</a></h3>
-<p>使用 <code>Obsolete</code> 用来标记程序段被弃用，例如当您需要使用一个新方法来替代类中的某个旧方法时，就可以使用该特性将旧方法标记为 obsolete（过时的）并来输出一条消息，来提示应该使用新方法代替旧方法。它的语法格式如下：
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="na">[Obsolete (Message,IsError,UrlFormat)]</span>
-</span></code></pre></div></p>
-<p>参数说明：</p>
-<ol>
-<li><code>Message</code> ：描述性字符串，可以用来说明弃用以及原因。</li>
-<li><code>IsError</code> ：用来标识使用弃用的方法是一个错误，取值为 true 或 false （默认）。当为 true 时，若代码段被调用程序将会报错。</li>
-<li><code>UrlFormat</code> ：用于指定一个 URL ，可以是一个说明文档的链接。</li>
-</ol>
-<p>示例：
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="na">[Obsolete("方法已弃用",true)]</span>
-</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Test</span><span class="p">(){}</span>
-</span><span id="__span-4-3"><a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>
-</span><span id="__span-4-4"><a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="k">private</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
-</span><span id="__span-4-5"><a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="p">{</span>
-</span><span id="__span-4-6"><a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="n">Test</span><span class="p">();</span><span class="w"> </span><span class="c1">// 编译器会发出提醒，强行运行会报错</span>
-</span><span id="__span-4-7"><a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="p">}</span>
-</span></code></pre></div></p>
-<h2 id="_4">三、自定义特性<a class="headerlink" href="#_4" title="Permanent link">⚓︎</a></h2>
-<p>通过 <code>AttributeUsage</code> 可以实现自定义特性，自定义特性和自定义类一样简单，自定义特性就是一个传统类，这些类直接或间接派生自 <code>System.Attribute</code> 类，与传统类一样，包含存储和检索数据的方法。</p>
-<p>自定义一个特性的步骤可以参考：
-1. 声明自定义特性；
-2. 构建自定义特性；
-3. 在目标程序上应用自定义特性；
-4. 通过反射访问特性。</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<ol>
-<li>特性类必须声明为公共类。</li>
-<li>按照约定，属性类的名称以单词 Attribute 结尾。虽然不是必需的，但为了可读性，建议使用此约定。</li>
-<li>所有属性类必须直接或间接地继承 <code>System.Attribute</code> 类。</li>
-</ol>
-</div>
-<p>示例：
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="na">[AttributeUsage(AttributeTargets.All)]</span>
-</span><span id="__span-5-2"><a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">DeveloperAttribute</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Attribute</span>
-</span><span id="__span-5-3"><a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="p">{</span>
-</span><span id="__span-5-4"><a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="c1">// Private fields.</span>
-</span><span id="__span-5-5"><a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
-</span><span id="__span-5-6"><a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">level</span><span class="p">;</span>
-</span><span id="__span-5-7"><a href="#__codelineno-5-7" id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">reviewed</span><span class="p">;</span>
-</span><span id="__span-5-8"><a href="#__codelineno-5-8" id="__codelineno-5-8" name="__codelineno-5-8"></a>
-</span><span id="__span-5-9"><a href="#__codelineno-5-9" id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">    </span><span class="c1">// This constructor defines two required parameters: name and level.</span>
-</span><span id="__span-5-10"><a href="#__codelineno-5-10" id="__codelineno-5-10" name="__codelineno-5-10"></a>
-</span><span id="__span-5-11"><a href="#__codelineno-5-11" id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="nf">DeveloperAttribute</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">level</span><span class="p">)</span>
-</span><span id="__span-5-12"><a href="#__codelineno-5-12" id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-5-13"><a href="#__codelineno-5-13" id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
-</span><span id="__span-5-14"><a href="#__codelineno-5-14" id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="n">level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">level</span><span class="p">;</span>
-</span><span id="__span-5-15"><a href="#__codelineno-5-15" id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="n">reviewed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">false</span><span class="p">;</span>
-</span><span id="__span-5-16"><a href="#__codelineno-5-16" id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-5-17"><a href="#__codelineno-5-17" id="__codelineno-5-17" name="__codelineno-5-17"></a>
-</span><span id="__span-5-18"><a href="#__codelineno-5-18" id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="w">    </span><span class="c1">// Define Name property.</span>
-</span><span id="__span-5-19"><a href="#__codelineno-5-19" id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="w">    </span><span class="c1">// This is a read-only attribute.</span>
-</span><span id="__span-5-20"><a href="#__codelineno-5-20" id="__codelineno-5-20" name="__codelineno-5-20"></a>
-</span><span id="__span-5-21"><a href="#__codelineno-5-21" id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">virtual</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Name</span>
-</span><span id="__span-5-22"><a href="#__codelineno-5-22" id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-5-23"><a href="#__codelineno-5-23" id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="w">        </span><span class="k">get</span><span class="w"> </span><span class="p">{</span><span class="k">return</span><span class="w"> </span><span class="n">name</span><span class="p">;}</span>
-</span><span id="__span-5-24"><a href="#__codelineno-5-24" id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-5-25"><a href="#__codelineno-5-25" id="__codelineno-5-25" name="__codelineno-5-25"></a>
-</span><span id="__span-5-26"><a href="#__codelineno-5-26" id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="w">    </span><span class="c1">// Define Level property.</span>
-</span><span id="__span-5-27"><a href="#__codelineno-5-27" id="__codelineno-5-27" name="__codelineno-5-27"></a><span class="w">    </span><span class="c1">// This is a read-only attribute.</span>
-</span><span id="__span-5-28"><a href="#__codelineno-5-28" id="__codelineno-5-28" name="__codelineno-5-28"></a>
-</span><span id="__span-5-29"><a href="#__codelineno-5-29" id="__codelineno-5-29" name="__codelineno-5-29"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">virtual</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Level</span>
-</span><span id="__span-5-30"><a href="#__codelineno-5-30" id="__codelineno-5-30" name="__codelineno-5-30"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-5-31"><a href="#__codelineno-5-31" id="__codelineno-5-31" name="__codelineno-5-31"></a><span class="w">        </span><span class="k">get</span><span class="w"> </span><span class="p">{</span><span class="k">return</span><span class="w"> </span><span class="n">level</span><span class="p">;}</span>
-</span><span id="__span-5-32"><a href="#__codelineno-5-32" id="__codelineno-5-32" name="__codelineno-5-32"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-5-33"><a href="#__codelineno-5-33" id="__codelineno-5-33" name="__codelineno-5-33"></a>
-</span><span id="__span-5-34"><a href="#__codelineno-5-34" id="__codelineno-5-34" name="__codelineno-5-34"></a><span class="w">    </span><span class="c1">// Define Reviewed property.</span>
-</span><span id="__span-5-35"><a href="#__codelineno-5-35" id="__codelineno-5-35" name="__codelineno-5-35"></a><span class="w">    </span><span class="c1">// This is a read/write attribute.</span>
-</span><span id="__span-5-36"><a href="#__codelineno-5-36" id="__codelineno-5-36" name="__codelineno-5-36"></a>
-</span><span id="__span-5-37"><a href="#__codelineno-5-37" id="__codelineno-5-37" name="__codelineno-5-37"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">virtual</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">Reviewed</span>
-</span><span id="__span-5-38"><a href="#__codelineno-5-38" id="__codelineno-5-38" name="__codelineno-5-38"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-5-39"><a href="#__codelineno-5-39" id="__codelineno-5-39" name="__codelineno-5-39"></a><span class="w">        </span><span class="k">get</span><span class="w"> </span><span class="p">{</span><span class="k">return</span><span class="w"> </span><span class="n">reviewed</span><span class="p">;}</span>
-</span><span id="__span-5-40"><a href="#__codelineno-5-40" id="__codelineno-5-40" name="__codelineno-5-40"></a><span class="w">        </span><span class="k">set</span><span class="w"> </span><span class="p">{</span><span class="n">reviewed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">value</span><span class="p">;}</span>
-</span><span id="__span-5-41"><a href="#__codelineno-5-41" id="__codelineno-5-41" name="__codelineno-5-41"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-5-42"><a href="#__codelineno-5-42" id="__codelineno-5-42" name="__codelineno-5-42"></a><span class="p">}</span>
-</span></code></pre></div></p>
-<p>然后就可以使用该属性了：
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="na">[Developer("Joan Smith", "1")]</span>
-</span><span id="__span-6-2"><a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>
-</span><span id="__span-6-3"><a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="o">-</span><span class="n">or</span><span class="o">-</span>
-</span><span id="__span-6-4"><a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a>
-</span><span id="__span-6-5"><a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="na">[Developer("Joan Smith", "1", Reviewed = true)]</span>
-</span></code></pre></div></p>
+<p>.NET 的 <code>System.Reflection</code> 命名空间下提供了反射技术使用的类，使用它们并结合 <code>System.Type</code> 使你能够获取有关加载的程序集和其中定义的类型的信息，如类、接口和值类型（即结构和枚举）：</p>
+<table>
+<thead>
+<tr>
+<th align="left">Class</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>Assembly</code></td>
+<td align="left">定义和加载程序集，加载程序集清单中列出的模块，以及在此程序集中定位一个类型并创建一个它的实例</td>
+</tr>
+<tr>
+<td align="left">Module</td>
+<td align="left">发现信息，如包含模块的程序集和模块中的类，还可以获取所有全局方法或模块上定义的其它特定的非全局方法</td>
+</tr>
+<tr>
+<td align="left">ConstructorInfo</td>
+<td align="left">发现信息，如名称、参数、访问修饰符（如 <code>public</code> 或 <code>private</code>）和构造函数的实现详细信息（如 <code>abstract</code> 或 <code>virtual</code>）</td>
+</tr>
+<tr>
+<td align="left">MethodInfo</td>
+<td align="left">发现信息，如名称、返回类型、参数、访问修饰符（如 <code>public</code> 或 <code>private</code>）和方法的实现详细信息（如 <code>abstract</code> 或 <code>virtual</code>）</td>
+</tr>
+<tr>
+<td align="left">FieldInfo</td>
+<td align="left">发现信息，如名称、访问修饰符（如 <code>public</code> 或 <code>private</code>）和一个字段的实现详细信息 （如 <code>static</code>）；并获取或设置字段值</td>
+</tr>
+<tr>
+<td align="left">EventInfo</td>
+<td align="left">发现信息（如名称、事件处理程序的数据类型、自定义特性、声明类型以及事件的反射的类型），并添加或删除事件处理程序</td>
+</tr>
+<tr>
+<td align="left">PropertyInfo</td>
+<td align="left">发现信息（如名称、数据类型、声明类型，反射的类型和属性的只读或可写状态），并获取或设置属性值</td>
+</tr>
+<tr>
+<td align="left">ParameterInfo</td>
+<td align="left">发现信息，如参数的名称、数据类型、参数是输入参数还是输出参数以及参数在方法签名中的位置</td>
+</tr>
+<tr>
+<td align="left">CustomAttributeData</td>
+<td align="left">发现有关自定义特性的信息，使你能够检查特性，而无需创建它们的实例</td>
+</tr>
+</tbody>
+</table>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">
@@ -556,7 +428,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 反射" class="md-footer__link md-footer__link--prev" href="../05%20%E5%8F%8D%E5%B0%84/" rel="prev">
+<a aria-label="上一页: 特性" class="md-footer__link md-footer__link--prev" href="../05%20%E7%89%B9%E6%80%A7/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -565,17 +437,17 @@
 <span class="md-footer__direction">
                   上一页
                 </span>
-                反射
+                特性
               </div>
 </div>
 </a>
-<a aria-label="下一页: Author" class="md-footer__link md-footer__link--next" href="../../author/" rel="next">
+<a aria-label="下一页: 多线程" class="md-footer__link md-footer__link--next" href="../07%20%E5%A4%9A%E7%BA%BF%E7%A8%8B/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                   下一页
                 </span>
-                Author
+                多线程
               </div>
 </div>
 <div class="md-footer__button md-icon">
