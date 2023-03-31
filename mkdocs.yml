@@ -13,40 +13,39 @@ copyright: Copyright &copy; 2022 - 2023 Finnegan Will
 
 # 导航
 nav:
-    - Home: 'Common/index.md'
+    - Home: 'common/index.md'
 
     - C#: 
       - C#基础:
-        - 认识C#: 'CSharpFoundation/00 认识CSharp.md'
-        - 数据类型: 'CSharpFoundation/01 数据类型.md'
-        - 运算符: 'CSharpFoundation/02 运算符.md'
-        - 控制语句: 'CSharpFoundation/03 控制语句.md'
-        - 数据结构: 'CSharpFoundation/04 数据结构.md'
-        - 类与对象: 'CSharpFoundation/05 类与对象.md'
-        - 抽象类与接口: 'CSharpFoundation/06 抽象类与接口.md'
-        - 异常处理: 'CSharpFoundation/07 异常处理.md'
+        - 认识C#: 'csharp-foundation/00 认识CSharp.md'
+        - 数据类型: 'csharp-foundation/01 数据类型.md'
+        - 运算符: 'csharp-foundation/02 运算符.md'
+        - 控制语句: 'csharp-foundation/03 控制语句.md'
+        - 数据结构: 'csharp-foundation/04 数据结构.md'
+        - 类与对象: 'csharp-foundation/05 类与对象.md'
+        - 抽象类与接口: 'csharp-foundation/06 抽象类与接口.md'
+        - 异常处理: 'csharp-foundation/07 异常处理.md'
 
       - C#进阶: 
-        - 索引器: 'CSharpAdvanced/01 索引器.md'
-        - 委托: 'CSharpAdvanced/02 委托与事件.md'
-        - 泛型: 'CSharpAdvanced/03 泛型.md'
-        - 集合: 'CSharpAdvanced/04 集合.md'
-        - 特性: 'CSharpAdvanced/05 特性.md'
-        - 反射: 'CSharpAdvanced/06 反射.md'
-        - 多线程: 'CSharpAdvanced/07 多线程.md'
-        - 文件处理: 'CSharpAdvanced/08 文件处理.md'
-#      - 匿名函数: CSharpAdvanced/
-#      - 指针变量: CSharpAdvanced/
+        - 索引器: 'csharp-advanced/01 索引器.md'
+        - 委托: 'csharp-advanced/02 委托与事件.md'
+        - 泛型: 'csharp-advanced/03 泛型.md'
+        - 集合: 'csharp-advanced/04 集合.md'
+        - 特性: 'csharp-advanced/05 特性.md'
+        - 反射: 'csharp-advanced/06 反射.md'
+        - 多线程: 'csharp-advanced/07 多线程.md'
+        - 文件处理: 'csharp-advanced/08 文件处理.md'
+#      - 匿名函数: csharp-advanced/
+#      - 指针变量: csharp-advanced/
 #      
 
     - ASP.NET Core: 
-      - Razor: 'Common/index.md'
-      - MVC: 'Common/index.md'
+      - 了解ASP.NET: 'aspnet-core/01 了解ASP.NET.md'
 
     - 关于: 
-      - Author: Common/author.md
-      - MkDocs: Common/mkdocs.md
-      - Thanks: Common/thanks.md
+      - Author: 'common/author.md'
+      - MkDocs: 'common/mkdocs.md'
+      - Thanks: 'common/thanks.md'
 
 
 # 主题设置
