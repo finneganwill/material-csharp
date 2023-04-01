@@ -1,0 +1,990 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://finneganwill.github.io/material-dotnet/csharp-advanced/04%20%E9%9B%86%E5%90%88/" rel="canonical"/>
+<link href="../03%20%E6%B3%9B%E5%9E%8B/" rel="prev"/>
+<link href="../05%20%E7%89%B9%E6%80%A7/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
+<title>集合 - .Net Material</title>
+<link href="../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+<script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                .gdesc-inner { font-size: 0.75rem; }
+                body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+                body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+                body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="cyan" data-md-color-primary="orange" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          跳转至
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="页眉" class="md-header__inner md-grid">
+<a aria-label=".Net Material" class="md-header__button md-logo" data-md-component="logo" href="../.." title=".Net Material">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            .Net Material
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              集合
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="cyan" data-md-color-media="" data-md-color-primary="orange" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="orange" data-md-color-media="" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+</form>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/finneganwill/material-dotnet" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    finneganwill/material-dotnet
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="标签" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../common/">
+      Home
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../../csharp-foundation/00%20%E8%AE%A4%E8%AF%86CSharp/">
+        C#
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../aspnet-core/01%20%E4%BA%86%E8%A7%A3ASP.NET/">
+        ASP.NET Core
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../common/author/">
+        关于
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label=".Net Material" class="md-nav__button md-logo" data-md-component="logo" href="../.." title=".Net Material">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    .Net Material
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/finneganwill/material-dotnet" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    finneganwill/material-dotnet
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../common/">
+        Home
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          C#
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          C#
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          C#基础
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_1">
+<span class="md-nav__icon md-icon"></span>
+          C#基础
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../csharp-foundation/00%20%E8%AE%A4%E8%AF%86CSharp/">
+        认识C#
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../csharp-foundation/01%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+        数据类型
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../csharp-foundation/02%20%E8%BF%90%E7%AE%97%E7%AC%A6/">
+        运算符
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../csharp-foundation/03%20%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5/">
+        控制语句
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../csharp-foundation/04%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+        数据结构
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../csharp-foundation/05%20%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/">
+        类与对象
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../csharp-foundation/06%20%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%8E%E6%8E%A5%E5%8F%A3/">
+        抽象类与接口
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../csharp-foundation/07%20%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/">
+        异常处理
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          C#进阶
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+          C#进阶
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../01%20%E7%B4%A2%E5%BC%95%E5%99%A8/">
+        索引器
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../02%20%E5%A7%94%E6%89%98%E4%B8%8E%E4%BA%8B%E4%BB%B6/">
+        委托
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../03%20%E6%B3%9B%E5%9E%8B/">
+        泛型
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          集合
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        集合
+      </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    一、集合概述
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    二、列表
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    三、键值集合
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    四、集
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    五、排序列表
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    七、堆栈
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_18">
+    八、队列
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_21">
+    九、点列阵
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../05%20%E7%89%B9%E6%80%A7/">
+        特性
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../06%20%E5%8F%8D%E5%B0%84/">
+        反射
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../07%20%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+        多线程
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../08%20%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/">
+        文件处理
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          ASP.NET Core
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          ASP.NET Core
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspnet-core/01%20%E4%BA%86%E8%A7%A3ASP.NET/">
+        了解ASP.NET
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          关于
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          关于
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../common/author/">
+        Author
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../common/mkdocs/">
+        MkDocs
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../common/thanks/">
+        Thanks
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    一、集合概述
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    二、列表
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    三、键值集合
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    四、集
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    五、排序列表
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_15">
+    七、堆栈
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_18">
+    八、队列
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_21">
+    九、点列阵
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="_1">集合<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h1>
+<h2 id="_2">一、集合概述<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h2>
+<p>对于许多应用程序，你会想要创建和管理相关对象的组。 有两种方法对对象进行分组：通过创建对象的数组，以及通过创建对象的集合。</p>
+<blockquote>
+<p>数组最适用于创建和使用固定数量的强类型化对象。与数组不同，集合提供更灵活的方式来使用对象组，你使用的对象组随着应用程序更改的需要<strong>动态地放大和缩小</strong>。 </p>
+</blockquote>
+<p>集合是专门被设计用来存储和检索数据的<strong>类</strong>，这些类是 .NET 框架提供的，<code>System.Collection</code> 命名空间下提供了一些集合类，但它们不是类型安全的，该命名空间中的类不会将元素作为特别类型化的对象存储，而是作为 <code>Object</code> 类型的对象存储。</p>
+<p>随着版本迭代，.NET 提供了泛型集合，位于 <code>System.Collection.Generic</code> 命名空间下， 泛型集合强制类型安全，因此无法向其添加任何其他数据类型。 当你从泛型集合检索元素时，你无需确定其数据类型或对其进行转换。</p>
+<p>为了实现多线程下的安全访问，<code>System.Collection.Concurrent</code> 命名空间下提供了并发安全的集合类。</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>应尽可能地使用 <code>System.Collections.Generic</code> 命名空间或 <code>System.Collections.Concurrent</code> 命名空间中的泛型集合，而不是 <code>System.Collections</code> 命名空间中的旧类型。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>通用集合类入口：<br/>
+<img alt="🔗" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f517.svg" title=":link:"/> <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.collections.generic">System.Collections.Generic</a>  <br/>
+<img alt="🔗" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f517.svg" title=":link:"/> <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.collections.concurrent">System.Collections.Concurrent</a>  <br/>
+<img alt="🔗" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f517.svg" title=":link:"/> <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.collections">System.Collections</a> </p>
+</div>
+<p>本节内容将介绍一些常用的泛型集合类以及简单使用，对于非泛型集合类作了解补充。主要涉及的泛型类有：</p>
+<table>
+<thead>
+<tr>
+<th align="left">类</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">List&lt;T&gt;</td>
+<td align="left">列表，自适应大小的数组集合</td>
+</tr>
+<tr>
+<td align="left">Dictionary&lt;K,V&gt;</td>
+<td align="left">键值集合，按键值对存储的集合</td>
+</tr>
+<tr>
+<td align="left">HashSet&lt;T&gt;</td>
+<td align="left">集，不允许重复元素的数组集合</td>
+</tr>
+<tr>
+<td align="left">SortedList&lt;K,V&gt;</td>
+<td align="left">排序键值列表，根据自定义排序规则实现按键排序的键值对集合</td>
+</tr>
+<tr>
+<td align="left">Stack&lt;T&gt;</td>
+<td align="left">栈，先进后出的数据结构</td>
+</tr>
+<tr>
+<td align="left">Queue&lt;T&gt;</td>
+<td align="left">队列，先进先出的数据结构</td>
+</tr>
+<tr>
+<td align="left">BitArray</td>
+<td align="left">点列阵，存储二进制的紧缩数组</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_3">二、列表<a class="headerlink" href="#_3" title="Permanent link">⚓︎</a></h2>
+<p>数组（array）在声明时通常会指定大小，而一旦确定后，数组大小就无法改变了。为了满足更加灵活的应用场景，因此定义了动态数组，也可称列表（List）。List 是可以自动调整大小的数据结构，并且允许在列表中进行动态内存分配、增加、搜索、排序等操作。</p>
+<h4 id="net">.NET类<a class="headerlink" href="#net" title="Permanent link">⚓︎</a></h4>
+<p><code>List&lt;T&gt;</code> 是 .NET System.Collections.Generic 中提供的类型安全的泛型列表，它替代了早期版本 System.Collections 中定义的 <code>ArrayList</code>，当你需要使用动态容量的集合存储数据时，你可以考虑它：</p>
+<ol>
+<li>当存储的对象具有同质类型时，应当使用 <code>List&lt;T&gt;</code>，<code>T</code> 为同质类型；</li>
+<li>当存储的对象具有不同类型时，应当使用 <code>List&lt;Object&gt;</code>，<code>Object</code> 是所有类型的基类 。</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>List&lt;T&gt; 具有以下特点：<br/>
+<img alt="1⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/31-20e3.svg" title=":one:"/> 元素无序性。存储的元素是无序的，它们只按添加的顺序指派索引，需要排序输出请使用Sort方法。<br/>
+<img alt="2⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/32-20e3.svg" title=":two:"/> 允许存储重复元素。列表允许重复添加同一元素。<br/>
+<img alt="3⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/33-20e3.svg" title=":three:"/> 允许存储 null 。列表允许添加 <code>null</code> ，并且允许多次添加。<br/>
+<img alt="4⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/34-20e3.svg" title=":four:"/> 非线程安全的。执行多次读取操作是安全的，但如果在读取时修改集合，则会出现问题。</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>为了确保线程安全，在读或写操作期间锁定集合。要使一个集合能够被多个线程访问以进行读写，您必须实现自己的同步。对于内置同步的集合，请参阅 System.Collections.Concurrent 命名空间中的类。有关固有的线程安全替代方法，请参阅 ImmutableList&lt;T&gt;类。</p>
+</div>
+<h4 id="_4">继承体系：<a class="headerlink" href="#_4" title="Permanent link">⚓︎</a></h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">List&lt;T&gt;</label><label for="__tabbed_1_2">ArrayList</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">List</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span>
+</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">ICollection</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">IEnumerable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-0-4"><a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">IList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-0-5"><a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">IReadOnlyCollection</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-0-6"><a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">IReadOnlyList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-0-7"><a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">IList</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">ArrayList</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ICloneable</span><span class="p">,</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">IList</span>
+</span></code></pre></div>
+</div>
+</div>
+</input></input></div>
+<h4 id="_5">基本使用<a class="headerlink" href="#_5" title="Permanent link">⚓︎</a></h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">List&lt;T&gt;</label><label for="__tabbed_2_2">ArrayList</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="cm">/* 定义一个方法用来输出 */</span>
+</span><span id="__span-2-2"><a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">private</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Print</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">log</span><span class="p">,</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="p">)</span>
+</span><span id="__span-2-3"><a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">{</span>
+</span><span id="__span-2-4"><a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">log</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">":"</span><span class="p">);</span>
+</span><span id="__span-2-5"><a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="n">list</span><span class="p">.</span><span class="n">ForEach</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">x</span><span class="p">));</span>
+</span><span id="__span-2-6"><a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
+</span><span id="__span-2-7"><a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="p">}</span>
+</span><span id="__span-2-8"><a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="k">private</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+</span><span id="__span-2-9"><a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="p">{</span>
+</span><span id="__span-2-10"><a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="c1">// 实例化</span>
+</span><span id="__span-2-11"><a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="n">List</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span><span class="p">();</span>
+</span><span id="__span-2-12"><a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">    </span><span class="c1">// 添加</span>
+</span><span id="__span-2-13"><a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">    </span><span class="n">list</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">"A"</span><span class="p">);</span>
+</span><span id="__span-2-14"><a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">    </span><span class="n">list</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">"B"</span><span class="p">);</span>
+</span><span id="__span-2-15"><a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">    </span><span class="n">list</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">"C"</span><span class="p">);</span>
+</span><span id="__span-2-16"><a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">    </span><span class="n">list</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">"D"</span><span class="p">);</span>
+</span><span id="__span-2-17"><a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">    </span><span class="n">list</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">"E"</span><span class="p">);</span>
+</span><span id="__span-2-18"><a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">    </span><span class="n">list</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">"F"</span><span class="p">);</span>
+</span><span id="__span-2-19"><a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">    </span><span class="n">list</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">"G"</span><span class="p">);</span>
+</span><span id="__span-2-20"><a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">    </span><span class="c1">// 属性</span>
+</span><span id="__span-2-21"><a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">list</span><span class="p">.</span><span class="n">Capacity</span><span class="p">);</span>
+</span><span id="__span-2-22"><a href="#__codelineno-2-22" id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">list</span><span class="p">.</span><span class="n">Count</span><span class="p">);</span>
+</span><span id="__span-2-23"><a href="#__codelineno-2-23" id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">    </span><span class="c1">// 遍历</span>
+</span><span id="__span-2-24"><a href="#__codelineno-2-24" id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">"遍历："</span><span class="p">);</span>
+</span><span id="__span-2-25"><a href="#__codelineno-2-25" id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">    </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">list</span><span class="p">)</span>
+</span><span id="__span-2-26"><a href="#__codelineno-2-26" id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+</span><span id="__span-2-27"><a href="#__codelineno-2-27" id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
+</span><span id="__span-2-28"><a href="#__codelineno-2-28" id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="w">    </span><span class="c1">// 索引</span>
+</span><span id="__span-2-29"><a href="#__codelineno-2-29" id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"索引："</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">list</span><span class="p">[</span><span class="m">5</span><span class="p">]);</span>
+</span><span id="__span-2-30"><a href="#__codelineno-2-30" id="__codelineno-2-30" name="__codelineno-2-30"></a><span class="w">    </span><span class="c1">// 移除</span>
+</span><span id="__span-2-31"><a href="#__codelineno-2-31" id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="w">    </span><span class="n">list</span><span class="p">.</span><span class="n">Remove</span><span class="p">(</span><span class="s">"G"</span><span class="p">);</span>
+</span><span id="__span-2-32"><a href="#__codelineno-2-32" id="__codelineno-2-32" name="__codelineno-2-32"></a><span class="w">    </span><span class="n">Print</span><span class="p">(</span><span class="s">"根据元素移除"</span><span class="p">,</span><span class="w"> </span><span class="n">list</span><span class="p">);</span>
+</span><span id="__span-2-33"><a href="#__codelineno-2-33" id="__codelineno-2-33" name="__codelineno-2-33"></a><span class="w">    </span><span class="n">list</span><span class="p">.</span><span class="n">RemoveAt</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
+</span><span id="__span-2-34"><a href="#__codelineno-2-34" id="__codelineno-2-34" name="__codelineno-2-34"></a><span class="w">    </span><span class="n">Print</span><span class="p">(</span><span class="s">"根据索引移除"</span><span class="p">,</span><span class="w"> </span><span class="n">list</span><span class="p">);</span>
+</span><span id="__span-2-35"><a href="#__codelineno-2-35" id="__codelineno-2-35" name="__codelineno-2-35"></a><span class="w">    </span><span class="c1">// 反转</span>
+</span><span id="__span-2-36"><a href="#__codelineno-2-36" id="__codelineno-2-36" name="__codelineno-2-36"></a><span class="w">    </span><span class="n">list</span><span class="p">.</span><span class="n">Reverse</span><span class="p">();</span>
+</span><span id="__span-2-37"><a href="#__codelineno-2-37" id="__codelineno-2-37" name="__codelineno-2-37"></a><span class="w">    </span><span class="n">Print</span><span class="p">(</span><span class="s">"反转"</span><span class="p">,</span><span class="w"> </span><span class="n">list</span><span class="p">);</span>
+</span><span id="__span-2-38"><a href="#__codelineno-2-38" id="__codelineno-2-38" name="__codelineno-2-38"></a><span class="w">    </span><span class="c1">// 清空</span>
+</span><span id="__span-2-39"><a href="#__codelineno-2-39" id="__codelineno-2-39" name="__codelineno-2-39"></a><span class="w">    </span><span class="n">list</span><span class="p">.</span><span class="n">Clear</span><span class="p">();</span>
+</span><span id="__span-2-40"><a href="#__codelineno-2-40" id="__codelineno-2-40" name="__codelineno-2-40"></a><span class="w">    </span><span class="n">Print</span><span class="p">(</span><span class="s">"清空"</span><span class="p">,</span><span class="w"> </span><span class="n">list</span><span class="p">);</span>
+</span><span id="__span-2-41"><a href="#__codelineno-2-41" id="__codelineno-2-41" name="__codelineno-2-41"></a><span class="p">}</span>
+</span><span id="__span-2-42"><a href="#__codelineno-2-42" id="__codelineno-2-42" name="__codelineno-2-42"></a><span class="c1">// Output:</span>
+</span><span id="__span-2-43"><a href="#__codelineno-2-43" id="__codelineno-2-43" name="__codelineno-2-43"></a><span class="c1">// 8</span>
+</span><span id="__span-2-44"><a href="#__codelineno-2-44" id="__codelineno-2-44" name="__codelineno-2-44"></a><span class="c1">// 7</span>
+</span><span id="__span-2-45"><a href="#__codelineno-2-45" id="__codelineno-2-45" name="__codelineno-2-45"></a><span class="c1">// 遍历：ABCDEFG</span>
+</span><span id="__span-2-46"><a href="#__codelineno-2-46" id="__codelineno-2-46" name="__codelineno-2-46"></a><span class="c1">// 索引：F</span>
+</span><span id="__span-2-47"><a href="#__codelineno-2-47" id="__codelineno-2-47" name="__codelineno-2-47"></a><span class="c1">// 根据元素移除:ABCDEF</span>
+</span><span id="__span-2-48"><a href="#__codelineno-2-48" id="__codelineno-2-48" name="__codelineno-2-48"></a><span class="c1">// 根据索引移除:BCDEF</span>
+</span><span id="__span-2-49"><a href="#__codelineno-2-49" id="__codelineno-2-49" name="__codelineno-2-49"></a><span class="c1">// 反转:FEDCB</span>
+</span><span id="__span-2-50"><a href="#__codelineno-2-50" id="__codelineno-2-50" name="__codelineno-2-50"></a><span class="c1">// 清空:</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="cm">/* 定义一个打印的方法（注：foreach 中的使用的object类型）*/</span>
+</span><span id="__span-3-2"><a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">private</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Print</span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">log</span><span class="p">,</span><span class="w"> </span><span class="n">ArrayList</span><span class="w"> </span><span class="n">list</span><span class="p">)</span>
+</span><span id="__span-3-3"><a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="p">{</span>
+</span><span id="__span-3-4"><a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">log</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">":"</span><span class="p">);</span>
+</span><span id="__span-3-5"><a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">list</span><span class="p">)</span>
+</span><span id="__span-3-6"><a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-3-7"><a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">o</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span>
+</span><span id="__span-3-8"><a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-9"><a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
+</span><span id="__span-3-10"><a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="p">}</span>
+</span><span id="__span-3-11"><a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="k">private</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+</span><span id="__span-3-12"><a href="#__codelineno-3-12" id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="p">{</span>
+</span><span id="__span-3-13"><a href="#__codelineno-3-13" id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">    </span><span class="c1">// 实例化</span>
+</span><span id="__span-3-14"><a href="#__codelineno-3-14" id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">    </span><span class="n">ArrayList</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="p">();</span>
+</span><span id="__span-3-15"><a href="#__codelineno-3-15" id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">    </span><span class="c1">// 添加</span>
+</span><span id="__span-3-16"><a href="#__codelineno-3-16" id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">    </span><span class="n">list</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">"A"</span><span class="p">);</span>
+</span><span id="__span-3-17"><a href="#__codelineno-3-17" id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">    </span><span class="n">list</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">"B"</span><span class="p">);</span>
+</span><span id="__span-3-18"><a href="#__codelineno-3-18" id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">    </span><span class="n">list</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">"C"</span><span class="p">);</span>
+</span><span id="__span-3-19"><a href="#__codelineno-3-19" id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">    </span><span class="n">list</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="m">1</span><span class="p">);</span>
+</span><span id="__span-3-20"><a href="#__codelineno-3-20" id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">    </span><span class="n">list</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="m">2</span><span class="p">);</span>
+</span><span id="__span-3-21"><a href="#__codelineno-3-21" id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="w">    </span><span class="n">list</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="m">3</span><span class="p">);</span>
+</span><span id="__span-3-22"><a href="#__codelineno-3-22" id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">    </span><span class="n">list</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">true</span><span class="p">);</span>
+</span><span id="__span-3-23"><a href="#__codelineno-3-23" id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="w">    </span><span class="c1">// 属性</span>
+</span><span id="__span-3-24"><a href="#__codelineno-3-24" id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">list</span><span class="p">.</span><span class="n">Capacity</span><span class="p">);</span>
+</span><span id="__span-3-25"><a href="#__codelineno-3-25" id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">list</span><span class="p">.</span><span class="n">Count</span><span class="p">);</span>
+</span><span id="__span-3-26"><a href="#__codelineno-3-26" id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="w">    </span><span class="c1">// 遍历</span>
+</span><span id="__span-3-27"><a href="#__codelineno-3-27" id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">"遍历："</span><span class="p">);</span>
+</span><span id="__span-3-28"><a href="#__codelineno-3-28" id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="w">    </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">list</span><span class="p">)</span>
+</span><span id="__span-3-29"><a href="#__codelineno-3-29" id="__codelineno-3-29" name="__codelineno-3-29"></a><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">o</span><span class="p">);</span>
+</span><span id="__span-3-30"><a href="#__codelineno-3-30" id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
+</span><span id="__span-3-31"><a href="#__codelineno-3-31" id="__codelineno-3-31" name="__codelineno-3-31"></a><span class="w">    </span><span class="c1">// 索引</span>
+</span><span id="__span-3-32"><a href="#__codelineno-3-32" id="__codelineno-3-32" name="__codelineno-3-32"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"索引："</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">list</span><span class="p">[</span><span class="m">5</span><span class="p">]);</span>
+</span><span id="__span-3-33"><a href="#__codelineno-3-33" id="__codelineno-3-33" name="__codelineno-3-33"></a><span class="w">    </span><span class="c1">// 移除</span>
+</span><span id="__span-3-34"><a href="#__codelineno-3-34" id="__codelineno-3-34" name="__codelineno-3-34"></a><span class="w">    </span><span class="n">list</span><span class="p">.</span><span class="n">Remove</span><span class="p">(</span><span class="s">"True"</span><span class="p">);</span>
+</span><span id="__span-3-35"><a href="#__codelineno-3-35" id="__codelineno-3-35" name="__codelineno-3-35"></a><span class="w">    </span><span class="n">Print</span><span class="p">(</span><span class="s">"根据元素移除"</span><span class="p">,</span><span class="w"> </span><span class="n">list</span><span class="p">);</span>
+</span><span id="__span-3-36"><a href="#__codelineno-3-36" id="__codelineno-3-36" name="__codelineno-3-36"></a><span class="w">    </span><span class="n">list</span><span class="p">.</span><span class="n">RemoveAt</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
+</span><span id="__span-3-37"><a href="#__codelineno-3-37" id="__codelineno-3-37" name="__codelineno-3-37"></a><span class="w">    </span><span class="n">Print</span><span class="p">(</span><span class="s">"根据索引移除"</span><span class="p">,</span><span class="w"> </span><span class="n">list</span><span class="p">);</span>
+</span><span id="__span-3-38"><a href="#__codelineno-3-38" id="__codelineno-3-38" name="__codelineno-3-38"></a><span class="w">    </span><span class="c1">// 反转</span>
+</span><span id="__span-3-39"><a href="#__codelineno-3-39" id="__codelineno-3-39" name="__codelineno-3-39"></a><span class="w">    </span><span class="n">list</span><span class="p">.</span><span class="n">Reverse</span><span class="p">();</span>
+</span><span id="__span-3-40"><a href="#__codelineno-3-40" id="__codelineno-3-40" name="__codelineno-3-40"></a><span class="w">    </span><span class="n">Print</span><span class="p">(</span><span class="s">"反转"</span><span class="p">,</span><span class="w"> </span><span class="n">list</span><span class="p">);</span>
+</span><span id="__span-3-41"><a href="#__codelineno-3-41" id="__codelineno-3-41" name="__codelineno-3-41"></a><span class="w">    </span><span class="c1">// 清空</span>
+</span><span id="__span-3-42"><a href="#__codelineno-3-42" id="__codelineno-3-42" name="__codelineno-3-42"></a><span class="w">    </span><span class="n">list</span><span class="p">.</span><span class="n">Clear</span><span class="p">();</span>
+</span><span id="__span-3-43"><a href="#__codelineno-3-43" id="__codelineno-3-43" name="__codelineno-3-43"></a><span class="w">    </span><span class="n">Print</span><span class="p">(</span><span class="s">"清空"</span><span class="p">,</span><span class="w"> </span><span class="n">list</span><span class="p">);</span>
+</span><span id="__span-3-44"><a href="#__codelineno-3-44" id="__codelineno-3-44" name="__codelineno-3-44"></a><span class="p">}</span>
+</span><span id="__span-3-45"><a href="#__codelineno-3-45" id="__codelineno-3-45" name="__codelineno-3-45"></a><span class="c1">// Output:</span>
+</span><span id="__span-3-46"><a href="#__codelineno-3-46" id="__codelineno-3-46" name="__codelineno-3-46"></a><span class="c1">// 8</span>
+</span><span id="__span-3-47"><a href="#__codelineno-3-47" id="__codelineno-3-47" name="__codelineno-3-47"></a><span class="c1">// 7</span>
+</span><span id="__span-3-48"><a href="#__codelineno-3-48" id="__codelineno-3-48" name="__codelineno-3-48"></a><span class="c1">// 遍历：ABC123True</span>
+</span><span id="__span-3-49"><a href="#__codelineno-3-49" id="__codelineno-3-49" name="__codelineno-3-49"></a><span class="c1">// 索引：3</span>
+</span><span id="__span-3-50"><a href="#__codelineno-3-50" id="__codelineno-3-50" name="__codelineno-3-50"></a><span class="c1">// 根据元素移除:ABC123True</span>
+</span><span id="__span-3-51"><a href="#__codelineno-3-51" id="__codelineno-3-51" name="__codelineno-3-51"></a><span class="c1">// 根据索引移除:BC123True</span>
+</span><span id="__span-3-52"><a href="#__codelineno-3-52" id="__codelineno-3-52" name="__codelineno-3-52"></a><span class="c1">// 反转:True321CB</span>
+</span><span id="__span-3-53"><a href="#__codelineno-3-53" id="__codelineno-3-53" name="__codelineno-3-53"></a><span class="c1">// 清空:</span>
+</span></code></pre></div>
+</div>
+</div>
+</input></input></div>
+<h2 id="_6">三、键值集合<a class="headerlink" href="#_6" title="Permanent link">⚓︎</a></h2>
+<p>键值集合通过键值对来维护元素，Key 与 Vlaue 成对出现。</p>
+<h4 id="net_1">.Net类<a class="headerlink" href="#net_1" title="Permanent link">⚓︎</a></h4>
+<p><code>Dictionary&lt;TKey,TValue&gt;</code> 是 .NET System.Collections.Generic 中提供的保存键值元素的集合，它替代了早期 System.Collections 中的 <code>Hashtable</code> 。当你需要使用一组键到一组值的映射时，可以考虑使用该类型。</p>
+<p>字典中的每一个添加项都由一个值及其关联键组成。通过键检索值非常快，接近于O(1)，因为Dictionary 类被实现为哈希表。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Dictionary&lt;TKey,TValue&gt; 具有以下特点：<br/>
+<img alt="1⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/31-20e3.svg" title=":one:"/> 元素无序性。存储的元素是无序的，字典根据元素添加的顺序存储元素。<br/>
+<img alt="2⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/32-20e3.svg" title=":two:"/> Key 不能相同，但 Value 可以。字典通过相等比较器确保每个键都是唯一的，只要一个对象被用作键，它就不能以任何影响其哈希值的方式改变。<br/>
+<img alt="3⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/33-20e3.svg" title=":three:"/> Key 不能为 null，但 Value 可以。如果类型 TValue 是引用类型，那么它可以取 null，但键不可以。<br/>
+<img alt="4⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/34-20e3.svg" title=":four:"/> 非线程安全的。执行多次读取操作是安全的，但如果在读取时修改集合，则会出现问题。</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>尽管 Hashtable 是线程安全的，但仍不建议使用它，有关线程安全的替代，请参阅 <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.collections.concurrent.concurrentdictionary-2?view=net-7.0">ConcurrentDictionary&lt;TKey,TValue&gt;</a> 类或 <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.collections.immutable.immutabledictionary-2?view=net-7.0">ImmutableDictionary&lt;TKey,TValue&gt;</a> 类。</p>
+</div>
+<p>为了便于枚举，字典中的每一项都被视为表示值及其键的 <a href="https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.keyvaluepair?view=net-7.0">KeyValuePair&lt;TKey,TValue&gt;</a> 结构。返回项的顺序未定义。由于Dictionary 是键和值的集合，因此元素类型既不是键的类型也不是值的类型。相反，元素类型是键类型和值类型的 KeyValuePair ，你可以在遍历时用到这个类型。</p>
+<h4 id="_7">继承体系<a class="headerlink" href="#_7" title="Permanent link">⚓︎</a></h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Dictionary</label><label for="__tabbed_3_2">Hashtable</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Dictionary</span><span class="o">&lt;</span><span class="n">TKey</span><span class="p">,</span><span class="n">TValue</span><span class="o">&gt;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span>
+</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span>
+</span><span id="__span-4-3"><a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="p">.</span><span class="n">ICollection</span><span class="o">&lt;</span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">KeyValuePair</span><span class="o">&lt;</span><span class="n">TKey</span><span class="p">,</span><span class="n">TValue</span><span class="o">&gt;&gt;</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-4-4"><a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="p">.</span><span class="n">IDictionary</span><span class="o">&lt;</span><span class="n">TKey</span><span class="p">,</span><span class="n">TValue</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-4-5"><a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">    </span><span class="p">.</span><span class="n">IEnumerable</span><span class="o">&lt;</span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">KeyValuePair</span><span class="o">&lt;</span><span class="n">TKey</span><span class="p">,</span><span class="n">TValue</span><span class="o">&gt;&gt;</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-4-6"><a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="p">.</span><span class="n">IReadOnlyCollection</span><span class="o">&lt;</span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">KeyValuePair</span><span class="o">&lt;</span><span class="n">TKey</span><span class="p">,</span><span class="n">TValue</span><span class="o">&gt;&gt;</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-4-7"><a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="p">.</span><span class="n">IReadOnlyDictionary</span><span class="o">&lt;</span><span class="n">TKey</span><span class="p">,</span><span class="n">TValue</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-4-8"><a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">IDictionary</span><span class="p">,</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">Runtime</span><span class="p">.</span><span class="n">Serialization</span>
+</span><span id="__span-4-9"><a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">    </span><span class="p">.</span><span class="n">IDeserializationCallback</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-4-10"><a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">    </span><span class="p">.</span><span class="n">ISerializable</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Hashtable</span><span class="w"> </span><span class="p">:</span><span class="w"> </span>
+</span><span id="__span-5-2"><a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="n">ICloneable</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-5-3"><a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">IDictionary</span><span class="p">,</span>
+</span><span id="__span-5-4"><a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="n">Runtime</span><span class="p">.</span><span class="n">Serialization</span><span class="p">.</span><span class="n">IDeserializationCallback</span><span class="p">,</span>
+</span><span id="__span-5-5"><a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="n">Runtime</span><span class="p">.</span><span class="n">Serialization</span><span class="p">.</span><span class="n">ISerializable</span>
+</span></code></pre></div>
+</div>
+</div>
+</input></input></div>
+<h4 id="_8">基本使用<a class="headerlink" href="#_8" title="Permanent link">⚓︎</a></h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Dictionary</label><label for="__tabbed_4_2">Hashtable</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</input></input></div>
+<h2 id="_9">四、集<a class="headerlink" href="#_9" title="Permanent link">⚓︎</a></h2>
+<p>集（Set）和列表类似，它也可以存储一组元素，与 List 不同的是，Set 不允许重复元素且无法索引。它与数学概念中的集合一致。</p>
+<h4 id="net_2">.NET 类<a class="headerlink" href="#net_2" title="Permanent link">⚓︎</a></h4>
+<p><code>HashSet&lt;T&gt;</code> 是 .NET System.Collections.Generic 中提供的保存非重复元素的集合，在 System.Collcetion 中没有类似的类。</p>
+<p>HashSet 类基于数学集模型，提供了高性能的集合操作，如交集、并集、差集等。Set 是不包含重复元素的集合，其元素没有特定的顺序。HashSet 类提供了类似于访问 Dictionary 或 Hashtable 集合的键的高性能集操作。简单来说，HashSet 类可以看作是一个没有值的 Dictionary 集合。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>HashSet 具有以下特点：<br/>
+<img alt="1⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/31-20e3.svg" title=":one:"/> 元素无序性。存储的元素是无序的，并且没有<strong>不能通过索引器获取元素</strong>。<br/>
+<img alt="2⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/32-20e3.svg" title=":two:"/> 不能存储重复元素。该集合不会将一个已经存在的元素再次存储到集合中。<br/>
+<img alt="3⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/33-20e3.svg" title=":three:"/> 允许存储 null 。该集合允许存储 null，但只会存储一次。<br/>
+<img alt="4⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/34-20e3.svg" title=":four:"/> 非线程安全的。</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>HashSet 集合没有排序，不能包含重复的元素。对于应用程序，如果顺序或元素复制比性能更重要，请考虑将List 类与 Sort 方法结合使用。</p>
+</div>
+<h4 id="_10">继承体系<a class="headerlink" href="#_10" title="Permanent link">⚓︎</a></h4>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">HashSet</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span>
+</span><span id="__span-6-2"><a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">ICollection</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-6-3"><a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">IEnumerable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-6-4"><a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">IReadOnlyCollection</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-6-5"><a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">IReadOnlySet</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-6-6"><a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">ISet</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-6-7"><a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="n">Runtime</span><span class="p">.</span><span class="n">Serialization</span><span class="p">.</span><span class="n">IDeserializationCallback</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-6-8"><a href="#__codelineno-6-8" id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="n">Runtime</span><span class="p">.</span><span class="n">Serialization</span><span class="p">.</span><span class="n">ISerializable</span>
+</span></code></pre></div>
+<h4 id="_11">基本使用<a class="headerlink" href="#_11" title="Permanent link">⚓︎</a></h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">HashSet</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</input></div>
+<h2 id="_12">五、排序列表<a class="headerlink" href="#_12" title="Permanent link">⚓︎</a></h2>
+<h4 id="net_3">.NET 类<a class="headerlink" href="#net_3" title="Permanent link">⚓︎</a></h4>
+<p><code>SorteList&lt;T&gt;</code> 是 .NET System.Collections.Generic 命名空间中提供的基于可自定义 <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.collections.generic.icomparer-1?view=net-7.0">IComparer&lt;T&gt;</a> 实现 <strong>按键进行排序</strong> 的 <strong>键/值对</strong> 的集合，它替代了 System.Collections 中的 <code>SortedList</code> 类。</p>
+<p>SortedList&lt;TKey,TValue&gt;泛型类是一个具有 O(log n) 检索的键/值对数组，其中 n 是列表中元素的数量。它支持通过 <code>Keys</code> 和 <code>Values</code> 属性索引器返回对键和值进行高效的检索。访问属性时不需要重新生成列表，因为列表只是键和值的内部数组的包装器。下面的代码展示了 Values 属性从一个排序的字符串列表中索引检索值的用法:
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-7-1"><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kt">string</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mySortedList</span><span class="p">.</span><span class="n">Values</span><span class="p">[</span><span class="m">3</span><span class="p">];</span>
+</span></code></pre></div></p>
+<p>SortedList 中的每个元素都可以作为 KeyValuePair<tkey,tvalue> 对象检索，你可以在遍历的时候使用它：
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-8-1"><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="k">foreach</span><span class="p">(</span><span class="w"> </span><span class="n">KeyValuePair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">kvp</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">mySortedList</span><span class="w"> </span><span class="p">)</span>
+</span><span id="__span-8-2"><a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="p">{</span>
+</span><span id="__span-8-3"><a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"Key = {0}, Value = {1}"</span><span class="p">,</span><span class="w"> </span><span class="n">kvp</span><span class="p">.</span><span class="n">Key</span><span class="p">,</span><span class="w"> </span><span class="n">kvp</span><span class="p">.</span><span class="n">Value</span><span class="p">);</span>
+</span><span id="__span-8-4"><a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="p">}</span>
+</span></code></pre></div></tkey,tvalue></p>
+<p>SortedList 的容量是 SortedList 可以容纳的元素数量。当元素被添加时，通过重新分配内部数组，容量会根据需要自动增加。容量可以通过调用 <code>TrimExcess</code> 方法或显式设置 Capacity 属性来减小。减小容量会重新分配内存并复制 SortedList 中的所有元素。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>SortedList&lt;T&gt;</code> 具有以下特点：<br/>
+<img alt="1⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/31-20e3.svg" title=":one:"/> 元素有序。基于比较器 <code>Comparer&lt;T&gt;</code> 实现对键的排序；<br/>
+<img alt="2⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/32-20e3.svg" title=":two:"/> 允许键重复，但不允许值重复。键用于索引值，每个键必须是唯一的；<br/>
+<img alt="3⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/33-20e3.svg" title=":three:"/> 键不允许为 null ，但值可以。如果列表中的值类型TValue是引用类型，则值可以为空；<br/>
+<img alt="4⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/34-20e3.svg" title=":four:"/> 非线程安全的。为了保证枚举期间的线程安全，可以在整个枚举期间锁定集合。要允许多个线程访问集合进行读写，必须实现自己的同步。</p>
+</div>
+<h4 id="_13">继承体系<a class="headerlink" href="#_13" title="Permanent link">⚓︎</a></h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"/><div class="tabbed-labels"><label for="__tabbed_6_1">SortedList&lt;T&gt;</label><label for="__tabbed_6_2">SortedList</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-9-1"><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">SortedList</span><span class="o">&lt;</span><span class="n">TKey</span><span class="p">,</span><span class="n">TValue</span><span class="o">&gt;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span>
+</span><span id="__span-9-2"><a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="n">System</span><span class="p">.</span><span class="n">Collections</span>
+</span><span id="__span-9-3"><a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">    </span><span class="p">.</span><span class="n">IDictionary</span><span class="p">,</span>
+</span><span id="__span-9-4"><a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">    </span><span class="p">.</span><span class="n">Generic</span>
+</span><span id="__span-9-5"><a href="#__codelineno-9-5" id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">        </span><span class="p">.</span><span class="n">ICollection</span><span class="o">&lt;</span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">KeyValuePair</span><span class="o">&lt;</span><span class="n">TKey</span><span class="p">,</span><span class="n">TValue</span><span class="o">&gt;&gt;</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-9-6"><a href="#__codelineno-9-6" id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">        </span><span class="p">.</span><span class="n">IDictionary</span><span class="o">&lt;</span><span class="n">TKey</span><span class="p">,</span><span class="n">TValue</span><span class="o">&gt;</span><span class="p">,</span>
+</span><span id="__span-9-7"><a href="#__codelineno-9-7" id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">        </span><span class="p">.</span><span class="n">IEnumerable</span><span class="o">&lt;</span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">KeyValuePair</span><span class="o">&lt;</span><span class="n">TKey</span><span class="p">,</span><span class="n">TValue</span><span class="o">&gt;&gt;</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-9-8"><a href="#__codelineno-9-8" id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">        </span><span class="p">.</span><span class="n">IReadOnlyCollection</span><span class="o">&lt;</span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">KeyValuePair</span><span class="o">&lt;</span><span class="n">TKey</span><span class="p">,</span><span class="n">TValue</span><span class="o">&gt;&gt;</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-9-9"><a href="#__codelineno-9-9" id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">        </span><span class="p">.</span><span class="n">IReadOnlyDictionary</span><span class="o">&lt;</span><span class="n">TKey</span><span class="p">,</span><span class="n">TValue</span><span class="o">&gt;</span>
+</span><span id="__span-9-10"><a href="#__codelineno-9-10" id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="c1">// 缩进替代省略命名空间</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-10-1"><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">SortedList</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ICloneable</span><span class="p">,</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">IDictionary</span>
+</span></code></pre></div>
+</div>
+</div>
+</input></div>
+<h4 id="_14">基本使用<a class="headerlink" href="#_14" title="Permanent link">⚓︎</a></h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio"/><input id="__tabbed_7_2" name="__tabbed_7" type="radio"/><div class="tabbed-labels"><label for="__tabbed_7_1">SortedList&lt;T&gt;</label><label for="__tabbed_7_2">SortedList</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="_15">七、堆栈<a class="headerlink" href="#_15" title="Permanent link">⚓︎</a></h2>
+<p>栈（Stack）是一种具有后进先出（Last In First Out, LIFO）的数据结构。</p>
+<h4 id="net_4">.NET 类<a class="headerlink" href="#net_4" title="Permanent link">⚓︎</a></h4>
+<p><code>Stack&lt;T&gt;</code> 是 .NET System.Colloections.Generic 中提供的存储相同指定类型实例的可变大小、后进先出集合，它替代了早期在 System.Collections 中提供的 <code>Stack</code> 类。当你需要临时存储信息时，堆栈和队列很有用。也就是说，您可能希望在检索元素值后丢弃元素。</p>
+<blockquote>
+<p>如果需要以相反的顺序访问信息，则使用栈；如果需要按照信息在集合中存储的顺序访问信息，则使用队列。</p>
+</blockquote>
+<p><code>Stack&lt;T\&gt;</code> 实现为<strong>数组</strong>，Stack 的容量是可以容纳的元素数量。当元素被添加到 Stack 时，通过重新分配内部数组，容量会根据需要自动增加，您可以通过调用 <code>TrimExcess</code> 方法来减少容量。</p>
+<p><code>Stack&lt;T&gt;</code> 具有三个主要操作：</p>
+<ol>
+<li><code>Push</code> 将一个&lt;T&gt;类型元素插入到堆栈的顶部；</li>
+<li><code>Pop</code> 从堆栈顶部移除一个&lt;T&gt;类型的元素；</li>
+<li><code>Peek</code> 返回一个位于堆栈顶部的元素，但不会从堆栈中删除它。</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<p>当 Stack&lt;T&gt; 容量不足时，通过重新分配内部数组，容量会根据需要自动增减。如果 Count 小于堆栈的容量，则 Push 是一个 O(1) 操作。如果容量需要增加以容纳新元素，则 Push 变成 O(n) 操作，其中 n 为 Count。Pop是一个O(1)操作。  </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Stack&lt;T&gt; 具有以下特点：<br/>
+<img alt="1⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/31-20e3.svg" title=":one:"/> 后进先出。最先被添加的元素被存储在栈底，后添加的元素先被取出。<br/>
+<img alt="2⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/32-20e3.svg" title=":two:"/> 元素可重复。允许添加重复元素。<br/>
+<img alt="3⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/33-20e3.svg" title=":three:"/> 元素可为 null 。 接受null作为引用类型的有效值。<br/>
+<img alt="4⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/34-20e3.svg" title=":four:"/> 非线程安全。该类不是线程安全的，当需要从多个线程并发访问集合时，请参阅ConcurrentStack&lt;T&gt; 类型</p>
+</div>
+<h4 id="_16">继承体系<a class="headerlink" href="#_16" title="Permanent link">⚓︎</a></h4>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-11-1"><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Stack</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span>
+</span><span id="__span-11-2"><a href="#__codelineno-11-2" id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">IEnumerable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-11-3"><a href="#__codelineno-11-3" id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">IReadOnlyCollection</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-11-4"><a href="#__codelineno-11-4" id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">ICollection</span>
+</span></code></pre></div>
+<h4 id="_17">基本使用<a class="headerlink" href="#_17" title="Permanent link">⚓︎</a></h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio"/><input id="__tabbed_8_2" name="__tabbed_8" type="radio"/><div class="tabbed-labels"><label for="__tabbed_8_1">Stack&lt;T&gt;</label><label for="__tabbed_8_2">Stack</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="_18">八、队列<a class="headerlink" href="#_18" title="Permanent link">⚓︎</a></h2>
+<p>队列（Queue）是一种具有先进先出（First In First Out, FIFO）的数据结构。</p>
+<h4 id="net_5">.NET 类<a class="headerlink" href="#net_5" title="Permanent link">⚓︎</a></h4>
+<p><code>Queue&lt;T&gt;</code> 是 .NET System.Colloections.Generic 中提供的存储相同指定类型实例的可变大小、先进先出集合，它替代了早期在 System.Collections 中提供的 <code>Queue</code> 类。当你需要临时存储信息时，堆栈和队列很有用。也就是说，您可能希望在检索元素值后丢弃元素。</p>
+<blockquote>
+<p>如果需要按照信息在集合中存储的顺序访问信息，则使用队列；如果需要以相反的顺序访问信息，则使用栈；</p>
+</blockquote>
+<p>该类将泛型队列实现为一个<strong>循环数组</strong>，Queue 的容量是 Queue 可以容纳的元素数量。当元素被添加到Queue 时，通过重新分配内部数组，容量会根据需要自动增加，您可以通过调用 <code>TrimExcess</code> 方法来减少容量。  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Queue 通过容量因子来完成扩容，新容量 = 容量因子 * 当前容量，容量因子默认为 2.0；</p>
+</div>
+<p><code>Queue&lt;T&gt;</code> 具有三个主要操作：</p>
+<ol>
+<li><code>Enqueue</code> 将一个 &lt;T&gt; 类型元素添加到队列的末尾；</li>
+<li><code>Dequeue</code> 从Queue 开始删除最老的元素；</li>
+<li><code>Peek</code> 返回一个位于队列开头的元素，但不会从队列中删除它。</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Queue&lt;T&gt; 具有以下特点：<br/>
+<img alt="1⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/31-20e3.svg" title=":one:"/> 先进先出。最先被添加的元素被存储在队列开头，先添加的元素先被取出。<br/>
+<img alt="2⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/32-20e3.svg" title=":two:"/> 元素可重复。允许添加重复元素。<br/>
+<img alt="3⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/33-20e3.svg" title=":three:"/> 元素可为 null 。 接受null作为引用类型的有效值。<br/>
+<img alt="4⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/34-20e3.svg" title=":four:"/> 非线程安全。该类不是线程安全的，当需要从多个线程并发访问集合时，请参阅ConcurrentQueue&lt;T&gt; 类</p>
+</div>
+<h4 id="_19">继承体系<a class="headerlink" href="#_19" title="Permanent link">⚓︎</a></h4>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-12-1"><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Queue</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span>
+</span><span id="__span-12-2"><a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">IEnumerable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span>
+</span><span id="__span-12-3"><a href="#__codelineno-12-3" id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">.</span><span class="n">IReadOnlyCollection</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-12-4"><a href="#__codelineno-12-4" id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">ICollection</span>
+</span></code></pre></div>
+<h4 id="_20">基本使用<a class="headerlink" href="#_20" title="Permanent link">⚓︎</a></h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio"/><input id="__tabbed_9_2" name="__tabbed_9" type="radio"/><div class="tabbed-labels"><label for="__tabbed_9_1">Queue&lt;T&gt;</label><label for="__tabbed_9_2">Queue</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="_21">九、点列阵<a class="headerlink" href="#_21" title="Permanent link">⚓︎</a></h2>
+<p>点列阵也称位数组，是用来存储位数据（0或1）集合结构。</p>
+<h4 id="net_6">.NET 类<a class="headerlink" href="#net_6" title="Permanent link">⚓︎</a></h4>
+<p><code>BitArray</code> 是 .NET System.Collections 命名空间下提供的存储 1 和 0 的紧缩型二进制数组类，它使用布尔值来表示，其中 true 表示位是开启的（1），false 表示位是关闭的（0）。当您需要存储位，但是事先不知道位数时，则使用点阵列。您可以使用<strong>整型索引</strong>从点阵列集合中访问各项，索引从零开始。</p>
+<p>BitArray 的容量（Capacity）总是与计数（Count）相同。元素的增加和减少通过 Length 属性加减完成，BitArray的大小由客户端控制；可以使用整数索引访问此集合中的元素。此集合中的索引是从零开始的，索引超过BitArray的末尾会抛出一个ArgumentException。</p>
+<p>BitArray类提供了在其他集合中找不到的方法，包括那些允许使用过滤器一次修改多个元素的方法，如<code>And</code>、<code>Or</code>、<code>Xor</code>、<code>not</code> 和 <code>SetAll</code>。</p>
+<p><code>System.Collections.Specialized</code> 命名空间下的 <code>BitVector32</code> 类是一个提供与 <code>BitArray</code> 相同功能的结构，但具有更快的性能。BitVector32 更快，因为它是一个值类型，因此内存分配在堆栈上，而BitArray 是一个引用类型，因此内存分配在堆上。BitVector32 可以存储32位，而 BitArray 可以存储可变数量的位。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>BitVector32存储位标志和小整数，因此对于不向用户公开的数据非常理想。然而，如果所需位标志的数量是未知的，是可变的，或者大于32，则使用BitArray代替。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>BitArray 具有以下特点：
+<img alt="1⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/31-20e3.svg" title=":one:"/>
+<img alt="2⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/32-20e3.svg" title=":two:"/> 允许元素重复。允许存储多个位值。
+<img alt="3⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/33-20e3.svg" title=":three:"/> 不允许存储 null。点列阵只能存储 true or false。
+<img alt="4⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/34-20e3.svg" title=":four:"/> 非线程安全的。为了保证枚举期间的线程安全，您可以在整个枚举期间锁定集合，或者捕获由其他线程所做的更改所导致的异常。</p>
+</div>
+<h4 id="_22">继承体系<a class="headerlink" href="#_22" title="Permanent link">⚓︎</a></h4>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-13-1"><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="err">```</span><span class="n">csharp</span>
+</span><span id="__span-13-2"><a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="k">public</span><span class="w"> </span><span class="k">sealed</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">BitArray</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ICloneable</span><span class="p">,</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">ICollection</span>
+</span></code></pre></div>
+<h4 id="_23">基本使用<a class="headerlink" href="#_23" title="Permanent link">⚓︎</a></h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio"/><div class="tabbed-labels"><label for="__tabbed_10_1">BitArray</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<form class="md-feedback" hidden="" name="feedback">
+<fieldset>
+<legend class="md-feedback__title">
+        本文章对您是否有帮助？
+      </legend>
+<div class="md-feedback__inner">
+<div class="md-feedback__list">
+<button class="md-feedback__icon md-icon" data-md-value="1" title="感谢帮助！" type="submit">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81Z"></path></svg>
+</button>
+<button class="md-feedback__icon md-icon" data-md-value="0" title="有待提升！" type="submit">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14Z"></path></svg>
+</button>
+</div>
+<div class="md-feedback__note">
+<div data-md-value="1" hidden="">
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+<div data-md-value="0" hidden="">
+              
+              
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="" rel="noopener" target="_blank">feedback form</a>.
+            </div>
+</div>
+</div>
+</fieldset>
+</form>
+</article>
+</div>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+            回到页面顶部
+          </button>
+</main>
+<footer class="md-footer">
+<nav aria-label="页脚" class="md-footer__inner md-grid">
+<a aria-label="上一页: 泛型" class="md-footer__link md-footer__link--prev" href="../03%20%E6%B3%9B%E5%9E%8B/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                  上一页
+                </span>
+                泛型
+              </div>
+</div>
+</a>
+<a aria-label="下一页: 特性" class="md-footer__link md-footer__link--next" href="../05%20%E7%89%B9%E6%80%A7/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                  下一页
+                </span>
+                特性
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © 2022 - 2023 Finnegan Will
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://space.bilibili.com/698590186?spm_id_from=333.1007.0.0" rel="noopener" target="_blank" title="BiliBili">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92.02c-26.45-.8-48.21-9.8-65.28-27.2C9.682 419.4.767 396.5 0 368.2V169.8c.767-26 9.682-47.6 26.74-65.7C43.81 87.75 65.57 78.77 92.02 78h29.38L96.05 52.19c-5.75-5.73-8.63-13-8.63-21.79 0-8.8 2.88-16.06 8.63-21.797C101.8 2.868 109.1 0 117.9 0s16.1 2.868 21.9 8.603L213.1 78h88l74.5-69.397C381.7 2.868 389.2 0 398 0c8.8 0 16.1 2.868 21.9 8.603 5.7 5.737 8.6 12.997 8.6 21.797 0 8.79-2.9 16.06-8.6 21.79L394.6 78h29.3c26.4.77 48 9.75 64.7 26.1zm-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96.05c-9.59.4-17.45 3.7-23.58 9.8-6.14 6.1-9.4 13.9-9.78 23.5v194.4c0 9.2 3.26 17 9.78 23.5s14.38 9.8 23.58 9.8H416.4c9.2 0 17-3.3 23.3-9.8 6.3-6.5 9.7-14.3 10.1-23.5V173.8zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5-9.6 0-17.5-3.2-23.6-9.5-6.1-6.3-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2 6.3-6.3 13.2-9.6 23.3-10 9.2.4 17 3.7 23.3 10zm191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.1 6.3-14 9.5-23.6 9.5-9.6 0-17.4-3.2-23.6-9.5-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2 6.3-6.3 14.1-9.6 23.3-10 9.2.4 17 3.7 23.3 10z"></path></svg>
+</a>
+<a class="md-social__link" href="https://github.com/finneganwill/material-csharp" rel="noopener" target="_blank" title="微博">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M407 177.6c7.6-24-13.4-46.8-37.4-41.7-22 4.8-28.8-28.1-7.1-32.8 50.1-10.9 92.3 37.1 76.5 84.8-6.8 21.2-38.8 10.8-32-10.3zM214.8 446.7C108.5 446.7 0 395.3 0 310.4c0-44.3 28-95.4 76.3-143.7C176 67 279.5 65.8 249.9 161c-4 13.1 12.3 5.7 12.3 6 79.5-33.6 140.5-16.8 114 51.4-3.7 9.4 1.1 10.9 8.3 13.1 135.7 42.3 34.8 215.2-169.7 215.2zm143.7-146.3c-5.4-55.7-78.5-94-163.4-85.7-84.8 8.6-148.8 60.3-143.4 116s78.5 94 163.4 85.7c84.8-8.6 148.8-60.3 143.4-116zM347.9 35.1c-25.9 5.6-16.8 43.7 8.3 38.3 72.3-15.2 134.8 52.8 111.7 124-7.4 24.2 29.1 37 37.4 12 31.9-99.8-55.1-195.9-157.4-174.3zm-78.5 311c-17.1 38.8-66.8 60-109.1 46.3-40.8-13.1-58-53.4-40.3-89.7 17.7-35.4 63.1-55.4 103.4-45.1 42 10.8 63.1 50.2 46 88.5zm-86.3-30c-12.9-5.4-30 .3-38 12.9-8.3 12.9-4.3 28 8.6 34 13.1 6 30.8.3 39.1-12.9 8-13.1 3.7-28.3-9.7-34zm32.6-13.4c-5.1-1.7-11.4.6-14.3 5.4-2.9 5.1-1.4 10.6 3.7 12.9 5.1 2 11.7-.3 14.6-5.4 2.8-5.2 1.1-10.9-4-12.9z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "content.code.copy", "content.code.annotate", "navigation.tracking", "navigation.footer"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../assets/javascripts/bundle.efa0ade1.min.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
