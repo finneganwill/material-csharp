@@ -6,6 +6,41 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://finneganwill.github.io/material-dotnet/adonet/01%20%E4%BA%86%E8%A7%A3ADO.NET/</loc>
+         <lastmod>2023-04-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://finneganwill.github.io/material-dotnet/adonet/02%20%E6%95%B0%E6%8D%AE%E6%8F%90%E4%BE%9B%E7%A8%8B%E5%BA%8F/</loc>
+         <lastmod>2023-04-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://finneganwill.github.io/material-dotnet/adonet/03%20%E6%95%B0%E6%8D%AE%E9%9B%86/</loc>
+         <lastmod>2023-04-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://finneganwill.github.io/material-dotnet/adonet/04%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%98%A0%E5%B0%84/</loc>
+         <lastmod>2023-04-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://finneganwill.github.io/material-dotnet/adonet/05%20%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E6%BA%90/</loc>
+         <lastmod>2023-04-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://finneganwill.github.io/material-dotnet/adonet/06%20%E6%A3%80%E7%B4%A2%E5%92%8C%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE/</loc>
+         <lastmod>2023-04-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://finneganwill.github.io/material-dotnet/adonet/07%20%E4%BA%8B%E5%8A%A1%E4%B8%8E%E5%B9%B6%E5%8F%91/</loc>
+         <lastmod>2023-04-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://finneganwill.github.io/material-dotnet/aspnet-core/01%20%E4%BA%86%E8%A7%A3ASP.NET/</loc>
          <lastmod>2023-04-03</lastmod>
          <changefreq>daily</changefreq>
@@ -122,6 +157,26 @@
     </url>
     <url>
          <loc>https://finneganwill.github.io/material-dotnet/csharp-foundation/08%20%E5%B8%B8%E7%94%A8%E7%B1%BB/</loc>
+         <lastmod>2023-04-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://finneganwill.github.io/material-dotnet/ef-core/01%20%E4%BA%86%E8%A7%A3EF%20Core/</loc>
+         <lastmod>2023-04-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://finneganwill.github.io/material-dotnet/linq/01%20%E4%BA%86%E8%A7%A3LINQ/</loc>
+         <lastmod>2023-04-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://finneganwill.github.io/material-dotnet/linq/02%20%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/</loc>
+         <lastmod>2023-04-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://finneganwill.github.io/material-dotnet/linq/03%20%E6%96%B9%E6%B3%95%E8%AF%AD%E6%B3%95/</loc>
          <lastmod>2023-04-03</lastmod>
          <changefreq>daily</changefreq>
     </url>

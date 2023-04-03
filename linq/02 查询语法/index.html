@@ -5,11 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://finneganwill.github.io/material-dotnet/common/thanks/" rel="canonical"/>
-<link href="../mkdocs/" rel="prev"/>
+<link href="https://finneganwill.github.io/material-dotnet/linq/02%20%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/" rel="canonical"/>
+<link href="../01%20%E4%BA%86%E8%A7%A3LINQ/" rel="prev"/>
+<link href="../../aspnet-core/01%20%E4%BA%86%E8%A7%A3ASP.NET/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
-<title>Thanks - .Net Material</title>
+<title>查询语法 - .Net Material</title>
 <link href="../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -36,6 +37,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#_1">
+          跳转至
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -57,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Thanks
+              查询语法
             
           </span>
 </div>
@@ -100,7 +104,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../linq/01%20%E4%BA%86%E8%A7%A3LINQ/">
+<a class="md-tabs__link md-tabs__link--active" href="../01%20%E4%BA%86%E8%A7%A3LINQ/">
         LINQ
       </a>
 </li>
@@ -115,7 +119,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../author/">
+<a class="md-tabs__link" href="../../common/author/">
         关于
       </a>
 </li>
@@ -275,25 +279,26 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
           LINQ
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
           LINQ
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../linq/01%20%E4%BA%86%E8%A7%A3LINQ/">
+<a class="md-nav__link" href="../01%20%E4%BA%86%E8%A7%A3LINQ/">
         了解LINQ
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../linq/02%20%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
         查询语法
       </a>
 </li>
@@ -340,31 +345,30 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
 <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
           关于
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
           关于
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../author/">
+<a class="md-nav__link" href="../../common/author/">
         Author
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../mkdocs/">
+<a class="md-nav__link" href="../../common/mkdocs/">
         MkDocs
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../common/thanks/">
         Thanks
       </a>
 </li>
@@ -386,10 +390,7 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>Thanks</h1>
-<p><a href="https://learn.microsoft.com/zh-cn/dotnet/csharp/">C# 文档 - 入门、教程、参考。 | Microsoft Learn</a> </p>
-<p><a href="https://www.runoob.com/csharp/csharp-tutorial.html">C# 教程 | 菜鸟教程 (runoob.com)</a></p>
-<p><a href="http://c.biancheng.net/csharp/">C#教程 | C语言中文网 (biancheng.net)</a></p>
+<h1 id="_1">查询语法<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h1>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">
@@ -433,7 +434,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: MkDocs" class="md-footer__link md-footer__link--prev" href="../mkdocs/" rel="prev">
+<a aria-label="上一页: 了解LINQ" class="md-footer__link md-footer__link--prev" href="../01%20%E4%BA%86%E8%A7%A3LINQ/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -442,8 +443,21 @@
 <span class="md-footer__direction">
                   上一页
                 </span>
-                MkDocs
+                了解LINQ
               </div>
+</div>
+</a>
+<a aria-label="下一页: 了解ASP.NET" class="md-footer__link md-footer__link--next" href="../../aspnet-core/01%20%E4%BA%86%E8%A7%A3ASP.NET/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                  下一页
+                </span>
+                了解ASP.NET
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
 </div>
 </a>
 </nav>

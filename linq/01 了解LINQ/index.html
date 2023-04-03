@@ -5,11 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://finneganwill.github.io/material-dotnet/common/thanks/" rel="canonical"/>
-<link href="../mkdocs/" rel="prev"/>
+<link href="https://finneganwill.github.io/material-dotnet/linq/01%20%E4%BA%86%E8%A7%A3LINQ/" rel="canonical"/>
+<link href="../../csharp-advanced/08%20%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/" rel="prev"/>
+<link href="../02%20%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
-<title>Thanks - .Net Material</title>
+<title>了解LINQ - .Net Material</title>
 <link href="../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -36,6 +37,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#linq">
+          跳转至
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -57,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Thanks
+              了解LINQ
             
           </span>
 </div>
@@ -100,7 +104,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../linq/01%20%E4%BA%86%E8%A7%A3LINQ/">
+<a class="md-tabs__link md-tabs__link--active" href="./">
         LINQ
       </a>
 </li>
@@ -115,7 +119,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../author/">
+<a class="md-tabs__link" href="../../common/author/">
         关于
       </a>
 </li>
@@ -275,25 +279,72 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
           LINQ
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
           LINQ
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../linq/01%20%E4%BA%86%E8%A7%A3LINQ/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          了解LINQ
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         了解LINQ
       </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#linq_1">
+    一、LINQ 是什么
+  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../linq/02%20%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/">
+<a class="md-nav__link" href="#linq_2">
+    二、LINQ 查询
+  </a>
+<nav aria-label="二、LINQ 查询" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#01-linq">
+    01 LINQ查询过程
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#02">
+    02 数据源
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#03">
+    03 查询体
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#04">
+    04 查询执行
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../02%20%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/">
         查询语法
       </a>
 </li>
@@ -340,31 +391,30 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
 <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
           关于
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
           关于
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../author/">
+<a class="md-nav__link" href="../../common/author/">
         Author
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../mkdocs/">
+<a class="md-nav__link" href="../../common/mkdocs/">
         MkDocs
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../common/thanks/">
         Thanks
       </a>
 </li>
@@ -380,16 +430,143 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#linq_1">
+    一、LINQ 是什么
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#linq_2">
+    二、LINQ 查询
+  </a>
+<nav aria-label="二、LINQ 查询" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#01-linq">
+    01 LINQ查询过程
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#02">
+    02 数据源
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#03">
+    03 查询体
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#04">
+    04 查询执行
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>Thanks</h1>
-<p><a href="https://learn.microsoft.com/zh-cn/dotnet/csharp/">C# 文档 - 入门、教程、参考。 | Microsoft Learn</a> </p>
-<p><a href="https://www.runoob.com/csharp/csharp-tutorial.html">C# 教程 | 菜鸟教程 (runoob.com)</a></p>
-<p><a href="http://c.biancheng.net/csharp/">C#教程 | C语言中文网 (biancheng.net)</a></p>
+<h1 id="linq">了解 LINQ<a class="headerlink" href="#linq" title="Permanent link">⚓︎</a></h1>
+<h2 id="linq_1">一、LINQ 是什么<a class="headerlink" href="#linq_1" title="Permanent link">⚓︎</a></h2>
+<p>语言集成查询（Language integrated query，LINQ）是 .Net 3.5 和 Visual Studio 2008 引入的功能强大的查询语言，是一系列直接将查询功能集成到 C# 语言的技术统称。例如，SQL 是一种结构化查询语言，用于保存和检索数据库中的数据。同样，LINQ 是 C＃和 VB.NET 中内置的结构化查询语法，用于从不同类型的数据源中检索数据。</p>
+<p>在 C# 中可为以下对象编写 LINQ 查询：SQL Server 数据库、XML 文档、ADO.NET 数据集以及支持<code>IEnumerable</code> 或泛型 <code>IEnumerable&lt;T&gt;</code> 接口的任何对象集合。 此外，第三方也为许多 Web 服务和其他数据库实现提供了 LINQ 支持。</p>
+<p>LINQ 查询将结果作为对象返回。它使您可以在结果集上使用面向对象的方法，而不必担心将不同格式的结果转换为对象。下面为 LINQ 的简单示例，您可以从中体会它的用法和作用：</p>
+<p>示例：
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">// 设置数据源</span>
+</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kt">int</span><span class="p">[]</span><span class="w"> </span><span class="n">scores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="m">97</span><span class="p">,</span><span class="w"> </span><span class="m">92</span><span class="p">,</span><span class="w"> </span><span class="m">81</span><span class="p">,</span><span class="w"> </span><span class="m">60</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1">// 定义LINQ查询表达式</span>
+</span><span id="__span-0-5"><a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">IEnumerable</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">scoreQuery</span><span class="w"> </span><span class="o">=</span>
+</span><span id="__span-0-6"><a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="k">from</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">scores</span>
+</span><span id="__span-0-7"><a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="k">where</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">80</span>
+</span><span id="__span-0-8"><a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="k">select</span><span class="w"> </span><span class="n">score</span><span class="p">;</span>
+</span><span id="__span-0-9"><a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="c1">// 执行查询</span>
+</span><span id="__span-0-11"><a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">scoreQuery</span><span class="p">)</span>
+</span><span id="__span-0-12"><a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="p">{</span>
+</span><span id="__span-0-13"><a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" "</span><span class="p">);</span>
+</span><span id="__span-0-14"><a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="p">}</span>
+</span><span id="__span-0-15"><a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a>
+</span><span id="__span-0-16"><a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="c1">// Output: 97 92 81</span>
+</span></code></pre></div></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>在语法上，Linq 与 SQL 很相似，如果你掌握了SQL语法你可以很轻松上手 Linq。</p>
+</div>
+<p>LINQ的优势（<a href="https://www.cainiaojc.com/linq/why-linq.html">参考</a>）：</p>
+<ul>
+<li><strong>Familiar language（熟悉的语言）:</strong> 开发人员不必为每种类型的数据源或数据格式学习新的查询语言。</li>
+<li><strong>Less coding（更少的代码）:</strong> 与更传统的方法相比，它减少了要编写的代码量。</li>
+<li><strong>Readable code（代码可读性）:</strong> LINQ使代码更具可读性，因此其他开发人员可以轻松地理解和维护它。</li>
+<li><strong>Standardized way of querying multiple data sources（查询多个数据源的标准化方法）:</strong> 相同的LINQ语法可用于查询多个数据源。</li>
+<li><strong>Compile time safety of queries（查询的编译时安全性）:</strong> 它在编译时提供对象的类型检查。</li>
+<li><strong>IntelliSense support（智能感知支持）:</strong> LINQ为通用集合提供了IntelliSense。</li>
+<li><strong>Shaping data（数据形状）:</strong> 您可以以不同形状检索数据。</li>
+</ul>
+<h2 id="linq_2">二、LINQ 查询<a class="headerlink" href="#linq_2" title="Permanent link">⚓︎</a></h2>
+<h3 id="01-linq">01 LINQ查询过程<a class="headerlink" href="#01-linq" title="Permanent link">⚓︎</a></h3>
+<p>所有 LINQ 查询操作都由以下三个不同的操作组成：</p>
+<ol>
+<li>获取数据源（Data source）。</li>
+<li>创建查询（Query creation）。</li>
+<li>执行查询（Query execution）。</li>
+</ol>
+<p>在 LINQ 中，查询的执行不同于查询本身，仅通过创建查询变量不会检索到任何数据。下图演示完整的查询操作：
+![[LINQ查询.png]]</p>
+<h3 id="02">02 数据源<a class="headerlink" href="#02" title="Permanent link">⚓︎</a></h3>
+<p>LINQ 支持诸多类型的数据源，包括 <strong>SQL Server</strong>、<strong>XML文件</strong>、<strong>ADO.NET DataSet</strong>、支持 <code>IEnumerable</code> 或泛型 <code>IEnumerable&lt;T&gt;</code> 接口的任何对象<strong>集合</strong>以及 LINQ 提供程序可用的任何其他格式的数据等。</p>
+<p>示例中的数据源为数组，它隐式地支持泛型 <code>IEnumerable&lt;T&gt;</code> 接口，因此可以作为数据源进行LINQ查询。可查询类型不需要进行修改或特殊处理就可以用作 LINQ 数据源，如果源数据还没有作为可查询类型出现在内存中，则 LINQ 提供程序必须以此方式表示源数据。 例如，LINQ to XML 将 XML 文档加载到可查询的 <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.xml.linq.xelement">XElement</a> 类型中：
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1">// Create a data source from an XML document.</span>
+</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="c1">// using System.Xml.Linq;</span>
+</span><span id="__span-1-3"><a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">XElement</span><span class="w"> </span><span class="n">contacts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">XElement</span><span class="p">.</span><span class="n">Load</span><span class="p">(</span><span class="s">@"c:\myContactList.xml"</span><span class="p">);</span>
+</span></code></pre></div></p>
+<h3 id="03">03 查询体<a class="headerlink" href="#03" title="Permanent link">⚓︎</a></h3>
+<p>查询指定要从数据源中检索的信息。 查询还可以指定在返回这些信息之前如何对其进行排序、分组和结构化。 查询存储在查询变量中，并用查询表达式进行初始化。</p>
+<p>目前需要注意的是，在 LINQ 中，查询变量本身不执行任何操作并且不返回任何数据。 它只是存储在以后某个时刻执行查询时为生成结果而必需的信息。</p>
+<h3 id="04">04 查询执行<a class="headerlink" href="#04" title="Permanent link">⚓︎</a></h3>
+<p>查询执行分为延迟执行与立即执行。</p>
+<p><strong>延迟执行</strong> 
+上述示例中采用的是延迟执行，查询过程延迟到 <code>foreach</code> 中，当代码执行至 <code>foreach</code> 时，才会进行查询。
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">scoreQuery</span><span class="p">)</span>
+</span><span id="__span-2-2"><a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="p">{</span>
+</span><span id="__span-2-3"><a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" "</span><span class="p">);</span>
+</span><span id="__span-2-4"><a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="p">}</span>
+</span></code></pre></div>
+由于查询变量本身从不保存查询结果，因此可以根据需要随意执行查询。 例如，可以通过一个单独的应用程序持续更新数据库。 在应用程序中，可以创建一个检索最新数据的查询，并可以按某一时间间隔反复执行该查询以便每次检索不同的结果。</p>
+<p><strong>立即执行</strong> 
+对一系列源元素执行聚合函数的查询首先循环访问这些元素。 <code>Count</code>、<code>Max</code>、<code>Average</code> 和 <code>First</code> 就属于此类查询，这些查询在执行时不使用显式 <code>foreach</code> 语句。
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kt">var</span><span class="w"> </span><span class="n">evenNumQuery</span><span class="w"> </span><span class="o">=</span>
+</span><span id="__span-3-2"><a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="k">from</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">numbers</span>
+</span><span id="__span-3-3"><a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="nf">where</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span>
+</span><span id="__span-3-4"><a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="k">select</span><span class="w"> </span><span class="n">num</span><span class="p">;</span>
+</span><span id="__span-3-5"><a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="kt">int</span><span class="w"> </span><span class="n">evenNumCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">evenNumQuery</span><span class="p">.</span><span class="n">Count</span><span class="p">();</span>
+</span></code></pre></div></p>
+<p>要强制立即执行任何查询并缓存其结果，可调用 <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.linq.enumerable.tolist">ToList</a> 或 <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.linq.enumerable.toarray">ToArray</a> 方法。
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">List</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">numQuery2</span><span class="w"> </span><span class="o">=</span>
+</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="p">(</span><span class="k">from</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">numbers</span>
+</span><span id="__span-4-3"><a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">     </span><span class="k">where</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span>
+</span><span id="__span-4-4"><a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">     </span><span class="k">select</span><span class="w"> </span><span class="n">num</span><span class="p">).</span><span class="n">ToList</span><span class="p">();</span>
+</span><span id="__span-4-5"><a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>
+</span><span id="__span-4-6"><a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="c1">// or like this:</span>
+</span><span id="__span-4-7"><a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="c1">// numQuery3 is still an int[]</span>
+</span><span id="__span-4-8"><a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a>
+</span><span id="__span-4-9"><a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="kt">var</span><span class="w"> </span><span class="n">numQuery3</span><span class="w"> </span><span class="o">=</span>
+</span><span id="__span-4-10"><a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">    </span><span class="p">(</span><span class="k">from</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">numbers</span>
+</span><span id="__span-4-11"><a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">     </span><span class="k">where</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span>
+</span><span id="__span-4-12"><a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">     </span><span class="k">select</span><span class="w"> </span><span class="n">num</span><span class="p">).</span><span class="n">ToArray</span><span class="p">();</span>
+</span></code></pre></div>
+此外，还可以通过在紧跟查询表达式之后的位置放置一个 <code>foreach</code> 循环来强制执行查询。 但是，通过调用 <code>ToList</code> 或 <code>ToArray</code>，也可以将所有数据缓存在单个集合对象中。</p>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">
@@ -433,7 +610,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: MkDocs" class="md-footer__link md-footer__link--prev" href="../mkdocs/" rel="prev">
+<a aria-label="上一页: 文件处理" class="md-footer__link md-footer__link--prev" href="../../csharp-advanced/08%20%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -442,8 +619,21 @@
 <span class="md-footer__direction">
                   上一页
                 </span>
-                MkDocs
+                文件处理
               </div>
+</div>
+</a>
+<a aria-label="下一页: 查询语法" class="md-footer__link md-footer__link--next" href="../02%20%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                  下一页
+                </span>
+                查询语法
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
 </div>
 </a>
 </nav>
