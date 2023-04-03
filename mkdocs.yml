@@ -13,7 +13,7 @@ copyright: Copyright &copy; 2022 - 2023 Finnegan Will
 
 # 导航
 nav:
-    - Home: 'common/index.md'
+    - Home: 'index.md'
 
     - C#: 
       - C#基础:
