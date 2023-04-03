@@ -37,13 +37,13 @@ nav:
         - 文件处理: 'csharp-advanced/08 文件处理.md'
 #      - 匿名函数: csharp-advanced/
 #      - 指针变量: csharp-advanced/
-#      
+
+    - LINQ:
+      - 了解LINQ: 'linq/01 了解LINQ.md'
+      - 查询语法: 'linq/02 查询语法.md'
 
     - ASP.NET Core: 
       - 了解ASP.NET: 'aspnet-core/01 了解ASP.NET.md'
-
-    - LINQ:
-      - 了解LINQ: 'linq/01 了解LINQ'
 
     - 关于: 
       - Author: 'common/author.md'

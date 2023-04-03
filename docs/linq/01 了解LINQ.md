@@ -1,4 +1,4 @@
-# LINQ 简介
+# 了解 LINQ
 
 ## 一、LINQ 是什么
 语言集成查询（Language integrated query，LINQ）是 .Net 3.5 和 Visual Studio 2008 引入的功能强大的查询语言，是一系列直接将查询功能集成到 C# 语言的技术统称。例如，SQL 是一种结构化查询语言，用于保存和检索数据库中的数据。同样，LINQ 是 C＃和 VB.NET 中内置的结构化查询语法，用于从不同类型的数据源中检索数据。
@@ -67,13 +67,30 @@ XElement contacts = XElement.Load(@"c:\myContactList.xml");
 目前需要注意的是，在 LINQ 中，查询变量本身不执行任何操作并且不返回任何数据。 它只是存储在以后某个时刻执行查询时为生成结果而必需的信息。
 
 ### 04 查询执行
-查询执行分为延迟执行与立即执行，上述示例中采用的是延迟执行，查询过程延迟到 `foreach` 中，当代码执行至 foreach 时，才会进行查询。
+查询执行分为延迟执行与立即执行。
 
 **延迟执行** 
+上述示例中采用的是延迟执行，查询过程延迟到 `foreach` 中，当代码执行至 `foreach` 时，才会进行查询。
+```csharp
+foreach (int i in scoreQuery)
+{
+    Console.Write(i + " ");
+}
+```
 由于查询变量本身从不保存查询结果，因此可以根据需要随意执行查询。 例如，可以通过一个单独的应用程序持续更新数据库。 在应用程序中，可以创建一个检索最新数据的查询，并可以按某一时间间隔反复执行该查询以便每次检索不同的结果。
 
 **立即执行** 
-对一系列源元素执行聚合函数的查询必须首先循环访问这些元素。 `Count`、`Max`、`Average` 和 `First` 就属于此类查询。要强制立即执行任何查询并缓存其结果，可调用 [ToList](https://learn.microsoft.com/zh-cn/dotnet/api/system.linq.enumerable.tolist) 或 [ToArray](https://learn.microsoft.com/zh-cn/dotnet/api/system.linq.enumerable.toarray) 方法。
+对一系列源元素执行聚合函数的查询首先循环访问这些元素。 `Count`、`Max`、`Average` 和 `First` 就属于此类查询，这些查询在执行时不使用显式 `foreach` 语句。
+```csharp
+var evenNumQuery =
+    from num in numbers
+    where (num % 2) == 0
+    select num;
+
+int evenNumCount = evenNumQuery.Count();
+```
+
+要强制立即执行任何查询并缓存其结果，可调用 [ToList](https://learn.microsoft.com/zh-cn/dotnet/api/system.linq.enumerable.tolist) 或 [ToArray](https://learn.microsoft.com/zh-cn/dotnet/api/system.linq.enumerable.toarray) 方法。
 ```csharp
 List<int> numQuery2 =
     (from num in numbers
