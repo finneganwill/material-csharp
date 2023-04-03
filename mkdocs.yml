@@ -42,6 +42,9 @@ nav:
     - ASP.NET Core: 
       - 了解ASP.NET: 'aspnet-core/01 了解ASP.NET.md'
 
+    - LINQ:
+      - 了解LINQ: 'linq/01 了解LINQ'
+
     - 关于: 
       - Author: 'common/author.md'
       - MkDocs: 'common/mkdocs.md'

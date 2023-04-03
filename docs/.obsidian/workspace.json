@@ -20,14 +20,19 @@
             }
           },
           {
-            "id": "790985b1ad92000f",
+            "id": "cc63a3e74f537aed",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "linq/01 了解LINQ.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "aspnet-core/02 Razor.md",
+                "file": "linq/01 了解LINQ.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "aspnet-core/02 Razor.md",
+                "file": "linq/01 了解LINQ.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "aspnet-core/02 Razor.md"
+                "file": "linq/01 了解LINQ.md"
               }
             }
           }
@@ -155,8 +160,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "a872eb570a40bce7",
+  "active": "cc63a3e74f537aed",
   "lastOpenFiles": [
+    "aspnet-core/02 Razor.md",
+    "linq/01 了解LINQ.md",
+    "linq",
+    "ef-core",
     "aspnet-core/03 MVC.md",
     "aspnet-core/01 了解ASP.NET.md",
     "aspnet-core/未命名.md",
