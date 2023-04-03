@@ -82,7 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 218.5
   },
   "right": {
     "id": "528b3f859f6fe830",
@@ -142,12 +142,12 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -162,8 +162,9 @@
   },
   "active": "cc63a3e74f537aed",
   "lastOpenFiles": [
-    "aspnet-core/02 Razor.md",
+    "LINQ查询.png",
     "linq/01 了解LINQ.md",
+    "aspnet-core/02 Razor.md",
     "linq",
     "ef-core",
     "aspnet-core/03 MVC.md",
