@@ -44,6 +44,7 @@ nav:
 
     - ADO.NET:
       - 了解ADO.NET: 'adonet/01 了解ADO.NET.md'
+      - 数据提供程序: 'adonet/02 数据提供程序'
 
     - EF Core:
       - 了解EF Core: 'ef-core/01 了解EF Core.md'
