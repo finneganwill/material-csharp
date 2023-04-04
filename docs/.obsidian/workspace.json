@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "adonet/03 数据集.md",
+                "file": "adonet/04 数据类型映射.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "adonet/03 数据集.md",
+                "file": "adonet/04 数据类型映射.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "adonet/03 数据集.md",
+                "file": "adonet/04 数据类型映射.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "adonet/03 数据集.md"
+                "file": "adonet/04 数据类型映射.md"
               }
             }
           }
@@ -149,8 +149,9 @@
   },
   "active": "fc7c783e49b9ab6a",
   "lastOpenFiles": [
-    "adonet/02 数据提供程序.md",
     "adonet/03 数据集.md",
+    "adonet/02 数据提供程序.md",
+    "adonet/DataSet对象模型.png",
     "adonet/04 数据类型映射.md",
     "adonet/07 事务与并发.md",
     "adonet/ADO.NET LINQ 技术.png",
