@@ -42,11 +42,14 @@ nav:
       - 了解LINQ: 'linq/01 了解LINQ.md'
       - 查询语法: 'linq/02 查询语法.md'
 
-    - ASP.NET Core: 
-      - 了解ASP.NET: 'aspnet-core/01 了解ASP.NET.md'
+    - ADO.NET:
+      - 了解ADO.NET: 'adonet/01 了解ADO.NET.md'
 
     - EF Core:
-      - 了解EF Core: 'ef-core/01 了解EF '
+      - 了解EF Core: 'ef-core/01 了解EF Core.md'
+
+    - ASP.NET Core: 
+      - 了解ASP.NET: 'aspnet-core/01 了解ASP.NET.md'
 
     - 关于: 
       - Author: 'common/author.md'
