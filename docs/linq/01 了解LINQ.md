@@ -28,7 +28,7 @@ foreach (int i in scoreQuery)
 ```
 
 !!! Tip
-	在语法上，Linq 与 SQL 很相似，如果你掌握了SQL语法你可以很轻松上手 Linq，但是从名字就可以看出，它仅支持查询功能。
+	在语法上，Linq 与 SQL 很相似，如果你掌握了SQL语法你可以很轻松上手 Linq。
 
 LINQ的优势（[参考](https://www.cainiaojc.com/linq/why-linq.html)）：
 

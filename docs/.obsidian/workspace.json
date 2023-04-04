@@ -30,9 +30,81 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "140a4ee8f270ead7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "adonet/02 数据提供程序.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1a89492c8c8af291",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "adonet/03 数据集.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c9f82ba9dd31b594",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "adonet/04 数据类型映射.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "52beaf583baa3ce9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "adonet/05 连接数据源.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7cbd374bf6a632b5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "adonet/06 检索和修改数据.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fc7c783e49b9ab6a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "adonet/01 了解ADO.NET.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -160,10 +232,16 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "d57f7aa2055fadb0",
+  "active": "fc7c783e49b9ab6a",
   "lastOpenFiles": [
-    "linq/01 了解LINQ.md",
+    "adonet/05 连接数据源.md",
+    "adonet/07 事务与并发.md",
+    "adonet/06 检索和修改数据.md",
+    "adonet/04 数据类型映射.md",
+    "adonet/03 数据集.md",
+    "adonet/02 数据提供程序.md",
     "adonet/01 了解ADO.NET.md",
+    "linq/01 了解LINQ.md",
     "linq/02 查询语法.md",
     "linq/03 方法语法.md",
     "ef-core/01 了解EF Core.md",
