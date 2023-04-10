@@ -52,6 +52,7 @@ LINQ to SQL 是适合不需要映射到概念模型的开发人员使用的有�
 
 ## 三、ADO.NET代码示例
 
+### 01 ADO.NET 连接 SQL Server
 ```csharp
 using System;
 using System.Data;
