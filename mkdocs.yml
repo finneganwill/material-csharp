@@ -153,6 +153,8 @@ extra:
 
 # MD扩展
 markdown_extensions:
+  # 脚注
+  - footnotes
   # 代码高亮
   - pymdownx.highlight:
       anchor_linenums: true
