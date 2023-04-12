@@ -6,6 +6,8 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://finneganwill.github.io/material-dotnet/adonet/05%20%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E6%BA%90/" rel="canonical"/>
+<link href="../04%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%98%A0%E5%B0%84/" rel="prev"/>
+<link href="../06%20%E5%88%9B%E5%BB%BA%E5%91%BD%E4%BB%A4/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
 <title>连接数据源 - .Net Material</title>
@@ -107,13 +109,18 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../aspnet-core/01%20%E4%BA%86%E8%A7%A3ASP.NET/">
-        ASP.NET Core
+<a class="md-tabs__link md-tabs__link--active" href="../01%20%E4%BA%86%E8%A7%A3ADO.NET/">
+        ADO.NET
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../ef-core/01 了解EF ">
+<a class="md-tabs__link" href="../../ef-core/01%20%E4%BA%86%E8%A7%A3EF%20Core/">
         EF Core
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../aspnet-core/01%20%E4%BA%86%E8%A7%A3ASP.NET/">
+        ASP.NET Core
       </a>
 </li>
 <li class="md-tabs__item">
@@ -302,21 +309,150 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-          ASP.NET Core
+          ADO.NET
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
-          ASP.NET Core
+          ADO.NET
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../aspnet-core/01%20%E4%BA%86%E8%A7%A3ASP.NET/">
-        了解ASP.NET
+<a class="md-nav__link" href="../01%20%E4%BA%86%E8%A7%A3ADO.NET/">
+        了解ADO.NET
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../02%20%E6%95%B0%E6%8D%AE%E6%8F%90%E4%BE%9B%E7%A8%8B%E5%BA%8F/">
+        数据提供程序
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../03%20%E6%95%B0%E6%8D%AE%E9%9B%86/">
+        数据集
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../04%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%98%A0%E5%B0%84/">
+        数据类型映射
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          连接数据源
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        连接数据源
+      </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    一、连接数据源
+  </a>
+<nav aria-label="一、连接数据源" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#01">
+    01 建立连接
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#02">
+    02 关闭连接
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    二、连接事件
+  </a>
+<nav aria-label="二、连接事件" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#01-connection">
+    01 Connection连接事件
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#02-infomessage">
+    02 使用InfoMessage事件
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#03-statechange">
+    03 使用StateChange事件
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    三、连接字符串
+  </a>
+<nav aria-label="三、连接字符串" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#01_1">
+    01 连接字符串
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#02_1">
+    02 连接字符串生成器
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#03">
+    03 连接字符串与配置文件
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    四、连接池
+  </a>
+<nav aria-label="四、连接池" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#01_2">
+    01 连接池原理
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#02-sql-server">
+    02 SQL Server 连接池
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../06%20%E5%88%9B%E5%BB%BA%E5%91%BD%E4%BB%A4/">
+        创建命令
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../07%20%E6%A3%80%E7%B4%A2%E5%92%8C%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE/">
+        检索和修改数据
       </a>
 </li>
 </ul>
@@ -335,7 +471,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../ef-core/01 了解EF ">
+<a class="md-nav__link" href="../../ef-core/01%20%E4%BA%86%E8%A7%A3EF%20Core/">
         了解EF Core
       </a>
 </li>
@@ -345,11 +481,31 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
 <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-          关于
+          ASP.NET Core
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          ASP.NET Core
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../aspnet-core/01%20%E4%BA%86%E8%A7%A3ASP.NET/">
+        了解ASP.NET
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          关于
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
 <span class="md-nav__icon md-icon"></span>
           关于
         </label>
@@ -381,6 +537,98 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    一、连接数据源
+  </a>
+<nav aria-label="一、连接数据源" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#01">
+    01 建立连接
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#02">
+    02 关闭连接
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    二、连接事件
+  </a>
+<nav aria-label="二、连接事件" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#01-connection">
+    01 Connection连接事件
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#02-infomessage">
+    02 使用InfoMessage事件
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#03-statechange">
+    03 使用StateChange事件
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    三、连接字符串
+  </a>
+<nav aria-label="三、连接字符串" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#01_1">
+    01 连接字符串
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#02_1">
+    02 连接字符串生成器
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#03">
+    03 连接字符串与配置文件
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    四、连接池
+  </a>
+<nav aria-label="四、连接池" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#01_2">
+    01 连接池原理
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#02-sql-server">
+    02 SQL Server 连接池
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
 </nav>
 </div>
 </div>
@@ -388,6 +636,264 @@
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
 <h1 id="_1">连接数据源<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h1>
+<blockquote>
+<p>任何数据库应用程序的一项主要功能是连接数据源并检索数据源中包含的数据。 ADO.NET 的 .NET Framework 数据提供程序充当应用程序和数据源之间的桥梁，使你可以执行命令以及使用 DataReader 或 DataAdapter 检索数据。 任何数据库应用程序的一项关键功能是更新数据库中存储的数据的能力。 在 ADO.NET 中，更新数据时会使用 DataAdapter、DataSet 和 Command 对象；此外，还可能会使用事务。</p>
+</blockquote>
+<h2 id="_2">一、连接数据源<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h2>
+<h3 id="01">01 建立连接<a class="headerlink" href="#01" title="Permanent link">⚓︎</a></h3>
+<p>在 ADO.NET 中，通过在连接字符串中提供必要的身份验证信息，使用 <code>Connection</code> 对象来连接到某个特定数据源， 使用的 <code>Connection</code> 对象类型取决于数据源的类型。</p>
+<p>随 .NET Framework 提供的每个数据提供程序都具有一个 DbConnection 对象：</p>
+<ul>
+<li>适用于 OLE DB 的 .NET Framework 数据提供程序包括一个 <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.data.oledb.oledbconnection">OleDbConnection</a> 对象；</li>
+<li>适用于 SQL Server 的 .NET Framework 数据提供程序包括一个 <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.data.sqlclient.sqlconnection">SqlConnection</a> 对象；</li>
+<li>适用于 ODBC 的 .NET Framework 数据提供程序包括一个 <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.data.odbc.odbcconnection">OdbcConnection</a> 对象</li>
+<li>适用于 Oracle 的 .NET Framework 数据提供程序包括一个 <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.data.oracleclient.oracleconnection">OracleConnection</a> 对象。</li>
+</ul>
+<p>连接数据源的代码段示例如下：</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">SQL Server</label><label for="__tabbed_1_2">OLE DB</label><label for="__tabbed_1_3">ODBC</label><label for="__tabbed_1_4">Oracle</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">// Assumes connectionString is a valid connection string.  </span>
+</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">SqlConnection</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlConnection</span><span class="p">(</span><span class="n">connectionString</span><span class="p">))</span><span class="w">  </span>
+</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-0-4"><a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="n">Open</span><span class="p">();</span><span class="w">  </span>
+</span><span id="__span-0-5"><a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="c1">// Do work here.  </span>
+</span><span id="__span-0-6"><a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="p">}</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1">// Assumes connectionString is a valid connection string.  </span>
+</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">OleDbConnection</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span>
+</span><span id="__span-1-3"><a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">  </span><span class="k">new</span><span class="w"> </span><span class="nf">OleDbConnection</span><span class="p">(</span><span class="n">connectionString</span><span class="p">))</span><span class="w">  </span>
+</span><span id="__span-1-4"><a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-1-5"><a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="n">Open</span><span class="p">();</span><span class="w">  </span>
+</span><span id="__span-1-6"><a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="c1">// Do work here.  </span>
+</span><span id="__span-1-7"><a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="p">}</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><code>csharp
+    // Assumes connectionString is a valid connection string.  
+    using (OdbcConnection connection =
+      new OdbcConnection(connectionString))  
+    {  
+        connection.Open();  
+        // Do work here.  
+    }</code></p>
+</div>
+<div class="tabbed-block">
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1">// Assumes connectionString is a valid connection string.  </span>
+</span><span id="__span-2-2"><a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">OracleConnection</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span>
+</span><span id="__span-2-3"><a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">  </span><span class="k">new</span><span class="w"> </span><span class="nf">OracleConnection</span><span class="p">(</span><span class="n">connectionString</span><span class="p">))</span><span class="w">  </span>
+</span><span id="__span-2-4"><a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-2-5"><a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="n">Open</span><span class="p">();</span><span class="w">  </span>
+</span><span id="__span-2-6"><a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="c1">// Do work here.  </span>
+</span><span id="__span-2-7"><a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="p">}</span><span class="w">  </span>
+</span><span id="__span-2-8"><a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="n">OracleConnection</span><span class="w"> </span><span class="n">nwindConn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OracleConnection</span><span class="p">(</span><span class="s">"Data Source=MyOracleServer;Integrated Security=yes;"</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-2-9"><a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="n">nwindConn</span><span class="p">.</span><span class="n">Open</span><span class="p">();</span>
+</span></code></pre></div>
+</div>
+</div>
+</input></input></input></input></div>
+<h3 id="02">02 关闭连接<a class="headerlink" href="#02" title="Permanent link">⚓︎</a></h3>
+<p>建议在使用完连接时一定要关闭连接，以便连接可以返回池。</p>
+<ul>
+<li>使用 <code>using</code> 语句，<code>using</code> 语句可确保正确使用 <code>IDisposable</code> 实例；</li>
+<li>调用连接对象的 <code>Close</code> 或 <code>Dispose</code> 方法</li>
+</ul>
+<p>不是显式关闭的连接可能不会添加或返回到池中。例如，如果连接已超出范围但没有显式关闭，则仅当达到最大池大小而该连接仍然有效时，该连接才会返回到连接池中。</p>
+<h2 id="_3">二、连接事件<a class="headerlink" href="#_3" title="Permanent link">⚓︎</a></h2>
+<h3 id="01-connection">01 Connection连接事件<a class="headerlink" href="#01-connection" title="Permanent link">⚓︎</a></h3>
+<p>所有 .NET Framework 数据提供程序中的 Connection 对象有两个事件，可用于从数据源中检索信息性消息或确定 Connection 的状态是否已被更改。</p>
+<table>
+<thead>
+<tr>
+<th align="left">事件</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">InfoMessage</td>
+<td align="left">当从数据源中返回信息性消息时发生。 信息性消息是数据源中不会引发异常的消息。</td>
+</tr>
+<tr>
+<td align="left">StateChange</td>
+<td align="left">当 Connection 的状态更改时发生。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="02-infomessage">02 使用InfoMessage事件<a class="headerlink" href="#02-infomessage" title="Permanent link">⚓︎</a></h3>
+<p>SqlConnection 对象的 InfoMessage 事件从 SQL Server 数据源中检索警告和信息性消息。</p>
+<blockquote>
+<p>从数据源返回的严重程度为 11 到 16 的错误将引发异常。 但是，InfoMessage 事件可用于从数据源中获取与错误无关联的消息。 对于 Microsoft SQL Server，任何严重程度等于或小于 10 的错误都将被视为信息性消息，将使用 InfoMessage 事件来捕获。</p>
+</blockquote>
+<p>InfoMessage 事件接收 <code>SqlInfoMessageEventArgs</code> 对象，该对象在其 <code>Errors</code> 属性中包含来自数据源的消息的集合。</p>
+<p>示例：
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1">// Assumes that connection represents a SqlConnection object.  </span>
+</span><span id="__span-3-2"><a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">connection</span><span class="p">.</span><span class="n">InfoMessage</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlInfoMessageEventHandler</span><span class="p">(</span><span class="n">OnInfoMessage</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-3-3"><a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="k">protected</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnInfoMessage</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">SqlInfoMessageEventArgs</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w">  </span>
+</span><span id="__span-3-5"><a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-3-6"><a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="n">SqlError</span><span class="w"> </span><span class="n">err</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">args</span><span class="p">.</span><span class="n">Errors</span><span class="p">)</span><span class="w">  </span>
+</span><span id="__span-3-7"><a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-3-8"><a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="w">  </span>
+</span><span id="__span-3-9"><a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">            </span><span class="s">"The {0} has received a severity {1}, state {2} error number {3}\n"</span><span class="w"> </span><span class="o">+</span><span class="w">  </span>
+</span><span id="__span-3-10"><a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">            </span><span class="s">"on line {4} of procedure {5} on server {6}:\n{7}"</span><span class="p">,</span><span class="w">  </span>
+</span><span id="__span-3-11"><a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">            </span><span class="n">err</span><span class="p">.</span><span class="n">Source</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-3-12"><a href="#__codelineno-3-12" id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">            </span><span class="n">err</span><span class="p">.</span><span class="n">Class</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-3-13"><a href="#__codelineno-3-13" id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">            </span><span class="n">err</span><span class="p">.</span><span class="n">State</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-3-14"><a href="#__codelineno-3-14" id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">            </span><span class="n">err</span><span class="p">.</span><span class="n">Number</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-3-15"><a href="#__codelineno-3-15" id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">            </span><span class="n">err</span><span class="p">.</span><span class="n">LineNumber</span><span class="p">,</span>
+</span><span id="__span-3-16"><a href="#__codelineno-3-16" id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">            </span><span class="n">err</span><span class="p">.</span><span class="n">Procedure</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-3-17"><a href="#__codelineno-3-17" id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">            </span><span class="n">err</span><span class="p">.</span><span class="n">Server</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-3-18"><a href="#__codelineno-3-18" id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">            </span><span class="n">err</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-3-19"><a href="#__codelineno-3-19" id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">    </span><span class="p">}</span><span class="w">  </span>
+</span><span id="__span-3-20"><a href="#__codelineno-3-20" id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<h3 id="03-statechange">03 使用StateChange事件<a class="headerlink" href="#03-statechange" title="Permanent link">⚓︎</a></h3>
+<p>StateChange 事件在 Connection 的状态更改时发生。 </p>
+<p>StateChange 事件接收 <code>StateChangeEventArgs</code>，使你能够使用 <code>OriginalState</code> 和 <code>CurrentState</code> 属性来确定 Connection 状态的更改。 </p>
+<ul>
+<li>OriginalState 属性是一个 ConnectionState 枚举，指示更改前的 Connection 状态；</li>
+<li>CurrentState 属性是一个 ConnectionState 枚举，指示更改后的 Connection 状态。</li>
+</ul>
+<p>示例：
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1">// Assumes connection represents a SqlConnection object.  </span>
+</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">connection</span><span class="p">.</span><span class="n">StateChange</span><span class="w">  </span><span class="o">+=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StateChangeEventHandler</span><span class="p">(</span><span class="n">OnStateChange</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-4-3"><a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="k">protected</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">OnStateChange</span><span class="p">(</span><span class="kt">object</span><span class="w"> </span><span class="n">sender</span><span class="p">,</span><span class="w"> </span><span class="n">StateChangeEventArgs</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w">  </span>
+</span><span id="__span-4-5"><a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-4-6"><a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="w">  </span>
+</span><span id="__span-4-7"><a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">        </span><span class="s">"The current Connection state has changed from {0} to {1}."</span><span class="p">,</span><span class="w">  </span>
+</span><span id="__span-4-8"><a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">        </span><span class="n">args</span><span class="p">.</span><span class="n">OriginalState</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-4-9"><a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">        </span><span class="n">args</span><span class="p">.</span><span class="n">CurrentState</span><span class="p">);</span><span class="w">  </span>
+</span><span id="__span-4-10"><a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<h2 id="_4">三、连接字符串<a class="headerlink" href="#_4" title="Permanent link">⚓︎</a></h2>
+<h3 id="01_1">01 连接字符串<a class="headerlink" href="#01_1" title="Permanent link">⚓︎</a></h3>
+<p>连接字符串包含初始化信息，该信息作为参数从数据提供程序传递给数据源。</p>
+<p>在前述示例代码段中，例如 <code>new SqlConnection(connectionString)</code>，Data Provider 接收连接字符串作为 <code>DbConnection.ConnectionString</code> 属性的值，数据提供程序解析连接字符串，并确保语法正确且支持关键字， 然后 <code>DbConnection.Open()</code> 方法将已解析的连接参数传递到数据源，数据源执行进一步验证并建立连接。</p>
+<p><mark>连接字符串是使用分号分隔的键/值参数对字符串列表</mark>。
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">String</span><span class="w"> </span><span class="n">connectionString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"keyword1=value; keyword2=value"</span><span class="p">;</span>
+</span></code></pre></div></p>
+<p>连接字符串具有以下语法规则：</p>
+<ul>
+<li>关键字不区分大小写， 但是，值可能会区分大小写，具体取决于数据源；</li>
+<li>关键字和值都可以包含空白字符；</li>
+<li>关键字和不带引号的值中忽略前导空格和尾随空格；</li>
+<li>包含分号、Unicode 控制字符、前导空格或尾随空格值必须用单引号或双引号将其括起；</li>
+<li>包含单引号的值只能用双引号括起，反之亦然；</li>
+<li>引号本身以及等号不需要转义；</li>
+<li>关键字集取决于提供程序，键入错误会导致错误。</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>在运行时从未验证的用户手动输入构造的连接字符串易受字符串注入式攻击，从而危害数据源的安全。 为了解决这些问题，ADO.NET 2.0 为每个 .NET Framework 数据提供程序引入了连接字符串生成器。 这些连接字符串生成器将参数公开为强类型属性，并使得在将连接字符串发送到数据源之前可以验证该连接字符串，关于连接字符串生成器的介绍请参考后续内容。</p>
+</div>
+<h3 id="02_1">02 连接字符串生成器<a class="headerlink" href="#02_1" title="Permanent link">⚓︎</a></h3>
+<p>在 ADO.NET 的早期版本中，不会对具有串联字符串值的连接字符串进行编译时检查，因此在运行时会产生 <code>ArgumentException</code>。 并且，不同的 Data Provider 支持的连接字符串关键字的语法不同，这使得手动构造有效连接字符串变得很困难。</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>当使用动态字符串串联根据用户输入生成连接字符串时，可能发生连接字符串 <strong>注入式攻击</strong>。 如果未验证字符串并且未转义恶意文本或字符，则攻击者可能会访问服务器上的敏感数据或其他资源。 例如，攻击者可以通过提供分号并追加其他值来发起攻击。</p>
+</div>
+<p>为解决这个问题，ADO.NET 2.0 为每个  Data Provider 引入了<strong>连接字符串生成器</strong>，每个 Data Provider 包括一个从 <code>DbConnectionStringBuilder</code> 继承的强类型连接字符串生成器类， <mark>每个提供程序的特定连接字符串语法记录在其 <code>ConnectionString</code> 属性中。</mark> </p>
+<table>
+<thead>
+<tr>
+<th align="left">Data Provider</th>
+<th align="left">ConnectionStringBuilder</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">System.Data.SqlClient</td>
+<td align="left">System.Data.SqlClient.SqlConnectionStringBuilder</td>
+</tr>
+<tr>
+<td align="left">System.Data.OleDb</td>
+<td align="left">System.Data.OleDb.OleDbConnectionStringBuilder</td>
+</tr>
+<tr>
+<td align="left">System.Data.Odbc</td>
+<td align="left">System.Data.Odbc.OdbcConnectionStringBuilder</td>
+</tr>
+<tr>
+<td align="left">System.Data.OracleClient</td>
+<td align="left">System.Data.OracleClient.OracleConnectionStringBuilder</td>
+</tr>
+</tbody>
+</table>
+<p>连接字符串生成器类旨在排除推测，防止出现语法错误和安全漏洞。 它们提供与每个数据提供程序允许的已知键/值对相对应的方法和属性。 每个类都保持一个固定的同义词集合，可以将同义词转换为相应的已知键名。 <strong>将执行键/值对的有效性检查，无效对会引发异常</strong>。 此外，还会以一种安全方式处理插入的值。</p>
+<p>示例：
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">SqlConnectionStringBuilder</span><span class="w"> </span><span class="n">builder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlConnectionStringBuilder</span><span class="p">();</span><span class="w">  </span>
+</span><span id="__span-6-2"><a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">builder</span><span class="p">[</span><span class="s">"Data Source"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"(local)"</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-6-3"><a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="n">builder</span><span class="p">[</span><span class="s">"integrated Security"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-6-4"><a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="n">builder</span><span class="p">[</span><span class="s">"Initial Catalog"</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"AdventureWorks;NewValue=Bad"</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-6-5"><a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">builder</span><span class="p">.</span><span class="n">ConnectionString</span><span class="p">);</span>
+</span><span id="__span-6-6"><a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a>
+</span><span id="__span-6-7"><a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="c1">// Output:</span>
+</span><span id="__span-6-8"><a href="#__codelineno-6-8" id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="c1">// data source=(local);Integrated Security=True;</span>
+</span><span id="__span-6-9"><a href="#__codelineno-6-9" id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="c1">// initial catalog="AdventureWorks;NewValue=Bad"</span>
+</span></code></pre></div></p>
+<h3 id="03">03 连接字符串与配置文件<a class="headerlink" href="#03" title="Permanent link">⚓︎</a></h3>
+<p>如果事先知道连接字符串的某些元素，则可以将其存储在配置文件中，并在运行时检索它们以构造完整连接字符串。 </p>
+<p>例如，可能事先知道数据库的名称，但不知道服务器的名称。 或者，您可能希望用户在运行时提供用户名和密码，而不能在连接字符串中插入其他值。</p>
+<p>连接字符串生成器的一个重载构造函数将 String 作为自变量，这可让你提供部分连接字符串，然后通过用户输入使这部分连接字符串成为完整字符串。 该部分连接字符串可以存储在配置文件中并在运行时进行检索。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>参考链接：<a href="https://learn.microsoft.com/zh-cn/dotnet/framework/data/adonet/connection-strings-and-configuration-files">https://learn.microsoft.com/zh-cn/dotnet/framework/data/adonet/connection-strings-and-configuration-files</a> </p>
+</div>
+<h2 id="_5">四、连接池<a class="headerlink" href="#_5" title="Permanent link">⚓︎</a></h2>
+<h3 id="01_2">01 连接池原理<a class="headerlink" href="#01_2" title="Permanent link">⚓︎</a></h3>
+<p>连接到数据源可能需要很长时间。 为了最大程度地降低打开连接的成本，ADO.NET 使用一种称为“连接池”的优化技术，这种技术可最大程度地降低重复打开和关闭连接所造成的成本。不同的数据提供程序处理连接池的方式有所不同。</p>
+<p>连接池使新连接必须打开的次数得以减少。 池程序维持物理连接的所有权。 通过为每个给定的连接配置保留一组活动连接来管理连接。 每当用户在连接上调用 <code>Open</code> 时，池进程就会查找池中可用的连接。 如果某个池连接可用，会将该连接返回给调用者，而不是打开新连接。 应用程序在该连接上调用 <code>Close</code> 时，池进程会将连接返回到活动连接池集中，而不是关闭连接。 连接返回到池中之后，即可在下一个 <code>Open</code> 调用中重复使用。</p>
+<p>只有配置相同的连接可以建立池连接。 ADO.NET 会同时保留多个池，每个池对应一种配置。 在使用集成的安全性时，连接按照连接字符串以及 Windows 标识分到多个池中。 还根据连接是否已在事务中登记来建立池连接。 在使用 <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.data.sqlclient.sqlconnection.changepassword">ChangePassword</a> 时，<a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.data.sqlclient.sqlcredential">SqlCredential</a> 实例影响连接池。 <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.data.sqlclient.sqlcredential">SqlCredential</a> 的不同实例将使用不同的连接池，即使用户 ID 和密码相，也是如此。</p>
+<p>池连接可以显著提高应用程序的性能和可缩放性。 <strong>默认情况下，在 ADO.NET 中启用连接池。</strong> 除非显式禁用，否则，在应用程序中打开和关闭连接时，池进程会对连接进行优化。 还可以提供几个连接字符串修饰符来控制连接池的行为。 </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>启用连接池后，如果发生超时错误或其他登录错误，则将引发异常，并且在接下来的五秒内进行的后续连接尝试将失败，此段时间称为“阻塞期”。 如果应用程序尝试在阻塞期内进行连接，则将再次引发第一个异常。 阻塞期结束后的后续失败将导致新的阻塞期，该阻塞期的持续时间是上一个阻塞期的两倍，最长为一分钟。</p>
+</div>
+<h3 id="02-sql-server">02 SQL Server 连接池<a class="headerlink" href="#02-sql-server" title="Permanent link">⚓︎</a></h3>
+<p>在初次打开连接时，将根据完全匹配算法创建连接池，该算法将池与连接中的连接字符串关联。 每个连接池都与一个不同的连接字符串相关联。 打开新连接时，如果连接字符串并非与现有池完全匹配，将创建一个新池。 按进程、应用程序域、连接字符串以及 Windows 标识（在使用集成的安全性时）来建立池连接。 连接字符串还必须是完全匹配的；按不同顺序为同一连接提供的关键字将分到单独的池中。</p>
+<h4 id="_6">创建连接池<a class="headerlink" href="#_6" title="Permanent link">⚓︎</a></h4>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-7-1"><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">SqlConnection</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlConnection</span><span class="p">(</span><span class="w">  </span>
+</span><span id="__span-7-2"><a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">  </span><span class="s">"Integrated Security=SSPI;Initial Catalog=Northwind"</span><span class="p">))</span><span class="w">  </span>
+</span><span id="__span-7-3"><a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-7-4"><a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="n">Open</span><span class="p">();</span>
+</span><span id="__span-7-5"><a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">    </span><span class="c1">// Pool A is created.  </span>
+</span><span id="__span-7-6"><a href="#__codelineno-7-6" id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="p">}</span><span class="w">  </span>
+</span><span id="__span-7-7"><a href="#__codelineno-7-7" id="__codelineno-7-7" name="__codelineno-7-7"></a>
+</span><span id="__span-7-8"><a href="#__codelineno-7-8" id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">SqlConnection</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlConnection</span><span class="p">(</span><span class="w">  </span>
+</span><span id="__span-7-9"><a href="#__codelineno-7-9" id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">  </span><span class="s">"Integrated Security=SSPI;Initial Catalog=pubs"</span><span class="p">))</span><span class="w">  </span>
+</span><span id="__span-7-10"><a href="#__codelineno-7-10" id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-7-11"><a href="#__codelineno-7-11" id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="n">Open</span><span class="p">();</span>
+</span><span id="__span-7-12"><a href="#__codelineno-7-12" id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">    </span><span class="c1">// Pool B is created because the connection strings differ.  </span>
+</span><span id="__span-7-13"><a href="#__codelineno-7-13" id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="p">}</span><span class="w">  </span>
+</span><span id="__span-7-14"><a href="#__codelineno-7-14" id="__codelineno-7-14" name="__codelineno-7-14"></a>
+</span><span id="__span-7-15"><a href="#__codelineno-7-15" id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">SqlConnection</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlConnection</span><span class="p">(</span><span class="w">  </span>
+</span><span id="__span-7-16"><a href="#__codelineno-7-16" id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="w">  </span><span class="s">"Integrated Security=SSPI;Initial Catalog=Northwind"</span><span class="p">))</span><span class="w">  </span>
+</span><span id="__span-7-17"><a href="#__codelineno-7-17" id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-7-18"><a href="#__codelineno-7-18" id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="n">Open</span><span class="p">();</span>
+</span><span id="__span-7-19"><a href="#__codelineno-7-19" id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="w">    </span><span class="c1">// The connection string matches pool A.  </span>
+</span><span id="__span-7-20"><a href="#__codelineno-7-20" id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="p">}</span>
+</span><span id="__span-7-21"><a href="#__codelineno-7-21" id="__codelineno-7-21" name="__codelineno-7-21"></a>
+</span><span id="__span-7-22"><a href="#__codelineno-7-22" id="__codelineno-7-22" name="__codelineno-7-22"></a><span class="c1">// 示例中创建了三个新的 SqlConnection 对象，但是管理时只需要两个连接池。 注意，根据为 `Initial Catalog` 分配的值，第一个和第二个连接字符串有所不同。</span>
+</span></code></pre></div>
+<h4 id="_7">添加连接<a class="headerlink" href="#_7" title="Permanent link">⚓︎</a></h4>
+<p>连接池是为每个唯一的连接字符串创建的。 当创建一个池后，将创建多个连接对象并将其添加到该池中，以满足最小池大小的需求。 连接根据需要添加到池中，但是不能超过指定的最大池大小（默认值为 100）。 连接在关闭或断开时释放回池中。</p>
+<p>在请求 SqlConnection 对象时，如果存在可用的连接，将从池中获取该对象。 连接要可用，必须未使用，具有匹配的事务上下文或未与任何事务上下文关联，并且具有与服务器的有效链接。</p>
+<p>连接池进程通过在连接释放回池中时重新分配连接，来满足这些连接请求。 如果已达到最大池大小且不存在可用的连接，则该请求将会排队。 然后，池进程尝试重新建立任何连接，直至到达超时时间（默认值为 15 秒）。 如果池进程在连接超时之前无法满足请求，将引发异常。</p>
+<div class="admonition warnning">
+<p class="admonition-title">Warnning</p>
+<p>请在连接使用完毕后关闭连接，以便连接返回连接池，可以调用 <code>Connection</code> 对象的 <code>Close</code> 或 <code>Dispose</code> 方法，或使用 <code>using</code> 语句。</p>
+</div>
+<h4 id="_8">移除连接<a class="headerlink" href="#_8" title="Permanent link">⚓︎</a></h4>
+<p>如果空闲时间达到大约 4-8 分钟，或池进程检测到与服务器的连接已断开，连接池进程会将该连接从池中移除。 注意，只有在尝试与服务器进行通信之后才能检测到断开的连接。 如果发现某连接不再连接到服务器，则会将其标记为无效。 无效连接只有在关闭或重新建立后，才会从连接池中移除。</p>
+<p>如果存在一个与已消失的服务器的连接，即使连接池进程尚未检测到断开的连接，也可以从池中取出此连接并将连接标记为无效。 这种情况是因为检查连接是否仍有效的系统开销将造成与服务器的另一次往返，从而抵消了池进程的优势。 发生此情况时，初次尝试使用该连接将检测连接是否曾断开，并引发异常。</p>
+<h4 id="_9">清除连接池<a class="headerlink" href="#_9" title="Permanent link">⚓︎</a></h4>
+<p>ADO.NET 2.0 引入了两种新方法来清除池：<a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.data.sqlclient.sqlconnection.clearallpools">ClearAllPools</a> 和 <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.data.sqlclient.sqlconnection.clearpool">ClearPool</a>。 <code>ClearAllPools</code> 清除指定提供程序的所有连接池，<code>ClearPool</code> 清除与特定连接关联的连接池。</p>
+<p>如果在调用时连接正在使用，将对它们进行相应的标记。 连接关闭时，将被丢弃，而不是返回池中。</p>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">
@@ -430,6 +936,34 @@
           </button>
 </main>
 <footer class="md-footer">
+<nav aria-label="页脚" class="md-footer__inner md-grid">
+<a aria-label="上一页: 数据类型映射" class="md-footer__link md-footer__link--prev" href="../04%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%98%A0%E5%B0%84/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                  上一页
+                </span>
+                数据类型映射
+              </div>
+</div>
+</a>
+<a aria-label="下一页: 创建命令" class="md-footer__link md-footer__link--next" href="../06%20%E5%88%9B%E5%BB%BA%E5%91%BD%E4%BB%A4/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                  下一页
+                </span>
+                创建命令
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
