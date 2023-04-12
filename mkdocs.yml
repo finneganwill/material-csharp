@@ -48,7 +48,8 @@ nav:
       - 数据集: 'adonet/03 数据集.md'
       - 数据类型映射: 'adonet/04 数据类型映射.md'
       - 连接数据源: 'adonet/05 连接数据源.md'
-      - 检索和修改数据: 'adonet/06 检索和修改数据.md'
+      - 创建命令: 'adonet/06 创建命令.md'
+      - 检索和修改数据: 'adonet/07 检索和修改数据.md'
 
     - EF Core:
       - 了解EF Core: 'ef-core/01 了解EF Core.md'
