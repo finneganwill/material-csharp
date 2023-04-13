@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://finneganwill.github.io/material-dotnet/adonet/01%20%E4%BA%86%E8%A7%A3ADO.NET/" rel="canonical"/>
-<link href="../../linq/02%20%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/" rel="prev"/>
-<link href="../02%20%E6%95%B0%E6%8D%AE%E6%8F%90%E4%BE%9B%E7%A8%8B%E5%BA%8F/" rel="next"/>
+<link href="https://finneganwill.github.io/material-dotnet/adonet/02-%E6%95%B0%E6%8D%AE%E6%8F%90%E4%BE%9B%E7%A8%8B%E5%BA%8F/" rel="canonical"/>
+<link href="../01-%E4%BA%86%E8%A7%A3ADO.NET/" rel="prev"/>
+<link href="../03-%E6%95%B0%E6%8D%AE%E9%9B%86/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
-<title>了解ADO.NET - .Net Material</title>
+<title>数据提供程序 - .Net Material</title>
 <link href="../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -37,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#adonet">
+<a class="md-skip" href="#_1">
           跳转至
         </a>
 </div>
@@ -61,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              了解ADO.NET
+              数据提供程序
             
           </span>
 </div>
@@ -109,7 +109,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="./">
+<a class="md-tabs__link md-tabs__link--active" href="../01-%E4%BA%86%E8%A7%A3ADO.NET/">
         ADO.NET
       </a>
 </li>
@@ -321,14 +321,19 @@
           ADO.NET
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../01-%E4%BA%86%E8%A7%A3ADO.NET/">
+        了解ADO.NET
+      </a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          了解ADO.NET
+          数据提供程序
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        了解ADO.NET
+        数据提供程序
       </a>
 <nav aria-label="目录" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -337,98 +342,46 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#adonet_1">
-    一、ADO.NET 是什么？
-  </a>
-<nav aria-label="一、ADO.NET 是什么？" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#01-adonet">
-    01 ADO.NET 简介
+<a class="md-nav__link" href="#data-provider">
+    一、Data Provider
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#02-adonet">
-    02 ADO.NET体系结构
+<a class="md-nav__link" href="#provider">
+    二、Provider的核心对象
   </a>
 </li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#linqadonet">
-    二、LINQ和ADO.NET
-  </a>
-<nav aria-label="二、LINQ和ADO.NET" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#01-adonet-linq">
-    01 ADO.NET LINQ 技术
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#02-linq-to-dataset">
-    02 LINQ to DataSet
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#03-linq-to-sql">
-    03 LINQ to SQL
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#04-linq-to-entities">
-    04 LINQ to Entities
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#adonet_3">
-    三、ADO.NET代码示例
-  </a>
-<nav aria-label="三、ADO.NET代码示例" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#01-adonet-sql-server-localdb">
-    01 ADO.NET 连接 SQL Server LocalDB
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../02%20%E6%95%B0%E6%8D%AE%E6%8F%90%E4%BE%9B%E7%A8%8B%E5%BA%8F/">
-        数据提供程序
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../03%20%E6%95%B0%E6%8D%AE%E9%9B%86/">
+<a class="md-nav__link" href="../03-%E6%95%B0%E6%8D%AE%E9%9B%86/">
         数据集
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../04%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%98%A0%E5%B0%84/">
+<a class="md-nav__link" href="../04-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%98%A0%E5%B0%84/">
         数据类型映射
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../05%20%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E6%BA%90/">
+<a class="md-nav__link" href="../05-%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E6%BA%90/">
         连接数据源
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../06%20%E5%88%9B%E5%BB%BA%E5%91%BD%E4%BB%A4/">
-        创建命令
+<a class="md-nav__link" href="../06-%E5%88%9B%E5%BB%BA%E5%91%BD%E4%BB%A4%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0/">
+        创建命令与配置参数
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../07%20%E6%A3%80%E7%B4%A2%E5%92%8C%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE/">
+<a class="md-nav__link" href="../07-%E6%A3%80%E7%B4%A2%E5%92%8C%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE/">
         检索和修改数据
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../08-%E4%BA%8B%E5%8A%A1%E4%B8%8E%E5%B9%B6%E5%8F%91%E6%80%A7/">
+        事务与并发性
       </a>
 </li>
 </ul>
@@ -519,66 +472,14 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#adonet_1">
-    一、ADO.NET 是什么？
-  </a>
-<nav aria-label="一、ADO.NET 是什么？" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#01-adonet">
-    01 ADO.NET 简介
+<a class="md-nav__link" href="#data-provider">
+    一、Data Provider
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#02-adonet">
-    02 ADO.NET体系结构
+<a class="md-nav__link" href="#provider">
+    二、Provider的核心对象
   </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#linqadonet">
-    二、LINQ和ADO.NET
-  </a>
-<nav aria-label="二、LINQ和ADO.NET" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#01-adonet-linq">
-    01 ADO.NET LINQ 技术
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#02-linq-to-dataset">
-    02 LINQ to DataSet
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#03-linq-to-sql">
-    03 LINQ to SQL
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#04-linq-to-entities">
-    04 LINQ to Entities
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#adonet_3">
-    三、ADO.NET代码示例
-  </a>
-<nav aria-label="三、ADO.NET代码示例" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#01-adonet-sql-server-localdb">
-    01 ADO.NET 连接 SQL Server LocalDB
-  </a>
-</li>
-</ul>
-</nav>
 </li>
 </ul>
 </nav>
@@ -587,96 +488,76 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="adonet">了解ADO.NET<a class="headerlink" href="#adonet" title="Permanent link">⚓︎</a></h1>
-<h2 id="adonet_1">一、ADO.NET 是什么？<a class="headerlink" href="#adonet_1" title="Permanent link">⚓︎</a></h2>
-<h3 id="01-adonet">01 ADO.NET 简介<a class="headerlink" href="#01-adonet" title="Permanent link">⚓︎</a></h3>
-<p><strong>ADO.NET</strong> 是一组向 .NET Framework 程序员公开数据访问服务的类。</p>
-<p>ADO.NET 为创建分布式数据共享应用程序提供了一组丰富的组件。 它提供了对关系数据、XML 和应用程序数据的访问，是 .NET Framework 中不可缺少的一部分。 ADO.NET 支持多种开发需求，包括创建由应用程序、工具、语言或 Internet 浏览器使用的前端数据库客户端和中间层业务对象。</p>
-<p>ADO.NET 提供对诸如 SQL Server 和 XML 这样的数据源以及通过 OLE DB 和 ODBC 公开的数据源的一致访问。 共享数据的使用方应用程序可以使用 ADO.NET 连接到这些数据源，并可以检索、处理和更新其中包含的数据。这些结果或者被直接处理，放在 ADO.NET <code>DataSet</code> 对象中以便以特别的方式向用户公开，并与来自多个源的数据组合；或者在层之间传递。 <code>DataSet</code> 对象也可以独立于 .NET Framework 数据提供程序，用于管理应用程序本地的数据或源自 XML 的数据。</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>ADO.NET 向编写托管代码的开发人员提供类似于 ActiveX 数据对象 (ADO) 向本机组件对象模型 (COM) 开发人员提供的功能。 ADO.NET 在 .NET Framework 中提供最直接的数据访问方法。建议您在 .NET 应用程序中使用 ADO.NET 而不使用 ADO 来访问数据。</p>
-</div>
-<h3 id="02-adonet">02 ADO.NET体系结构<a class="headerlink" href="#02-adonet" title="Permanent link">⚓︎</a></h3>
-<p>ADO.NET 用于访问和操作数据的两个主要组件是 <strong>.NET Framework 数据提供程序（Data Provider）</strong> 和 <strong>DataSet</strong>。</p>
-<h4 id="data-provider">Data Provider<a class="headerlink" href="#data-provider" title="Permanent link">⚓︎</a></h4>
-<p>.NET Framework 数据提供程序是专门为数据操作以及快速、只进、只读访问数据而设计的组件。 <code>Connection</code> 对象提供到数据源的连接。 使用 <code>Command</code> 对象可以访问用于返回数据、修改数据、运行存储过程以及发送或检索参数信息的数据库命令。 <code>DataReader</code> 可从数据源提供高性能的数据流。 最后，<code>DataAdapter</code> 在 <code>DataSet</code> 对象和数据源之间起到桥梁作用。 <code>DataAdapter</code> 使用 <code>Command</code> 对象在数据源中执行 SQL 命令以向 <code>DataSet</code> 中加载数据，并将对 <code>DataSet</code> 中数据的更改协调回数据源。</p>
-<h4 id="dataset">DataSet<a class="headerlink" href="#dataset" title="Permanent link">⚓︎</a></h4>
-<p>ADO.NET <code>DataSet</code> 是专门为独立于任何数据源的数据访问而设计的。 因此，它可以用于多种不同的数据源，用于 XML 数据，或用于管理应用程序本地的数据。 <code>DataSet</code> 包含一个或多个 <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.data.datatable">DataTable</a> 对象的集合，这些对象由数据行和数据列以及有关 <code>DataTable</code> 对象中数据的主键、外键、约束和关系信息组成。</p>
-<h4 id="adonet_2">ADO.NET 体系结构<a class="headerlink" href="#adonet_2" title="Permanent link">⚓︎</a></h4>
-<p>![[ADO.NET体系结构.png]]</p>
-<h2 id="linqadonet">二、LINQ和ADO.NET<a class="headerlink" href="#linqadonet" title="Permanent link">⚓︎</a></h2>
-<h3 id="01-adonet-linq">01 ADO.NET LINQ 技术<a class="headerlink" href="#01-adonet-linq" title="Permanent link">⚓︎</a></h3>
-<p>有三种独立的 ADO.NET 语言集成查询 (LINQ) 技术：LINQ to DataSet、LINQ to SQL 和 LINQ to Entities。 </p>
-<ul>
-<li>LINQ to DataSet 提供丰富的且针对 <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.data.dataset">DataSet</a> 优化的查询；</li>
-<li>LINQ to SQL 可用于直接查询 SQL Server 数据库架构； </li>
-<li>LINQ to Entities 可用于查询实体数据模型。</li>
-</ul>
-<p>![[ADO.NET LINQ 技术.png]]</p>
-<h3 id="02-linq-to-dataset">02 LINQ to DataSet<a class="headerlink" href="#02-linq-to-dataset" title="Permanent link">⚓︎</a></h3>
-<p>DataSet 是用作 ADO.NET 构建基础的离线编程模型的关键要素，其使用非常广泛。 LINQ to DataSet 使开发人员能够使用许多其他数据源可用的相同查询构建机制，在 DataSet 中内置更丰富的查询功能。</p>
-<h3 id="03-linq-to-sql">03 LINQ to SQL<a class="headerlink" href="#03-linq-to-sql" title="Permanent link">⚓︎</a></h3>
-<p>LINQ to SQL 是适合不需要映射到概念模型的开发人员使用的有用工具。 使用 LINQ to SQL 可以直接在现有数据库架构上使用 LINQ 编程模型。 开发人员可以使用 LINQ to SQL 生成用于表示数据的 .NET Framework 类。 这些生成的类直接映射到数据库表、视图、存储过程和用户定义的函数，而不映射到概念数据模型。</p>
-<p>借助 LINQ to SQL，除了其他数据源（例如 XML）外，开发人员还可以使用与内存中集合和 DataSet 相同的 LINQ 编程模式直接针对存储架构编写代码。</p>
-<h3 id="04-linq-to-entities">04 LINQ to Entities<a class="headerlink" href="#04-linq-to-entities" title="Permanent link">⚓︎</a></h3>
-<p>大多数应用程序目前是在关系数据库之上编写的。 有时这些应用程序将需要与以关系形式表示的数据进行交互。 数据库架构并不总是构建应用程序的理想选择，并且应用程序的概念模型与数据库的逻辑模型不同。 实体数据模型是可用于对特定域的数据进行建模的概念数据模型，以便应用程序可作为对象与数据交互。 </p>
-<p>通过实体数据模型，在 .NET 环境中将关系数据作为对象公开。 这使得对象层成为实现 LINQ 支持的理想目标，开发人员可以采用生成业务逻辑所用的语言来构建数据库查询。 此功能称为 LINQ to Entities。。</p>
-<h2 id="adonet_3">三、ADO.NET代码示例<a class="headerlink" href="#adonet_3" title="Permanent link">⚓︎</a></h2>
-<h3 id="01-adonet-sql-server-localdb">01 ADO.NET 连接 SQL Server LocalDB<a class="headerlink" href="#01-adonet-sql-server-localdb" title="Permanent link">⚓︎</a></h3>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
-</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Data</span><span class="p">;</span>
-</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.Data.SqlClient</span><span class="p">;</span>
-</span><span id="__span-0-4"><a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="k">class</span><span class="w"> </span><span class="nc">Program</span>
-</span><span id="__span-0-6"><a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="p">{</span>
-</span><span id="__span-0-7"><a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span>
-</span><span id="__span-0-8"><a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-0-9"><a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">connectionString</span><span class="w"> </span><span class="o">=</span>
-</span><span id="__span-0-10"><a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">            </span><span class="s">"Data Source=(local);Initial Catalog=Northwind;"</span>
-</span><span id="__span-0-11"><a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">            </span><span class="o">+</span><span class="w"> </span><span class="s">"Integrated Security=true"</span><span class="p">;</span>
-</span><span id="__span-0-12"><a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a>
-</span><span id="__span-0-13"><a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">        </span><span class="c1">// Provide the query string with a parameter placeholder.</span>
-</span><span id="__span-0-14"><a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">        </span><span class="kt">string</span><span class="w"> </span><span class="n">queryString</span><span class="w"> </span><span class="o">=</span>
-</span><span id="__span-0-15"><a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">            </span><span class="s">"SELECT ProductID, UnitPrice, ProductName from dbo.products "</span>
-</span><span id="__span-0-16"><a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">                </span><span class="o">+</span><span class="w"> </span><span class="s">"WHERE UnitPrice &gt; @pricePoint "</span>
-</span><span id="__span-0-17"><a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">                </span><span class="o">+</span><span class="w"> </span><span class="s">"ORDER BY UnitPrice DESC;"</span><span class="p">;</span>
-</span><span id="__span-0-18"><a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a>
-</span><span id="__span-0-19"><a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">        </span><span class="c1">// Specify the parameter value.</span>
-</span><span id="__span-0-20"><a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">paramValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">;</span>
-</span><span id="__span-0-21"><a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a>
-</span><span id="__span-0-22"><a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">        </span><span class="c1">// Create and open the connection in a using block. This</span>
-</span><span id="__span-0-23"><a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">        </span><span class="c1">// ensures that all resources will be closed and disposed</span>
-</span><span id="__span-0-24"><a href="#__codelineno-0-24" id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">        </span><span class="c1">// when the code exits.</span>
-</span><span id="__span-0-25"><a href="#__codelineno-0-25" id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">        </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">SqlConnection</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span>
-</span><span id="__span-0-26"><a href="#__codelineno-0-26" id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="nf">SqlConnection</span><span class="p">(</span><span class="n">connectionString</span><span class="p">))</span>
-</span><span id="__span-0-27"><a href="#__codelineno-0-27" id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">        </span><span class="p">{</span>
-</span><span id="__span-0-28"><a href="#__codelineno-0-28" id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">            </span><span class="c1">// Create the Command and Parameter objects.</span>
-</span><span id="__span-0-29"><a href="#__codelineno-0-29" id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">            </span><span class="n">SqlCommand</span><span class="w"> </span><span class="n">command</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlCommand</span><span class="p">(</span><span class="n">queryString</span><span class="p">,</span><span class="w"> </span><span class="n">connection</span><span class="p">);</span>
-</span><span id="__span-0-30"><a href="#__codelineno-0-30" id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">            </span><span class="n">command</span><span class="p">.</span><span class="n">Parameters</span><span class="p">.</span><span class="n">AddWithValue</span><span class="p">(</span><span class="s">"@pricePoint"</span><span class="p">,</span><span class="w"> </span><span class="n">paramValue</span><span class="p">);</span>
-</span><span id="__span-0-31"><a href="#__codelineno-0-31" id="__codelineno-0-31" name="__codelineno-0-31"></a>
-</span><span id="__span-0-32"><a href="#__codelineno-0-32" id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">            </span><span class="c1">// Open the connection in a try/catch block.</span>
-</span><span id="__span-0-33"><a href="#__codelineno-0-33" id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="w">            </span><span class="c1">// Create and execute the DataReader, writing the result</span>
-</span><span id="__span-0-34"><a href="#__codelineno-0-34" id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="w">            </span><span class="c1">// set to the console window.</span>
-</span><span id="__span-0-35"><a href="#__codelineno-0-35" id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="w">            </span><span class="k">try</span>
-</span><span id="__span-0-36"><a href="#__codelineno-0-36" id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="w">            </span><span class="p">{</span>
-</span><span id="__span-0-37"><a href="#__codelineno-0-37" id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="w">                </span><span class="n">connection</span><span class="p">.</span><span class="n">Open</span><span class="p">();</span>
-</span><span id="__span-0-38"><a href="#__codelineno-0-38" id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="w">                </span><span class="n">SqlDataReader</span><span class="w"> </span><span class="n">reader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">command</span><span class="p">.</span><span class="n">ExecuteReader</span><span class="p">();</span>
-</span><span id="__span-0-39"><a href="#__codelineno-0-39" id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="w">                </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">reader</span><span class="p">.</span><span class="n">Read</span><span class="p">())</span>
-</span><span id="__span-0-40"><a href="#__codelineno-0-40" id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="w">                </span><span class="p">{</span>
-</span><span id="__span-0-41"><a href="#__codelineno-0-41" id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="w">                    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">"\t{0}\t{1}\t{2}"</span><span class="p">,</span>
-</span><span id="__span-0-42"><a href="#__codelineno-0-42" id="__codelineno-0-42" name="__codelineno-0-42"></a><span class="w">                        </span><span class="n">reader</span><span class="p">[</span><span class="m">0</span><span class="p">],</span><span class="w"> </span><span class="n">reader</span><span class="p">[</span><span class="m">1</span><span class="p">],</span><span class="w"> </span><span class="n">reader</span><span class="p">[</span><span class="m">2</span><span class="p">]);</span>
-</span><span id="__span-0-43"><a href="#__codelineno-0-43" id="__codelineno-0-43" name="__codelineno-0-43"></a><span class="w">                </span><span class="p">}</span>
-</span><span id="__span-0-44"><a href="#__codelineno-0-44" id="__codelineno-0-44" name="__codelineno-0-44"></a><span class="w">                </span><span class="n">reader</span><span class="p">.</span><span class="n">Close</span><span class="p">();</span>
-</span><span id="__span-0-45"><a href="#__codelineno-0-45" id="__codelineno-0-45" name="__codelineno-0-45"></a><span class="w">            </span><span class="p">}</span>
-</span><span id="__span-0-46"><a href="#__codelineno-0-46" id="__codelineno-0-46" name="__codelineno-0-46"></a><span class="w">            </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span>
-</span><span id="__span-0-47"><a href="#__codelineno-0-47" id="__codelineno-0-47" name="__codelineno-0-47"></a><span class="w">            </span><span class="p">{</span>
-</span><span id="__span-0-48"><a href="#__codelineno-0-48" id="__codelineno-0-48" name="__codelineno-0-48"></a><span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">ex</span><span class="p">.</span><span class="n">Message</span><span class="p">);</span>
-</span><span id="__span-0-49"><a href="#__codelineno-0-49" id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="w">            </span><span class="p">}</span>
-</span><span id="__span-0-50"><a href="#__codelineno-0-50" id="__codelineno-0-50" name="__codelineno-0-50"></a><span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
-</span><span id="__span-0-51"><a href="#__codelineno-0-51" id="__codelineno-0-51" name="__codelineno-0-51"></a><span class="w">        </span><span class="p">}</span>
-</span><span id="__span-0-52"><a href="#__codelineno-0-52" id="__codelineno-0-52" name="__codelineno-0-52"></a><span class="w">    </span><span class="p">}</span>
-</span></code></pre></div>
+<h1 id="_1">数据提供程序<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h1>
+<h2 id="data-provider">一、Data Provider<a class="headerlink" href="#data-provider" title="Permanent link">⚓︎</a></h2>
+<table>
+<thead>
+<tr>
+<th align="left">Provider</th>
+<th align="left">命名空间</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">用于SQL Server的数据访问接口</td>
+<td align="left">System.Data.SqlClient</td>
+<td align="left">提供Microsoft SQL Server的数据访问</td>
+</tr>
+<tr>
+<td align="left">用于OLRE DB的数据访问接口</td>
+<td align="left">System.Data.OleDb</td>
+<td align="left">提供对使用OLE DB公开的数据源中数据的访问</td>
+</tr>
+<tr>
+<td align="left">用于ODBC的数据提供程序</td>
+<td align="left">System.Data.Odbc</td>
+<td align="left">提供对使用ODBC公开的数据源中数据的访问</td>
+</tr>
+<tr>
+<td align="left">用于Oracle的数据提供程序</td>
+<td align="left">System.Data.Oracle</td>
+<td align="left">适用于Oracle数据源，支持Oracle客户端软件8.1.7和更高版本</td>
+</tr>
+<tr>
+<td align="left">用于EntityClient提供程序</td>
+<td align="left">System.Data.EntityClient</td>
+<td align="left">提供对实体数据模型 (EDM) 应用程序的数据访问。</td>
+</tr>
+<tr>
+<td align="left">用于SQL Server Compact 4.0的数据提供程序</td>
+<td align="left">System.Data.SqlServerCe</td>
+<td align="left">提供 Microsoft SQL Server Compact 4.0 的数据访问</td>
+</tr>
+</tbody>
+</table>
+<h2 id="provider">二、Provider的核心对象<a class="headerlink" href="#provider" title="Permanent link">⚓︎</a></h2>
+<table>
+<thead>
+<tr>
+<th align="left">Object</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>Connection</code></td>
+<td align="left">建立与特定数据源的连接，所有 <code>Connection</code> 对象的基类均为 DbConnection 类。</td>
+</tr>
+<tr>
+<td align="left"><code>Command</code></td>
+<td align="left">对数据源执行命令，公开 <code>Parameters</code> ，并可在 <code>Transaction</code> 范围内从 <code>Connection</code>执行，所有 <code>Command</code> 对象的基类均为 DbCommand类。</td>
+</tr>
+<tr>
+<td align="left"><code>DataReader</code></td>
+<td align="left">数据源中读取只进且只读的数据流，所有 <code>DataReader</code> 对象的基类均为 DbDataReader 类。</td>
+</tr>
+<tr>
+<td align="left"><code>DataAdapter</code></td>
+<td align="left">使用数据源填充 <code>DataSet</code> 并解决更新，所有 <code>DataAdapter</code> 对象的基类均为 DbDataAdapter 类。</td>
+</tr>
+</tbody>
+</table>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">
@@ -720,7 +601,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 查询语法" class="md-footer__link md-footer__link--prev" href="../../linq/02%20%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/" rel="prev">
+<a aria-label="上一页: 了解ADO.NET" class="md-footer__link md-footer__link--prev" href="../01-%E4%BA%86%E8%A7%A3ADO.NET/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -729,17 +610,17 @@
 <span class="md-footer__direction">
                   上一页
                 </span>
-                查询语法
+                了解ADO.NET
               </div>
 </div>
 </a>
-<a aria-label="下一页: 数据提供程序" class="md-footer__link md-footer__link--next" href="../02%20%E6%95%B0%E6%8D%AE%E6%8F%90%E4%BE%9B%E7%A8%8B%E5%BA%8F/" rel="next">
+<a aria-label="下一页: 数据集" class="md-footer__link md-footer__link--next" href="../03-%E6%95%B0%E6%8D%AE%E9%9B%86/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                   下一页
                 </span>
-                数据提供程序
+                数据集
               </div>
 </div>
 <div class="md-footer__button md-icon">

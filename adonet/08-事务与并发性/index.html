@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://finneganwill.github.io/material-dotnet/adonet/06%20%E5%88%9B%E5%BB%BA%E5%91%BD%E4%BB%A4/" rel="canonical"/>
-<link href="../05%20%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E6%BA%90/" rel="prev"/>
-<link href="../07%20%E6%A3%80%E7%B4%A2%E5%92%8C%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE/" rel="next"/>
+<link href="https://finneganwill.github.io/material-dotnet/adonet/08-%E4%BA%8B%E5%8A%A1%E4%B8%8E%E5%B9%B6%E5%8F%91%E6%80%A7/" rel="canonical"/>
+<link href="../07-%E6%A3%80%E7%B4%A2%E5%92%8C%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE/" rel="prev"/>
+<link href="../../ef-core/01%20%E4%BA%86%E8%A7%A3EF%20Core/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
-<title>创建命令 - .Net Material</title>
+<title>事务与并发性 - .Net Material</title>
 <link href="../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -37,9 +37,6 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#_1">
-          跳转至
-        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -61,7 +58,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              创建命令
+              事务与并发性
             
           </span>
 </div>
@@ -109,7 +106,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../01%20%E4%BA%86%E8%A7%A3ADO.NET/">
+<a class="md-tabs__link md-tabs__link--active" href="../01-%E4%BA%86%E8%A7%A3ADO.NET/">
         ADO.NET
       </a>
 </li>
@@ -322,70 +319,44 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../01%20%E4%BA%86%E8%A7%A3ADO.NET/">
+<a class="md-nav__link" href="../01-%E4%BA%86%E8%A7%A3ADO.NET/">
         了解ADO.NET
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../02%20%E6%95%B0%E6%8D%AE%E6%8F%90%E4%BE%9B%E7%A8%8B%E5%BA%8F/">
+<a class="md-nav__link" href="../02-%E6%95%B0%E6%8D%AE%E6%8F%90%E4%BE%9B%E7%A8%8B%E5%BA%8F/">
         数据提供程序
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../03%20%E6%95%B0%E6%8D%AE%E9%9B%86/">
+<a class="md-nav__link" href="../03-%E6%95%B0%E6%8D%AE%E9%9B%86/">
         数据集
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../04%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%98%A0%E5%B0%84/">
+<a class="md-nav__link" href="../04-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%98%A0%E5%B0%84/">
         数据类型映射
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../05%20%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E6%BA%90/">
+<a class="md-nav__link" href="../05-%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E6%BA%90/">
         连接数据源
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../06-%E5%88%9B%E5%BB%BA%E5%91%BD%E4%BB%A4%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0/">
+        创建命令与配置参数
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../07-%E6%A3%80%E7%B4%A2%E5%92%8C%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE/">
+        检索和修改数据
       </a>
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          创建命令
-          <span class="md-nav__icon md-icon"></span>
-</label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        创建命令
-      </a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-    一、命令与参数
-  </a>
-<nav aria-label="一、命令与参数" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#01-dbcommand">
-    01 DbCommand
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#02">
-    02 配置命令参数
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../07%20%E6%A3%80%E7%B4%A2%E5%92%8C%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE/">
-        检索和修改数据
+        事务与并发性
       </a>
 </li>
 </ul>
@@ -470,121 +441,14 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_1">
-    一、命令与参数
-  </a>
-<nav aria-label="一、命令与参数" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#01-dbcommand">
-    01 DbCommand
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#02">
-    02 配置命令参数
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>创建命令</h1>
-<h2 id="_1">一、命令与参数<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h2>
-<h3 id="01-dbcommand">01 DbCommand<a class="headerlink" href="#01-dbcommand" title="Permanent link">⚓︎</a></h3>
-<p>建立与数据源的连接后，可以使用 DbCommand 对象来执行命令并从数据源中返回结果，可以使用命令构造函数之一为要使用的数据提供程序（Data Provider）创建命令。</p>
-<p>每个 Data Provider 都具有一个 DbCommand 对象<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> —— OleDbCommand、SqlCommand、OdbcCommand、OracleCommand。</p>
-<p>DbCommand 对象具有几个重要属性：</p>
-<table>
-<thead>
-<tr>
-<th align="left">属性</th>
-<th align="left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><code>CommandText</code></td>
-<td align="left">获取或设置要在数据源中执行的 Transact-SQL 语句、表名或存储过程。</td>
-</tr>
-<tr>
-<td align="left"><code>CommandType</code></td>
-<td align="left">获取或设置一个值，该值指示解释 CommandText 属性的方式。</td>
-</tr>
-<tr>
-<td align="left"><code>Connection</code></td>
-<td align="left">获取或设置 SqlCommand 的此实例使用的 SqlConnection。</td>
-</tr>
-</tbody>
-</table>
-<p>CommandType 是一个枚举属性，可以通过该属性设置让命令字符串按何种规则被解释执行，枚举选项如下：</p>
-<table>
-<thead>
-<tr>
-<th align="left">枚举项</th>
-<th align="left">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><code>CommandType.Text</code></td>
-<td align="left">定义要在数据源处执行的语句的 SQL 命令（默认）</td>
-</tr>
-<tr>
-<td align="left"><code>CommandType.StoredProcedure</code></td>
-<td align="left">存储过程名称</td>
-</tr>
-<tr>
-<td align="left"><code>CommandType.TableDirect</code></td>
-<td align="left">表的名称</td>
-</tr>
-</tbody>
-</table>
-<p>下列示例展示了 SqlCommand 对象的创建：
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">// 假设 sqlConnection 是有效连接</span>
-</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kt">string</span><span class="w"> </span><span class="n">queryString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"select * from student_info;"</span><span class="p">;</span>
-</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">SqlCommand</span><span class="w"> </span><span class="n">cm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlCommand</span><span class="p">(</span><span class="n">queryString</span><span class="p">,</span><span class="w"> </span><span class="n">sqlConnection</span><span class="p">);</span><span class="w"> </span>
-</span><span id="__span-0-4"><a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="c1">// or</span>
-</span><span id="__span-0-6"><a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="n">SqlCommand</span><span class="w"> </span><span class="n">cm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlCommand</span><span class="p">();</span>
-</span><span id="__span-0-7"><a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="n">cm</span><span class="p">.</span><span class="n">CommandText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">queryString</span><span class="p">;</span>
-</span><span id="__span-0-8"><a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="n">cm</span><span class="p">.</span><span class="n">CommandType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CommanType</span><span class="p">.</span><span class="n">Text</span><span class="p">;</span><span class="w"> </span><span class="c1">// 执行SQL命令，默认不需要设置该属性，仅做演示使用</span>
-</span><span id="__span-0-9"><a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="n">cm</span><span class="p">.</span><span class="n">Connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sqlConnection</span>
-</span></code></pre></div></p>
-<h3 id="02">02 配置命令参数<a class="headerlink" href="#02" title="Permanent link">⚓︎</a></h3>
-<p>通过提供类型检查和验证，命令对象可使用参数来将值传递给 SQL 语句或存储过程。</p>
-<p>与命令文本不同，参数输入被视为文本值，而不是可执行代码。 这样可帮助抵御“SQL 注入”攻击，这种攻击的攻击者会将命令插入 SQL 语句，从而危及服务器的安全。参数化命令还可提高查询执行性能，因为它们可帮助数据库服务器将传入命令与适当的缓存查询计划进行准确匹配。除具备安全和性能优势外，参数化命令还提供一种用于组织传递到数据源的值的便捷方法。</p>
-<p><a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.data.common.dbparameter">DbParameter</a> 对象可以通过使用其构造函数来创建，或者也可以通过调用 <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.data.common.dbcommand.dbparametercollection">DbParameterCollection</a> 集合的 <code>Add</code> 方法以将该对象添加到 <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.data.common.dbparametercollection">DbParameterCollection</a> 来创建。 <code>Add</code> 方法将构造函数实参或现有形参对象用作输入，具体取决于数据提供程序。</p>
-<p>在添加参数时，您必须为输入参数以外的参数提供一个 <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.data.parameterdirection">ParameterDirection</a> 属性。 下表显示了可用于 <code>ParameterDirection</code> 枚举的 <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.data.parameterdirection">ParameterDirection</a> 值。
-<a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.data.parameterdirection#system-data-parameterdirection-input">Input</a> ： 该参数为输入参数。 这是默认值。
-<a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.data.parameterdirection#system-data-parameterdirection-inputoutput">InputOutput</a> ：该参数可执行输入和输出。
-<a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.data.parameterdirection#system-data-parameterdirection-output">Output</a>　：该参数为输出参数。
-<a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.data.parameterdirection#system-data-parameterdirection-returnvalue">ReturnValue</a>：该参数表示从某操作（如存储过程、内置函数或用户定义的函数）返回的值。</p>
-<p>参数占位符的语法取决于数据源。 .NET Framework 数据提供程序以不同方式处理命名和指定参数和参数占位符。 此语法是针对某个特定的数据源自定义的，如下表所述。
-<a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.data.sqlclient">System.Data.SqlClient</a>：以 <code>@</code><em>参数名_格式使用命名参数。
-<a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.data.oledb">System.Data.OleDb</a>：使用由问号 (?) 指示的位置参数标记。
-<a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.data.odbc">System.Data.Odbc</a>：使用由问号 (<code>?</code>) 指示的位置参数标记。
-<a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.data.oracleclient">System.Data.OracleClient</a>：以 <code>:</code>_参数名</em> （或 <em>参数名</em>）格式使用命名参数。</p>
-<div class="footnote">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>适用于 OLE DB 的 OleDbCommand 对象；适用于 SQL Server 的 SqlCommand 对象；适用于 ODBC 的 OdbcCommand 对象；适用于 Oracle 的 OracleCommand 对象。 <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
-</li>
-</ol>
-</div>
+<h1>事务与并发性</h1>
+<p><a href="https://learn.microsoft.com/zh-cn/dotnet/framework/data/adonet/transactions-and-concurrency">https://learn.microsoft.com/zh-cn/dotnet/framework/data/adonet/transactions-and-concurrency</a></p>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">
@@ -628,7 +492,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 连接数据源" class="md-footer__link md-footer__link--prev" href="../05%20%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E6%BA%90/" rel="prev">
+<a aria-label="上一页: 检索和修改数据" class="md-footer__link md-footer__link--prev" href="../07-%E6%A3%80%E7%B4%A2%E5%92%8C%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -637,17 +501,17 @@
 <span class="md-footer__direction">
                   上一页
                 </span>
-                连接数据源
+                检索和修改数据
               </div>
 </div>
 </a>
-<a aria-label="下一页: 检索和修改数据" class="md-footer__link md-footer__link--next" href="../07%20%E6%A3%80%E7%B4%A2%E5%92%8C%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE/" rel="next">
+<a aria-label="下一页: 了解EF Core" class="md-footer__link md-footer__link--next" href="../../ef-core/01%20%E4%BA%86%E8%A7%A3EF%20Core/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                   下一页
                 </span>
-                检索和修改数据
+                了解EF Core
               </div>
 </div>
 <div class="md-footer__button md-icon">

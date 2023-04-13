@@ -5,9 +5,9 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://finneganwill.github.io/material-dotnet/adonet/07%20%E6%A3%80%E7%B4%A2%E5%92%8C%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE/" rel="canonical"/>
-<link href="../06%20%E5%88%9B%E5%BB%BA%E5%91%BD%E4%BB%A4/" rel="prev"/>
-<link href="../../ef-core/01%20%E4%BA%86%E8%A7%A3EF%20Core/" rel="next"/>
+<link href="https://finneganwill.github.io/material-dotnet/adonet/07-%E6%A3%80%E7%B4%A2%E5%92%8C%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE/" rel="canonical"/>
+<link href="../06-%E5%88%9B%E5%BB%BA%E5%91%BD%E4%BB%A4%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0/" rel="prev"/>
+<link href="../08-%E4%BA%8B%E5%8A%A1%E4%B8%8E%E5%B9%B6%E5%8F%91%E6%80%A7/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
 <title>检索和修改数据 - .Net Material</title>
@@ -109,7 +109,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../01%20%E4%BA%86%E8%A7%A3ADO.NET/">
+<a class="md-tabs__link md-tabs__link--active" href="../01-%E4%BA%86%E8%A7%A3ADO.NET/">
         ADO.NET
       </a>
 </li>
@@ -322,33 +322,33 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../01%20%E4%BA%86%E8%A7%A3ADO.NET/">
+<a class="md-nav__link" href="../01-%E4%BA%86%E8%A7%A3ADO.NET/">
         了解ADO.NET
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../02%20%E6%95%B0%E6%8D%AE%E6%8F%90%E4%BE%9B%E7%A8%8B%E5%BA%8F/">
+<a class="md-nav__link" href="../02-%E6%95%B0%E6%8D%AE%E6%8F%90%E4%BE%9B%E7%A8%8B%E5%BA%8F/">
         数据提供程序
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../03%20%E6%95%B0%E6%8D%AE%E9%9B%86/">
+<a class="md-nav__link" href="../03-%E6%95%B0%E6%8D%AE%E9%9B%86/">
         数据集
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../04%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%98%A0%E5%B0%84/">
+<a class="md-nav__link" href="../04-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%98%A0%E5%B0%84/">
         数据类型映射
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../05%20%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E6%BA%90/">
+<a class="md-nav__link" href="../05-%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E6%BA%90/">
         连接数据源
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../06%20%E5%88%9B%E5%BB%BA%E5%91%BD%E4%BB%A4/">
-        创建命令
+<a class="md-nav__link" href="../06-%E5%88%9B%E5%BB%BA%E5%91%BD%E4%BB%A4%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0/">
+        创建命令与配置参数
       </a>
 </li>
 <li class="md-nav__item md-nav__item--active">
@@ -426,6 +426,11 @@
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../08-%E4%BA%8B%E5%8A%A1%E4%B8%8E%E5%B9%B6%E5%8F%91%E6%80%A7/">
+        事务与并发性
+      </a>
 </li>
 </ul>
 </nav>
@@ -738,8 +743,8 @@
 </span></code></pre></div></p>
 <h3 id="04">04 查询分页<a class="headerlink" href="#04" title="Permanent link">⚓︎</a></h3>
 <p>查询结果分页是以较小数据子集（即页）的形式返回查询结果的过程。 它通常用于以易于管理的小块形式向用户显示结果。</p>
-<p>DataAdapter 提供通过重载 Fill 方法仅返回一页数据的功能。 但是，对于大量的查询结果，它可能并不是首选的分页方法，因为 DataAdapter 虽然仅使用所请求的记录来填充目标 <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.data.datatable">DataTable</a> 或 <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.data.dataset">DataSet</a>，但仍会使用返回整个查询的资源。 若要在从数据源中返回一页数据时不使用返回整个查询的资源，请为查询指定附加条件，使返回的行数减少到只返回所需的行。</p>
-<p>若要使用 Fill 方法返回一页数据，请指定 startRecord 参数（代表该数据页中的第一个记录），并指定 maxRecords 参数（代表该数据页中的记录数）。</p>
+<p>DataAdapter 提供通过重载 <code>Fill()</code> 方法仅返回一页数据的功能。 但是，对于大量的查询结果，它可能并不是首选的分页方法，因为 DataAdapter 虽然仅使用所请求的记录来填充 DataTable 或 DataSet，但仍会使用返回整个查询的资源。 若要在从数据源中返回一页数据时不使用返回整个查询的资源，请为查询指定附加条件，使返回的行数减少到只返回所需的行。</p>
+<p>若要使用 <code>Fill()</code> 方法返回一页数据，请指定 startRecord 参数（代表该数据页中的第一个记录），并指定 maxRecords 参数（代表该数据页中的记录数）。</p>
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">currentIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w">  </span>
 </span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">pageSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">;</span><span class="w">  </span>
 </span><span id="__span-4-3"><a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>
@@ -844,7 +849,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 创建命令" class="md-footer__link md-footer__link--prev" href="../06%20%E5%88%9B%E5%BB%BA%E5%91%BD%E4%BB%A4/" rel="prev">
+<a aria-label="上一页: 创建命令与配置参数" class="md-footer__link md-footer__link--prev" href="../06-%E5%88%9B%E5%BB%BA%E5%91%BD%E4%BB%A4%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -853,17 +858,17 @@
 <span class="md-footer__direction">
                   上一页
                 </span>
-                创建命令
+                创建命令与配置参数
               </div>
 </div>
 </a>
-<a aria-label="下一页: 了解EF Core" class="md-footer__link md-footer__link--next" href="../../ef-core/01%20%E4%BA%86%E8%A7%A3EF%20Core/" rel="next">
+<a aria-label="下一页: 事务与并发性" class="md-footer__link md-footer__link--next" href="../08-%E4%BA%8B%E5%8A%A1%E4%B8%8E%E5%B9%B6%E5%8F%91%E6%80%A7/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                   下一页
                 </span>
-                了解EF Core
+                事务与并发性
               </div>
 </div>
 <div class="md-footer__button md-icon">

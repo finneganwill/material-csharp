@@ -5,9 +5,9 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://finneganwill.github.io/material-dotnet/adonet/05%20%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E6%BA%90/" rel="canonical"/>
-<link href="../04%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%98%A0%E5%B0%84/" rel="prev"/>
-<link href="../06%20%E5%88%9B%E5%BB%BA%E5%91%BD%E4%BB%A4/" rel="next"/>
+<link href="https://finneganwill.github.io/material-dotnet/adonet/05-%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E6%BA%90/" rel="canonical"/>
+<link href="../04-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%98%A0%E5%B0%84/" rel="prev"/>
+<link href="../06-%E5%88%9B%E5%BB%BA%E5%91%BD%E4%BB%A4%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
 <title>连接数据源 - .Net Material</title>
@@ -109,7 +109,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../01%20%E4%BA%86%E8%A7%A3ADO.NET/">
+<a class="md-tabs__link md-tabs__link--active" href="../01-%E4%BA%86%E8%A7%A3ADO.NET/">
         ADO.NET
       </a>
 </li>
@@ -322,22 +322,22 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../01%20%E4%BA%86%E8%A7%A3ADO.NET/">
+<a class="md-nav__link" href="../01-%E4%BA%86%E8%A7%A3ADO.NET/">
         了解ADO.NET
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../02%20%E6%95%B0%E6%8D%AE%E6%8F%90%E4%BE%9B%E7%A8%8B%E5%BA%8F/">
+<a class="md-nav__link" href="../02-%E6%95%B0%E6%8D%AE%E6%8F%90%E4%BE%9B%E7%A8%8B%E5%BA%8F/">
         数据提供程序
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../03%20%E6%95%B0%E6%8D%AE%E9%9B%86/">
+<a class="md-nav__link" href="../03-%E6%95%B0%E6%8D%AE%E9%9B%86/">
         数据集
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../04%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%98%A0%E5%B0%84/">
+<a class="md-nav__link" href="../04-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%98%A0%E5%B0%84/">
         数据类型映射
       </a>
 </li>
@@ -446,13 +446,18 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../06%20%E5%88%9B%E5%BB%BA%E5%91%BD%E4%BB%A4/">
-        创建命令
+<a class="md-nav__link" href="../06-%E5%88%9B%E5%BB%BA%E5%91%BD%E4%BB%A4%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0/">
+        创建命令与配置参数
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../07%20%E6%A3%80%E7%B4%A2%E5%92%8C%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE/">
+<a class="md-nav__link" href="../07-%E6%A3%80%E7%B4%A2%E5%92%8C%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE/">
         检索和修改数据
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../08-%E4%BA%8B%E5%8A%A1%E4%B8%8E%E5%B9%B6%E5%8F%91%E6%80%A7/">
+        事务与并发性
       </a>
 </li>
 </ul>
@@ -837,12 +842,37 @@
 </span><span id="__span-6-9"><a href="#__codelineno-6-9" id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="c1">// initial catalog="AdventureWorks;NewValue=Bad"</span>
 </span></code></pre></div></p>
 <h3 id="03">03 连接字符串与配置文件<a class="headerlink" href="#03" title="Permanent link">⚓︎</a></h3>
-<p>如果事先知道连接字符串的某些元素，则可以将其存储在配置文件中，并在运行时检索它们以构造完整连接字符串。 </p>
-<p>例如，可能事先知道数据库的名称，但不知道服务器的名称。 或者，您可能希望用户在运行时提供用户名和密码，而不能在连接字符串中插入其他值。</p>
-<p>连接字符串生成器的一个重载构造函数将 String 作为自变量，这可让你提供部分连接字符串，然后通过用户输入使这部分连接字符串成为完整字符串。 该部分连接字符串可以存储在配置文件中并在运行时进行检索。</p>
+<p>在应用程序代码中嵌入连接字符串可能导致安全漏洞和维护问题。 使用 <a href="https://learn.microsoft.com/zh-cn/dotnet/framework/tools/ildasm-exe-il-disassembler">Ildasm.exe（IL 反汇编程序）</a>工具可以查看编译到应用程序源代码中的未加密连接字符串。 此外，如果连接字符串发生更改，则必须重新编译应用程序。 因此，微软建议将连接字符串存储在应用程序配置文件中。</p>
+<p>下面的代码展示了配置文件中添加连接字符串的语法：
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-7-1"><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="cp">&lt;?xml version='1.0' encoding='utf-8'?&gt;</span><span class="w">  </span>
+</span><span id="__span-7-2"><a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="nt">&lt;configuration&gt;</span><span class="w">  </span>
+</span><span id="__span-7-3"><a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="nt">&lt;connectionStrings&gt;</span><span class="w">  </span>
+</span><span id="__span-7-4"><a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">  </span><span class="nt">&lt;clear</span><span class="w"> </span><span class="nt">/&gt;</span><span class="w">  </span>
+</span><span id="__span-7-5"><a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">  </span><span class="nt">&lt;add</span><span class="w"> </span><span class="na">name=</span><span class="s">"Name"</span><span class="w"> </span><span class="na">providerName=</span><span class="s">"System.Data.ProviderName"</span><span class="w"> </span>
+</span><span id="__span-7-6"><a href="#__codelineno-7-6" id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">      </span><span class="na">connectionString=</span><span class="s">"Valid Connection String;"</span><span class="w"> </span><span class="nt">/&gt;</span><span class="w">  </span>
+</span><span id="__span-7-7"><a href="#__codelineno-7-7" id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="nt">&lt;/connectionStrings&gt;</span><span class="w">  </span>
+</span><span id="__span-7-8"><a href="#__codelineno-7-8" id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="nt">&lt;/configuration&gt;</span>
+</span></code></pre></div></p>
+<div class="admonition about configuration">
+<p class="admonition-title">About</p>
+<p>应用程序配置文件包含特定应用程序特有的设置。 例如，ASP.NET 应用程序能包含一个或多个 web.config 文件，Windows 应用程序可能包含一个可选 app.config 文件。 虽然配置文件的名称和位置会因应用程序宿主的不同而有所不同，但配置文件可以有相同的元素。</p>
+</div>
+<p>另外，你可以进一步将连接字符串抽离到单独的外部文件，然后在应用程序配置文件中重新引用它们：
+<div class="language-xml highlight"><span class="filename">外部配置文件 connections.config</span><pre><span></span><code><span id="__span-8-1"><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="nt">&lt;connectionStrings&gt;</span><span class="w">  </span>
+</span><span id="__span-8-2"><a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">  </span><span class="nt">&lt;add</span><span class="w"> </span><span class="na">name=</span><span class="s">"Name"</span>
+</span><span id="__span-8-3"><a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">   </span><span class="na">providerName=</span><span class="s">"System.Data.ProviderName"</span>
+</span><span id="__span-8-4"><a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">   </span><span class="na">connectionString=</span><span class="s">"Valid Connection String;"</span><span class="w"> </span><span class="nt">/&gt;</span><span class="w">  </span>
+</span><span id="__span-8-5"><a href="#__codelineno-8-5" id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="nt">&lt;/connectionStrings&gt;</span>
+</span></code></pre></div></p>
+<div class="language-xml highlight"><span class="filename">应用程序配置文件</span><pre><span></span><code><span id="__span-9-1"><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="cp">&lt;?xml version='1.0' encoding='utf-8'?&gt;</span><span class="w">  </span>
+</span><span id="__span-9-2"><a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="nt">&lt;configuration&gt;</span><span class="w">  </span>
+</span><span id="__span-9-3"><a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">    </span><span class="nt">&lt;connectionStrings</span><span class="w"> </span><span class="na">configSource=</span><span class="s">"connections.config"</span><span class="nt">/&gt;</span><span class="w">  </span>
+</span><span id="__span-9-4"><a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="nt">&lt;/configuration&gt;</span>
+</span></code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>参考链接：<a href="https://learn.microsoft.com/zh-cn/dotnet/framework/data/adonet/connection-strings-and-configuration-files">https://learn.microsoft.com/zh-cn/dotnet/framework/data/adonet/connection-strings-and-configuration-files</a> </p>
+<p><img alt="1⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/31-20e3.svg" title=":one:"/> 您可以将连接字符串的一部分保存在配置文件中，并使用 DbConnectionStringBuilder 类在运行时将该字符串补充完整。 如果您预先不知道连接字符串的元素，或者不希望将敏感信息保存到配置文件中，这一方法会很有用。<br/>
+<img alt="2⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/32-20e3.svg" title=":two:"/> .NET Framework 支持运行时检索配置文件中的连接字符串，您可以以编程方式按名称或提供程序名称检索连接字符串。更多参考：<a href="https://learn.microsoft.com/zh-cn/dotnet/framework/data/adonet/connection-strings-and-configuration-files">https://learn.microsoft.com/zh-cn/dotnet/framework/data/adonet/connection-strings-and-configuration-files</a> </p>
 </div>
 <h2 id="_5">四、连接池<a class="headerlink" href="#_5" title="Permanent link">⚓︎</a></h2>
 <h3 id="01_2">01 连接池原理<a class="headerlink" href="#01_2" title="Permanent link">⚓︎</a></h3>
@@ -857,28 +887,28 @@
 <h3 id="02-sql-server">02 SQL Server 连接池<a class="headerlink" href="#02-sql-server" title="Permanent link">⚓︎</a></h3>
 <p>在初次打开连接时，将根据完全匹配算法创建连接池，该算法将池与连接中的连接字符串关联。 每个连接池都与一个不同的连接字符串相关联。 打开新连接时，如果连接字符串并非与现有池完全匹配，将创建一个新池。 按进程、应用程序域、连接字符串以及 Windows 标识（在使用集成的安全性时）来建立池连接。 连接字符串还必须是完全匹配的；按不同顺序为同一连接提供的关键字将分到单独的池中。</p>
 <h4 id="_6">创建连接池<a class="headerlink" href="#_6" title="Permanent link">⚓︎</a></h4>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-7-1"><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">SqlConnection</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlConnection</span><span class="p">(</span><span class="w">  </span>
-</span><span id="__span-7-2"><a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">  </span><span class="s">"Integrated Security=SSPI;Initial Catalog=Northwind"</span><span class="p">))</span><span class="w">  </span>
-</span><span id="__span-7-3"><a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="p">{</span><span class="w">  </span>
-</span><span id="__span-7-4"><a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="n">Open</span><span class="p">();</span>
-</span><span id="__span-7-5"><a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">    </span><span class="c1">// Pool A is created.  </span>
-</span><span id="__span-7-6"><a href="#__codelineno-7-6" id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="p">}</span><span class="w">  </span>
-</span><span id="__span-7-7"><a href="#__codelineno-7-7" id="__codelineno-7-7" name="__codelineno-7-7"></a>
-</span><span id="__span-7-8"><a href="#__codelineno-7-8" id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">SqlConnection</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlConnection</span><span class="p">(</span><span class="w">  </span>
-</span><span id="__span-7-9"><a href="#__codelineno-7-9" id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">  </span><span class="s">"Integrated Security=SSPI;Initial Catalog=pubs"</span><span class="p">))</span><span class="w">  </span>
-</span><span id="__span-7-10"><a href="#__codelineno-7-10" id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="p">{</span><span class="w">  </span>
-</span><span id="__span-7-11"><a href="#__codelineno-7-11" id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="n">Open</span><span class="p">();</span>
-</span><span id="__span-7-12"><a href="#__codelineno-7-12" id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">    </span><span class="c1">// Pool B is created because the connection strings differ.  </span>
-</span><span id="__span-7-13"><a href="#__codelineno-7-13" id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="p">}</span><span class="w">  </span>
-</span><span id="__span-7-14"><a href="#__codelineno-7-14" id="__codelineno-7-14" name="__codelineno-7-14"></a>
-</span><span id="__span-7-15"><a href="#__codelineno-7-15" id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">SqlConnection</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlConnection</span><span class="p">(</span><span class="w">  </span>
-</span><span id="__span-7-16"><a href="#__codelineno-7-16" id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="w">  </span><span class="s">"Integrated Security=SSPI;Initial Catalog=Northwind"</span><span class="p">))</span><span class="w">  </span>
-</span><span id="__span-7-17"><a href="#__codelineno-7-17" id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="p">{</span><span class="w">  </span>
-</span><span id="__span-7-18"><a href="#__codelineno-7-18" id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="n">Open</span><span class="p">();</span>
-</span><span id="__span-7-19"><a href="#__codelineno-7-19" id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="w">    </span><span class="c1">// The connection string matches pool A.  </span>
-</span><span id="__span-7-20"><a href="#__codelineno-7-20" id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="p">}</span>
-</span><span id="__span-7-21"><a href="#__codelineno-7-21" id="__codelineno-7-21" name="__codelineno-7-21"></a>
-</span><span id="__span-7-22"><a href="#__codelineno-7-22" id="__codelineno-7-22" name="__codelineno-7-22"></a><span class="c1">// 示例中创建了三个新的 SqlConnection 对象，但是管理时只需要两个连接池。 注意，根据为 `Initial Catalog` 分配的值，第一个和第二个连接字符串有所不同。</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-10-1"><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">SqlConnection</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlConnection</span><span class="p">(</span><span class="w">  </span>
+</span><span id="__span-10-2"><a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">  </span><span class="s">"Integrated Security=SSPI;Initial Catalog=Northwind"</span><span class="p">))</span><span class="w">  </span>
+</span><span id="__span-10-3"><a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-10-4"><a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="n">Open</span><span class="p">();</span>
+</span><span id="__span-10-5"><a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">    </span><span class="c1">// Pool A is created.  </span>
+</span><span id="__span-10-6"><a href="#__codelineno-10-6" id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="p">}</span><span class="w">  </span>
+</span><span id="__span-10-7"><a href="#__codelineno-10-7" id="__codelineno-10-7" name="__codelineno-10-7"></a>
+</span><span id="__span-10-8"><a href="#__codelineno-10-8" id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">SqlConnection</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlConnection</span><span class="p">(</span><span class="w">  </span>
+</span><span id="__span-10-9"><a href="#__codelineno-10-9" id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="w">  </span><span class="s">"Integrated Security=SSPI;Initial Catalog=pubs"</span><span class="p">))</span><span class="w">  </span>
+</span><span id="__span-10-10"><a href="#__codelineno-10-10" id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-10-11"><a href="#__codelineno-10-11" id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="n">Open</span><span class="p">();</span>
+</span><span id="__span-10-12"><a href="#__codelineno-10-12" id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="w">    </span><span class="c1">// Pool B is created because the connection strings differ.  </span>
+</span><span id="__span-10-13"><a href="#__codelineno-10-13" id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="p">}</span><span class="w">  </span>
+</span><span id="__span-10-14"><a href="#__codelineno-10-14" id="__codelineno-10-14" name="__codelineno-10-14"></a>
+</span><span id="__span-10-15"><a href="#__codelineno-10-15" id="__codelineno-10-15" name="__codelineno-10-15"></a><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="n">SqlConnection</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SqlConnection</span><span class="p">(</span><span class="w">  </span>
+</span><span id="__span-10-16"><a href="#__codelineno-10-16" id="__codelineno-10-16" name="__codelineno-10-16"></a><span class="w">  </span><span class="s">"Integrated Security=SSPI;Initial Catalog=Northwind"</span><span class="p">))</span><span class="w">  </span>
+</span><span id="__span-10-17"><a href="#__codelineno-10-17" id="__codelineno-10-17" name="__codelineno-10-17"></a><span class="p">{</span><span class="w">  </span>
+</span><span id="__span-10-18"><a href="#__codelineno-10-18" id="__codelineno-10-18" name="__codelineno-10-18"></a><span class="w">    </span><span class="n">connection</span><span class="p">.</span><span class="n">Open</span><span class="p">();</span>
+</span><span id="__span-10-19"><a href="#__codelineno-10-19" id="__codelineno-10-19" name="__codelineno-10-19"></a><span class="w">    </span><span class="c1">// The connection string matches pool A.  </span>
+</span><span id="__span-10-20"><a href="#__codelineno-10-20" id="__codelineno-10-20" name="__codelineno-10-20"></a><span class="p">}</span>
+</span><span id="__span-10-21"><a href="#__codelineno-10-21" id="__codelineno-10-21" name="__codelineno-10-21"></a>
+</span><span id="__span-10-22"><a href="#__codelineno-10-22" id="__codelineno-10-22" name="__codelineno-10-22"></a><span class="c1">// 示例中创建了三个新的 SqlConnection 对象，但是管理时只需要两个连接池。 注意，根据为 `Initial Catalog` 分配的值，第一个和第二个连接字符串有所不同。</span>
 </span></code></pre></div>
 <h4 id="_7">添加连接<a class="headerlink" href="#_7" title="Permanent link">⚓︎</a></h4>
 <p>连接池是为每个唯一的连接字符串创建的。 当创建一个池后，将创建多个连接对象并将其添加到该池中，以满足最小池大小的需求。 连接根据需要添加到池中，但是不能超过指定的最大池大小（默认值为 100）。 连接在关闭或断开时释放回池中。</p>
@@ -937,7 +967,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 数据类型映射" class="md-footer__link md-footer__link--prev" href="../04%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%98%A0%E5%B0%84/" rel="prev">
+<a aria-label="上一页: 数据类型映射" class="md-footer__link md-footer__link--prev" href="../04-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%98%A0%E5%B0%84/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -950,13 +980,13 @@
               </div>
 </div>
 </a>
-<a aria-label="下一页: 创建命令" class="md-footer__link md-footer__link--next" href="../06%20%E5%88%9B%E5%BB%BA%E5%91%BD%E4%BB%A4/" rel="next">
+<a aria-label="下一页: 创建命令与配置参数" class="md-footer__link md-footer__link--next" href="../06-%E5%88%9B%E5%BB%BA%E5%91%BD%E4%BB%A4%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                   下一页
                 </span>
-                创建命令
+                创建命令与配置参数
               </div>
 </div>
 <div class="md-footer__button md-icon">
