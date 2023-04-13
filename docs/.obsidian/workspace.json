@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "adonet/08 事务与并发.md",
+                "file": "adonet/05 连接数据源.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "adonet/08 事务与并发.md",
+                "file": "adonet/05 连接数据源.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "adonet/08 事务与并发.md",
+                "file": "adonet/05 连接数据源.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "adonet/08 事务与并发.md"
+                "file": "adonet/05 连接数据源.md"
               }
             }
           }
@@ -149,9 +149,9 @@
   },
   "active": "acc16553905ece3b",
   "lastOpenFiles": [
-    "adonet/07 检索和修改数据.md",
-    "adonet/08 事务与并发.md",
     "adonet/06 创建命令与配置参数.md",
+    "adonet/08 事务与并发.md",
+    "adonet/07 检索和修改数据.md",
     "adonet/05 连接数据源.md",
     "adonet/01 了解ADO.NET.md",
     "adonet/02 数据提供程序.md",
