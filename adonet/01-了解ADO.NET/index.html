@@ -609,7 +609,10 @@
 <h4 id="dataset">DataSet<a class="headerlink" href="#dataset" title="Permanent link">⚓︎</a></h4>
 <p>ADO.NET <code>DataSet</code> 是专门为独立于任何数据源的数据访问而设计的。 因此，它可以用于多种不同的数据源，用于 XML 数据，或用于管理应用程序本地的数据。 <code>DataSet</code> 包含一个或多个 <a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.data.datatable">DataTable</a> 对象的集合，这些对象由数据行和数据列以及有关 <code>DataTable</code> 对象中数据的主键、外键、约束和关系信息组成。</p>
 <h4 id="adonet_2">ADO.NET 体系结构<a class="headerlink" href="#adonet_2" title="Permanent link">⚓︎</a></h4>
-<p>![[ADO.NET体系结构.png]]</p>
+<figure>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../img/ADO.NET%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84.png"><img alt="ADO.NET体系结构图" src="../img/ADO.NET%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84.png" width="750"/></a>
+<figcaption>ADO.NET体系结构图</figcaption></p>
+</figure>
 <h2 id="linqadonet">二、LINQ和ADO.NET<a class="headerlink" href="#linqadonet" title="Permanent link">⚓︎</a></h2>
 <h3 id="01-adonet-linq">01 ADO.NET LINQ 技术<a class="headerlink" href="#01-adonet-linq" title="Permanent link">⚓︎</a></h3>
 <p>有三种独立的 ADO.NET 语言集成查询 (LINQ) 技术：LINQ to DataSet、LINQ to SQL 和 LINQ to Entities。 </p>
@@ -618,9 +621,10 @@
 <li>LINQ to SQL 可用于直接查询 SQL Server 数据库架构； </li>
 <li>LINQ to Entities 可用于查询实体数据模型。</li>
 </ul>
-<p>![[(https://github.com/finneganwill/material-dotnet/blob/gh-pages/adonet/ADO.NET%20LINQ%20%E6%8A%80%E6%9C%AF.png)]] </p>
-<p>![[https://learn.microsoft.com/zh-cn/dotnet/framework/data/adonet/media/dpue-linqtoadonetoverview-bpuedev11.gif]] 
-![[ADO.NET LINQ 技术.png]]</p>
+<figure>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../img/ADO.NET%20LINQ%20%E6%8A%80%E6%9C%AF.png"><img alt="ADO.NET LINQ 技术" src="../img/ADO.NET%20LINQ%20%E6%8A%80%E6%9C%AF.png" width="600"/></a>
+<figcaption>ADO.NET LINQ 技术</figcaption></p>
+</figure>
 <h3 id="02-linq-to-dataset">02 LINQ to DataSet<a class="headerlink" href="#02-linq-to-dataset" title="Permanent link">⚓︎</a></h3>
 <p>DataSet 是用作 ADO.NET 构建基础的离线编程模型的关键要素，其使用非常广泛。 LINQ to DataSet 使开发人员能够使用许多其他数据源可用的相同查询构建机制，在 DataSet 中内置更丰富的查询功能。</p>
 <h3 id="03-linq-to-sql">03 LINQ to SQL<a class="headerlink" href="#03-linq-to-sql" title="Permanent link">⚓︎</a></h3>
@@ -628,7 +632,7 @@
 <p>借助 LINQ to SQL，除了其他数据源（例如 XML）外，开发人员还可以使用与内存中集合和 DataSet 相同的 LINQ 编程模式直接针对存储架构编写代码。</p>
 <h3 id="04-linq-to-entities">04 LINQ to Entities<a class="headerlink" href="#04-linq-to-entities" title="Permanent link">⚓︎</a></h3>
 <p>大多数应用程序目前是在关系数据库之上编写的。 有时这些应用程序将需要与以关系形式表示的数据进行交互。 数据库架构并不总是构建应用程序的理想选择，并且应用程序的概念模型与数据库的逻辑模型不同。 实体数据模型是可用于对特定域的数据进行建模的概念数据模型，以便应用程序可作为对象与数据交互。 </p>
-<p>通过实体数据模型，在 .NET 环境中将关系数据作为对象公开。 这使得对象层成为实现 LINQ 支持的理想目标，开发人员可以采用生成业务逻辑所用的语言来构建数据库查询。 此功能称为 LINQ to Entities。。</p>
+<p>通过实体数据模型，在 .NET 环境中将关系数据作为对象公开。 这使得对象层成为实现 LINQ 支持的理想目标，开发人员可以采用生成业务逻辑所用的语言来构建数据库查询。 此功能称为 LINQ to Entities。</p>
 <h2 id="adonet_3">三、ADO.NET代码示例<a class="headerlink" href="#adonet_3" title="Permanent link">⚓︎</a></h2>
 <h3 id="01-adonet-sql-server-localdb">01 ADO.NET 连接 SQL Server LocalDB<a class="headerlink" href="#01-adonet-sql-server-localdb" title="Permanent link">⚓︎</a></h3>
 <div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>

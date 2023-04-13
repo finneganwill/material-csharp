@@ -511,7 +511,10 @@
 <h1 id="_1">数据集<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h1>
 <h2 id="dataset">一、DataSet<a class="headerlink" href="#dataset" title="Permanent link">⚓︎</a></h2>
 <p><a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.data.dataset">DataSet</a> 对象对于支持 ADO.NET 中的断开连接的分布式数据方案起到至关重要的作用。 DataSet 是数据驻留在内存中的表示形式，不管数据源是什么，它都可提供一致的关系编程模型。 它可以用于多种不同的数据源，用于 XML 数据，或用于管理应用程序本地的数据。 DataSet 表示包括相关表、约束和表间关系在内的整个数据集。</p>
-<p>![[DataSet对象模型.png]]</p>
+<figure>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../img/DataSet%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B.png"><img alt="DataSet对象模型.png" src="../img/DataSet%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B.png" width="650"/></a>
+<figcaption>DataSet对象模型</figcaption></p>
+</figure>
 <h2 id="datatablecollection">二、DataTableCollection<a class="headerlink" href="#datatablecollection" title="Permanent link">⚓︎</a></h2>
 <p>ADO.NET DataSet 包含由 DataTable 对象表示的零个或多个表的集合。 DataTableCollection 包含 DataSet 中的所有 DataTable 对象。</p>
 <p>DataTable 在 System.Data 命名空间中定义，表示内存驻留数据的单个表。 其中包含由 DataColumnCollection 表示的列集合以及由 ConstraintCollection 表示的约束集合，这两个集合共同定义表的架构。 DataTable 还包含 DataRowCollection（其中包含表中的数据）所表示的行的集合。 除了其当前状态之前，DataRow 还会保留其当前版本和初始版本，以标识对行中存储的值的更改。</p>
