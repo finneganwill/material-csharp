@@ -34,6 +34,9 @@ ADO.NET `DataSet` 是专门为独立于任何数据源的数据访问而设计
 - LINQ to SQL 可用于直接查询 SQL Server 数据库架构； 
 - LINQ to Entities 可用于查询实体数据模型。
 
+![[(https://github.com/finneganwill/material-dotnet/blob/gh-pages/adonet/ADO.NET%20LINQ%20%E6%8A%80%E6%9C%AF.png)]] 
+
+![[https://learn.microsoft.com/zh-cn/dotnet/framework/data/adonet/media/dpue-linqtoadonetoverview-bpuedev11.gif]] 
 ![[ADO.NET LINQ 技术.png]]
 
 ### 02 LINQ to DataSet
