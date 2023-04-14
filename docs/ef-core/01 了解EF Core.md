@@ -43,9 +43,3 @@ EF Core 以 NuGet 包的形式提供。 要将 EF Core 添加到应用程序，
 			```
 		3. 若要更新提供程序，使用 `Update-Package` 命令；
 		4. 若要指定特定版本，可以使用 `-Version` 修饰符。 例如，若要安装 EF Core 6.0.14 包，请将 `-Version 6.0.14` 追加到命令中。
-
-
-## 三、第一个EF Core应用
-
-
-## 四、ASP.NET Core 与 EF Core
