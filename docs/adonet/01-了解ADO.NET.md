@@ -16,18 +16,20 @@ ADO.NET 提供对诸如 SQL Server 和 XML 这样的数据源以及通过 OLE DB
 
 ADO.NET 用于访问和操作数据的两个主要组件是 **.NET Framework 数据提供程序（Data Provider）** 和 **DataSet**。
 
-#### Data Provider
+**Data Provider** 
 .NET Framework 数据提供程序是专门为数据操作以及快速、只进、只读访问数据而设计的组件。 `Connection` 对象提供到数据源的连接。 使用 `Command` 对象可以访问用于返回数据、修改数据、运行存储过程以及发送或检索参数信息的数据库命令。 `DataReader` 可从数据源提供高性能的数据流。 最后，`DataAdapter` 在 `DataSet` 对象和数据源之间起到桥梁作用。 `DataAdapter` 使用 `Command` 对象在数据源中执行 SQL 命令以向 `DataSet` 中加载数据，并将对 `DataSet` 中数据的更改协调回数据源。
 
-#### DataSet
+**DataSet** 
 ADO.NET `DataSet` 是专门为独立于任何数据源的数据访问而设计的。 因此，它可以用于多种不同的数据源，用于 XML 数据，或用于管理应用程序本地的数据。 `DataSet` 包含一个或多个 [DataTable](https://learn.microsoft.com/zh-cn/dotnet/api/system.data.datatable) 对象的集合，这些对象由数据行和数据列以及有关 `DataTable` 对象中数据的主键、外键、约束和关系信息组成。
 
-#### ADO.NET 体系结构
+**实体框架** 
+ADO.NET 实体框架专门用于让开发人员能够通过针对概念应用程序模型进行编程（而不是直接针对关系存储架构进行编程）来创建数据访问应用程序。 这样做的目的是减少面向数据的应用程序所需的编码和维护工作
 
-<figure markdown> 
-    ![ADO.NET体系结构图](img/ADO.NET体系结构.png){ width="750" }
-    <figcaption>ADO.NET体系结构图</figcaption>
-</figure>
+**WCF数据服务**
+WCF Data Services 用于在 Web 或 Intranet 上部署数据服务。 这些数据将按照实体数据模型的规范组织成不同的实体和关系。 在此模型上部署的数据可通过标准的 HTTP 协议进行寻址。
+
+**XML 和 ADO.NET** 
+ADO.NET 利用 XML 的功能来提供对数据的断开连接的访问。 ADO.NET 是与 .NET Framework 中的 XML 类一起设计的，它们都是同一个体系结构的组件。ADO.NET 和 .NET Framework 中的 XML 类在 `DataSet` 对象中聚合。 无论 XML 源是文件还是 XML 流，都可以用其中的数据来填充 `DataSet`。 无论 `DataSet` 中数据的源是什么，都可以将 `DataSet` 作为符合万维网联合会 (W3C) 的 XML 进行编写，其架构作为 XML 架构定义语言 (XSD) 架构。 由于 `DataSet` 的本机序列化格式为 XML，因此它是用于在层间移动数据的绝佳媒介，这使 `DataSet` 成为了与 XML Web 服务之间远程处理数据和架构上下文的最佳选择。
 
 ## 二、LINQ和ADO.NET
 

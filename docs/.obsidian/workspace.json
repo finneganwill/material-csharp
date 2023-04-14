@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "adonet/01-了解ADO.NET.md",
+                "file": "ef-core/01 了解EF Core.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "adonet/01-了解ADO.NET.md",
+                "file": "ef-core/01 了解EF Core.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "adonet/01-了解ADO.NET.md",
+                "file": "ef-core/01 了解EF Core.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "adonet/01-了解ADO.NET.md"
+                "file": "ef-core/01 了解EF Core.md"
               }
             }
           }
@@ -149,13 +149,13 @@
   },
   "active": "acc16553905ece3b",
   "lastOpenFiles": [
-    "adonet/03-数据集.md",
-    "adonet/01-了解ADO.NET.md",
-    "adonet/02-数据提供程序.md",
-    "adonet/img/DataSet对象模型.png",
-    "adonet/img",
     "adonet/img/ADO.NET体系结构.png",
+    "adonet/01-了解ADO.NET.md",
+    "adonet/img/DataSet对象模型.png",
     "adonet/img/ADO.NET LINQ 技术.png",
+    "adonet/03-数据集.md",
+    "adonet/02-数据提供程序.md",
+    "adonet/img",
     "adonet/08-事务与并发性.md",
     "adonet/07-检索和修改数据.md",
     "adonet/06-创建命令与配置参数.md",
