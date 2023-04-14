@@ -23,7 +23,11 @@ ADO.NET 用于访问和操作数据的两个主要组件是 **.NET Framework 数
 ADO.NET `DataSet` 是专门为独立于任何数据源的数据访问而设计的。 因此，它可以用于多种不同的数据源，用于 XML 数据，或用于管理应用程序本地的数据。 `DataSet` 包含一个或多个 [DataTable](https://learn.microsoft.com/zh-cn/dotnet/api/system.data.datatable) 对象的集合，这些对象由数据行和数据列以及有关 `DataTable` 对象中数据的主键、外键、约束和关系信息组成。
 
 #### ADO.NET 体系结构
-![[ADO.NET体系结构.png]]
+
+<figure markdown> 
+    ![ADO.NET体系结构图](img/ADO.NET体系结构.png){ width="750" }
+    <figcaption>ADO.NET体系结构图</figcaption>
+</figure>
 
 ## 二、LINQ和ADO.NET
 
@@ -34,10 +38,10 @@ ADO.NET `DataSet` 是专门为独立于任何数据源的数据访问而设计
 - LINQ to SQL 可用于直接查询 SQL Server 数据库架构； 
 - LINQ to Entities 可用于查询实体数据模型。
 
-![[(https://github.com/finneganwill/material-dotnet/blob/gh-pages/adonet/ADO.NET%20LINQ%20%E6%8A%80%E6%9C%AF.png)]] 
-
-![[https://learn.microsoft.com/zh-cn/dotnet/framework/data/adonet/media/dpue-linqtoadonetoverview-bpuedev11.gif]] 
-![[ADO.NET LINQ 技术.png]]
+<figure markdown> 
+    ![ADO.NET LINQ 技术](img/ADO.NET LINQ 技术.png){ width="600" }
+    <figcaption>ADO.NET LINQ 技术</figcaption>
+</figure>
 
 ### 02 LINQ to DataSet
 DataSet 是用作 ADO.NET 构建基础的离线编程模型的关键要素，其使用非常广泛。 LINQ to DataSet 使开发人员能够使用许多其他数据源可用的相同查询构建机制，在 DataSet 中内置更丰富的查询功能。
@@ -50,7 +54,7 @@ LINQ to SQL 是适合不需要映射到概念模型的开发人员使用的有�
 ### 04 LINQ to Entities
 大多数应用程序目前是在关系数据库之上编写的。 有时这些应用程序将需要与以关系形式表示的数据进行交互。 数据库架构并不总是构建应用程序的理想选择，并且应用程序的概念模型与数据库的逻辑模型不同。 实体数据模型是可用于对特定域的数据进行建模的概念数据模型，以便应用程序可作为对象与数据交互。 
 
-通过实体数据模型，在 .NET 环境中将关系数据作为对象公开。 这使得对象层成为实现 LINQ 支持的理想目标，开发人员可以采用生成业务逻辑所用的语言来构建数据库查询。 此功能称为 LINQ to Entities。。
+通过实体数据模型，在 .NET 环境中将关系数据作为对象公开。 这使得对象层成为实现 LINQ 支持的理想目标，开发人员可以采用生成业务逻辑所用的语言来构建数据库查询。 此功能称为 LINQ to Entities。
 
 
 ## 三、ADO.NET代码示例
