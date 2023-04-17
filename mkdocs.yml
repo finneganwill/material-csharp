@@ -39,8 +39,9 @@ nav:
 #      - 指针变量: csharp-advanced/
 
     - LINQ:
-      - 了解LINQ: 'linq/01 了解LINQ.md'
-      - 查询语法: 'linq/02 查询语法.md'
+      - 了解LINQ: 'linq/01-了解LINQ.md'
+      - 查询语法: 'linq/02-查询语法.md'
+      - 方法语法: 'linq/03-方法语法'
 
     - ADO.NET:
       - 了解ADO.NET: 'adonet/01-了解ADO.NET.md'

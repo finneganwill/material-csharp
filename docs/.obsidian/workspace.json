@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linq/03 方法语法.md",
+                "file": "linq/03-方法语法.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linq/03 方法语法.md",
+                "file": "linq/03-方法语法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linq/03 方法语法.md",
+                "file": "linq/03-方法语法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linq/03 方法语法.md"
+                "file": "linq/03-方法语法.md"
               }
             }
           }
@@ -149,9 +149,10 @@
   },
   "active": "acc16553905ece3b",
   "lastOpenFiles": [
-    "linq/02 查询语法.md",
-    "linq/03 方法语法.md",
-    "linq/01 了解LINQ.md",
+    "index.md",
+    "linq/02-查询语法.md",
+    "linq/03-方法语法.md",
+    "linq/01-了解LINQ.md",
     "linq/img/Linq查询过程.png",
     "adonet/01-了解ADO.NET.md",
     "ef-core/01 了解EF Core.md",
@@ -184,7 +185,6 @@
     "Common",
     "新建文件夹",
     "author.md",
-    "mkdocs.md",
-    "index.md"
+    "mkdocs.md"
   ]
 }
