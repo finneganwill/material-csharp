@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linq/03-方法语法.md",
+                "file": "linq/04-标准查询运算符方法.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linq/04-标准查询运算符.md",
+                "file": "linq/04-标准查询运算符方法.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linq/03-方法语法.md",
+                "file": "linq/04-标准查询运算符方法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linq/03-方法语法.md",
+                "file": "linq/04-标准查询运算符方法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linq/03-方法语法.md"
+                "file": "linq/04-标准查询运算符方法.md"
               }
             }
           }
@@ -161,20 +161,21 @@
   },
   "active": "acc16553905ece3b",
   "lastOpenFiles": [
-    "linq/04-标准查询运算符.md",
     "linq/03-方法语法.md",
+    "linq/04-标准查询运算符方法.md",
+    "linq/01-了解LINQ.md",
+    "adonet/01-了解ADO.NET.md",
+    "adonet/02-数据提供程序.md",
+    "linq/04-标准查询运算符",
     "index.md",
     "linq/02-查询语法.md",
-    "linq/01-了解LINQ.md",
     "linq/img/Linq查询过程.png",
-    "adonet/01-了解ADO.NET.md",
     "ef-core/01 了解EF Core.md",
     "linq/img",
     "adonet/img/ADO.NET体系结构.png",
     "adonet/img/DataSet对象模型.png",
     "adonet/img/ADO.NET LINQ 技术.png",
     "adonet/03-数据集.md",
-    "adonet/02-数据提供程序.md",
     "adonet/img",
     "adonet/08-事务与并发性.md",
     "adonet/07-检索和修改数据.md",
@@ -197,7 +198,6 @@
     "ASP.NET Core/02 Razor.md",
     "Common",
     "新建文件夹",
-    "author.md",
-    "mkdocs.md"
+    "author.md"
   ]
 }
