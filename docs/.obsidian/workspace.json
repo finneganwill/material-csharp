@@ -25,14 +25,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linq/02-查询语法.md",
+                "file": "linq/06-筛选运算.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8a667c7ba47de000",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "linq/07-排序运算.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linq/02-查询语法.md",
+                "file": "linq/07-排序运算.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linq/02-查询语法.md",
+                "file": "linq/07-排序运算.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linq/02-查询语法.md"
+                "file": "linq/07-排序运算.md"
               }
             }
           }
@@ -160,11 +172,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "0513f8c09704aa7b",
+  "active": "ae0ea77f21deadc6",
   "lastOpenFiles": [
-    "linq/05-投影运算.md",
     "linq/06-筛选运算.md",
     "linq/02-查询语法.md",
+    "linq/07-排序运算.md",
+    "linq/05-投影运算.md",
     "linq/03-方法语法.md",
     "linq/04-标准查询运算符方法.md",
     "linq/01-了解LINQ.md",
@@ -198,7 +211,6 @@
     "ASP.NET Core/03 MVC.md",
     "ASP.NET Core/未命名.md",
     "ASP.NET Core/01 了解ASP.NET Core.md",
-    "ASP.NET Core/02 Razor.md",
     "Common",
     "新建文件夹"
   ]
