@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://finneganwill.github.io/material-dotnet/linq/02%20%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/" rel="canonical"/>
-<link href="../01%20%E4%BA%86%E8%A7%A3LINQ/" rel="prev"/>
-<link href="../../adonet/01-%E4%BA%86%E8%A7%A3ADO.NET/" rel="next"/>
+<link href="https://finneganwill.github.io/material-dotnet/linq/05-%E6%8A%95%E5%BD%B1%E8%BF%90%E7%AE%97/" rel="canonical"/>
+<link href="../04-%E6%A0%87%E5%87%86%E6%9F%A5%E8%AF%A2%E8%BF%90%E7%AE%97%E7%AC%A6%E6%96%B9%E6%B3%95/" rel="prev"/>
+<link href="../06-%E7%AD%9B%E9%80%89%E8%BF%90%E7%AE%97/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
-<title>查询语法 - .Net Material</title>
+<title>投影运算 - .Net Material</title>
 <link href="../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -61,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              查询语法
+              投影运算
             
           </span>
 </div>
@@ -104,7 +104,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../01%20%E4%BA%86%E8%A7%A3LINQ/">
+<a class="md-tabs__link md-tabs__link--active" href="../01-%E4%BA%86%E8%A7%A3LINQ/">
         LINQ
       </a>
 </li>
@@ -297,15 +297,92 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../01%20%E4%BA%86%E8%A7%A3LINQ/">
+<a class="md-nav__link" href="../01-%E4%BA%86%E8%A7%A3LINQ/">
         了解LINQ
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../02-%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/">
+        查询语法
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../03-%E6%96%B9%E6%B3%95%E8%AF%AD%E6%B3%95/">
+        方法语法
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+          标准查询运算符
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_3_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_4">
+<span class="md-nav__icon md-icon"></span>
+          标准查询运算符
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../04-%E6%A0%87%E5%87%86%E6%9F%A5%E8%AF%A2%E8%BF%90%E7%AE%97%E7%AC%A6%E6%96%B9%E6%B3%95/">
+        标准查询运算符方法
       </a>
 </li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          投影运算
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        查询语法
+        投影运算
       </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    一、投影运算方法
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#select">
+    二、Select
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#selectmany">
+    三、SelectMany
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zip">
+    四、Zip
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../06-%E7%AD%9B%E9%80%89%E8%BF%90%E7%AE%97/">
+        筛选运算
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../07-%E6%8E%92%E5%BA%8F%E8%BF%90%E7%AE%97/">
+        排序运算
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../08-%E6%95%B0%E6%8D%AE%E5%88%86%E7%BB%84/">
+        数据分组
+      </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -444,13 +521,164 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    一、投影运算方法
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#select">
+    二、Select
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#selectmany">
+    三、SelectMany
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zip">
+    四、Zip
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="_1">查询语法<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h1>
+<h1 id="_1">投影运算<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h1>
+<h2 id="_2">一、投影运算方法<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h2>
+<p>在查询语法中，通过 <code>select</code> 关键字完成投影运算，比如：
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kt">var</span><span class="w"> </span><span class="n">queryAllCustomers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">cust</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">customers</span><span class="w"> </span><span class="k">select</span><span class="w"> </span><span class="n">cust</span><span class="p">;</span>
+</span></code></pre></div></p>
+<p>在方法语法中，存在标准查询运算符方法来完成这一功能，下面列出列这些方法，需要注意的是不是所有方法都有对应的查询语法关键字：</p>
+<table>
+<thead>
+<tr>
+<th align="left">方法</th>
+<th align="left">说明</th>
+<th align="left">查询语法</th>
+<th align="left">链接</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><code>Select</code></td>
+<td align="left">将序列的每个元素按指定规则投影</td>
+<td align="left"><code>select</code></td>
+<td align="left"><a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.linq.enumerable.select">Enumerable.Select</a> 、<a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.linq.queryable.select">Queryable.Select</a></td>
+</tr>
+<tr>
+<td align="left"><code>SelectMany</code></td>
+<td align="left">将序列的每个元素按指定规则投影，并将结果序列合并为一个序列</td>
+<td align="left">多 <code>from</code> 子句</td>
+<td align="left"><a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.linq.enumerable.selectmany">Enumerable.SelectMany</a> 、<a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.linq.queryable.selectmany">Queryable.SelectMany</a></td>
+</tr>
+<tr>
+<td align="left"><code>Zip</code></td>
+<td align="left">使用 2-3 个指定序列中的元素生成元组序列</td>
+<td align="left">×</td>
+<td align="left"><a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.linq.enumerable.zip">Enumerable.Zip</a> 、<a href="https://learn.microsoft.com/zh-cn/dotnet/api/system.linq.queryable.zip">Queryable.Zip</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="select">二、Select<a class="headerlink" href="#select" title="Permanent link">⚓︎</a></h2>
+<p><code>Select()</code> 方法会将调用它的序列按照传入的函数规则返回投影结果。下例展示了查询语法与方法语法的对比使用，示例显式序列中每个单词的首字母。</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">List</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">words</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">"an"</span><span class="p">,</span><span class="w"> </span><span class="s">"apple"</span><span class="p">,</span><span class="w"> </span><span class="s">"a"</span><span class="p">,</span><span class="w"> </span><span class="s">"day"</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="c1">// 查询语法</span>
+</span><span id="__span-1-4"><a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="kt">var</span><span class="w"> </span><span class="n">query1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">word</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">words</span>
+</span><span id="__span-1-5"><a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">            </span><span class="k">select</span><span class="w"> </span><span class="n">word</span><span class="p">.</span><span class="n">Substring</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">);</span>
+</span><span id="__span-1-6"><a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">query1</span><span class="p">)</span>
+</span><span id="__span-1-8"><a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+</span><span id="__span-1-9"><a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a>
+</span><span id="__span-1-10"><a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
+</span><span id="__span-1-11"><a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a>
+</span><span id="__span-1-12"><a href="#__codelineno-1-12" id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="c1">// 方法语法</span>
+</span><span id="__span-1-13"><a href="#__codelineno-1-13" id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="hll"><span class="kt">var</span><span class="w"> </span><span class="n">query2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">words</span><span class="p">.</span><span class="n">Select</span><span class="p">(</span><span class="n">word</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">word</span><span class="p">.</span><span class="n">Substring</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">));</span>
+</span></span><span id="__span-1-14"><a href="#__codelineno-1-14" id="__codelineno-1-14" name="__codelineno-1-14"></a>
+</span><span id="__span-1-15"><a href="#__codelineno-1-15" id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">query2</span><span class="p">)</span>
+</span><span id="__span-1-16"><a href="#__codelineno-1-16" id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+</span><span id="__span-1-17"><a href="#__codelineno-1-17" id="__codelineno-1-17" name="__codelineno-1-17"></a>
+</span><span id="__span-1-18"><a href="#__codelineno-1-18" id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="cm">/* This code produces the following output:</span>
+</span><span id="__span-1-19"><a href="#__codelineno-1-19" id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="cm">    a a a d</span>
+</span><span id="__span-1-20"><a href="#__codelineno-1-20" id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="cm">    a a a d</span>
+</span><span id="__span-1-21"><a href="#__codelineno-1-21" id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="cm">*/</span>
+</span></code></pre></div>
+<h2 id="selectmany">三、SelectMany<a class="headerlink" href="#selectmany" title="Permanent link">⚓︎</a></h2>
+<p><code>SelectMany()</code> 将序列的每个元素按指定规则投影，并将结果序列合并为一个序列，在面对具有对个 <code>from</code> 子句时考虑使用该方法。下例展示了查询语法与方法语法的对比使用，示例显式序列中每个单词的首字母。</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">List</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">phrases</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">"an apple a day"</span><span class="p">,</span><span class="w"> </span><span class="s">"the quick brown fox"</span><span class="w"> </span><span class="p">};</span>
+</span><span id="__span-2-2"><a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="c1">// 查询语法</span>
+</span><span id="__span-2-4"><a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="kt">var</span><span class="w"> </span><span class="n">query1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">phrase</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">phrases</span>
+</span><span id="__span-2-5"><a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">            </span><span class="k">from</span><span class="w"> </span><span class="n">word</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">phrase</span><span class="p">.</span><span class="n">Split</span><span class="p">(</span><span class="sc">' '</span><span class="p">)</span>
+</span><span id="__span-2-6"><a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">            </span><span class="k">select</span><span class="w"> </span><span class="n">word</span><span class="p">;</span>
+</span><span id="__span-2-7"><a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">query1</span><span class="p">)</span>
+</span><span id="__span-2-9"><a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" "</span><span class="p">);</span>
+</span><span id="__span-2-10"><a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a>
+</span><span id="__span-2-11"><a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
+</span><span id="__span-2-12"><a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a>
+</span><span id="__span-2-13"><a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="c1">// 方法语法</span>
+</span><span id="__span-2-14"><a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="hll"><span class="n">IEnumerable</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">query2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">phrases</span><span class="p">.</span><span class="n">SelectMany</span><span class="p">(</span><span class="n">phrase</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">phrase</span><span class="p">.</span><span class="n">Split</span><span class="p">(</span><span class="sc">' '</span><span class="p">));</span>
+</span></span><span id="__span-2-15"><a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a>
+</span><span id="__span-2-16"><a href="#__codelineno-2-16" id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">query2</span><span class="p">)</span>
+</span><span id="__span-2-17"><a href="#__codelineno-2-17" id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" "</span><span class="p">);</span>
+</span><span id="__span-2-18"><a href="#__codelineno-2-18" id="__codelineno-2-18" name="__codelineno-2-18"></a>
+</span><span id="__span-2-19"><a href="#__codelineno-2-19" id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="cm">/* This code produces the following output:</span>
+</span><span id="__span-2-20"><a href="#__codelineno-2-20" id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="cm">    an apple a day the quick brown fox</span>
+</span><span id="__span-2-21"><a href="#__codelineno-2-21" id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="cm">    an apple a day the quick brown fox</span>
+</span><span id="__span-2-22"><a href="#__codelineno-2-22" id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="cm">*/</span>
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>如果你考虑使用 <code>Select()</code> 完成上述功能，代码如下：
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">IEnumerable</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">[]</span><span class="o">&gt;</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">phrases</span><span class="p">.</span><span class="n">Select</span><span class="p">(</span><span class="n">phrase</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">phrase</span><span class="p">.</span><span class="n">Split</span><span class="p">(</span><span class="s">" "</span><span class="p">));</span>
+</span><span id="__span-3-2"><a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="c1">// 双重循环</span>
+</span><span id="__span-3-3"><a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">strs</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">query</span><span class="p">)</span>
+</span><span id="__span-3-4"><a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">strs</span><span class="p">)</span>
+</span><span id="__span-3-5"><a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+</span></code></pre></div></p>
+</div>
+<h2 id="zip">四、Zip<a class="headerlink" href="#zip" title="Permanent link">⚓︎</a></h2>
+<p><code>Zip</code> 方法可以处理两个或更多可能是异构类型的序列，生成 <em>元组</em> 序列。</p>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1">// An int array with 7 elements.</span>
+</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">IEnumerable</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="p">[]</span>
+</span><span id="__span-4-3"><a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="p">{</span>
+</span><span id="__span-4-4"><a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span><span class="m">7</span>
+</span><span id="__span-4-5"><a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="p">};</span>
+</span><span id="__span-4-6"><a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="c1">// A char array with 6 elements.</span>
+</span><span id="__span-4-7"><a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="n">IEnumerable</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="n">letters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="p">[]</span>
+</span><span id="__span-4-8"><a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="p">{</span>
+</span><span id="__span-4-9"><a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">    </span><span class="sc">'A'</span><span class="p">,</span><span class="w"> </span><span class="sc">'B'</span><span class="p">,</span><span class="w"> </span><span class="sc">'C'</span><span class="p">,</span><span class="w"> </span><span class="sc">'D'</span><span class="p">,</span><span class="w"> </span><span class="sc">'E'</span><span class="p">,</span><span class="w"> </span><span class="sc">'F'</span>
+</span><span id="__span-4-10"><a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="p">};</span>
+</span><span id="__span-4-11"><a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a>
+</span><span id="__span-4-12"><a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="k">foreach</span><span class="w"> </span><span class="p">((</span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">letter</span><span class="p">)</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span><span class="n">Zip</span><span class="p">(</span><span class="n">letters</span><span class="p">))</span>
+</span><span id="__span-4-13"><a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="p">{</span>
+</span><span id="__span-4-14"><a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">    </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">$"Number: {number} zipped with letter: '{letter}'"</span><span class="p">);</span>
+</span><span id="__span-4-15"><a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="p">}</span>
+</span><span id="__span-4-16"><a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a>
+</span><span id="__span-4-17"><a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="cm">/* This code produces the following output:</span>
+</span><span id="__span-4-18"><a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="cm">    Number: 1 zipped with letter: 'A'</span>
+</span><span id="__span-4-19"><a href="#__codelineno-4-19" id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="cm">    Number: 2 zipped with letter: 'B'</span>
+</span><span id="__span-4-20"><a href="#__codelineno-4-20" id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="cm">    Number: 3 zipped with letter: 'C'</span>
+</span><span id="__span-4-21"><a href="#__codelineno-4-21" id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="cm">    Number: 4 zipped with letter: 'D'</span>
+</span><span id="__span-4-22"><a href="#__codelineno-4-22" id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="cm">    Number: 5 zipped with letter: 'E'</span>
+</span><span id="__span-4-23"><a href="#__codelineno-4-23" id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="cm">    Number: 6 zipped with letter: 'F'</span>
+</span><span id="__span-4-24"><a href="#__codelineno-4-24" id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="cm">*/</span>
+</span></code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>zip 操作生成的序列的长度永远不会长于最短序列。 <code>numbers</code> 和 <code>letters</code> 集合的长度不同，生成的序列将省略 <code>numbers</code> 集合中的最后一个元素，因为它没有任何要压缩的内容。</p>
+</div>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">
@@ -494,7 +722,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 了解LINQ" class="md-footer__link md-footer__link--prev" href="../01%20%E4%BA%86%E8%A7%A3LINQ/" rel="prev">
+<a aria-label="上一页: 标准查询运算符方法" class="md-footer__link md-footer__link--prev" href="../04-%E6%A0%87%E5%87%86%E6%9F%A5%E8%AF%A2%E8%BF%90%E7%AE%97%E7%AC%A6%E6%96%B9%E6%B3%95/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -503,17 +731,17 @@
 <span class="md-footer__direction">
                   上一页
                 </span>
-                了解LINQ
+                标准查询运算符方法
               </div>
 </div>
 </a>
-<a aria-label="下一页: 了解ADO.NET" class="md-footer__link md-footer__link--next" href="../../adonet/01-%E4%BA%86%E8%A7%A3ADO.NET/" rel="next">
+<a aria-label="下一页: 筛选运算" class="md-footer__link md-footer__link--next" href="../06-%E7%AD%9B%E9%80%89%E8%BF%90%E7%AE%97/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                   下一页
                 </span>
-                了解ADO.NET
+                筛选运算
               </div>
 </div>
 <div class="md-footer__button md-icon">
