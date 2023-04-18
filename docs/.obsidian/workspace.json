@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linq/05-投影运算.md",
+                "file": "linq/02-查询语法.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linq/05-投影运算.md",
+                "file": "linq/02-查询语法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linq/05-投影运算.md",
+                "file": "linq/02-查询语法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linq/05-投影运算.md"
+                "file": "linq/02-查询语法.md"
               }
             }
           }
@@ -174,8 +174,8 @@
   },
   "active": "da63bcbeab5a30cb",
   "lastOpenFiles": [
-    "linq/02-查询语法.md",
     "linq/05-投影运算.md",
+    "linq/02-查询语法.md",
     "linq/03-方法语法.md",
     "linq/04-标准查询运算符方法.md",
     "linq/01-了解LINQ.md",
