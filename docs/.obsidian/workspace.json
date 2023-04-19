@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "09-联接运算.md",
+                "file": "linq/01-了解LINQ.md",
                 "mode": "source",
                 "source": false
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "09-联接运算.md",
+                "file": "linq/01-了解LINQ.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "09-联接运算.md",
+                "file": "linq/01-了解LINQ.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "09-联接运算.md"
+                "file": "linq/01-了解LINQ.md"
               }
             }
           }
@@ -198,8 +198,8 @@
   },
   "active": "5f0c8aa4df2ca679",
   "lastOpenFiles": [
+    "linq/09-联接运算.md",
     "linq/08-数据分组.md",
-    "09-联接运算.md",
     "linq/07-排序运算.md",
     "linq/06-筛选运算.md",
     "linq/02-查询语法.md",
