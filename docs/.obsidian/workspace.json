@@ -187,10 +187,10 @@
   "active": "0b7c1ec6c63bca33",
   "lastOpenFiles": [
     "linq/07-排序运算.md",
-    "linq/06-筛选运算.md",
-    "linq/05-投影运算.md",
     "linq/08-数据分组.md",
+    "linq/06-筛选运算.md",
     "linq/02-查询语法.md",
+    "linq/05-投影运算.md",
     "linq/03-方法语法.md",
     "linq/04-标准查询运算符方法.md",
     "linq/01-了解LINQ.md",
