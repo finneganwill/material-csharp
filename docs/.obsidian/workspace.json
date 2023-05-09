@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "linq/09-联接运算.md",
+                "file": "ef-core/01 了解EF Core.md",
                 "mode": "source",
                 "source": false
               }
@@ -29,8 +29,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -104,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "linq/09-联接运算.md",
+                "file": "ef-core/01 了解EF Core.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "linq/09-联接运算.md",
+                "file": "ef-core/01 了解EF Core.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "linq/09-联接运算.md"
+                "file": "ef-core/01 了解EF Core.md"
               }
             }
           }
@@ -166,9 +165,15 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "3d3a56b850acacb3",
+  "active": "5f0c8aa4df2ca679",
   "lastOpenFiles": [
+    "ef-core/02-DbContext.md",
     "linq/01-了解LINQ.md",
+    "ef-core/01 了解EF Core.md",
+    "aspnet-core/01 了解ASP.NET.md",
+    "aspnet-core/03 MVC.md",
+    "aspnet-core/02 Razor.md",
+    "csharp-advanced/08 文件处理.md",
     "linq/09-联接运算.md",
     "linq/08-数据分组.md",
     "linq/07-排序运算.md",
@@ -182,7 +187,6 @@
     "linq/04-标准查询运算符",
     "index.md",
     "linq/img/Linq查询过程.png",
-    "ef-core/01 了解EF Core.md",
     "linq/img",
     "adonet/img/ADO.NET体系结构.png",
     "adonet/img/DataSet对象模型.png",
@@ -198,13 +202,8 @@
     "csharp-foundation/03 控制语句.md",
     "adonet/未命名",
     "adonet",
-    "aspnet-core/01 了解ASP.NET.md",
-    "aspnet-core/02 Razor.md",
     "linq",
     "ef-core",
-    "aspnet-core/03 MVC.md",
-    "aspnet-core/未命名.md",
-    "ASP.NET Core/03 MVC.md",
     "Common",
     "新建文件夹"
   ]
