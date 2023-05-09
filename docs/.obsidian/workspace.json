@@ -8,54 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "da63bcbeab5a30cb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "linq/05-投影运算.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0513f8c09704aa7b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "linq/06-筛选运算.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8a667c7ba47de000",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "linq/07-排序运算.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0b7c1ec6c63bca33",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "linq/08-数据分组.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "5f0c8aa4df2ca679",
             "type": "leaf",
             "state": {
@@ -66,9 +18,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "3d3a56b850acacb3",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.2.7"
+              }
+            }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -111,6 +73,14 @@
             "type": "leaf",
             "state": {
               "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "46ad994509ac3b8b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
               "state": {}
             }
           }
@@ -196,7 +166,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "5f0c8aa4df2ca679",
+  "active": "3d3a56b850acacb3",
   "lastOpenFiles": [
     "linq/01-了解LINQ.md",
     "linq/09-联接运算.md",
