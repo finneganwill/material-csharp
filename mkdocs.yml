@@ -15,56 +15,68 @@ copyright: Copyright &copy; 2022 - 2023 Finnegan Will
 nav:
     - Home: 'index.md'
 
-    - C#: 
-      - C#基础:
-        - 认识C#: 'csharp-foundation/00 认识CSharp.md'
-        - 数据类型: 'csharp-foundation/01 数据类型.md'
-        - 运算符: 'csharp-foundation/02 运算符.md'
-        - 控制语句: 'csharp-foundation/03 控制语句.md'
-        - 数据结构: 'csharp-foundation/04 数据结构.md'
-        - 类与对象: 'csharp-foundation/05 类与对象.md'
-        - 抽象类与接口: 'csharp-foundation/06 抽象类与接口.md'
-        - 异常处理: 'csharp-foundation/07 异常处理.md'
+    - 博客记录:
+      - 2023年5月:
+        - Init: 'blogs/init.md'
+      - 2023年4月:
+        - Title: 'blogs/test.md'
 
-      - C#进阶: 
-        - 索引器: 'csharp-advanced/01 索引器.md'
-        - 委托: 'csharp-advanced/02 委托与事件.md'
-        - 泛型: 'csharp-advanced/03 泛型.md'
-        - 集合: 'csharp-advanced/04 集合.md'
-        - 特性: 'csharp-advanced/05 特性.md'
-        - 反射: 'csharp-advanced/06 反射.md'
-        - 多线程: 'csharp-advanced/07 多线程.md'
-        - 文件处理: 'csharp-advanced/08 文件处理.md'
-#      - 匿名函数: csharp-advanced/
-#      - 指针变量: csharp-advanced/
+    - 技术学习:
+      - C#: 
+        - C#基础:
+          - 认识C#: 'csharp-foundation/00 认识CSharp.md'
+          - 数据类型: 'csharp-foundation/01 数据类型.md'
+          - 运算符: 'csharp-foundation/02 运算符.md'
+          - 控制语句: 'csharp-foundation/03 控制语句.md'
+          - 数据结构: 'csharp-foundation/04 数据结构.md'
+          - 类与对象: 'csharp-foundation/05 类与对象.md'
+          - 抽象类与接口: 'csharp-foundation/06 抽象类与接口.md'
+          - 异常处理: 'csharp-foundation/07 异常处理.md'
+        - C#进阶: 
+          - 索引器: 'csharp-advanced/01 索引器.md'
+          - 委托: 'csharp-advanced/02 委托与事件.md'
+          - 泛型: 'csharp-advanced/03 泛型.md'
+          - 集合: 'csharp-advanced/04 集合.md'
+          - 特性: 'csharp-advanced/05 特性.md'
+          - 反射: 'csharp-advanced/06 反射.md'
+          - 多线程: 'csharp-advanced/07 多线程.md'
+          - 文件处理: 'csharp-advanced/08 文件处理.md'
+  #      - 匿名函数: csharp-advanced/
+  #      - 指针变量: csharp-advanced/
 
-    - LINQ:
-      - 了解LINQ: 'linq/01-了解LINQ.md'
-      - 查询语法: 'linq/02-查询语法.md'
-      - 方法语法: 'linq/03-方法语法.md'
-      - 标准查询运算符: 
-        - 标准查询运算符方法: 'linq/04-标准查询运算符方法.md'
-        - 投影运算: 'linq/05-投影运算.md'
-        - 筛选运算: 'linq/06-筛选运算.md'
-        - 排序运算: 'linq/07-排序运算.md'
-        - 数据分组: 'linq/08-数据分组.md'
+      - LINQ:
+        - 了解LINQ: 'linq/01-了解LINQ.md'
+        - 查询语法: 'linq/02-查询语法.md'
+        - 方法语法: 'linq/03-方法语法.md'
+        - 标准查询运算符: 
+          - 标准查询运算符方法: 'linq/04-标准查询运算符方法.md'
+          - 投影运算: 'linq/05-投影运算.md'
+          - 筛选运算: 'linq/06-筛选运算.md'
+          - 排序运算: 'linq/07-排序运算.md'
+          - 数据分组: 'linq/08-数据分组.md'
 
-    - ADO.NET:
-      - 了解ADO.NET: 'adonet/01-了解ADO.NET.md'
-      - 数据提供程序: 'adonet/02-数据提供程序.md'
-      - 数据集: 'adonet/03-数据集.md'
-      - 数据类型映射: 'adonet/04-数据类型映射.md'
-      - 连接数据源: 'adonet/05-连接数据源.md'
-      - 创建命令与配置参数: 'adonet/06-创建命令与配置参数.md'
-      - 检索和修改数据: 'adonet/07-检索和修改数据.md'
-      - 事务与并发性: 'adonet/08-事务与并发性.md'
+      - ADO.NET:
+        - 了解ADO.NET: 'adonet/01-了解ADO.NET.md'
+        - 数据提供程序: 'adonet/02-数据提供程序.md'
+        - 数据集: 'adonet/03-数据集.md'
+        - 数据类型映射: 'adonet/04-数据类型映射.md'
+        - 连接数据源: 'adonet/05-连接数据源.md'
+        - 创建命令与配置参数: 'adonet/06-创建命令与配置参数.md'
+        - 检索和修改数据: 'adonet/07-检索和修改数据.md'
+        - 事务与并发性: 'adonet/08-事务与并发性.md'
 
-    - EF Core:
-      - 了解EF Core: 'ef-core/01-了解EF Core.md'
-      - DbContext: 'ef-core/02-DbContext.md'
+      - EF Core:
+        - 了解EF Core: 'ef-core/01-了解EF Core.md'
+        - DbContext: 'ef-core/02-DbContext.md'
 
-    - ASP.NET Core: 
-      - 了解ASP.NET: 'aspnet-core/01 了解ASP.NET.md'
+      - ASP.NET Core: 
+        - 了解ASP.NET: 'aspnet-core/01 了解ASP.NET.md'
+
+    - BUG修复:
+      - Init: 'bugs/init.md'
+
+    - 生活留言:
+      - Init: 'life'
 
     - 关于: 
       - Author: 'common/author.md'
