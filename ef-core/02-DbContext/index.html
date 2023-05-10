@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://finneganwill.github.io/material-dotnet/ef-core/01%20%E4%BA%86%E8%A7%A3EF%20Core/" rel="canonical"/>
-<link href="../../adonet/08-%E4%BA%8B%E5%8A%A1%E4%B8%8E%E5%B9%B6%E5%8F%91%E6%80%A7/" rel="prev"/>
+<link href="https://finneganwill.github.io/material-dotnet/ef-core/02-DbContext/" rel="canonical"/>
+<link href="../01-%E4%BA%86%E8%A7%A3EF%20Core/" rel="prev"/>
 <link href="../../aspnet-core/01%20%E4%BA%86%E8%A7%A3ASP.NET/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
-<title>了解EF Core - .Net Material</title>
+<title>DbContext - .Net Material</title>
 <link href="../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -37,7 +37,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#ef-core">
+<a class="md-skip" href="#dbcontext">
           跳转至
         </a>
 </div>
@@ -61,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              了解EF Core
+              DbContext
             
           </span>
 </div>
@@ -99,28 +99,23 @@
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../csharp-foundation/00%20%E8%AE%A4%E8%AF%86CSharp/">
-        C#
+<a class="md-tabs__link" href="../../blogs/202305/init/">
+        博客记录
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../linq/01-%E4%BA%86%E8%A7%A3LINQ/">
-        LINQ
+<a class="md-tabs__link md-tabs__link--active" href="../../csharp-foundation/00%20%E8%AE%A4%E8%AF%86CSharp/">
+        技术学习
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../adonet/01-%E4%BA%86%E8%A7%A3ADO.NET/">
-        ADO.NET
+<a class="md-tabs__link" href="../../bugs/init/">
+        BUG修复
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="./">
-        EF Core
-      </a>
-</li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../aspnet-core/01%20%E4%BA%86%E8%A7%A3ASP.NET/">
-        ASP.NET Core
+<a class="md-tabs__link" href="../../life/init/">
+        生活留言
       </a>
 </li>
 <li class="md-tabs__item">
@@ -162,25 +157,80 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-          C#
+          博客记录
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_2">
 <span class="md-nav__icon md-icon"></span>
-          C#
+          博客记录
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2_1" type="checkbox"/>
 <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
-          C#基础
+          2023年5月
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-expanded="false" aria-labelledby="__nav_2_1_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_2_1">
 <span class="md-nav__icon md-icon"></span>
-          C#基础
+          2023年5月
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../blogs/202305/init/">
+        Init
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          2023年4月
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+          2023年4月
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../blogs/202304/test/">
+        Title
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          技术学习
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          技术学习
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          C#
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_1">
+<span class="md-nav__icon md-icon"></span>
+          C#
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
@@ -223,21 +273,6 @@
         异常处理
       </a>
 </li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
-          C#进阶
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_2_2">
-<span class="md-nav__icon md-icon"></span>
-          C#进阶
-        </label>
-<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../csharp-advanced/01%20%E7%B4%A2%E5%BC%95%E5%99%A8/">
         索引器
@@ -281,17 +316,14 @@
 </ul>
 </nav>
 </li>
-</ul>
-</nav>
-</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<input class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
           LINQ
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_3">
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
 <span class="md-nav__icon md-icon"></span>
           LINQ
         </label>
@@ -312,13 +344,13 @@
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+<input class="md-nav__toggle md-toggle" id="__nav_3_2_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2_4" id="__nav_3_2_4_label" tabindex="0">
           标准查询运算符
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_4_label" class="md-nav" data-md-level="2">
-<label class="md-nav__title" for="__nav_3_4">
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_4_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_2_4">
 <span class="md-nav__icon md-icon"></span>
           标准查询运算符
         </label>
@@ -355,13 +387,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<input class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
           ADO.NET
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_4">
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
 <span class="md-nav__icon md-icon"></span>
           ADO.NET
         </label>
@@ -410,25 +442,30 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
           EF Core
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_5">
+<nav aria-expanded="true" aria-labelledby="__nav_3_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_4">
 <span class="md-nav__icon md-icon"></span>
           EF Core
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../01-%E4%BA%86%E8%A7%A3EF%20Core/">
+        了解EF Core
+      </a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          了解EF Core
+          DbContext
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        了解EF Core
+        DbContext
       </a>
 <nav aria-label="目录" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -437,13 +474,75 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ef-core_1">
-    一、EF Core 是什么
+<a class="md-nav__link" href="#_1">
+    一、概述
+  </a>
+<nav aria-label="一、概述" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#01">
+    01 介绍
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ef-core_2">
-    二、获取 EF Core
+<a class="md-nav__link" href="#02">
+    02 生存周期
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    二、上下文初始化
+  </a>
+<nav aria-label="二、上下文初始化" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#01-aspnet">
+    01 ASP.NET依赖注入
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#02-new">
+    02 new
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#03">
+    03 工厂模式
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    三、上下文配置
+  </a>
+<nav aria-label="三、上下文配置" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#01-dbcontextoptions">
+    01 DbContextOptions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#02_1">
+    02 配置数据库提供程序
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#03_1">
+    03 其他配置
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    四、上下文池
   </a>
 </li>
 </ul>
@@ -453,13 +552,13 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
-<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<input class="md-nav__toggle md-toggle" id="__nav_3_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
           ASP.NET Core
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_6">
+<nav aria-expanded="false" aria-labelledby="__nav_3_5_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_5">
 <span class="md-nav__icon md-icon"></span>
           ASP.NET Core
         </label>
@@ -472,14 +571,57 @@
 </ul>
 </nav>
 </li>
+</ul>
+</nav>
+</li>
 <li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
-<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          BUG修复
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          BUG修复
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../bugs/init/">
+        Init
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          生活留言
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          生活留言
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../life/init/">
+        Init
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
           关于
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_7">
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
           关于
         </label>
@@ -517,13 +659,75 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ef-core_1">
-    一、EF Core 是什么
+<a class="md-nav__link" href="#_1">
+    一、概述
+  </a>
+<nav aria-label="一、概述" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#01">
+    01 介绍
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#ef-core_2">
-    二、获取 EF Core
+<a class="md-nav__link" href="#02">
+    02 生存周期
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    二、上下文初始化
+  </a>
+<nav aria-label="二、上下文初始化" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#01-aspnet">
+    01 ASP.NET依赖注入
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#02-new">
+    02 new
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#03">
+    03 工厂模式
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    三、上下文配置
+  </a>
+<nav aria-label="三、上下文配置" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#01-dbcontextoptions">
+    01 DbContextOptions
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#02_1">
+    02 配置数据库提供程序
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#03_1">
+    03 其他配置
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    四、上下文池
   </a>
 </li>
 </ul>
@@ -533,61 +737,39 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="ef-core">了解EF Core<a class="headerlink" href="#ef-core" title="Permanent link">⚓︎</a></h1>
-<h2 id="ef-core_1">一、EF Core 是什么<a class="headerlink" href="#ef-core_1" title="Permanent link">⚓︎</a></h2>
-<p>Entity Framework (EF) Core 是轻量化、可扩展、开源和跨平台版的常用 Entity Framework 数据访问技术，是一个 ORM 框架。</p>
-<p>EF Core 可用作对象关系映射程序 (O/RM)，这可以实现以下两点：</p>
+<h1 id="dbcontext">DbContext<a class="headerlink" href="#dbcontext" title="Permanent link">⚓︎</a></h1>
+<h2 id="_1">一、概述<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h2>
+<h3 id="01">01 介绍<a class="headerlink" href="#01" title="Permanent link">⚓︎</a></h3>
+<p>DbContext 实例表示与数据库的会话，可用于查询和保存实体的实例。 DbContext 是工作单元和存储库模式的组合。</p>
+<p><strong>Entity Framework Core 不支持在同一 DbContext 实例上运行多个并行操作</strong>。 这包括异步查询的并行执行以及从多个线程进行的任何显式并发使用。 因此，请始终立即等待异步调用，或者对并行执行的操作使用单独的 DbContext 实例。</p>
+<h3 id="02">02 生存周期<a class="headerlink" href="#02" title="Permanent link">⚓︎</a></h3>
+<p><code>DbContext</code> 生存周期是指从创建实例开始，到实例释放结束的过程。<code>DbContext</code> 实例的生存周期通常较短，实例存在期间可以视为一个工作单元。</p>
+<blockquote>
+<p>“工作单元将持续跟踪在可能影响数据库的业务事务中执行的所有操作。 当你完成操作后，它将找出更改数据库作为工作结果时需要执行的所有操作。” ——Martin Fowler</p>
+</blockquote>
+<p>EF Core 对该工作单元定义包含一下过程：</p>
 <ul>
-<li>使 .NET 开发人员能够使用 .NET 对象处理数据库。</li>
-<li>无需再像通常那样编写大部分数据访问代码。</li>
+<li>创建 <code>DbContext</code> 实例；</li>
+<li>根据上下文跟踪实体实例；</li>
+<li>根据需要对所跟踪的实例进行更改以实现业务规则；</li>
+<li>调用 <code>SaveChanges</code> 或者 <code>SaveChangesAsync</code>。EF Core 检测所做的更改，并将这些更改写入数据库；</li>
+<li>释放DbContext实例。</li>
 </ul>
-<p>EF Core 支持多个数据库引擎。</p>
-<div class="admonition note">
-<p class="admonition-title">ADO.NET、EF、EF Core</p>
-<p>🧲 ADO.NET 是微软开发的一个<mark style="background: #CACFD9A6;">对象数据库连接（Object Data Access）组件</mark>，它可以用于与各种关系型数据库进行交互，如 SQL Server、Access、Oracle、MySQL 等。ADO.NET 提供了一组接口，可以用于连接数据库、执行 SQL 查询、提取数据等操作。在 .NET Framework 中，ADO.NET 是最流行的数据访问组件之一，被广泛应用于桌面应用程序、Web 服务、游戏等领域。<br/>
-🧲 EF 是一个<mark style="background: #CACFD9A6;">对象关系映射（Object-Relational Mapping，ORM）框架</mark>，<mark style="background: #CACFD9A6;">基于 ADO.NET 实现</mark>，在 EF 中，数据被映射为对象，每个对象都有一组属性和一个对应的数据类型。通过使用这些对象和属性，开发者可以更方便地操作和管理数据。EF 的核心是对象-关系映射（ORM）机制，通过使用 C# 的语法，可以更方便地操作数据库，实现数据库与应用程序之间的无缝连接。它可以帮助开发者减少大量的数据操作代码，提高开发效率和代码质量。EF 6 是专为 .NET Framework 设计的对象关系映射器。<br/>
-🧲 EF Core 是 EF 的一个分支，是 EF6 的完全重写，并附带于 NuGet 包中。与 EF6 相比，EF Core 提供了更好的跨平台支持，<mark style="background: #CACFD9A6;">可以在 .NET Core 和 .NET Framework 上运行</mark>。EF Core 继承了 EF6 的优点，并对其进行了改进和扩展，提供了更好的性能和更灵活的数据访问方式。它通过<mark style="background: #CACFD9A6;">使用空数据访问模型和简化的 EF 实现</mark>，可以更方便地与非 SQL 数据源进行交互，如文件、XML 文件等。</p>
+<div class="admonition danger">
+<p class="admonition-title">重要</p>
+<p><img alt="1⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/31-20e3.svg" title=":one:"/> <strong>使用后释放 <code>DbContext</code> 非常重要</strong>。 这可确保释放所有非托管资源，并注销任何事件或其他挂钩，以防止在实例保持引用时出现内存泄漏。<br/>
+<img alt="2⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/32-20e3.svg" title=":two:"/> <strong><code>DbContext</code> 不是线程安全的</strong>。不要在线程之间共享上下文， 请确保在继续使用上下文实例之前，等待所有异步调用。<br/>
+<img alt="3⃣" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/33-20e3.svg" title=":three:"/> EF Core 代码引发的 <code>InvalidOperationException</code> 会使上下文进入不可恢复状态。此类异常表示程序出现错误，不能从中恢复。</p>
 </div>
-<h2 id="ef-core_2">二、获取 EF Core<a class="headerlink" href="#ef-core_2" title="Permanent link">⚓︎</a></h2>
-<p>EF Core 以 NuGet 包的形式提供。 要将 EF Core 添加到应用程序，请安装适用于要使用的数据库提供程序的 NuGet 包。 要安装或更新 NuGet 包，可以使用 .NET Core 命令行界面 (CLI)、Visual Studio 包管理器对话框或 Visual Studio 包管理器控制台。</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">.NET Core CLI</label><label for="__tabbed_1_2">VS NuGet Dialog</label><label for="__tabbed_1_3">VS NuGet Console</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="admonition abstract">
-<p class="admonition-title">.NET Core CLI</p>
-<ol>
-<li>在操作系统的命令行中使用以下 .NET Core CLI 命令来安装或更新 EF Core SQL Server 提供程序：
-    <div class="language-powershell highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">dotnet</span> <span class="n">add</span> <span class="n">package</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">EntityFrameworkCore</span><span class="p">.</span><span class="n">SqlServer</span>
-</span></code></pre></div></li>
-<li>可以使用 <code>-v</code> 修饰符在 <code>dotnet add package</code> 命令中指明特定的版本。 例如，若要安装 EF Core 6.0.14 包，请将 <code>-v 6.0.14</code> 追加到命令中。</li>
-</ol>
-</div>
-</div>
-<div class="tabbed-block">
-<div class="admonition abstract">
-<p class="admonition-title">VS NuGet Dialog</p>
-<ol>
-<li>在VS菜单中选择“项目 -&gt; 管理NuGet包”；</li>
-<li>单击“浏览”或“更新”选项卡；</li>
-<li>若要安装或更新 SQL Server 提供程序，请选择 <code>Microsoft.EntityFrameworkCore.SqlServer</code> 包并确认。</li>
-</ol>
-</div>
-</div>
-<div class="tabbed-block">
-<div class="admonition abstract">
-<p class="admonition-title">VS NuGet Console</p>
-<ol>
-<li>从 Visual Studio 菜单中选择“工具”&gt;“NuGet 包管理器”&gt;“包管理器控制台”；</li>
-<li>若要安装 SQL Server 提供程序，请在包管理器控制台中运行以下命令：
-    <div class="language-powershell highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nb">Install-Package</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">EntityFrameworkCore</span><span class="p">.</span><span class="n">SqlServer</span>
-</span></code></pre></div></li>
-<li>若要更新提供程序，使用 <code>Update-Package</code> 命令；</li>
-<li>若要指定特定版本，可以使用 <code>-Version</code> 修饰符。 例如，若要安装 EF Core 6.0.14 包，请将 <code>-Version 6.0.14</code> 追加到命令中。</li>
-</ol>
-</div>
-</div>
-</div>
-</input></input></input></div>
+<h2 id="_2">二、上下文初始化<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h2>
+<h3 id="01-aspnet">01 ASP.NET依赖注入<a class="headerlink" href="#01-aspnet" title="Permanent link">⚓︎</a></h3>
+<h3 id="02-new">02 new<a class="headerlink" href="#02-new" title="Permanent link">⚓︎</a></h3>
+<h3 id="03">03 工厂模式<a class="headerlink" href="#03" title="Permanent link">⚓︎</a></h3>
+<h2 id="_3">三、上下文配置<a class="headerlink" href="#_3" title="Permanent link">⚓︎</a></h2>
+<h3 id="01-dbcontextoptions">01 DbContextOptions<a class="headerlink" href="#01-dbcontextoptions" title="Permanent link">⚓︎</a></h3>
+<h3 id="02_1">02 配置数据库提供程序<a class="headerlink" href="#02_1" title="Permanent link">⚓︎</a></h3>
+<h3 id="03_1">03 其他配置<a class="headerlink" href="#03_1" title="Permanent link">⚓︎</a></h3>
+<h2 id="_4">四、上下文池<a class="headerlink" href="#_4" title="Permanent link">⚓︎</a></h2>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">
@@ -631,7 +813,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 事务与并发性" class="md-footer__link md-footer__link--prev" href="../../adonet/08-%E4%BA%8B%E5%8A%A1%E4%B8%8E%E5%B9%B6%E5%8F%91%E6%80%A7/" rel="prev">
+<a aria-label="上一页: 了解EF Core" class="md-footer__link md-footer__link--prev" href="../01-%E4%BA%86%E8%A7%A3EF%20Core/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -640,7 +822,7 @@
 <span class="md-footer__direction">
                   上一页
                 </span>
-                事务与并发性
+                了解EF Core
               </div>
 </div>
 </a>
