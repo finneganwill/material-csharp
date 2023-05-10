@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ef-core/01-了解EF Core.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ef-core/01-了解EF Core.md",
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ef-core/01-了解EF Core.md",
+                "file": "index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ef-core/01-了解EF Core.md"
+                "file": "index.md"
               }
             }
           }
@@ -157,9 +157,12 @@
   },
   "active": "5f0c8aa4df2ca679",
   "lastOpenFiles": [
+    "common/thanks.md",
+    "common/mkdocs.md",
+    "common/author.md",
+    "ef-core/01-了解EF Core.md",
     "ef-core/03-创建模型.md",
     "ef-core/02-DbContext.md",
-    "ef-core/01-了解EF Core.md",
     "ef-core/06-迁移.md",
     "ef-core/05-保存数据.md",
     "ef-core/04-查询数据.md",
@@ -187,9 +190,6 @@
     "adonet/img/ADO.NET LINQ 技术.png",
     "adonet/03-数据集.md",
     "adonet/img",
-    "adonet/08-事务与并发性.md",
-    "adonet/07-检索和修改数据.md",
-    "adonet/06-创建命令与配置参数.md",
     "adonet/未命名",
     "adonet",
     "linq",
