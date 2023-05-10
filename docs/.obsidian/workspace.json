@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ef-core/02-DbContext.md",
+                "file": "ef-core/03-创建模型.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ef-core/02-DbContext.md",
+                "file": "ef-core/03-创建模型.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ef-core/02-DbContext.md",
+                "file": "ef-core/03-创建模型.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ef-core/02-DbContext.md"
+                "file": "ef-core/03-创建模型.md"
               }
             }
           }
@@ -157,8 +157,8 @@
   },
   "active": "5f0c8aa4df2ca679",
   "lastOpenFiles": [
-    "ef-core/01 了解EF Core.md",
     "ef-core/02-DbContext.md",
+    "ef-core/01-了解EF Core.md",
     "ef-core/06-迁移.md",
     "ef-core/05-保存数据.md",
     "ef-core/04-查询数据.md",

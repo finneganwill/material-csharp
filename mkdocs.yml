@@ -60,7 +60,8 @@ nav:
       - 事务与并发性: 'adonet/08-事务与并发性.md'
 
     - EF Core:
-      - 了解EF Core: 'ef-core/01 了解EF Core.md'
+      - 了解EF Core: 'ef-core/01-了解EF Core.md'
+      - DbContext: 'ef-core/02-DbContext.md'
 
     - ASP.NET Core: 
       - 了解ASP.NET: 'aspnet-core/01 了解ASP.NET.md'
