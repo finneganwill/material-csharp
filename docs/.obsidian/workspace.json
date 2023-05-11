@@ -18,8 +18,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "7bf90f6ba4343514",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.2.8"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -155,15 +166,27 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "5f0c8aa4df2ca679",
+  "active": "7bf90f6ba4343514",
   "lastOpenFiles": [
+    "blogs/202305/init.md",
+    "blogs/202305",
+    "blogs/2023/init.md",
+    "blogs/2023",
+    "blogs/202304/test.md",
+    "blogs/202304",
+    "blogs/2023年4月/test.md",
+    "blogs/2023年4月/init.md",
+    "blogs/2023年4月",
+    "blogs/2023年",
+    "blogs/新建文件夹",
+    "blogs/2023年5月/init.md",
+    "blogs/2023年5月",
+    "blogs/init.md",
+    "bugs/init.md",
     "life/init.md",
     "life/新建文本文档.txt",
     "life",
     "bugs",
-    "新建文件夹",
-    "lifes",
-    "blogs",
     "common/thanks.md",
     "common/mkdocs.md",
     "common/author.md",
@@ -181,21 +204,9 @@
     "linq/09-联接运算.md",
     "linq/08-数据分组.md",
     "linq/07-排序运算.md",
-    "linq/06-筛选运算.md",
-    "linq/02-查询语法.md",
-    "linq/05-投影运算.md",
-    "linq/03-方法语法.md",
-    "linq/04-标准查询运算符方法.md",
-    "adonet/01-了解ADO.NET.md",
-    "adonet/02-数据提供程序.md",
-    "linq/04-标准查询运算符",
-    "index.md",
     "linq/img/Linq查询过程.png",
-    "linq/img",
     "adonet/img/ADO.NET体系结构.png",
     "adonet/img/DataSet对象模型.png",
-    "adonet/img/ADO.NET LINQ 技术.png",
-    "adonet/img",
-    "adonet/未命名"
+    "adonet/img/ADO.NET LINQ 技术.png"
   ]
 }
