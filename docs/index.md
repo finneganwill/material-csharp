@@ -7,16 +7,11 @@ hide:
 ---
 
 # Welcome!
-
-!!! Abstract inline "技术学习"
-	- [x] C# - 编程语言
-	- [x] LINQ - 语言集成查询技术
-	- [x] ADO.NET - 数据访问服务类
-	- [x] EF Core - 对象关系映射框架
-	- [x] ASP.NET Core - WEB应用框架
-
 !!! Abstract inline "博客记录"
 	比较随意的技术博客专区。
+
+!!! Abstract inline "技术学习"
+	随便学学。
 
 !!! Abstract inline "BUG修复"
 	没有完美的代码。

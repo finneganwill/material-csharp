@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "teches/aspnet-core/01 了解ASP.NET.md",
+                "file": "teches/razor/01-认识Razor.md",
                 "mode": "source",
                 "source": false
               }
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "teches/aspnet-core/01 了解ASP.NET.md",
+                "file": "teches/razor/01-认识Razor.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "teches/aspnet-core/01 了解ASP.NET.md",
+                "file": "teches/razor/01-认识Razor.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "teches/aspnet-core/01 了解ASP.NET.md"
+                "file": "teches/razor/01-认识Razor.md"
               }
             }
           }
@@ -167,7 +167,12 @@
   },
   "active": "5f0c8aa4df2ca679",
   "lastOpenFiles": [
+    "未命名.md",
+    "teches/razor/01-认识Razor.md",
+    "teches/razor",
     "index.md",
+    "teches/Abstract.md",
+    "teches/aspnet-core/01 了解ASP.NET.md",
     "blogs/202305/init.md",
     "blogs/202305",
     "blogs/2023/init.md",
@@ -186,7 +191,6 @@
     "life/init.md",
     "life/新建文本文档.txt",
     "life",
-    "bugs",
     "common/thanks.md",
     "common/mkdocs.md",
     "common/author.md",
@@ -199,10 +203,6 @@
     "linq/01-了解LINQ.md",
     "aspnet-core/01 了解ASP.NET.md",
     "aspnet-core/03 MVC.md",
-    "aspnet-core/02 Razor.md",
-    "csharp-advanced/08 文件处理.md",
-    "linq/09-联接运算.md",
-    "linq/08-数据分组.md",
     "linq/img/Linq查询过程.png",
     "adonet/img/ADO.NET体系结构.png",
     "adonet/img/DataSet对象模型.png",
