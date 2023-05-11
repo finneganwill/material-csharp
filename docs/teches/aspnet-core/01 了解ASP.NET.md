@@ -56,6 +56,12 @@
 ### 03 UI解决方案
 
 服务器呈现UI
-Razor Pages/MVC/Blaz
+Razor/MVC
+
+客户端呈现UI
+Blazor WebAssembly/JavaScript 框架（Angular/React/Vue）
+
+混合式呈现UI
+MVC+Blazor / Razor+Blazor
 
 ## 三、Web API
