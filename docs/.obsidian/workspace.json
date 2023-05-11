@@ -20,6 +20,18 @@
             }
           },
           {
+            "id": "c15d983685870c6e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "teches/aspnet-core/01 了解ASP.NET.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "7bf90f6ba4343514",
             "type": "leaf",
             "state": {
@@ -29,7 +41,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -103,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "teches/razor/01-认识Razor.md",
+                "file": "teches/aspnet-core/01 了解ASP.NET.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "teches/razor/01-认识Razor.md",
+                "file": "teches/aspnet-core/01 了解ASP.NET.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "teches/razor/01-认识Razor.md"
+                "file": "teches/aspnet-core/01 了解ASP.NET.md"
               }
             }
           }
@@ -165,14 +178,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "5f0c8aa4df2ca679",
+  "active": "c15d983685870c6e",
   "lastOpenFiles": [
-    "未命名.md",
+    "teches/aspnet-core/02 Razor.md",
+    "teches/aspnet-core/03 MVC.md",
+    "teches/aspnet-core/01 了解ASP.NET.md",
+    "teches/razor/02-Razor保留关键字.md",
     "teches/razor/01-认识Razor.md",
+    "未命名",
     "teches/razor",
     "index.md",
     "teches/Abstract.md",
-    "teches/aspnet-core/01 了解ASP.NET.md",
     "blogs/202305/init.md",
     "blogs/202305",
     "blogs/2023/init.md",
@@ -190,7 +206,6 @@
     "bugs/init.md",
     "life/init.md",
     "life/新建文本文档.txt",
-    "life",
     "common/thanks.md",
     "common/mkdocs.md",
     "common/author.md",
@@ -201,8 +216,6 @@
     "ef-core/05-保存数据.md",
     "ef-core/04-查询数据.md",
     "linq/01-了解LINQ.md",
-    "aspnet-core/01 了解ASP.NET.md",
-    "aspnet-core/03 MVC.md",
     "linq/img/Linq查询过程.png",
     "adonet/img/ADO.NET体系结构.png",
     "adonet/img/DataSet对象模型.png",
