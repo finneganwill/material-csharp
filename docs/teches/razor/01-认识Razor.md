@@ -5,7 +5,7 @@ Razor 是一种标记语法，用于将基于 .NET 的代码嵌入网页中。 R
 
 ## 二、Razor语法
 
-默认的 Razor 语言为 HTML。 从 Razor 标记呈现 HTML 与从 HTML 文件呈现 HTML 没有什么不同。 服务器会按原样呈现 `.cshtml`Razor 文件中的 HTML 标记。
+默认的 Razor 语言为 HTML。 从 Razor 标记呈现 HTML 与从 HTML 文件呈现 HTML 没有什么不同。 服务器会按原样呈现 `.cshtml` Razor 文件中的 HTML 标记。
 
 Razor 支持 C#，并使用 `@` 符号从 HTML 转换为 C#。 Razor 计算 C# 表达式，并将它们呈现在 HTML 输出中。
 

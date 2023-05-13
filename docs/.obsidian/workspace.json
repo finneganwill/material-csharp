@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "teches/razor/01-认识Razor.md",
+                "file": "teches/razor/02-Razor保留关键字.md",
                 "mode": "source",
                 "source": false
               }
@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "teches/razor/01-认识Razor.md",
+                "file": "teches/razor/02-Razor保留关键字.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "teches/razor/01-认识Razor.md",
+                "file": "teches/razor/02-Razor保留关键字.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "teches/razor/01-认识Razor.md"
+                "file": "teches/razor/02-Razor保留关键字.md"
               }
             }
           }
@@ -170,8 +170,8 @@
   },
   "active": "c15d983685870c6e",
   "lastOpenFiles": [
-    "teches/razor/02-Razor保留关键字.md",
     "teches/razor/01-认识Razor.md",
+    "teches/razor/02-Razor保留关键字.md",
     "teches/aspnet-core/03 MVC.md",
     "teches/aspnet-core/02 Razor.md",
     "teches/aspnet-core/01 了解ASP.NET.md",
