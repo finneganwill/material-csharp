@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "teches/aspnet-core/01 了解ASP.NET.md",
+                "file": "teches/aspnet-core/03 MVC.md",
                 "mode": "source",
                 "source": false
               }
@@ -116,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "teches/aspnet-core/01 了解ASP.NET.md",
+                "file": "teches/aspnet-core/03 MVC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "teches/aspnet-core/01 了解ASP.NET.md",
+                "file": "teches/aspnet-core/03 MVC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -156,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "teches/aspnet-core/01 了解ASP.NET.md"
+                "file": "teches/aspnet-core/03 MVC.md"
               }
             }
           }
@@ -181,8 +181,8 @@
   "active": "c15d983685870c6e",
   "lastOpenFiles": [
     "teches/aspnet-core/02 Razor.md",
-    "teches/aspnet-core/03 MVC.md",
     "teches/aspnet-core/01 了解ASP.NET.md",
+    "teches/aspnet-core/03 MVC.md",
     "teches/razor/02-Razor保留关键字.md",
     "teches/razor/01-认识Razor.md",
     "未命名",
