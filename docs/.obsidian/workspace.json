@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "teches/Abstract.md",
+                "file": "teches/csharp/02-运算符.md",
                 "mode": "source",
                 "source": false
               }
@@ -118,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "teches/Abstract.md",
+                "file": "teches/csharp/02-运算符.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "teches/Abstract.md",
+                "file": "teches/csharp/02-运算符.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "teches/Abstract.md"
+                "file": "teches/csharp/02-运算符.md"
               }
             }
           }
@@ -182,6 +182,8 @@
   },
   "active": "0120574dbe8f287f",
   "lastOpenFiles": [
+    "teches/csharp/03-控制语句.md",
+    "teches/Abstract.md",
     "teches/razor/01-认识Razor.md",
     "teches/linq/01-认识LINQ.md",
     "teches/ef-core/01-认识EF Core.md",
@@ -195,12 +197,10 @@
     "teches/razor/02-Razor保留关键字.md",
     "teches/csharp/01-数据类型.md",
     "teches/csharp/02-运算符.md",
-    "teches/csharp/03-控制语句.md",
     "teches/csharp/04-数据结构.md",
     "未命名",
     "teches/razor",
     "index.md",
-    "teches/Abstract.md",
     "blogs/202305/init.md",
     "blogs/202305",
     "blogs/2023/init.md",
