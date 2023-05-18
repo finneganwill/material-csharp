@@ -1,4 +1,4 @@
-# 了解ASP.NET Core
+# 认识ASP.NET Core
 
 ## 一、ASP.NET Core简介
 

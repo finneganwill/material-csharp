@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "teches/aspnet-core/01 了解ASP.NET.md",
+                "file": "teches/Abstract.md",
                 "mode": "source",
                 "source": false
               }
@@ -118,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "teches/aspnet-core/01 了解ASP.NET.md",
+                "file": "teches/Abstract.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "teches/aspnet-core/01 了解ASP.NET.md",
+                "file": "teches/Abstract.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "teches/aspnet-core/01 了解ASP.NET.md"
+                "file": "teches/Abstract.md"
               }
             }
           }
@@ -182,17 +182,21 @@
   },
   "active": "0120574dbe8f287f",
   "lastOpenFiles": [
+    "teches/razor/01-认识Razor.md",
+    "teches/linq/01-认识LINQ.md",
+    "teches/ef-core/01-认识EF Core.md",
+    "teches/csharp/00-认识CSharp.md",
+    "teches/adonet/01-认识ADO.NET.md",
+    "teches/adonet/02-数据提供程序.md",
+    "teches/aspnet-core/01-认识ASP.NET Core.md",
     "teches/aspnet-core/03 MVC.md",
     "teches/aspnet-core/02 Razor.md",
-    "teches/aspnet-core/01 了解ASP.NET.md",
     "teches/razor/03-Razor表达式.md",
     "teches/razor/02-Razor保留关键字.md",
     "teches/csharp/01-数据类型.md",
     "teches/csharp/02-运算符.md",
     "teches/csharp/03-控制语句.md",
     "teches/csharp/04-数据结构.md",
-    "teches/csharp/00-认识CSharp.md",
-    "teches/razor/01-认识Razor.md",
     "未命名",
     "teches/razor",
     "index.md",
@@ -214,10 +218,6 @@
     "bugs/init.md",
     "life/init.md",
     "life/新建文本文档.txt",
-    "common/thanks.md",
-    "common/mkdocs.md",
-    "common/author.md",
-    "ef-core/01-了解EF Core.md",
     "linq/img/Linq查询过程.png",
     "adonet/img/ADO.NET体系结构.png",
     "adonet/img/DataSet对象模型.png",

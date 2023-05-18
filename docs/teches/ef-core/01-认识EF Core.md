@@ -1,4 +1,4 @@
-# 了解EF Core
+# 认识EF Core
 
 ## 一、EF Core 是什么
 Entity Framework (EF) Core 是轻量化、可扩展、开源和跨平台版的常用 Entity Framework 数据访问技术，是一个 ORM 框架。

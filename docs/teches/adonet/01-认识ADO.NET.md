@@ -1,4 +1,4 @@
-# 了解ADO.NET
+# 认识ADO.NET
 
 ## 一、ADO.NET 是什么？
 ### 01 ADO.NET 简介
