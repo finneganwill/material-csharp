@@ -5,21 +5,19 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://finneganwill.github.io/material-dotnet/common/mkdocs/" rel="canonical"/>
-<link href="../author/" rel="prev"/>
-<link href="../thanks/" rel="next"/>
-<link href="../../assets/images/favicon.png" rel="icon"/>
+<link href="https://finneganwill.github.io/material-dotnet/teches/aspnet-core/02%20Razor/" rel="canonical"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
-<title>MkDocs - .Net Material</title>
-<link href="../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
-<link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
+<title>Razor Pages - .Net Material</title>
+<link href="../../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -30,14 +28,14 @@
                 body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
                 body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
                 body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+                </style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="cyan" data-md-color-primary="orange" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#welcome-to-mkdocs">
+<a class="md-skip" href="#razor-pages">
           跳转至
         </a>
 </div>
@@ -45,7 +43,7 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="页眉" class="md-header__inner md-grid">
-<a aria-label=".Net Material" class="md-header__button md-logo" data-md-component="logo" href="../.." title=".Net Material">
+<a aria-label=".Net Material" class="md-header__button md-logo" data-md-component="logo" href="../../.." title=".Net Material">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -61,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              MkDocs
+              Razor Pages
             
           </span>
 </div>
@@ -94,37 +92,37 @@
 <div class="md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../..">
+<a class="md-tabs__link" href="../../..">
       Home
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../teches/csharp/00-%E8%AE%A4%E8%AF%86CSharp/">
+<a class="md-tabs__link" href="../../csharp/00-%E8%AE%A4%E8%AF%86CSharp/">
         C#
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../teches/linq/01-%E8%AE%A4%E8%AF%86LINQ/">
+<a class="md-tabs__link" href="../../linq/01-%E8%AE%A4%E8%AF%86LINQ/">
         LINQ
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../teches/adonet/01-%E8%AE%A4%E8%AF%86ADO.NET/">
+<a class="md-tabs__link" href="../../adonet/01-%E8%AE%A4%E8%AF%86ADO.NET/">
         ADO.NET
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../teches/ef-core/01-%E8%AE%A4%E8%AF%86EF%20Core/">
+<a class="md-tabs__link" href="../../ef-core/01-%E8%AE%A4%E8%AF%86EF%20Core/">
         EF Core
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../teches/aspnet-core/01-%E8%AE%A4%E8%AF%86ASP.NET%20Core/">
+<a class="md-tabs__link" href="../01-%E8%AE%A4%E8%AF%86ASP.NET%20Core/">
         ASP.NET Core
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../author/">
+<a class="md-tabs__link" href="../../../common/author/">
         关于
       </a>
 </li>
@@ -138,7 +136,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label=".Net Material" class="md-nav__button md-logo" data-md-component="logo" href="../.." title=".Net Material">
+<a aria-label=".Net Material" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title=".Net Material">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
 </a>
     .Net Material
@@ -155,7 +153,7 @@
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../..">
+<a class="md-nav__link" href="../../..">
         Home
       </a>
 </li>
@@ -172,87 +170,87 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/csharp/00-%E8%AE%A4%E8%AF%86CSharp/">
+<a class="md-nav__link" href="../../csharp/00-%E8%AE%A4%E8%AF%86CSharp/">
         认识 C#
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/csharp/01-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+<a class="md-nav__link" href="../../csharp/01-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
         数据类型
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/csharp/02-%E8%BF%90%E7%AE%97%E7%AC%A6/">
+<a class="md-nav__link" href="../../csharp/02-%E8%BF%90%E7%AE%97%E7%AC%A6/">
         运算符
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/csharp/03-%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5/">
+<a class="md-nav__link" href="../../csharp/03-%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5/">
         控制语句
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/csharp/04-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+<a class="md-nav__link" href="../../csharp/04-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
         数据结构
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/csharp/05-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/">
+<a class="md-nav__link" href="../../csharp/05-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/">
         类与对象
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/csharp/06-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%8E%E6%8E%A5%E5%8F%A3/">
+<a class="md-nav__link" href="../../csharp/06-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%8E%E6%8E%A5%E5%8F%A3/">
         抽象类与接口
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/csharp/07-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/">
+<a class="md-nav__link" href="../../csharp/07-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/">
         异常处理
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/csharp/08-%E5%B8%B8%E7%94%A8%E7%B1%BB/">
+<a class="md-nav__link" href="../../csharp/08-%E5%B8%B8%E7%94%A8%E7%B1%BB/">
         常用类
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/csharp/09-%E7%B4%A2%E5%BC%95%E5%99%A8/">
+<a class="md-nav__link" href="../../csharp/09-%E7%B4%A2%E5%BC%95%E5%99%A8/">
         索引器
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/csharp/10-%E5%A7%94%E6%89%98%E4%B8%8E%E4%BA%8B%E4%BB%B6/">
+<a class="md-nav__link" href="../../csharp/10-%E5%A7%94%E6%89%98%E4%B8%8E%E4%BA%8B%E4%BB%B6/">
         委托
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/csharp/11-%E6%B3%9B%E5%9E%8B/">
+<a class="md-nav__link" href="../../csharp/11-%E6%B3%9B%E5%9E%8B/">
         泛型
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/csharp/12-%E9%9B%86%E5%90%88/">
+<a class="md-nav__link" href="../../csharp/12-%E9%9B%86%E5%90%88/">
         集合
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/csharp/13-%E7%89%B9%E6%80%A7/">
+<a class="md-nav__link" href="../../csharp/13-%E7%89%B9%E6%80%A7/">
         特性
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/csharp/14-%E5%8F%8D%E5%B0%84/">
+<a class="md-nav__link" href="../../csharp/14-%E5%8F%8D%E5%B0%84/">
         反射
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/csharp/15-%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+<a class="md-nav__link" href="../../csharp/15-%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
         多线程
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/csharp/16-%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/">
+<a class="md-nav__link" href="../../csharp/16-%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/">
         文件处理
       </a>
 </li>
@@ -272,17 +270,17 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/linq/01-%E8%AE%A4%E8%AF%86LINQ/">
+<a class="md-nav__link" href="../../linq/01-%E8%AE%A4%E8%AF%86LINQ/">
         认识 LINQ
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/linq/02-%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/">
+<a class="md-nav__link" href="../../linq/02-%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/">
         查询语法
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/linq/03-%E6%96%B9%E6%B3%95%E8%AF%AD%E6%B3%95/">
+<a class="md-nav__link" href="../../linq/03-%E6%96%B9%E6%B3%95%E8%AF%AD%E6%B3%95/">
         方法语法
       </a>
 </li>
@@ -299,27 +297,27 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/linq/04-%E6%A0%87%E5%87%86%E6%9F%A5%E8%AF%A2%E8%BF%90%E7%AE%97%E7%AC%A6%E6%96%B9%E6%B3%95/">
+<a class="md-nav__link" href="../../linq/04-%E6%A0%87%E5%87%86%E6%9F%A5%E8%AF%A2%E8%BF%90%E7%AE%97%E7%AC%A6%E6%96%B9%E6%B3%95/">
         标准查询运算符方法
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/linq/05-%E6%8A%95%E5%BD%B1%E8%BF%90%E7%AE%97/">
+<a class="md-nav__link" href="../../linq/05-%E6%8A%95%E5%BD%B1%E8%BF%90%E7%AE%97/">
         投影运算
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/linq/06-%E7%AD%9B%E9%80%89%E8%BF%90%E7%AE%97/">
+<a class="md-nav__link" href="../../linq/06-%E7%AD%9B%E9%80%89%E8%BF%90%E7%AE%97/">
         筛选运算
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/linq/07-%E6%8E%92%E5%BA%8F%E8%BF%90%E7%AE%97/">
+<a class="md-nav__link" href="../../linq/07-%E6%8E%92%E5%BA%8F%E8%BF%90%E7%AE%97/">
         排序运算
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/linq/08-%E6%95%B0%E6%8D%AE%E5%88%86%E7%BB%84/">
+<a class="md-nav__link" href="../../linq/08-%E6%95%B0%E6%8D%AE%E5%88%86%E7%BB%84/">
         数据分组
       </a>
 </li>
@@ -342,42 +340,42 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/adonet/01-%E8%AE%A4%E8%AF%86ADO.NET/">
+<a class="md-nav__link" href="../../adonet/01-%E8%AE%A4%E8%AF%86ADO.NET/">
         认识 ADO.NET
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/adonet/02-%E6%95%B0%E6%8D%AE%E6%8F%90%E4%BE%9B%E7%A8%8B%E5%BA%8F/">
+<a class="md-nav__link" href="../../adonet/02-%E6%95%B0%E6%8D%AE%E6%8F%90%E4%BE%9B%E7%A8%8B%E5%BA%8F/">
         数据提供程序
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/adonet/03-%E6%95%B0%E6%8D%AE%E9%9B%86/">
+<a class="md-nav__link" href="../../adonet/03-%E6%95%B0%E6%8D%AE%E9%9B%86/">
         数据集
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/adonet/04-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%98%A0%E5%B0%84/">
+<a class="md-nav__link" href="../../adonet/04-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%98%A0%E5%B0%84/">
         数据类型映射
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/adonet/05-%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E6%BA%90/">
+<a class="md-nav__link" href="../../adonet/05-%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E6%BA%90/">
         连接数据源
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/adonet/06-%E5%88%9B%E5%BB%BA%E5%91%BD%E4%BB%A4%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0/">
+<a class="md-nav__link" href="../../adonet/06-%E5%88%9B%E5%BB%BA%E5%91%BD%E4%BB%A4%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0/">
         创建命令与配置参数
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/adonet/07-%E6%A3%80%E7%B4%A2%E5%92%8C%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE/">
+<a class="md-nav__link" href="../../adonet/07-%E6%A3%80%E7%B4%A2%E5%92%8C%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE/">
         检索和修改数据
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/adonet/08-%E4%BA%8B%E5%8A%A1%E4%B8%8E%E5%B9%B6%E5%8F%91%E6%80%A7/">
+<a class="md-nav__link" href="../../adonet/08-%E4%BA%8B%E5%8A%A1%E4%B8%8E%E5%B9%B6%E5%8F%91%E6%80%A7/">
         事务与并发性
       </a>
 </li>
@@ -397,12 +395,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/ef-core/01-%E8%AE%A4%E8%AF%86EF%20Core/">
+<a class="md-nav__link" href="../../ef-core/01-%E8%AE%A4%E8%AF%86EF%20Core/">
         认识 EF Core
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/ef-core/02-DbContext/">
+<a class="md-nav__link" href="../../ef-core/02-DbContext/">
         DbContext
       </a>
 </li>
@@ -422,60 +420,37 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../teches/aspnet-core/01-%E8%AE%A4%E8%AF%86ASP.NET%20Core/">
+<a class="md-nav__link" href="../01-%E8%AE%A4%E8%AF%86ASP.NET%20Core/">
         认识 ASP.NET Core
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
 <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
           关于
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_7">
 <span class="md-nav__icon md-icon"></span>
           关于
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../author/">
+<a class="md-nav__link" href="../../../common/author/">
         Author
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-          MkDocs
-          <span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../common/mkdocs/">
         MkDocs
       </a>
-<nav aria-label="目录" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#commands">
-    Commands
-  </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#project-layout">
-    Project layout
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../thanks/">
+<a class="md-nav__link" href="../../../common/thanks/">
         Thanks
       </a>
 </li>
@@ -497,13 +472,13 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#commands">
-    Commands
+<a class="md-nav__link" href="#razor">
+    一、Razor
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#project-layout">
-    Project layout
+<a class="md-nav__link" href="#razor_1">
+    二、Razor 语法
   </a>
 </li>
 </ul>
@@ -513,21 +488,11 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="welcome-to-mkdocs">Welcome to MkDocs<a class="headerlink" href="#welcome-to-mkdocs" title="Permanent link">⚓︎</a></h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">⚓︎</a></h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
-</ul>
-<h2 id="project-layout">Project layout<a class="headerlink" href="#project-layout" title="Permanent link">⚓︎</a></h2>
-<div class="language-text highlight"><pre><span></span><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre></div>
+<h1 id="razor-pages">Razor Pages<a class="headerlink" href="#razor-pages" title="Permanent link">⚓︎</a></h1>
+<h2 id="razor">一、Razor<a class="headerlink" href="#razor" title="Permanent link">⚓︎</a></h2>
+<p>Razor 是一种标记语法，用于将基于 .NET 的代码嵌入网页中。 Razor 语法由 Razor 标记、C# 和 HTML 组成。 包含 Razor 的文件通常具有 <code>.cshtml</code> 文件扩展名。 Razor 也可在 <a href="https://learn.microsoft.com/zh-cn/aspnet/core/blazor/components/?view=aspnetcore-6.0">Razor 组件</a> 文件 (<code>.razor</code>) 中找到。 Razor 语法类似于各种 JavaScript 单页应用程序 (SPA) 框架（如 Angular、React、VueJs 和 Svelte）的模板化引擎。 有关详细信息，请参阅<a href="https://learn.microsoft.com/zh-cn/aspnet/core/client-side/spa-services?view=aspnetcore-6.0">本文中所述的功能自 ASP.NET Core 3.0 起已过时</a>。</p>
+<p><a href="https://learn.microsoft.com/zh-cn/aspnet/web-pages/overview/getting-started/introducing-razor-syntax-c">使用 Razor ASP.NET Web 编程简介语法</a> 提供了许多使用 Razor 语法编程的示例。 尽管该主题是为 ASP.NET 而不是 ASP.NET Core 编写的，但大多数示例适用于 ASP.NET Core。</p>
+<h2 id="razor_1">二、Razor 语法<a class="headerlink" href="#razor_1" title="Permanent link">⚓︎</a></h2>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">
@@ -570,34 +535,6 @@ docs/
           </button>
 </main>
 <footer class="md-footer">
-<nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: Author" class="md-footer__link md-footer__link--prev" href="../author/" rel="prev">
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
-</div>
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                  上一页
-                </span>
-                Author
-              </div>
-</div>
-</a>
-<a aria-label="下一页: Thanks" class="md-footer__link md-footer__link--next" href="../thanks/" rel="next">
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                  下一页
-                </span>
-                Thanks
-              </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
-</div>
-</a>
-</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
@@ -626,7 +563,7 @@ docs/
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "content.code.copy", "content.code.annotate", "navigation.tracking", "navigation.footer"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
-<script src="../../assets/javascripts/bundle.efa0ade1.min.js"></script>
+<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "content.code.copy", "content.code.annotate", "navigation.tracking", "navigation.footer"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../../assets/javascripts/bundle.efa0ade1.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
