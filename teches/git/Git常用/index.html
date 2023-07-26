@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://finneganwill.github.io/material-dotnet/teches/adonet/08-%E4%BA%8B%E5%8A%A1%E4%B8%8E%E5%B9%B6%E5%8F%91%E6%80%A7/" rel="canonical"/>
-<link href="../07-%E6%A3%80%E7%B4%A2%E5%92%8C%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE/" rel="prev"/>
-<link href="../../ef-core/01-%E8%AE%A4%E8%AF%86EF%20Core/" rel="next"/>
+<link href="https://finneganwill.github.io/material-dotnet/teches/git/Git%E5%B8%B8%E7%94%A8/" rel="canonical"/>
+<link href="../../aspnet-core/01-%E8%AE%A4%E8%AF%86ASP.NET%20Core/" rel="prev"/>
+<link href="../../../common/author/" rel="next"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
-<title>事务与并发性 - .Net Material</title>
+<title>Git 常用操作 - .Net Material</title>
 <link href="../../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -37,6 +37,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#git">
+          跳转至
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -58,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              事务与并发性
+              Git 常用操作
             
           </span>
 </div>
@@ -106,7 +109,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../01-%E8%AE%A4%E8%AF%86ADO.NET/">
+<a class="md-tabs__link" href="../../adonet/01-%E8%AE%A4%E8%AF%86ADO.NET/">
         ADO.NET
       </a>
 </li>
@@ -121,7 +124,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../git/Git%E5%B8%B8%E7%94%A8/">
+<a class="md-tabs__link md-tabs__link--active" href="./">
         Git
       </a>
 </li>
@@ -331,56 +334,55 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
           ADO.NET
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
           ADO.NET
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../01-%E8%AE%A4%E8%AF%86ADO.NET/">
+<a class="md-nav__link" href="../../adonet/01-%E8%AE%A4%E8%AF%86ADO.NET/">
         认识 ADO.NET
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../02-%E6%95%B0%E6%8D%AE%E6%8F%90%E4%BE%9B%E7%A8%8B%E5%BA%8F/">
+<a class="md-nav__link" href="../../adonet/02-%E6%95%B0%E6%8D%AE%E6%8F%90%E4%BE%9B%E7%A8%8B%E5%BA%8F/">
         数据提供程序
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../03-%E6%95%B0%E6%8D%AE%E9%9B%86/">
+<a class="md-nav__link" href="../../adonet/03-%E6%95%B0%E6%8D%AE%E9%9B%86/">
         数据集
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../04-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%98%A0%E5%B0%84/">
+<a class="md-nav__link" href="../../adonet/04-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%98%A0%E5%B0%84/">
         数据类型映射
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../05-%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E6%BA%90/">
+<a class="md-nav__link" href="../../adonet/05-%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E6%BA%90/">
         连接数据源
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../06-%E5%88%9B%E5%BB%BA%E5%91%BD%E4%BB%A4%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0/">
+<a class="md-nav__link" href="../../adonet/06-%E5%88%9B%E5%BB%BA%E5%91%BD%E4%BB%A4%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0/">
         创建命令与配置参数
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../07-%E6%A3%80%E7%B4%A2%E5%92%8C%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE/">
+<a class="md-nav__link" href="../../adonet/07-%E6%A3%80%E7%B4%A2%E5%92%8C%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE/">
         检索和修改数据
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../adonet/08-%E4%BA%8B%E5%8A%A1%E4%B8%8E%E5%B9%B6%E5%8F%91%E6%80%A7/">
         事务与并发性
       </a>
 </li>
@@ -432,22 +434,60 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
 <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
           Git
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_7">
 <span class="md-nav__icon md-icon"></span>
           Git
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../git/Git%E5%B8%B8%E7%94%A8/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Git 常用操作
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         Git 常用操作
       </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1">
+    1 配置信息
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+    2 基本操作
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+    3 分支
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4">
+    4 标签
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5">
+    5 撤销
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -491,14 +531,95 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1">
+    1 配置信息
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+    2 基本操作
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+    3 分支
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4">
+    4 标签
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5">
+    5 撤销
+  </a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>事务与并发性</h1>
-<p><a href="https://learn.microsoft.com/zh-cn/dotnet/framework/data/adonet/transactions-and-concurrency">https://learn.microsoft.com/zh-cn/dotnet/framework/data/adonet/transactions-and-concurrency</a></p>
+<h1 id="git">Git 常用命令<a class="headerlink" href="#git" title="Permanent link">⚓︎</a></h1>
+<h2 id="1">1 配置信息<a class="headerlink" href="#1" title="Permanent link">⚓︎</a></h2>
+<p>查看配置列表
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1"># 全部信息</span>
+</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>git<span class="w"> </span>config<span class="w"> </span>--list
+</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1"># 指定信息</span>
+</span><span id="__span-0-4"><a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name
+</span><span id="__span-0-5"><a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email
+</span></code></pre></div></p>
+<p>设置用户名和邮箱
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">"your name"</span>
+</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">"your email"</span>
+</span></code></pre></div></p>
+<p>修改配置
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a>git<span class="w"> </span>config<span class="w"> </span>--replace-all<span class="w"> </span>user.name<span class="w"> </span><span class="s2">"your name"</span>
+</span></code></pre></div></p>
+<p>删除配置
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>--unset<span class="w"> </span>user.name
+</span></code></pre></div></p>
+<h2 id="2">2 基本操作<a class="headerlink" href="#2" title="Permanent link">⚓︎</a></h2>
+<p>初始化工作区
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>git<span class="w"> </span>init
+</span></code></pre></div></p>
+<p>连接远程库
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1"># 查看</span>
+</span><span id="__span-5-2"><a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>git<span class="w"> </span>remote<span class="w"> </span>-v
+</span><span id="__span-5-3"><a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="c1"># 添加</span>
+</span><span id="__span-5-4"><a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>&lt;alias&gt;<span class="w"> </span>&lt;address&gt;
+</span><span id="__span-5-5"><a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>http://...
+</span></code></pre></div></p>
+<p>添加到暂存区
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1"># 全部添加</span>
+</span><span id="__span-6-2"><a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>git<span class="w"> </span>add<span class="w"> </span>.
+</span><span id="__span-6-3"><a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="c1"># 指定文件或目录</span>
+</span><span id="__span-6-4"><a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a>git<span class="w"> </span>add<span class="w"> </span>&lt;file&gt;
+</span></code></pre></div></p>
+<p>提交的本地库
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"message"</span>
+</span></code></pre></div></p>
+<p>推送到远程
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>&lt;remote_name&gt;<span class="w"> </span>&lt;branch_name&gt;
+</span><span id="__span-8-2"><a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>master
+</span></code></pre></div></p>
+<p>日志
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="c1"># 查看工作区、暂存区状态</span>
+</span><span id="__span-9-2"><a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a>git<span class="w"> </span>status
+</span><span id="__span-9-3"><a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="c1"># 查看仓库提交日志</span>
+</span><span id="__span-9-4"><a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a>git<span class="w"> </span>log
+</span></code></pre></div></p>
+<h2 id="3">3 分支<a class="headerlink" href="#3" title="Permanent link">⚓︎</a></h2>
+<h2 id="4">4 标签<a class="headerlink" href="#4" title="Permanent link">⚓︎</a></h2>
+<h2 id="5">5 撤销<a class="headerlink" href="#5" title="Permanent link">⚓︎</a></h2>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">
@@ -542,7 +663,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: 检索和修改数据" class="md-footer__link md-footer__link--prev" href="../07-%E6%A3%80%E7%B4%A2%E5%92%8C%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE/" rel="prev">
+<a aria-label="上一页: 认识 ASP.NET Core" class="md-footer__link md-footer__link--prev" href="../../aspnet-core/01-%E8%AE%A4%E8%AF%86ASP.NET%20Core/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -551,17 +672,17 @@
 <span class="md-footer__direction">
                   上一页
                 </span>
-                检索和修改数据
+                认识 ASP.NET Core
               </div>
 </div>
 </a>
-<a aria-label="下一页: 认识 EF Core" class="md-footer__link md-footer__link--next" href="../../ef-core/01-%E8%AE%A4%E8%AF%86EF%20Core/" rel="next">
+<a aria-label="下一页: Author" class="md-footer__link md-footer__link--next" href="../../../common/author/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                   下一页
                 </span>
-                认识 EF Core
+                Author
               </div>
 </div>
 <div class="md-footer__button md-icon">
