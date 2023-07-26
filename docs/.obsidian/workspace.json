@@ -47,14 +47,28 @@
             "id": "8d1a987e6bee59e3",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.3.5"
+                "file": "teches/Abstract.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "37e03d33dae384c2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Git常用.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -128,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "teches/csharp/05-类与对象.md",
+                "file": "Git常用.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -145,7 +159,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "teches/csharp/05-类与对象.md",
+                "file": "Git常用.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -168,7 +182,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "teches/csharp/05-类与对象.md"
+                "file": "Git常用.md"
               }
             }
           }
@@ -190,13 +204,16 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "8d1a987e6bee59e3",
+  "active": "37e03d33dae384c2",
   "lastOpenFiles": [
+    "teches/Abstract.md",
+    "Git常用.md",
+    "teches/git",
+    "teches/adonet/05-连接数据源.md",
     "teches/csharp/04-数据结构.md",
     "teches/csharp/01-数据类型.md",
     "teches/csharp/02-运算符.md",
     "teches/csharp/03-控制语句.md",
-    "teches/Abstract.md",
     "teches/razor/01-认识Razor.md",
     "teches/linq/01-认识LINQ.md",
     "teches/ef-core/01-认识EF Core.md",
@@ -208,7 +225,6 @@
     "teches/aspnet-core/02 Razor.md",
     "teches/razor/03-Razor表达式.md",
     "teches/razor/02-Razor保留关键字.md",
-    "未命名",
     "teches/razor",
     "index.md",
     "blogs/202305/init.md",
@@ -225,8 +241,6 @@
     "blogs/2023年5月/init.md",
     "blogs/2023年5月",
     "blogs/init.md",
-    "bugs/init.md",
-    "life/init.md",
     "life/新建文本文档.txt",
     "linq/img/Linq查询过程.png",
     "adonet/img/ADO.NET体系结构.png",
