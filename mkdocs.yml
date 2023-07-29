@@ -69,7 +69,7 @@ nav:
 
     - 博客:
       - 2023: 
-        - Git: 'teches/git/Git常用.md'
+        - Program.cs文件详解: 'blogs/ASP.NET Core项目Program.cs.md'
 
     - 关于: 
       - Author: 'common/author.md'
