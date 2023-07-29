@@ -4,6 +4,31 @@
 
 ## 1. 项目创建的Program.cs
 
+```csharp
+public class Program
+{
+	public static void Main(string[] args)
+	{
+
+		var builder = WebApplication.CreateBuilder(args);
+		builder.Services.AddControllers();
+		builder.Services.AddEndpointsApiExplorer();
+		builder.Services.AddSwaggerGen();
+		var app = builder.Build();
+		// Configure the HTTP request pipeline.
+		if (app.Environment.IsDevelopment())
+		{
+			app.UseSwagger();
+			app.UseSwaggerUI();
+		}
+		app.UseHttpsRedirection();
+		app.UseAuthorization();
+		app.MapControllers();
+		app.Run();
+	}
+}
+```
+
 Program类包含的Main方法是ASP.NET Core应用的入口点。Main方法类似于控制台应用程序 的Main方法。这是因为所有.NET Core应用程序基本上都是控制台应用程序。我们通过控制台应用程序构建其他类型的应用程序，例如MVC Web应用程序或Razor page 应用程序。
 
 ## **Program类的主要目的是配置应用程序基础结构。**
