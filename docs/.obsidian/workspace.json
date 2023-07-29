@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Git常用.md",
+                "file": "teches/Abstract.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Git常用.md",
+                "file": "teches/Abstract.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Git常用.md",
+                "file": "teches/Abstract.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Git常用.md"
+                "file": "teches/Abstract.md"
               }
             }
           }
@@ -157,8 +157,8 @@
   },
   "active": "37e03d33dae384c2",
   "lastOpenFiles": [
+    "teches/git/Git常用.md",
     "teches/Abstract.md",
-    "Git常用.md",
     "teches/git",
     "teches/adonet/05-连接数据源.md",
     "teches/csharp/04-数据结构.md",

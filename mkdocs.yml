@@ -64,6 +64,13 @@ nav:
     - ASP.NET Core: 
       - 认识 ASP.NET Core: 'teches/aspnet-core/01-认识ASP.NET Core.md'
 
+    - Git:
+      - Git 常用操作: 'teches/git/Git常用.md'
+
+    - 博客:
+      - 2023: 
+        - Git: 'teches/git/Git常用.md'
+
     - 关于: 
       - Author: 'common/author.md'
       - MkDocs: 'common/mkdocs.md'
