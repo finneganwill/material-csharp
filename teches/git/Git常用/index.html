@@ -129,6 +129,11 @@
       </a>
 </li>
 <li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../blogs/ASP.NET Core项目Program.cs.md">
+        博客
+      </a>
+</li>
+<li class="md-tabs__item">
 <a class="md-tabs__link" href="../../../common/author/">
         关于
       </a>
@@ -495,11 +500,46 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
 <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
-          关于
+          博客
           <span class="md-nav__icon md-icon"></span>
 </label>
 <nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+          博客
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
+          2023
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_8_1_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_8_1">
+<span class="md-nav__icon md-icon"></span>
+          2023
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../blogs/ASP.NET Core项目Program.cs.md">
+        Program.cs文件详解
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
+<label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          关于
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
 <span class="md-nav__icon md-icon"></span>
           关于
         </label>
@@ -618,6 +658,25 @@
 </span><span id="__span-9-4"><a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a>git<span class="w"> </span>log
 </span></code></pre></div></p>
 <h2 id="3">3 分支<a class="headerlink" href="#3" title="Permanent link">⚓︎</a></h2>
+<p>查看分支
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a>git<span class="w"> </span>branch<span class="w"> </span>-v
+</span></code></pre></div></p>
+<p>创建分支
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a>git<span class="w"> </span>branch<span class="w"> </span>&lt;branch_name&gt;
+</span></code></pre></div></p>
+<p>切换分支
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>&lt;branch_name&gt;
+</span></code></pre></div></p>
+<p>删除分支
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>&lt;branch_name&gt;
+</span></code></pre></div></p>
+<p>合并分支
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>master
+</span><span id="__span-14-2"><a href="#__codelineno-14-2" id="__codelineno-14-2" name="__codelineno-14-2"></a>git<span class="w"> </span>merge<span class="w"> </span>dec<span class="w"> </span><span class="c1"># 将dev合并到master</span>
+</span></code></pre></div></p>
+<p>分支重命名
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a>git<span class="w"> </span>branch<span class="w"> </span>-m<span class="w"> </span>&lt;old_name&gt;<span class="w"> </span>&lt;new_name&gt;
+</span></code></pre></div></p>
 <h2 id="4">4 标签<a class="headerlink" href="#4" title="Permanent link">⚓︎</a></h2>
 <h2 id="5">5 撤销<a class="headerlink" href="#5" title="Permanent link">⚓︎</a></h2>
 <form class="md-feedback" hidden="" name="feedback">
