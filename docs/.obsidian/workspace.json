@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blogs/Program.cs文件详解.md",
+                "file": "teches/git/Git常用.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "blogs/Program.cs文件详解.md",
+                "file": "teches/git/Git常用.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "blogs/Program.cs文件详解.md",
+                "file": "teches/git/Git常用.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "blogs/Program.cs文件详解.md"
+                "file": "teches/git/Git常用.md"
               }
             }
           }
@@ -157,8 +157,8 @@
   },
   "active": "37e03d33dae384c2",
   "lastOpenFiles": [
-    "teches/git/Git常用.md",
     "blogs/Program.cs文件详解.md",
+    "teches/git/Git常用.md",
     "teches/Abstract.md",
     "blogs",
     "teches/git",
