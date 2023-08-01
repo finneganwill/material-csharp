@@ -71,6 +71,36 @@ git log
 ```
 
 ## 3 分支
+查看分支
+```bash
+git branch -v
+```
+
+创建分支
+```bash
+git branch <branch_name>
+```
+
+切换分支
+```bash
+git checkout <branch_name>
+```
+
+删除分支
+```bash
+git branch -d <branch_name>
+```
+
+合并分支
+```bash
+git checkout master
+git merge dec # 将dev合并到master
+```
+
+分支重命名
+```bash
+git branch -m <old_name> <new_name>
+```
 
 ## 4 标签
 

@@ -69,7 +69,7 @@ nav:
 
     - 博客:
       - 2023: 
-        - Program.cs文件详解: 'blogs/ASP.NET Core项目Program.cs.md'
+        - Program.cs文件详解: 'blogs/Program.cs文件详解.md'
 
     - 关于: 
       - Author: 'common/author.md'
