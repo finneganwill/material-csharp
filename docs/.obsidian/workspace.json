@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "teches/git/Git常用.md",
+                "file": "teches/wpf/01-认识WPF.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "teches/git/Git常用.md",
+                "file": "teches/wpf/01-认识WPF.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "teches/git/Git常用.md",
+                "file": "teches/wpf/01-认识WPF.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "teches/git/Git常用.md"
+                "file": "teches/wpf/01-认识WPF.md"
               }
             }
           }
@@ -157,8 +157,11 @@
   },
   "active": "37e03d33dae384c2",
   "lastOpenFiles": [
-    "blogs/Program.cs文件详解.md",
+    "teches/ef-core/01-认识EF Core.md",
+    "teches/wpf/01-认识WPF.md",
     "teches/git/Git常用.md",
+    "teches/wpf",
+    "blogs/Program.cs文件详解.md",
     "teches/Abstract.md",
     "blogs",
     "teches/git",
@@ -169,7 +172,6 @@
     "teches/csharp/03-控制语句.md",
     "teches/razor/01-认识Razor.md",
     "teches/linq/01-认识LINQ.md",
-    "teches/ef-core/01-认识EF Core.md",
     "teches/csharp/00-认识CSharp.md",
     "teches/adonet/01-认识ADO.NET.md",
     "teches/adonet/02-数据提供程序.md",
@@ -191,8 +193,6 @@
     "blogs/2023年4月",
     "blogs/2023年",
     "blogs/新建文件夹",
-    "blogs/2023年5月/init.md",
-    "blogs/2023年5月",
     "linq/img/Linq查询过程.png",
     "adonet/img/ADO.NET体系结构.png",
     "adonet/img/DataSet对象模型.png",
