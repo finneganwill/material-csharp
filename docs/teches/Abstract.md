@@ -17,6 +17,7 @@ hide:
 !!! Info "框架"
 	- [x] EF Core - 对象关系映射框架
 	- [x] ASP.NET Core - WEB应用框架
+	- [ ] WPF - 桌面UI框架
 
 !!! Info "类库"
 	- [x] ADO.NET - 数据访问服务类
