@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "3da6a4e89c277f92",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "blogs/未命名.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "teches/wpf/01-认识WPF.md",
+                "file": "blogs/未命名.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "teches/wpf/01-认识WPF.md",
+                "file": "blogs/未命名.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "teches/wpf/01-认识WPF.md"
+                "file": "blogs/未命名.md"
               }
             }
           }
@@ -155,10 +168,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "37e03d33dae384c2",
+  "active": "ae0ea77f21deadc6",
   "lastOpenFiles": [
-    "teches/Abstract.md",
     "teches/wpf/01-认识WPF.md",
+    "blogs/未命名.md",
+    "teches/Abstract.md",
     "blogs/Program.cs文件详解.md",
     "teches/ef-core/01-认识EF Core.md",
     "teches/git/Git常用.md",
@@ -189,7 +203,6 @@
     "blogs/202304/test.md",
     "blogs/202304",
     "blogs/2023年4月/test.md",
-    "blogs/2023年4月/init.md",
     "blogs/2023年4月",
     "blogs/2023年",
     "blogs/新建文件夹",
