@@ -675,8 +675,11 @@
 <li><strong>Payload（负载）</strong>：包含要<strong>传输的数据</strong>，以及一些预定义的声明（例如发行人、过期时间等）和自定义声明（根据需求添加）。</li>
 <li><strong>Signature（签名）</strong>：通过使用密钥对头部和负载进行加密生成的哈希值，用于<strong>验证令牌</strong>的完整性和真实性。</li>
 </ol>
-<p>最终生成的JWT令牌形如：<code>xxxxx.yyyyy.zzzzz</code> ，下图显示了JWT令牌示例：
-![[Pasted image 20230812092701.png]]</p>
+<p>最终生成的JWT令牌形如：<code>xxxxx.yyyyy.zzzzz</code> ，下图显示了JWT令牌示例：</p>
+<figure>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../img/JWT%E7%A4%BA%E4%BE%8B.png"><img alt="JWT示例" src="../img/JWT%E7%A4%BA%E4%BE%8B.png" width="600"/></a>
+<figcaption>JWT示例</figcaption></p>
+</figure>
 <p>上图是JWT官网提供的JWT验证工具，可以使用它来对Token进行加解密验证。</p>
 <ul>
 <li>Header
@@ -710,8 +713,8 @@
 签名是基于秘密密钥（或公钥/私钥对）生成的一串字符串，用于确保JWT在传输过程中没有被篡改。签名加密的算法在Header的 <code>alg</code> 中指定，然后将头部信息和负载信息分别编码拼接在一起，通过算法和加密秘钥进行加密生成。当然，秘钥也可以先进行编码再用来加密。</p>
 </li>
 </ul>
-<div class="admonition warnning">
-<p class="admonition-title">Warnning</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p><mark style="background: #D2B3FFA6;">JWT提供了一种用于传输信息和验证的机制，但不适宜存放敏感的隐私数据。</mark>由于JWT是基于Base64编码的字符串，它是可解码的，因此不建议在JWT中存放敏感的隐私数据，例如密码、信用卡信息等。负载（Payload）部分通常用于存放一些非敏感的用户信息，如用户ID、角色、过期时间等。这些信息是公开的，并且可以从JWT中解码和读取。因此，敏感的隐私数据应该避免存放在JWT中，以防止信息泄露或被篡改。</p>
 </div>
 <h3 id="22-jwt">2.2 JWT工作流程<a class="headerlink" href="#22-jwt" title="Permanent link">⚓︎</a></h3>
