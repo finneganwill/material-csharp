@@ -114,9 +114,9 @@ theme:
     # light 明亮模式
     - scheme: default
       # emphasize 强调颜色
-      accent: cyan
+      accent: deep orange
       # header 头
-      primary: orange
+      primary: teal
       # switch 开关
       toggle:
         icon: material/brightness-7 
@@ -125,13 +125,16 @@ theme:
     # dark
     - scheme: slate
       # emphasize
-      accent: orange
+      accent: teal
       # header
       primary: black
       # switch
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+
+extra_css:
+  - stylesheets/extra.css
 
 # 附加组件
 extra:
