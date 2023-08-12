@@ -5,19 +5,21 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://finneganwill.github.io/material-dotnet/teches/linq/09-%E8%81%94%E6%8E%A5%E8%BF%90%E7%AE%97/" rel="canonical"/>
-<link href="../../../assets/images/favicon.png" rel="icon"/>
+<link href="https://finneganwill.github.io/material-dotnet/blogs/JWT%20%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="canonical"/>
+<link href="../Program.cs%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3/" rel="prev"/>
+<link href="../../common/author/" rel="next"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
-<title>联接运算 - .Net Material</title>
-<link href="../../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
-<link href="../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
+<title>JWT 使用教程 - .Net Material</title>
+<link href="../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
-<link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -28,14 +30,14 @@
                 body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
                 body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
                 body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-                </style><script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="cyan" data-md-color-primary="orange" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#_1">
+<a class="md-skip" href="#jwt">
           跳转至
         </a>
 </div>
@@ -43,7 +45,7 @@
 </div>
 <header class="md-header" data-md-component="header">
 <nav aria-label="页眉" class="md-header__inner md-grid">
-<a aria-label=".Net Material" class="md-header__button md-logo" data-md-component="logo" href="../../.." title=".Net Material">
+<a aria-label=".Net Material" class="md-header__button md-logo" data-md-component="logo" href="../.." title=".Net Material">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
@@ -59,7 +61,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              联接运算
+              JWT 使用教程
             
           </span>
 </div>
@@ -92,47 +94,47 @@
 <div class="md-grid">
 <ul class="md-tabs__list">
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../..">
+<a class="md-tabs__link" href="../..">
       Home
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../csharp/00-%E8%AE%A4%E8%AF%86CSharp/">
+<a class="md-tabs__link" href="../../teches/csharp/00-%E8%AE%A4%E8%AF%86CSharp/">
         C#
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../01-%E8%AE%A4%E8%AF%86LINQ/">
+<a class="md-tabs__link" href="../../teches/linq/01-%E8%AE%A4%E8%AF%86LINQ/">
         LINQ
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../adonet/01-%E8%AE%A4%E8%AF%86ADO.NET/">
+<a class="md-tabs__link" href="../../teches/adonet/01-%E8%AE%A4%E8%AF%86ADO.NET/">
         ADO.NET
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../ef-core/01-%E8%AE%A4%E8%AF%86EF%20Core/">
+<a class="md-tabs__link" href="../../teches/ef-core/01-%E8%AE%A4%E8%AF%86EF%20Core/">
         EF Core
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../aspnet-core/01-%E8%AE%A4%E8%AF%86ASP.NET%20Core/">
+<a class="md-tabs__link" href="../../teches/aspnet-core/01-%E8%AE%A4%E8%AF%86ASP.NET%20Core/">
         ASP.NET Core
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../git/Git%E5%B8%B8%E7%94%A8/">
+<a class="md-tabs__link" href="../../teches/git/Git%E5%B8%B8%E7%94%A8/">
         Git
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../blogs/Program.cs%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3/">
+<a class="md-tabs__link md-tabs__link--active" href="../Program.cs%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3/">
         博客
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../../../common/author/">
+<a class="md-tabs__link" href="../../common/author/">
         关于
       </a>
 </li>
@@ -146,7 +148,7 @@
 <div class="md-sidebar__inner">
 <nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label=".Net Material" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title=".Net Material">
+<a aria-label=".Net Material" class="md-nav__button md-logo" data-md-component="logo" href="../.." title=".Net Material">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
 </a>
     .Net Material
@@ -163,7 +165,7 @@
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../..">
+<a class="md-nav__link" href="../..">
         Home
       </a>
 </li>
@@ -180,87 +182,87 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../csharp/00-%E8%AE%A4%E8%AF%86CSharp/">
+<a class="md-nav__link" href="../../teches/csharp/00-%E8%AE%A4%E8%AF%86CSharp/">
         认识 C#
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../csharp/01-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+<a class="md-nav__link" href="../../teches/csharp/01-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
         数据类型
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../csharp/02-%E8%BF%90%E7%AE%97%E7%AC%A6/">
+<a class="md-nav__link" href="../../teches/csharp/02-%E8%BF%90%E7%AE%97%E7%AC%A6/">
         运算符
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../csharp/03-%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5/">
+<a class="md-nav__link" href="../../teches/csharp/03-%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5/">
         控制语句
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../csharp/04-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+<a class="md-nav__link" href="../../teches/csharp/04-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
         数据结构
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../csharp/05-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/">
+<a class="md-nav__link" href="../../teches/csharp/05-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/">
         类与对象
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../csharp/06-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%8E%E6%8E%A5%E5%8F%A3/">
+<a class="md-nav__link" href="../../teches/csharp/06-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%8E%E6%8E%A5%E5%8F%A3/">
         抽象类与接口
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../csharp/07-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/">
+<a class="md-nav__link" href="../../teches/csharp/07-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/">
         异常处理
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../csharp/08-%E5%B8%B8%E7%94%A8%E7%B1%BB/">
+<a class="md-nav__link" href="../../teches/csharp/08-%E5%B8%B8%E7%94%A8%E7%B1%BB/">
         常用类
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../csharp/09-%E7%B4%A2%E5%BC%95%E5%99%A8/">
+<a class="md-nav__link" href="../../teches/csharp/09-%E7%B4%A2%E5%BC%95%E5%99%A8/">
         索引器
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../csharp/10-%E5%A7%94%E6%89%98%E4%B8%8E%E4%BA%8B%E4%BB%B6/">
+<a class="md-nav__link" href="../../teches/csharp/10-%E5%A7%94%E6%89%98%E4%B8%8E%E4%BA%8B%E4%BB%B6/">
         委托
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../csharp/11-%E6%B3%9B%E5%9E%8B/">
+<a class="md-nav__link" href="../../teches/csharp/11-%E6%B3%9B%E5%9E%8B/">
         泛型
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../csharp/12-%E9%9B%86%E5%90%88/">
+<a class="md-nav__link" href="../../teches/csharp/12-%E9%9B%86%E5%90%88/">
         集合
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../csharp/13-%E7%89%B9%E6%80%A7/">
+<a class="md-nav__link" href="../../teches/csharp/13-%E7%89%B9%E6%80%A7/">
         特性
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../csharp/14-%E5%8F%8D%E5%B0%84/">
+<a class="md-nav__link" href="../../teches/csharp/14-%E5%8F%8D%E5%B0%84/">
         反射
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../csharp/15-%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+<a class="md-nav__link" href="../../teches/csharp/15-%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
         多线程
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../csharp/16-%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/">
+<a class="md-nav__link" href="../../teches/csharp/16-%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/">
         文件处理
       </a>
 </li>
@@ -280,17 +282,17 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../01-%E8%AE%A4%E8%AF%86LINQ/">
+<a class="md-nav__link" href="../../teches/linq/01-%E8%AE%A4%E8%AF%86LINQ/">
         认识 LINQ
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../02-%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/">
+<a class="md-nav__link" href="../../teches/linq/02-%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/">
         查询语法
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../03-%E6%96%B9%E6%B3%95%E8%AF%AD%E6%B3%95/">
+<a class="md-nav__link" href="../../teches/linq/03-%E6%96%B9%E6%B3%95%E8%AF%AD%E6%B3%95/">
         方法语法
       </a>
 </li>
@@ -307,27 +309,27 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../04-%E6%A0%87%E5%87%86%E6%9F%A5%E8%AF%A2%E8%BF%90%E7%AE%97%E7%AC%A6%E6%96%B9%E6%B3%95/">
+<a class="md-nav__link" href="../../teches/linq/04-%E6%A0%87%E5%87%86%E6%9F%A5%E8%AF%A2%E8%BF%90%E7%AE%97%E7%AC%A6%E6%96%B9%E6%B3%95/">
         标准查询运算符方法
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../05-%E6%8A%95%E5%BD%B1%E8%BF%90%E7%AE%97/">
+<a class="md-nav__link" href="../../teches/linq/05-%E6%8A%95%E5%BD%B1%E8%BF%90%E7%AE%97/">
         投影运算
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../06-%E7%AD%9B%E9%80%89%E8%BF%90%E7%AE%97/">
+<a class="md-nav__link" href="../../teches/linq/06-%E7%AD%9B%E9%80%89%E8%BF%90%E7%AE%97/">
         筛选运算
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../07-%E6%8E%92%E5%BA%8F%E8%BF%90%E7%AE%97/">
+<a class="md-nav__link" href="../../teches/linq/07-%E6%8E%92%E5%BA%8F%E8%BF%90%E7%AE%97/">
         排序运算
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../08-%E6%95%B0%E6%8D%AE%E5%88%86%E7%BB%84/">
+<a class="md-nav__link" href="../../teches/linq/08-%E6%95%B0%E6%8D%AE%E5%88%86%E7%BB%84/">
         数据分组
       </a>
 </li>
@@ -350,42 +352,42 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../adonet/01-%E8%AE%A4%E8%AF%86ADO.NET/">
+<a class="md-nav__link" href="../../teches/adonet/01-%E8%AE%A4%E8%AF%86ADO.NET/">
         认识 ADO.NET
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../adonet/02-%E6%95%B0%E6%8D%AE%E6%8F%90%E4%BE%9B%E7%A8%8B%E5%BA%8F/">
+<a class="md-nav__link" href="../../teches/adonet/02-%E6%95%B0%E6%8D%AE%E6%8F%90%E4%BE%9B%E7%A8%8B%E5%BA%8F/">
         数据提供程序
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../adonet/03-%E6%95%B0%E6%8D%AE%E9%9B%86/">
+<a class="md-nav__link" href="../../teches/adonet/03-%E6%95%B0%E6%8D%AE%E9%9B%86/">
         数据集
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../adonet/04-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%98%A0%E5%B0%84/">
+<a class="md-nav__link" href="../../teches/adonet/04-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%98%A0%E5%B0%84/">
         数据类型映射
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../adonet/05-%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E6%BA%90/">
+<a class="md-nav__link" href="../../teches/adonet/05-%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E6%BA%90/">
         连接数据源
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../adonet/06-%E5%88%9B%E5%BB%BA%E5%91%BD%E4%BB%A4%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0/">
+<a class="md-nav__link" href="../../teches/adonet/06-%E5%88%9B%E5%BB%BA%E5%91%BD%E4%BB%A4%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0/">
         创建命令与配置参数
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../adonet/07-%E6%A3%80%E7%B4%A2%E5%92%8C%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE/">
+<a class="md-nav__link" href="../../teches/adonet/07-%E6%A3%80%E7%B4%A2%E5%92%8C%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE/">
         检索和修改数据
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../adonet/08-%E4%BA%8B%E5%8A%A1%E4%B8%8E%E5%B9%B6%E5%8F%91%E6%80%A7/">
+<a class="md-nav__link" href="../../teches/adonet/08-%E4%BA%8B%E5%8A%A1%E4%B8%8E%E5%B9%B6%E5%8F%91%E6%80%A7/">
         事务与并发性
       </a>
 </li>
@@ -405,12 +407,12 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../ef-core/01-%E8%AE%A4%E8%AF%86EF%20Core/">
+<a class="md-nav__link" href="../../teches/ef-core/01-%E8%AE%A4%E8%AF%86EF%20Core/">
         认识 EF Core
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../ef-core/02-DbContext/">
+<a class="md-nav__link" href="../../teches/ef-core/02-DbContext/">
         DbContext
       </a>
 </li>
@@ -430,7 +432,7 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../aspnet-core/01-%E8%AE%A4%E8%AF%86ASP.NET%20Core/">
+<a class="md-nav__link" href="../../teches/aspnet-core/01-%E8%AE%A4%E8%AF%86ASP.NET%20Core/">
         认识 ASP.NET Core
       </a>
 </li>
@@ -450,46 +452,102 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../git/Git%E5%B8%B8%E7%94%A8/">
+<a class="md-nav__link" href="../../teches/git/Git%E5%B8%B8%E7%94%A8/">
         Git 常用操作
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
 <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
           博客
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_8">
 <span class="md-nav__icon md-icon"></span>
           博客
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_8_1" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_8_1" type="checkbox"/>
 <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
           2023
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_8_1_label" class="md-nav" data-md-level="2">
+<nav aria-expanded="true" aria-labelledby="__nav_8_1_label" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_8_1">
 <span class="md-nav__icon md-icon"></span>
           2023
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../blogs/Program.cs%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3/">
+<a class="md-nav__link" href="../Program.cs%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3/">
         Program.cs文件详解
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../../blogs/JWT%20%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          JWT 使用教程
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         JWT 使用教程
       </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-jwt">
+    1. 认识JWT
+  </a>
+<nav aria-label="1. 认识JWT" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-jwt">
+    1.1 JWT的功能
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-jwt">
+    2. JWT原理
+  </a>
+<nav aria-label="2. JWT原理" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#21-jwt">
+    2.1 JWT组成
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#22-jwt">
+    2.2 JWT工作流程
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#23-jwt">
+    2.3 JWT使用步骤
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-netjwt">
+    3. .NET配置JWT认证
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -510,17 +568,17 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../common/author/">
+<a class="md-nav__link" href="../../common/author/">
         Author
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../common/mkdocs/">
+<a class="md-nav__link" href="../../common/mkdocs/">
         MkDocs
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../../common/thanks/">
+<a class="md-nav__link" href="../../common/thanks/">
         Thanks
       </a>
 </li>
@@ -542,18 +600,46 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-    一、联接运算方法
+<a class="md-nav__link" href="#1-jwt">
+    1. 认识JWT
+  </a>
+<nav aria-label="1. 认识JWT" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-jwt">
+    1.1 JWT的功能
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-jwt">
+    2. JWT原理
+  </a>
+<nav aria-label="2. JWT原理" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#21-jwt">
+    2.1 JWT组成
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#join">
-    二、Join
+<a class="md-nav__link" href="#22-jwt">
+    2.2 JWT工作流程
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#groupjoin">
-    三、GroupJoin
+<a class="md-nav__link" href="#23-jwt">
+    2.3 JWT使用步骤
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-netjwt">
+    3. .NET配置JWT认证
   </a>
 </li>
 </ul>
@@ -563,10 +649,74 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="_1">联接运算<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h1>
-<h2 id="_2">一、联接运算方法<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h2>
-<h2 id="join">二、Join<a class="headerlink" href="#join" title="Permanent link">⚓︎</a></h2>
-<h2 id="groupjoin">三、GroupJoin<a class="headerlink" href="#groupjoin" title="Permanent link">⚓︎</a></h2>
+<h1 id="jwt">JWT使用教程<a class="headerlink" href="#jwt" title="Permanent link">⚓︎</a></h1>
+<h2 id="1-jwt">1. 认识JWT<a class="headerlink" href="#1-jwt" title="Permanent link">⚓︎</a></h2>
+<blockquote>
+<p>JSON Web Token (JWT) 是一个开放标准(RFC 7519)，它定义了一种紧凑的、自包含的方式，用于作为 JSON 对象在各方之间安全地传输信息。该信息可以被验证和信任，因为它是<strong>数字签名</strong>的。</p>
+</blockquote>
+<p>快速访问：<a href="https://jwt.io/">JSON Web Tokens - jwt.io</a> </p>
+<h3 id="11-jwt">1.1 JWT的功能<a class="headerlink" href="#11-jwt" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>
+<p><strong>身份验证（Authentication）</strong>：JWT可以被用作身份验证机制，用于验证用户的身份信息。当用户成功登录并获得JWT后，他们可以在后续请求中通过将JWT附加到请求中来证明自己的身份。</p>
+</li>
+<li>
+<p><strong>授权（Authorization）</strong>：JWT还可以用于授权用户访问特定资源或执行特定操作。在JWT的负载中，可以包含用户的权限或角色信息，服务器可以根据这些信息来判断用户是否有权访问特定资源。</p>
+</li>
+<li>
+<p><strong>信息交换（Information Exchange）</strong>：由于JWT是基于JSON格式的，因此可以方便地在不同的系统之间传输和交换信息。JWT可以作为一种安全的机制，用于在不同的服务之间传递信息，而无需再次进行身份验证。</p>
+</li>
+</ul>
+<h2 id="2-jwt">2. JWT原理<a class="headerlink" href="#2-jwt" title="Permanent link">⚓︎</a></h2>
+<h3 id="21-jwt">2.1 JWT组成<a class="headerlink" href="#21-jwt" title="Permanent link">⚓︎</a></h3>
+<p>JWT令牌是 它由三个部分组成，使用 <code>.</code> 进行分隔：</p>
+<ol>
+<li><strong>Header（头部）</strong>：包含描述<strong>JWT的元数据</strong>，例如加密算法（例如HMAC、RSA等）和令牌类型（通常是JWT）。</li>
+<li><strong>Payload（负载）</strong>：包含要<strong>传输的数据</strong>，以及一些预定义的声明（例如发行人、过期时间等）和自定义声明（根据需求添加）。</li>
+<li><strong>Signature（签名）</strong>：通过使用密钥对头部和负载进行加密生成的哈希值，用于<strong>验证令牌</strong>的完整性和真实性。</li>
+</ol>
+<p>最终生成的JWT令牌形如：<code>xxxxx.yyyyy.zzzzz</code> ，下图显示了JWT令牌示例：
+![[Pasted image 20230812092701.png]]</p>
+<p>上图是JWT官网提供的JWT验证工具，可以使用它来对Token进行加解密验证。</p>
+<ul>
+<li>Header
+<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">{</span>
+</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="err">'</span><span class="kc">t</span><span class="err">yp'</span><span class="p">:</span><span class="w"> </span><span class="err">'JWT'</span><span class="p">,</span>
+</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="err">'alg'</span><span class="p">:</span><span class="w"> </span><span class="err">'HS</span><span class="mi">256</span><span class="err">'</span>
+</span><span id="__span-0-4"><a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="p">}</span>
+</span></code></pre></div>
+头部用来存储JWT的相关信息，比如 <code>typ</code> 用于指定令牌的类型，通常是"JWT"；<code>alg</code> 指定用于对JWT签名或加密的算法，例如"HMACSHA256"、"RSA"等。当然还有其他字段，甚至自定义。</li>
+</ul>
+<p>需要注意的是：Header中的属性是公开信息，不应包含敏感或保密数据。</p>
+<ul>
+<li>
+<p>Payload
+<div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">{</span>
+</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="nt">"sub"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1234567890"</span><span class="p">,</span>
+</span><span id="__span-1-3"><a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John Doe"</span><span class="p">,</span>
+</span><span id="__span-1-4"><a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">  </span><span class="nt">"iat"</span><span class="p">:</span><span class="w"> </span><span class="mi">1516239022</span>
+</span><span id="__span-1-5"><a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="p">}</span>
+</span></code></pre></div>
+负载用来存储要传输的数据，比如 <code>sub</code> 用于标识JWT所代表的主体或用户，可以是用户ID，用户名等信息； <code>exp</code> 指定了JWT的过期时间，用于限制JWT的有效期；<code>iss</code> 表示发行该JWT的实体，即JWT的颁发者；<code>iat</code> 指定JWT的颁发时间，表示该JWT令牌的生成时间等，还可以增加其他自定义声明，以满足应用程序的需求。</p>
+</li>
+<li>
+<p>Signature
+<div class="language-json highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="err">HMACSHA</span><span class="mi">256</span><span class="err">(</span>
+</span><span id="__span-2-2"><a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="err">base</span><span class="mi">64</span><span class="err">UrlE</span><span class="kc">n</span><span class="err">code(header)</span><span class="w"> </span><span class="err">+</span><span class="w"> </span><span class="s2">"."</span><span class="w"> </span><span class="err">+</span>
+</span><span id="__span-2-3"><a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">  </span><span class="err">base</span><span class="mi">64</span><span class="err">UrlE</span><span class="kc">n</span><span class="err">code(payload)</span><span class="p">,</span>
+</span><span id="__span-2-4"><a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">  </span><span class="s2">"your_secret_key"</span>
+</span><span id="__span-2-5"><a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="err">)</span>
+</span></code></pre></div>
+签名是基于秘密密钥（或公钥/私钥对）生成的一串字符串，用于确保JWT在传输过程中没有被篡改。签名加密的算法在Header的 <code>alg</code> 中指定，然后将头部信息和负载信息分别编码拼接在一起，通过算法和加密秘钥进行加密生成。当然，秘钥也可以先进行编码再用来加密。</p>
+</li>
+</ul>
+<div class="admonition warnning">
+<p class="admonition-title">Warnning</p>
+<p><mark style="background: #D2B3FFA6;">JWT提供了一种用于传输信息和验证的机制，但不适宜存放敏感的隐私数据。</mark>由于JWT是基于Base64编码的字符串，它是可解码的，因此不建议在JWT中存放敏感的隐私数据，例如密码、信用卡信息等。负载（Payload）部分通常用于存放一些非敏感的用户信息，如用户ID、角色、过期时间等。这些信息是公开的，并且可以从JWT中解码和读取。因此，敏感的隐私数据应该避免存放在JWT中，以防止信息泄露或被篡改。</p>
+</div>
+<h3 id="22-jwt">2.2 JWT工作流程<a class="headerlink" href="#22-jwt" title="Permanent link">⚓︎</a></h3>
+<h3 id="23-jwt">2.3 JWT使用步骤<a class="headerlink" href="#23-jwt" title="Permanent link">⚓︎</a></h3>
+<h2 id="3-netjwt">3. .NET配置JWT认证<a class="headerlink" href="#3-netjwt" title="Permanent link">⚓︎</a></h2>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">
@@ -609,6 +759,34 @@
           </button>
 </main>
 <footer class="md-footer">
+<nav aria-label="页脚" class="md-footer__inner md-grid">
+<a aria-label="上一页: Program.cs文件详解" class="md-footer__link md-footer__link--prev" href="../Program.cs%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                  上一页
+                </span>
+                Program.cs文件详解
+              </div>
+</div>
+</a>
+<a aria-label="下一页: Author" class="md-footer__link md-footer__link--next" href="../../common/author/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                  下一页
+                </span>
+                Author
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
@@ -637,7 +815,7 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "content.code.copy", "content.code.annotate", "navigation.tracking", "navigation.footer"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
-<script src="../../../assets/javascripts/bundle.efa0ade1.min.js"></script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "toc.follow", "content.code.copy", "content.code.annotate", "navigation.tracking", "navigation.footer"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../assets/javascripts/bundle.efa0ade1.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

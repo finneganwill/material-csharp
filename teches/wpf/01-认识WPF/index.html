@@ -5,10 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://finneganwill.github.io/material-dotnet/teches/linq/09-%E8%81%94%E6%8E%A5%E8%BF%90%E7%AE%97/" rel="canonical"/>
+<link href="https://finneganwill.github.io/material-dotnet/teches/wpf/01-%E8%AE%A4%E8%AF%86WPF/" rel="canonical"/>
 <link href="../../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
-<title>联接运算 - .Net Material</title>
+<title>认识WPF - .Net Material</title>
 <link href="../../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -35,7 +35,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#_1">
+<a class="md-skip" href="#wpf">
           跳转至
         </a>
 </div>
@@ -59,7 +59,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              联接运算
+              认识WPF
             
           </span>
 </div>
@@ -102,7 +102,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../01-%E8%AE%A4%E8%AF%86LINQ/">
+<a class="md-tabs__link" href="../../linq/01-%E8%AE%A4%E8%AF%86LINQ/">
         LINQ
       </a>
 </li>
@@ -280,17 +280,17 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../01-%E8%AE%A4%E8%AF%86LINQ/">
+<a class="md-nav__link" href="../../linq/01-%E8%AE%A4%E8%AF%86LINQ/">
         认识 LINQ
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../02-%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/">
+<a class="md-nav__link" href="../../linq/02-%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/">
         查询语法
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../03-%E6%96%B9%E6%B3%95%E8%AF%AD%E6%B3%95/">
+<a class="md-nav__link" href="../../linq/03-%E6%96%B9%E6%B3%95%E8%AF%AD%E6%B3%95/">
         方法语法
       </a>
 </li>
@@ -307,27 +307,27 @@
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../04-%E6%A0%87%E5%87%86%E6%9F%A5%E8%AF%A2%E8%BF%90%E7%AE%97%E7%AC%A6%E6%96%B9%E6%B3%95/">
+<a class="md-nav__link" href="../../linq/04-%E6%A0%87%E5%87%86%E6%9F%A5%E8%AF%A2%E8%BF%90%E7%AE%97%E7%AC%A6%E6%96%B9%E6%B3%95/">
         标准查询运算符方法
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../05-%E6%8A%95%E5%BD%B1%E8%BF%90%E7%AE%97/">
+<a class="md-nav__link" href="../../linq/05-%E6%8A%95%E5%BD%B1%E8%BF%90%E7%AE%97/">
         投影运算
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../06-%E7%AD%9B%E9%80%89%E8%BF%90%E7%AE%97/">
+<a class="md-nav__link" href="../../linq/06-%E7%AD%9B%E9%80%89%E8%BF%90%E7%AE%97/">
         筛选运算
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../07-%E6%8E%92%E5%BA%8F%E8%BF%90%E7%AE%97/">
+<a class="md-nav__link" href="../../linq/07-%E6%8E%92%E5%BA%8F%E8%BF%90%E7%AE%97/">
         排序运算
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../08-%E6%95%B0%E6%8D%AE%E5%88%86%E7%BB%84/">
+<a class="md-nav__link" href="../../linq/08-%E6%95%B0%E6%8D%AE%E5%88%86%E7%BB%84/">
         数据分组
       </a>
 </li>
@@ -542,18 +542,18 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_2">
-    一、联接运算方法
+<a class="md-nav__link" href="#1-wpf">
+    1. WPF是什么
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#join">
-    二、Join
+<a class="md-nav__link" href="#2-wpf">
+    2. 第一个WPF应用程序
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#groupjoin">
-    三、GroupJoin
+<a class="md-nav__link" href="#3">
+    3. 概述
   </a>
 </li>
 </ul>
@@ -563,10 +563,36 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="_1">联接运算<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h1>
-<h2 id="_2">一、联接运算方法<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h2>
-<h2 id="join">二、Join<a class="headerlink" href="#join" title="Permanent link">⚓︎</a></h2>
-<h2 id="groupjoin">三、GroupJoin<a class="headerlink" href="#groupjoin" title="Permanent link">⚓︎</a></h2>
+<h1 id="wpf">认识WPF<a class="headerlink" href="#wpf" title="Permanent link">⚓︎</a></h1>
+<h2 id="1-wpf">1. WPF是什么<a class="headerlink" href="#1-wpf" title="Permanent link">⚓︎</a></h2>
+<p>Windows Presentation Foundation (WPF) 桌面是一个与分辨率无关的 UI 框架，使用基于矢量的呈现引擎，构建用于利用现代图形硬件。 WPF 提供一套完善的应用程序开发功能，这些功能包括 Extensible Application Markup Language (XAML)、控件、数据绑定、布局、二维和三维图形、动画、样式、模板、文档、媒体、文本和版式。 WPF 属于 .NET，因此可以生成整合 .NET API 其他元素的应用程序。</p>
+<p>WPF 有两种实现：</p>
+<ol>
+<li>
+<p>.Net 版本：
+    <a href="https://github.com/dotnet/wpf">GitHub</a> 上托管的 WPF 的开源实现，在 .NET 上运行。 适用于 XAML 设计器最低要求 <a href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&amp;utm_source=learn.microsoft.com&amp;utm_campaign=inline+link&amp;utm_content=download+vs2019+desktopguide+wpf">Visual Studio 2019 版本 16.8</a>。 但根据 .NET 的版本，可能需要使用较新版本的 Visual Studio。
+    尽管 .NET 是一种跨平台技术，但 <strong>WPF 仅在 Windows 上运行</strong>。</p>
+</li>
+<li>
+<p>.NET Framework 4 版本：
+    受 Visual Studio 2019 和 Visual Studio 2017 支持的 WPF 的 .NET Framework 实现。
+    .NET Framework 4 是仅限 Windows 的 .NET 版本，被视为一个 Windows 操作系统组件。 此版本的 WPF 随 .NET Framework 一起分发。 有关 WPF 的 .NET Framework 版本的详细信息，请参阅<a href="https://learn.microsoft.com/zh-cn/dotnet/desktop/wpf/introduction-to-wpf?view=netframeworkdesktop-4.8&amp;preserve-view=true">适用于 .NET Framework 的 WPF 简介</a>。</p>
+</li>
+</ol>
+<h2 id="2-wpf">2. 第一个WPF应用程序<a class="headerlink" href="#2-wpf" title="Permanent link">⚓︎</a></h2>
+<p>下面是使用Visual Studio 2022 创建 WPF HelloWorld 的步骤：</p>
+<p>创建成功后的应用基本结构如图所示：</p>
+<h2 id="3">3. 概述<a class="headerlink" href="#3" title="Permanent link">⚓︎</a></h2>
+<p>开发WPF程序前，你需要了解：
+1. 标记与代码隐藏
+2. 控件
+3. 布局
+4. 数据绑定
+5. 事件
+6. 图形与动画
+7. 文本与版式
+8. 自定义WPF应用
+9. MVVM架构</p>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">
