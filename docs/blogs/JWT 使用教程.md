@@ -30,6 +30,11 @@ JWT令牌由三个部分组成，使用 `.` 进行分隔：
 
 JWT生成的Token是遗传编码加密的字符串，格式形如  `XXX.YYY.ZZZ` 。`XXX` 部分是Header的Base64编码；`YYY` 部分是Payload的Base64编码；`ZZZ` 是将 `XXX` 和 `YYY` 拼接后通过加密秘钥（Secret Key）加密后形成的串。三者通过 `.` 拼接形成 Token .
 
+<figure markdown> 
+    ![Token组成](img/Token组成.png){ width="750" }
+    <figcaption>JWT示例</figcaption>
+</figure>
+
 - Header
 ```json
 {
@@ -71,9 +76,13 @@ HMACSHA256(
 !!! Warning "不要在JWT中携带敏感信息！"
 	***JWT提供了一种用于传输信息和验证的机制，但不适宜存放敏感的隐私数据***。由于JWT是基于Base64编码的字符串，它是可解码的，因此不建议在JWT中存放敏感的隐私数据，例如密码、信用卡信息等。负载（Payload）部分通常用于存放一些非敏感的用户信息，如用户ID、角色、过期时间等。这些信息是公开的，并且也可以从JWT中解码和读取。**因此，敏感的隐私数据应该避免存放在JWT中，以防止信息泄露或被篡改。** 
 
-
 ### 2.2 JWT认证流程
 
+JWT认证流程总结起来就是前端通过发送身份信息给服务端，后端在接受到请求后会生成Token，并在响应中发送给前端。前端得到Token后保存在本地，在后续的请求中都会携带该Token，服务端对
+令牌进行验证和授权访问。
+
+下图显示了认证流程：
+![[Pasted image 20230812172639.png]]
 
 ### 2.3 JWT使用步骤
 
