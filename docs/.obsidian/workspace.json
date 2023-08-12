@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blogs/JWT.md",
+                "file": "blogs/JWT 使用教程.md",
                 "mode": "source",
                 "source": false
               }
@@ -118,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "blogs/JWT.md",
+                "file": "blogs/JWT 使用教程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "blogs/JWT.md",
+                "file": "blogs/JWT 使用教程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "blogs/JWT.md"
+                "file": "blogs/JWT 使用教程.md"
               }
             }
           }
@@ -182,9 +182,10 @@
   },
   "active": "f1b36a9ae3202e51",
   "lastOpenFiles": [
+    "Pasted image 20230812092701.png",
     "teches/wpf/01-认识WPF.md",
     "blogs/WPF瀑布流.md",
-    "blogs/JWT.md",
+    "blogs/JWT 使用教程.md",
     "teches/Abstract.md",
     "blogs/Program.cs文件详解.md",
     "teches/ef-core/01-认识EF Core.md",
@@ -213,7 +214,6 @@
     "blogs/202305",
     "blogs/2023/init.md",
     "blogs/2023",
-    "blogs/202304/test.md",
     "blogs/202304",
     "blogs/2023年4月",
     "blogs/2023年",
