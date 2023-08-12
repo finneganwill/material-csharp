@@ -534,17 +534,12 @@
     2.2 JWT认证流程
   </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#23-jwt">
-    2.3 JWT使用步骤
-  </a>
-</li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#3-netjwt">
-    3. .NET配置JWT认证
+<a class="md-nav__link" href="#3-aspnetjwt">
+    3. ASP.NET配置JWT
   </a>
 </li>
 </ul>
@@ -630,17 +625,12 @@
     2.2 JWT认证流程
   </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#23-jwt">
-    2.3 JWT使用步骤
-  </a>
-</li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#3-netjwt">
-    3. .NET配置JWT认证
+<a class="md-nav__link" href="#3-aspnetjwt">
+    3. ASP.NET配置JWT
   </a>
 </li>
 </ul>
@@ -684,7 +674,7 @@
 <p>JWT生成的Token是遗传编码加密的字符串，格式形如  <code>XXX.YYY.ZZZ</code> 。<code>XXX</code> 部分是Header的Base64编码；<code>YYY</code> 部分是Payload的Base64编码；<code>ZZZ</code> 是将 <code>XXX</code> 和 <code>YYY</code> 拼接后通过加密秘钥（Secret Key）加密后形成的串。三者通过 <code>.</code> 拼接形成 Token .</p>
 <figure>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../img/Token%E7%BB%84%E6%88%90.png"><img alt="Token组成" src="../img/Token%E7%BB%84%E6%88%90.png" width="750"/></a>
-<figcaption>JWT示例</figcaption></p>
+<figcaption></figcaption></p>
 </figure>
 <ul>
 <li>
@@ -731,8 +721,104 @@
 <p><strong><em>JWT提供了一种用于传输信息和验证的机制，但不适宜存放敏感的隐私数据</em></strong>。由于JWT是基于Base64编码的字符串，它是可解码的，因此不建议在JWT中存放敏感的隐私数据，例如密码、信用卡信息等。负载（Payload）部分通常用于存放一些非敏感的用户信息，如用户ID、角色、过期时间等。这些信息是公开的，并且也可以从JWT中解码和读取。<strong>因此，敏感的隐私数据应该避免存放在JWT中，以防止信息泄露或被篡改。</strong> </p>
 </div>
 <h3 id="22-jwt">2.2 JWT认证流程<a class="headerlink" href="#22-jwt" title="Permanent link">⚓︎</a></h3>
-<h3 id="23-jwt">2.3 JWT使用步骤<a class="headerlink" href="#23-jwt" title="Permanent link">⚓︎</a></h3>
-<h2 id="3-netjwt">3. .NET配置JWT认证<a class="headerlink" href="#3-netjwt" title="Permanent link">⚓︎</a></h2>
+<p>JWT认证流程总结起来就是前端通过发送身份信息给服务端，后端在接受到请求后会生成Token，并在响应中发送给前端。前端得到Token后保存在本地，在后续的请求中都会携带该Token，服务端对
+令牌进行验证和授权访问。</p>
+<p>下图显示了认证流程：</p>
+<figure>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../img/Token%E8%AE%A4%E8%AF%81%E6%B5%81%E7%A8%8B.png"><img alt="Token认证流程" src="../img/Token%E8%AE%A4%E8%AF%81%E6%B5%81%E7%A8%8B.png" width="750"/></a>
+<figcaption>Token认证流程</figcaption></p>
+</figure>
+<p>前端（客户端）：</p>
+<ol>
+<li>用户身份验证：用户通过提供凭据（例如用户名和密码）进行身份验证，通常通过登录页面或其他验证方式。</li>
+<li>发送身份验证请求：前端将用户的凭据发送到后端服务器，通常使用 POST 请求发送至特定的身份验证端点（如<code>/login</code>）。</li>
+<li>后端身份验证：后端服务器接收到身份验证请求后，对提供的凭据进行验证。如果验证成功，后端服务器将生成一个 JWT。</li>
+<li>接收和存储 JWT：后端服务器将生成的 JWT 作为响应返回给前端。前端通常会将 JWT 存储在客户端，例如使用浏览器的本地存储（LocalStorage）或移动应用的内存中。</li>
+<li>发送 JWT：前端在后续的请求中，将 JWT 添加到每次请求的<code>Authorization</code>头部中。可以使用 Bearer 认证方案，将 JWT 添加到头部中的<code>Authorization</code>字段值中。</li>
+</ol>
+<p>后端（服务器）：</p>
+<ol>
+<li>验证 JWT：后端服务器接收到请求时，从<code>Authorization</code>头部中解析出 JWT，并对其进行验。</li>
+<li>验证签名：后端使用密钥对 JWT 的头部和负载进行签名验证，确保令牌的完整性。</li>
+<li>验证声明：后端检查负载中的声明，包括验证令牌的过期时间、发行人等。</li>
+<li>授权访问：如果 JWT 验证成功并且负载中的声明满足要求，后端服务器将对请求进行授权，允许访问受保护的资源或执行特定操作。</li>
+</ol>
+<p>在验证 JWT 时，后端可以使用密钥来验证签名，并可以根据声明中的信息，确定用户的权限或角色。通常，JWT 包含有关用户身份的基本信息，如用户ID或用户名等。需要注意的是，为了防止 CSRF（跨站请求伪造）攻击，可以在生成的 JWT 中包含 CSRF Token，并在每个请求中进行验证。</p>
+<p>总结起来，前端通过用户身份验证获取 JWT，并在后续请求中发送 JWT，而后端进行 JWT 的验证和授权访问。</p>
+<h2 id="3-aspnetjwt">3. ASP.NET配置JWT<a class="headerlink" href="#3-aspnetjwt" title="Permanent link">⚓︎</a></h2>
+<p>下面的内容是在Webapi项目中配置JWT的基本步骤，更详细的代码可以关注博客【】。</p>
+<p>在 ASP.NET Core Web API 中使用 JWT，你可以按照以下步骤进行设置：</p>
+<ol>
+<li>
+<p>添加 NuGet 包：打开你的  Web API 项目，使用 NuGet 包管理器或在.csproj 文件中添加以下包引用，以添加一个 JWT 库（例如 <code>Microsoft.AspNetCore.Authentication.JwtBearer</code>）：
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nt">&lt;PackageReference</span><span class="w"> </span><span class="na">Include=</span><span class="s">"Microsoft.AspNetCore.Authentication.JwtBearer"</span><span class="w"> </span><span class="na">Version=</span><span class="s">"x.x.x"</span><span class="w"> </span><span class="nt">/&gt;</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p>在 Startup.cs 中配置身份验证服务和 JWT：
+    在 ConfigureServices 方法中添加以下代码来配置 JWT 身份验证服务：
+    <div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">Microsoft.AspNetCore.Authentication.JwtBearer</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="k">using</span><span class="w"> </span><span class="nn">Microsoft.IdentityModel.Tokens</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-4-3"><a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="c1">// ...  </span>
+</span><span id="__span-4-4"><a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">ConfigureServices</span><span class="p">(</span><span class="n">IServiceCollection</span><span class="w"> </span><span class="n">services</span><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-4-5"><a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="p">{</span><span class="w">     </span>
+</span><span id="__span-4-6"><a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="c1">// 配置身份验证服务     </span>
+</span><span id="__span-4-7"><a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="n">services</span>
+</span><span id="__span-4-8"><a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">        </span><span class="p">.</span><span class="n">AddAuthentication</span><span class="p">(</span><span class="n">options</span><span class="w"> </span><span class="o">=&gt;</span><span class="w">     </span>
+</span><span id="__span-4-9"><a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">        </span><span class="p">{</span><span class="w">         </span>
+</span><span id="__span-4-10"><a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">            </span><span class="n">options</span><span class="p">.</span><span class="n">DefaultAuthenticateScheme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JwtBearerDefaults</span><span class="p">.</span><span class="n">AuthenticationScheme</span><span class="p">;</span>
+</span><span id="__span-4-11"><a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">            </span><span class="n">options</span><span class="p">.</span><span class="n">DefaultChallengeScheme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JwtBearerDefaults</span><span class="p">.</span><span class="n">AuthenticationScheme</span><span class="p">;</span>
+</span><span id="__span-4-12"><a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">        </span><span class="p">})</span>
+</span><span id="__span-4-13"><a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">        </span><span class="p">.</span><span class="n">AddJwtBearer</span><span class="p">(</span><span class="n">options</span><span class="w"> </span><span class="o">=&gt;</span><span class="w">     </span>
+</span><span id="__span-4-14"><a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">        </span><span class="p">{</span><span class="w">         </span>
+</span><span id="__span-4-15"><a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">            </span><span class="c1">// 设置 JWT Bearer 选项         </span>
+</span><span id="__span-4-16"><a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">            </span><span class="n">options</span><span class="p">.</span><span class="n">TokenValidationParameters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TokenValidationParameters</span>
+</span><span id="__span-4-17"><a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">            </span><span class="p">{</span><span class="w">             </span>
+</span><span id="__span-4-18"><a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">                </span><span class="n">ValidateIssuerSigningKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="p">,</span><span class="w">             </span>
+</span><span id="__span-4-19"><a href="#__codelineno-4-19" id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="w">                </span><span class="n">IssuerSigningKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span>
+</span><span id="__span-4-20"><a href="#__codelineno-4-20" id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="w">                </span><span class="n">SymmetricSecurityKey</span><span class="p">(</span><span class="n">Encoding</span><span class="p">.</span><span class="n">ASCII</span><span class="p">.</span><span class="n">GetBytes</span><span class="p">(</span><span class="s">"your_secret_key"</span><span class="p">)),</span><span class="w">  </span>
+</span><span id="__span-4-21"><a href="#__codelineno-4-21" id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="w">                </span><span class="n">ValidateIssuer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">false</span><span class="p">,</span><span class="w"> </span>
+</span><span id="__span-4-22"><a href="#__codelineno-4-22" id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="w">                </span><span class="n">ValidateAudience</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">false</span><span class="w">         </span>
+</span><span id="__span-4-23"><a href="#__codelineno-4-23" id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="w">        </span><span class="p">};</span><span class="w">     </span>
+</span><span id="__span-4-24"><a href="#__codelineno-4-24" id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="w">    </span><span class="p">});</span><span class="w">      </span>
+</span><span id="__span-4-25"><a href="#__codelineno-4-25" id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="w">    </span><span class="c1">// 添加其他服务配置    </span>
+</span><span id="__span-4-26"><a href="#__codelineno-4-26" id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="w">    </span><span class="c1">// ... </span>
+</span><span id="__span-4-27"><a href="#__codelineno-4-27" id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="p">}</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p>在 Configure 方法中启用身份验证：
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">Microsoft.AspNetCore.Authentication.JwtBearer</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-5-2"><a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="c1">// ...  </span>
+</span><span id="__span-5-4"><a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Configure</span><span class="p">(</span><span class="n">IApplicationBuilder</span><span class="w"> </span><span class="n">app</span><span class="p">,</span><span class="w"> </span><span class="n">IWebHostEnvironment</span><span class="w"> </span><span class="n">env</span><span class="p">)</span><span class="w"> </span>
+</span><span id="__span-5-5"><a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="p">{</span><span class="w">     </span>
+</span><span id="__span-5-6"><a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="c1">// 启用身份验证     </span>
+</span><span id="__span-5-7"><a href="#__codelineno-5-7" id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span><span class="n">app</span><span class="p">.</span><span class="n">UseAuthentication</span><span class="p">();</span><span class="w"> </span><span class="c1">// 添加其他中间件配置     </span>
+</span><span id="__span-5-8"><a href="#__codelineno-5-8" id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">    </span><span class="c1">// ... </span>
+</span><span id="__span-5-9"><a href="#__codelineno-5-9" id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="p">}</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p>保护控制器或路由： 在需要身份验证的控制器或路由上添加 <code>[Authorize]</code> 属性，这将确保只有经过身份验证的用户可以访问相应的资源。
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">Microsoft.AspNetCore.Mvc</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-6-2"><a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="na">[ApiController]</span>
+</span><span id="__span-6-4"><a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="na">[Route("api/[controller]</span><span class="s">")]</span>
+</span><span id="__span-6-5"><a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="na">[Authorize]</span><span class="w"> </span><span class="c1">// 添加身份验证属性 </span>
+</span><span id="__span-6-6"><a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">MyController</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ControllerBase</span><span class="w"> </span>
+</span><span id="__span-6-7"><a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="p">{</span><span class="w">     </span>
+</span><span id="__span-6-8"><a href="#__codelineno-6-8" id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">    </span><span class="c1">// ... </span>
+</span><span id="__span-6-9"><a href="#__codelineno-6-9" id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="p">}</span>
+</span></code></pre></div></p>
+</li>
+</ol>
+<p>至此，在你的 ASP.NET Core Web API 中已经集成了 JWT 身份验证。当客户端发送带有有效 JWT 的请求时，API 将进行身份验证，并允许访问受保护的资源。</p>
+<p>你还需要在登录或注册等适当的地方生成 JWT，并将其返回给客户端作为身份验证凭据。通常，你可以使用第三方库（如 <code>System.IdentityModel.Tokens.Jwt</code>）来生成和签名 JWT。</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>请注意，上述示例中的密钥（<code>your_secret_key</code>）应该是一个长而安全的随机字符串，并且不应该在公共代码中硬编码。同时，请确保在生产环境中安全存储密钥。</p>
+</div>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">
