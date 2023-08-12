@@ -32,7 +32,7 @@
                 body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
                 body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
                 </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
-<body data-md-color-accent="cyan" data-md-color-primary="orange" data-md-color-scheme="default" dir="ltr">
+<body data-md-color-accent="deep-orange" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
@@ -69,11 +69,11 @@
 </div>
 </div>
 <form class="md-header__option" data-md-component="palette">
-<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="cyan" data-md-color-media="" data-md-color-primary="orange" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="deep-orange" data-md-color-media="" data-md-color-primary="teal" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
 </label>
-<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="orange" data-md-color-media="" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="teal" data-md-color-media="" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
 <label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
 </label>
@@ -670,58 +670,65 @@
 </ul>
 <h2 id="2-jwt">2. JWT原理<a class="headerlink" href="#2-jwt" title="Permanent link">⚓︎</a></h2>
 <h3 id="21-jwt">2.1 JWT组成<a class="headerlink" href="#21-jwt" title="Permanent link">⚓︎</a></h3>
-<p>JWT令牌是 它由三个部分组成，使用 <code>.</code> 进行分隔：</p>
+<p>JWT令牌由三个部分组成，使用 <code>.</code> 进行分隔：</p>
 <ol>
-<li><strong>Header（头部）</strong>：包含描述<strong>JWT的元数据</strong>，例如加密算法（例如HMAC、RSA等）和令牌类型（通常是JWT）。</li>
-<li><strong>Payload（负载）</strong>：包含要<strong>传输的数据</strong>，以及一些预定义的声明（例如发行人、过期时间等）和自定义声明（根据需求添加）。</li>
-<li><strong>Signature（签名）</strong>：通过使用密钥对头部和负载进行加密生成的哈希值，用于<strong>验证令牌</strong>的完整性和真实性。</li>
+<li><strong>Header（头部）</strong>：包含描述 <strong>JWT的元数据</strong>，例如加密算法（例如HMAC、RSA等）和令牌类型（通常是JWT）。</li>
+<li><strong>Payload（负载）</strong>：包含要 <strong>传输的数据</strong>，以及一些预定义的声明（例如发行人、过期时间等）和自定义声明（根据需求添加）。</li>
+<li><strong>Signature（签名）</strong>：通过使用密钥对头部和负载进行加密生成的哈希值，用于 <strong>验证令牌</strong> 的完整性和真实性。</li>
 </ol>
-<p>最终生成的JWT令牌形如：<code>xxxxx.yyyyy.zzzzz</code> ，下图显示了JWT令牌示例：</p>
+<p>下图是JWT官网提供的JWT令牌工具，其中显示了Token的组成示例：</p>
 <figure>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../img/JWT%E7%A4%BA%E4%BE%8B.png"><img alt="JWT示例" src="../img/JWT%E7%A4%BA%E4%BE%8B.png" width="600"/></a>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../img/JWT%E7%A4%BA%E4%BE%8B.png"><img alt="JWT示例" src="../img/JWT%E7%A4%BA%E4%BE%8B.png" width="750"/></a>
 <figcaption>JWT示例</figcaption></p>
 </figure>
-<p>上图是JWT官网提供的JWT验证工具，可以使用它来对Token进行加解密验证。</p>
+<p>JWT生成的Token是遗传编码加密的字符串，格式形如  <code>XXX.YYY.ZZZ</code> 。<code>XXX</code> 部分是Header的Base64编码；<code>YYY</code> 部分是Payload的Base64编码；<code>ZZZ</code> 是将 <code>XXX</code> 和 <code>YYY</code> 拼接后通过加密秘钥（Secret Key）加密后形成的串。三者通过 <code>.</code> 拼接形成 Token .</p>
+<figure>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../img/Token%E7%BB%84%E6%88%90.png"><img alt="Token组成" src="../img/Token%E7%BB%84%E6%88%90.png" width="750"/></a>
+<figcaption>JWT示例</figcaption></p>
+</figure>
 <ul>
-<li>Header
+<li>
+<p>Header
 <div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">{</span>
-</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="err">'</span><span class="kc">t</span><span class="err">yp'</span><span class="p">:</span><span class="w"> </span><span class="err">'JWT'</span><span class="p">,</span>
-</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="err">'alg'</span><span class="p">:</span><span class="w"> </span><span class="err">'HS</span><span class="mi">256</span><span class="err">'</span>
+</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="err">'</span><span class="kc">t</span><span class="err">yp'</span><span class="p">:</span><span class="w"> </span><span class="err">'JWT'</span><span class="p">,</span><span class="w"> </span><span class="c1">// 指定令牌的类型</span>
+</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="err">'alg'</span><span class="p">:</span><span class="w"> </span><span class="err">'HS</span><span class="mi">256</span><span class="err">'</span><span class="w"> </span><span class="c1">// 指定用于对JWT签名或加密的算法</span>
 </span><span id="__span-0-4"><a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="p">}</span>
-</span></code></pre></div>
-头部用来存储JWT的相关信息，比如 <code>typ</code> 用于指定令牌的类型，通常是"JWT"；<code>alg</code> 指定用于对JWT签名或加密的算法，例如"HMACSHA256"、"RSA"等。当然还有其他字段，甚至自定义。</li>
-</ul>
-<p>需要注意的是：Header中的属性是公开信息，不应包含敏感或保密数据。</p>
-<ul>
-<li>Payload
+</span><span id="__span-0-5"><a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="c1">// 头部用来存储描述JWT的元数据，这些数据是与令牌相关的信息。</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Payload
 <div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">{</span>
-</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="nt">"sub"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1234567890"</span><span class="p">,</span>
-</span><span id="__span-1-3"><a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"John Doe"</span><span class="p">,</span>
-</span><span id="__span-1-4"><a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">  </span><span class="nt">"iat"</span><span class="p">:</span><span class="w"> </span><span class="mi">1516239022</span>
-</span><span id="__span-1-5"><a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="p">}</span>
-</span></code></pre></div>
-负载用来存储要传输的数据，比如 <code>sub</code> 用于标识JWT所代表的主体或用户，可以是用户ID，用户名等信息； <code>exp</code> 指定了JWT的过期时间，用于限制JWT的有效期；<code>iss</code> 表示发行该JWT的实体，即JWT的颁发者；<code>iat</code> 指定JWT的颁发时间，表示该JWT令牌的生成时间等，还可以增加其他自定义声明，以满足应用程序的需求。</li>
-</ul>
-<blockquote>
-<p>负载中的字段被称为声明（Claim），可以分为三类：注册声明，公共声明，私有声明。</p>
-<ul>
-<li>注册声明：预定义的声明，推荐但不强制，例如 <code>sub</code> <code>iss</code> <code>aud</code> <code>exp</code> <code>nbf</code> <code>iat</code> <code>jti</code>；</li>
-<li>公共声明：</li>
-</ul>
-</blockquote>
-<ul>
-<li>Signature
+</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="nt">"sub"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1234567890"</span><span class="p">,</span><span class="w"> </span><span class="c1">// 标识JWT所代表的主体或用户</span>
+</span><span id="__span-1-3"><a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">  </span><span class="nt">"exp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1672417200</span><span class="p">,</span><span class="w"> </span><span class="c1">// 指定JWT的过期时间，用于限制JWT的有效期</span>
+</span><span id="__span-1-4"><a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">  </span><span class="nt">"roles"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"admin"</span><span class="p">,</span><span class="w"> </span><span class="s2">"editor"</span><span class="p">],</span><span class="w"> </span><span class="c1">// 自定义</span>
+</span><span id="__span-1-5"><a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">  </span><span class="nt">"settings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"notifications"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nt">"privacy"</span><span class="p">:</span><span class="w"> </span><span class="s2">"private"</span><span class="p">,</span><span class="w"> </span><span class="nt">"theme"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dark"</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// 自定义</span>
+</span><span id="__span-1-6"><a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="p">}</span>
+</span><span id="__span-1-7"><a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="c1">// 负载用来存储要传输的数据，即希望发送方携带的数据信息。</span>
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Signature
 <div class="language-json highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="err">HMACSHA</span><span class="mi">256</span><span class="err">(</span>
 </span><span id="__span-2-2"><a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="err">base</span><span class="mi">64</span><span class="err">UrlE</span><span class="kc">n</span><span class="err">code(header)</span><span class="w"> </span><span class="err">+</span><span class="w"> </span><span class="s2">"."</span><span class="w"> </span><span class="err">+</span>
 </span><span id="__span-2-3"><a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">  </span><span class="err">base</span><span class="mi">64</span><span class="err">UrlE</span><span class="kc">n</span><span class="err">code(payload)</span><span class="p">,</span>
 </span><span id="__span-2-4"><a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">  </span><span class="s2">"your_secret_key"</span>
-</span><span id="__span-2-5"><a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="err">)</span>
-</span></code></pre></div>
-签名是基于秘密密钥（或公钥/私钥对）生成的一串字符串，用于确保JWT在传输过程中没有被篡改。签名加密的算法在Header的 <code>alg</code> 中指定，然后将头部信息和负载信息分别编码拼接在一起，通过算法和加密秘钥进行加密生成。当然，秘钥也可以先进行编码再用来加密。</li>
+</span><span id="__span-2-5"><a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="err">)</span><span class="w"> </span>
+</span><span id="__span-2-6"><a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="c1">// 签名是基于秘密密钥（或公钥/私钥对）生成的一串字符串，用于确保JWT在传输过程中没有被篡改。</span>
+</span></code></pre></div></p>
+</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>负载中的字段被称为声明（Claim），可以分为三类：注册声明，公共声明，私有声明。<br/>
+- 注册声明：预定义的声明，推荐但不强制，例如 <code>sub</code> <code>iss</code> <code>aud</code> <code>exp</code> <code>nbf</code> <code>iat</code> <code>jti</code>；<br/>
+- 公共声明：自定义的用于在JWT中携带一些公开的信息（如用户角色、权限等）；<br/>
+- 私有声明：应用程序特定的声明，用于传递应用程序自定义的数据（如用户的自定义设置等）<br/>
+公共声明和私有声明都是自定义声明，二者没有明确界限，这只是一种约定，并不存在一定要按照这种方式使用的规定。</p>
+</div>
 <div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p><mark style="background: #D2B3FFA6;">JWT提供了一种用于传输信息和验证的机制，但不适宜存放敏感的隐私数据。</mark>由于JWT是基于Base64编码的字符串，它是可解码的，因此不建议在JWT中存放敏感的隐私数据，例如密码、信用卡信息等。负载（Payload）部分通常用于存放一些非敏感的用户信息，如用户ID、角色、过期时间等。这些信息是公开的，并且可以从JWT中解码和读取。因此，敏感的隐私数据应该避免存放在JWT中，以防止信息泄露或被篡改。</p>
+<p class="admonition-title">不要在JWT中携带敏感信息！</p>
+<p><strong><em>JWT提供了一种用于传输信息和验证的机制，但不适宜存放敏感的隐私数据</em></strong>。由于JWT是基于Base64编码的字符串，它是可解码的，因此不建议在JWT中存放敏感的隐私数据，例如密码、信用卡信息等。负载（Payload）部分通常用于存放一些非敏感的用户信息，如用户ID、角色、过期时间等。这些信息是公开的，并且也可以从JWT中解码和读取。<strong>因此，敏感的隐私数据应该避免存放在JWT中，以防止信息泄露或被篡改。</strong> </p>
 </div>
 <h3 id="22-jwt">2.2 JWT认证流程<a class="headerlink" href="#22-jwt" title="Permanent link">⚓︎</a></h3>
 <h3 id="23-jwt">2.3 JWT使用步骤<a class="headerlink" href="#23-jwt" title="Permanent link">⚓︎</a></h3>
