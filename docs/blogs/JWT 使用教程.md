@@ -32,7 +32,7 @@ JWT生成的Token是遗传编码加密的字符串，格式形如  `XXX.YYY.ZZZ`
 
 <figure markdown> 
     ![Token组成](img/Token组成.png){ width="750" }
-    <figcaption>JWT示例</figcaption>
+    <figcaption></figcaption>
 </figure>
 
 - Header
@@ -82,10 +82,103 @@ JWT认证流程总结起来就是前端通过发送身份信息给服务端，�
 令牌进行验证和授权访问。
 
 下图显示了认证流程：
-![[Pasted image 20230812172639.png]]
 
-### 2.3 JWT使用步骤
+<figure markdown> 
+    ![Token认证流程](img/Token认证流程.png){ width="750" }
+    <figcaption>Token认证流程</figcaption>
+</figure>
+
+前端（客户端）：
+
+1. 用户身份验证：用户通过提供凭据（例如用户名和密码）进行身份验证，通常通过登录页面或其他验证方式。
+2. 发送身份验证请求：前端将用户的凭据发送到后端服务器，通常使用 POST 请求发送至特定的身份验证端点（如`/login`）。
+3. 后端身份验证：后端服务器接收到身份验证请求后，对提供的凭据进行验证。如果验证成功，后端服务器将生成一个 JWT。
+4. 接收和存储 JWT：后端服务器将生成的 JWT 作为响应返回给前端。前端通常会将 JWT 存储在客户端，例如使用浏览器的本地存储（LocalStorage）或移动应用的内存中。
+5. 发送 JWT：前端在后续的请求中，将 JWT 添加到每次请求的`Authorization`头部中。可以使用 Bearer 认证方案，将 JWT 添加到头部中的`Authorization`字段值中。
+
+后端（服务器）：
+
+1. 验证 JWT：后端服务器接收到请求时，从`Authorization`头部中解析出 JWT，并对其进行验。
+2. 验证签名：后端使用密钥对 JWT 的头部和负载进行签名验证，确保令牌的完整性。
+3. 验证声明：后端检查负载中的声明，包括验证令牌的过期时间、发行人等。
+4. 授权访问：如果 JWT 验证成功并且负载中的声明满足要求，后端服务器将对请求进行授权，允许访问受保护的资源或执行特定操作。
+
+在验证 JWT 时，后端可以使用密钥来验证签名，并可以根据声明中的信息，确定用户的权限或角色。通常，JWT 包含有关用户身份的基本信息，如用户ID或用户名等。需要注意的是，为了防止 CSRF（跨站请求伪造）攻击，可以在生成的 JWT 中包含 CSRF Token，并在每个请求中进行验证。
+
+总结起来，前端通过用户身份验证获取 JWT，并在后续请求中发送 JWT，而后端进行 JWT 的验证和授权访问。
+
+## 3. ASP.NET配置JWT
+下面的内容是在Webapi项目中配置JWT的基本步骤，更详细的代码可以关注博客【】。
+
+在 ASP.NET Core Web API 中使用 JWT，你可以按照以下步骤进行设置：
+
+1. 添加 NuGet 包：打开你的  Web API 项目，使用 NuGet 包管理器或在.csproj 文件中添加以下包引用，以添加一个 JWT 库（例如 `Microsoft.AspNetCore.Authentication.JwtBearer`）：
+```xml
+<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="x.x.x" />
+```
+
+2. 在 Startup.cs 中配置身份验证服务和 JWT：
+	在 ConfigureServices 方法中添加以下代码来配置 JWT 身份验证服务：
+	```csharp
+	using Microsoft.AspNetCore.Authentication.JwtBearer; 
+	using Microsoft.IdentityModel.Tokens;  
+	// ...  
+	public void ConfigureServices(IServiceCollection services) 
+	{     
+		// 配置身份验证服务     
+		services
+			.AddAuthentication(options =>     
+			{         
+				options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+				options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+			})
+			.AddJwtBearer(options =>     
+			{         
+				// 设置 JWT Bearer 选项         
+				options.TokenValidationParameters = new TokenValidationParameters
+				{             
+					ValidateIssuerSigningKey = true,             
+					IssuerSigningKey = new 
+					SymmetricSecurityKey(Encoding.ASCII.GetBytes("your_secret_key")),  
+					ValidateIssuer = false, 
+					ValidateAudience = false         
+			};     
+		});      
+		// 添加其他服务配置    
+		// ... 
+	}
+	```
+
+1. 在 Configure 方法中启用身份验证：
+```csharp
+using Microsoft.AspNetCore.Authentication.JwtBearer;  
+
+// ...  
+public void Configure(IApplicationBuilder app, IWebHostEnvironment env) 
+{     
+	// 启用身份验证     
+	app.UseAuthentication(); // 添加其他中间件配置     
+	// ... 
+}
+```
+
+4. 保护控制器或路由： 在需要身份验证的控制器或路由上添加 `[Authorize]` 属性，这将确保只有经过身份验证的用户可以访问相应的资源。
+```csharp
+using Microsoft.AspNetCore.Mvc;  
+
+[ApiController]
+[Route("api/[controller]")]
+[Authorize] // 添加身份验证属性 
+public class MyController : ControllerBase 
+{     
+	// ... 
+}
+```
 
 
-## 3. .NET配置JWT认证
+至此，在你的 ASP.NET Core Web API 中已经集成了 JWT 身份验证。当客户端发送带有有效 JWT 的请求时，API 将进行身份验证，并允许访问受保护的资源。
 
+你还需要在登录或注册等适当的地方生成 JWT，并将其返回给客户端作为身份验证凭据。通常，你可以使用第三方库（如 `System.IdentityModel.Tokens.Jwt`）来生成和签名 JWT。
+
+!!! Danger
+	请注意，上述示例中的密钥（`your_secret_key`）应该是一个长而安全的随机字符串，并且不应该在公共代码中硬编码。同时，请确保在生产环境中安全存储密钥。
