@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="https://finneganwill.github.io/material-dotnet/blogs/JWT%20%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="canonical"/>
 <link href="../Program.cs%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3/" rel="prev"/>
-<link href="../../common/author/" rel="next"/>
+<link href="../JWT%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E6%A1%88%E4%BE%8B/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
 <title>JWT 使用教程 - .Net Material</title>
@@ -545,6 +545,11 @@
 </ul>
 </nav>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../JWT%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E6%A1%88%E4%BE%8B/">
+        JWT身份认证案例
+      </a>
+</li>
 </ul>
 </nav>
 </li>
@@ -734,11 +739,11 @@
 <li>发送身份验证请求：前端将用户的凭据发送到后端服务器，通常使用 POST 请求发送至特定的身份验证端点（如<code>/login</code>）。</li>
 <li>后端身份验证：后端服务器接收到身份验证请求后，对提供的凭据进行验证。如果验证成功，后端服务器将生成一个 JWT。</li>
 <li>接收和存储 JWT：后端服务器将生成的 JWT 作为响应返回给前端。前端通常会将 JWT 存储在客户端，例如使用浏览器的本地存储（LocalStorage）或移动应用的内存中。</li>
-<li>发送 JWT：前端在后续的请求中，将 JWT 添加到每次请求的<code>Authorization</code>头部中。可以使用 Bearer 认证方案，将 JWT 添加到头部中的<code>Authorization</code>字段值中。</li>
+<li>发送 JWT：前端在后续的请求中，将 JWT 添加到每次请求的 <code>Authorization</code> 头部中。可以使用 Bearer 认证方案，将 JWT 添加到头部中的 <code>Authorization</code> 字段值中。</li>
 </ol>
 <p>后端（服务器）：</p>
 <ol>
-<li>验证 JWT：后端服务器接收到请求时，从<code>Authorization</code>头部中解析出 JWT，并对其进行验。</li>
+<li>验证 JWT：后端服务器接收到请求时，从 <code>Authorization</code> 头部中解析出 JWT，并对其进行验。</li>
 <li>验证签名：后端使用密钥对 JWT 的头部和负载进行签名验证，确保令牌的完整性。</li>
 <li>验证声明：后端检查负载中的声明，包括验证令牌的过期时间、发行人等。</li>
 <li>授权访问：如果 JWT 验证成功并且负载中的声明满足要求，后端服务器将对请求进行授权，允许访问受保护的资源或执行特定操作。</li>
@@ -875,13 +880,13 @@
               </div>
 </div>
 </a>
-<a aria-label="下一页: Author" class="md-footer__link md-footer__link--next" href="../../common/author/" rel="next">
+<a aria-label="下一页: JWT身份认证案例" class="md-footer__link md-footer__link--next" href="../JWT%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E6%A1%88%E4%BE%8B/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                   下一页
                 </span>
-                Author
+                JWT身份认证案例
               </div>
 </div>
 <div class="md-footer__button md-icon">
