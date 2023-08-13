@@ -16,7 +16,7 @@
 >2. 创建API接口
 >3. 配置身份验证
 >4. 定义Token生成方法
->5. 配置认证接口
+>5. 编写认证接口
 >6. 请求测试
 
 ### 2.1 准备项目
@@ -104,8 +104,115 @@ public class Program
 	**一般建议将签名加密秘钥存储在安全的地方**，例如 *配置文件*，*环境变量* 或 *密钥管理系统* 中。<br><br> 
 	**不建议直接在代码中硬编码密钥**，以防止意外泄露。请根据具体安全需求和最佳实践来选择和管理签名加密秘钥。
 ### 2.4 定义生成Token方法
-包中不提供生成Token的方法，需要自己定义，以实现自定义传输数据。下面给出一个
+
+包中不提供生成Token的方法，需要自己定义，以实现自定义传输数据。下面给出一个生成 Token 的方法：
+
+```csharp title="JwtHelper.cs"
+public class JwtHelper
+    {
+        public string GenerateJwtToken(string account)
+        {
+            var tokenHandler = new JwtSecurityTokenHandler();
+            
+            // Header
+            JwtHeader header = new JwtHeader
+            {
+                {JwtHeaderParameterNames.Typ,"JWT"},
+                {JwtHeaderParameterNames.Alg, SecurityAlgorithms.HmacSha256 }
+            };
+            // Payload
+            var payload = new[]
+            {
+                new Claim("account", account),
+            };
+            // Signature（进行sha256加密）
+            var key = Convert.FromBase64String("your_secret_key"); // 获取签名加密秘钥
+            var signingCredentials = new SigningCredentials(
+	            new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256
+	        );
+	        
+            // tonken info
+            var exTime = "10";
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                AdditionalHeaderClaims = header,
+                Subject = new ClaimsIdentity(payload),
+                SigningCredentials = signingCredentials,
+                // 设置过期时间
+                Expires = DateTime.UtcNow.AddMinutes(double.Parse(exTime)) 
+            };
+            
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            Console.WriteLine(token);
+            return tokenHandler.WriteToken(token);
+        }
+    }
+```
+
+在接口中可以使用该方法生成token并发送给客户端，对于常规系统来说，通常是在登录接口中生成并发送。
+
+上述代码中使用了对称加密（`new SymmetricSecurityKey(key)`），请确保生成 token 时的加密方式与配置服务时的方式一致。
+
+### 2.5 编写认证接口
+
+我们为 `login` 接口定义认证，在其中实现 token 生成和发送。并为 `Get()` 接口添加 `[Authorize]` 特性，保证只有通过认证后才能被访问。
+
+```csharp controller.cs
+[Authorize]
+[HttpGet(Name = "GetWeatherForecast")]
+public IEnumerable<WeatherForecast> Get()
+{
+	// 省略
+}
+
+[HttpPost("login")]
+public IActionResult Login(string account)
+{
+	// 省略接口逻辑
+	
+	// 生成token
+	JwtHelper jwtHelper = new JwtHelper();
+	string token = jwtHelper.GenerateJwtToken(account);
+	
+	// 发送token
+	return Ok(token);
+}
+```
+
+### 2.6 请求测试
+#### 未认证请求Get
+
+>在 Postman 中调用Get接口，此次请求不携带 token，期望的结果应当是请求失败。
+
+响应结果显示 `401 Unauthorized` 未经许可。响应头中提示token无效。
+
+接下来，请求 Login 接口，来获取 token 值。
+
+![[不携带Token进行请求.png]]
+#### 请求Login
+
+>在 Postman 中，请求 Login 接口，因为没有标注  `[Authorize]`，所以该接口可以响应未认证的请求，并发送一个 token。
+
+响应结果显示 `200 OK` 表示请求成功，并在body中发送了 token。
+
+接下来，携带该token进行上一步的验证。
+
+![[请求Login获取Token.png]]
+
+#### 认证请求Get
+
+>在 Postman 中，携带token再次请求Get() 。将token写入请求头的 `Authorization` 中。注意：在value中除了我们的token外，还有一个 `Bearer ` 前缀。
+
+响应结果显示 `200 OK` 表示请求成功，并在body中返回了请求的数据。
+
+综上，表明我们的JWT身份认证配置完成。
+
+![[携带Token进行请求.png]]
 
 ## 3. 总结
+
+1. webapi 中配置JWT，可以通过 `Microsoft.AspNetCore.Authentication.JwtBearer` 包实现，在启动文件中配置认证服务并启动。
+2. 需要自定义生成Token等方法，以便在接口被调用时生成要发送的token。
+3. 为需要认证才能被访问的接口添加 
 
 [TokenValidationParameters](https://learn.microsoft.com/en-us/dotnet/api/microsoft.identitymodel.tokens.tokenvalidationparameters?view=msal-web-dotnet-latest)
