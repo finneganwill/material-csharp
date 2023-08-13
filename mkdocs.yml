@@ -71,6 +71,7 @@ nav:
       - 2023: 
         - Program.cs文件详解: 'blogs/Program.cs文件详解.md'
         - JWT 使用教程: 'blogs/JWT 使用教程.md'
+        - JWT身份认证案例: 'blogs/JWT身份认证案例.md'
 
     - 关于: 
       - Author: 'common/author.md'
