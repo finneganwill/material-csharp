@@ -1,3 +1,4 @@
 .md-grid {
-  max-width: 1440px; 
+  max-width: calc(100vw * 0.8); /* 使用 80% 的屏幕宽度 */
 }
+

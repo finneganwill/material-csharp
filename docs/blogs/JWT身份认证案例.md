@@ -157,7 +157,7 @@ public class JwtHelper
 
 我们为 `login` 接口定义认证，在其中实现 token 生成和发送。并为 `Get()` 接口添加 `[Authorize]` 特性，保证只有通过认证后才能被访问。
 
-```csharp controller.cs
+```csharp title="controller.cs"
 [Authorize]
 [HttpGet(Name = "GetWeatherForecast")]
 public IEnumerable<WeatherForecast> Get()
@@ -188,7 +188,10 @@ public IActionResult Login(string account)
 
 接下来，请求 Login 接口，来获取 token 值。
 
-![[不携带Token进行请求.png]]
+<figure markdown> 
+    ![不携带Token进行请求](img/不携带Token进行请求.png){ width="750" }
+    <figcaption>不携带Token进行请求</figcaption>
+</figure>
 #### 请求Login
 
 >在 Postman 中，请求 Login 接口，因为没有标注  `[Authorize]`，所以该接口可以响应未认证的请求，并发送一个 token。
@@ -197,7 +200,10 @@ public IActionResult Login(string account)
 
 接下来，携带该token进行上一步的验证。
 
-![[请求Login获取Token.png]]
+<figure markdown> 
+    ![请求Login获取Token](img/请求Login获取Token.png){ width="750" }
+    <figcaption>请求Login获取Token</figcaption>
+</figure>
 
 #### 认证请求Get
 
@@ -207,12 +213,21 @@ public IActionResult Login(string account)
 
 综上，表明我们的JWT身份认证配置完成。
 
-![[携带Token进行请求.png]]
+<figure markdown> 
+    ![携带Token进行请求](img/携带Token进行请求.png){ width="750" }
+    <figcaption>携带Token进行请求</figcaption>
+</figure>
 
 ## 3. 总结
 
+### 3.1 步骤总结
 1. webapi 中配置JWT，可以通过 `Microsoft.AspNetCore.Authentication.JwtBearer` 包实现，在启动文件中配置认证服务并启动。
 2. 需要自定义生成Token等方法，以便在接口被调用时生成要发送的token。
-3. 为需要认证才能被访问的接口添加 
+4. 为需要认证才能被访问的接口添加  `[Authorize]` 特性，未经认证，请求将被拒绝。
+5. 在客户端请求时，请求头的 `Authorization` 的值需要在token前添加 `Bearer ` 前缀，否则将验证失败。
+### 3.2 扩展
+1. `[Authorize]` 特性不只能添加在方法上，还可以添加到Controller类上，这样整个类的接口都需要认证才能被访问。
+2. 除了自定义生成Token的方法，验证Token的方法也可以自定义，需要搭配 `[Authorize]` 的策略实现调用自定义验证方法。
+3. 除了使用 `[Authorize]` 还可以定义 Filter 已实现更灵活的功能。
 
-[TokenValidationParameters](https://learn.microsoft.com/en-us/dotnet/api/microsoft.identitymodel.tokens.tokenvalidationparameters?view=msal-web-dotnet-latest)
+关于扩展内容，本篇不再展开。

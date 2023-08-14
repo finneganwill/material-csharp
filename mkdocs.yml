@@ -1,5 +1,5 @@
 # 站点标题
-site_name: .Net Material
+site_name: Finn Space - .Net Material
 
 # 站点URL
 site_url: https://finneganwill.github.io/material-dotnet
@@ -14,6 +14,12 @@ copyright: Copyright &copy; 2022 - 2023 Finnegan Will
 # 导航
 nav:
     - Home: 'index.md'
+
+    - 博客:
+      - 2023: 
+        - Program.cs文件详解: 'blogs/Program.cs文件详解.md'
+        - JWT 使用教程: 'blogs/JWT 使用教程.md'
+        - JWT身份认证案例: 'blogs/JWT身份认证案例.md'
 
     - C#: 
       - 认识 C#: 'teches/csharp/00-认识CSharp.md'
@@ -66,12 +72,6 @@ nav:
 
     - Git:
       - Git 常用操作: 'teches/git/Git常用.md'
-
-    - 博客:
-      - 2023: 
-        - Program.cs文件详解: 'blogs/Program.cs文件详解.md'
-        - JWT 使用教程: 'blogs/JWT 使用教程.md'
-        - JWT身份认证案例: 'blogs/JWT身份认证案例.md'
 
     - 关于: 
       - Author: 'common/author.md'
