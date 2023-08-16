@@ -29,14 +29,3 @@ WPF 有两种实现：
 7. 文本与版式
 8. 自定义WPF应用
 9. MVVM架构
-
-## 4. 内容一览
-
-### 4.1 布局
-- [ ] StackPanel
-- [ ] WrapPanel
-- [ ] DockPanel
-- [ ] Grid
-- [ ] UniformGrid
-- [ ] Canvas
-
