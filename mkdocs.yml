@@ -15,7 +15,11 @@ copyright: Copyright &copy; 2022 - 2023 Finnegan Will
 nav:
     - Home: 'index.md'
 
+    - Blog:
+      - blog/index.md
+
     - 博客:
+      - 导航: 'blogs/nav.md'
       - 2023: 
         - Program.cs文件详解: 'blogs/Program.cs文件详解.md'
         - JWT 使用教程: 'blogs/JWT 使用教程.md'
@@ -70,13 +74,16 @@ nav:
     - ASP.NET Core: 
       - 认识 ASP.NET Core: 'teches/aspnet-core/01-认识ASP.NET Core.md'
 
+    - WPF:
+      - 认识WPF: 'techs/wpf/01-认识WPF.md'
+
     - Git:
       - Git 常用操作: 'teches/git/Git常用.md'
 
     - 关于: 
       - Author: 'common/author.md'
       - MkDocs: 'common/mkdocs.md'
-      - Thanks: 'common/thanks.md'
+      - Refers: 'common/refers.md'
 
 
 # 主题设置

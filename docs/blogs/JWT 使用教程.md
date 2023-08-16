@@ -28,7 +28,7 @@ JWT令牌由三个部分组成，使用 `.` 进行分隔：
     <figcaption>JWT示例</figcaption>
 </figure>
 
-JWT生成的Token是遗传编码加密的字符串，格式形如  `XXX.YYY.ZZZ` 。`XXX` 部分是Header的Base64编码；`YYY` 部分是Payload的Base64编码；`ZZZ` 是将 `XXX` 和 `YYY` 拼接后通过加密秘钥（Secret Key）加密后形成的串。三者通过 `.` 拼接形成 Token .
+JWT生成的Token是一串编码加密的字符串，格式形如  `XXX.YYY.ZZZ` 。`XXX` 部分是Header的Base64编码；`YYY` 部分是Payload的Base64编码；`ZZZ` 是将 `XXX` 和 `YYY` 拼接后通过加密秘钥（Secret Key）加密后形成的串。三者通过 `.` 拼接形成 Token .
 
 <figure markdown> 
     ![Token组成](img/Token组成.png){ width="750" }

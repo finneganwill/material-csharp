@@ -1,11 +1,3 @@
----
-hide:
-  - navigation
-  - toc
-  - feedback
-  - footer
----
-
 # Welcome!
 
 !!! Info "语言"

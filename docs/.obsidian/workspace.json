@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blogs/JWT身份认证案例.md",
+                "file": "blogs/JWT 使用教程.md",
                 "mode": "source",
                 "source": false
               }
@@ -168,10 +168,14 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "9079046e2bb63a6a",
+  "active": "d9cae640d83b0811",
   "lastOpenFiles": [
-    "blogs/JWT 使用教程.md",
     "blogs/JWT身份认证案例.md",
+    "blogs/JWT 使用教程.md",
+    "blogs/nav.md",
+    "index.md",
+    "common/refers.md",
+    "common/author.md",
     "blogs/img/Token组成.png",
     "blogs/img/不携带Token进行请求.png",
     "blogs/img/携带Token进行请求.png",
@@ -209,9 +213,6 @@
     "teches/linq/01-认识LINQ.md",
     "teches/csharp/00-认识CSharp.md",
     "teches/aspnet-core/01-认识ASP.NET Core.md",
-    "teches/aspnet-core/03 MVC.md",
-    "teches/aspnet-core/02 Razor.md",
-    "teches/razor/03-Razor表达式.md",
     "teches/razor",
     "linq/img/Linq查询过程.png",
     "adonet/img/ADO.NET体系结构.png"
