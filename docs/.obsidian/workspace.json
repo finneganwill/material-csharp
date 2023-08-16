@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "teches/csharp/17-其他.md",
+                "file": "teches/wpf/01-认识WPF.md",
                 "mode": "source",
                 "source": false
               }
@@ -106,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "teches/csharp/17-其他.md",
+                "file": "teches/wpf/01-认识WPF.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "teches/csharp/17-其他.md",
+                "file": "teches/wpf/01-认识WPF.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "teches/csharp/17-其他.md"
+                "file": "teches/wpf/01-认识WPF.md"
               }
             }
           }
@@ -170,7 +170,10 @@
   },
   "active": "d9cae640d83b0811",
   "lastOpenFiles": [
+    "teches/Abstract.md",
+    "teches/wpf/01-认识WPF.md",
     "index.md",
+    "teches/csharp/17-其他.md",
     "blogs/nav.md",
     "blogs/JWT 使用教程.md",
     "blogs/JWT身份认证案例.md",
@@ -198,9 +201,7 @@
     "teches/adonet/04-数据类型映射.md",
     "teches/adonet/02-数据提供程序.md",
     "teches/csharp/01-数据类型.md",
-    "teches/wpf/01-认识WPF.md",
     "blogs/WPF瀑布流.md",
-    "teches/Abstract.md",
     "teches/ef-core/01-认识EF Core.md",
     "teches/git/Git常用.md",
     "teches/wpf",
@@ -212,7 +213,6 @@
     "teches/razor/01-认识Razor.md",
     "teches/linq/01-认识LINQ.md",
     "teches/csharp/00-认识CSharp.md",
-    "teches/aspnet-core/01-认识ASP.NET Core.md",
     "teches/razor",
     "linq/img/Linq查询过程.png",
     "adonet/img/ADO.NET体系结构.png"
