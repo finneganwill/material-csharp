@@ -34,13 +34,15 @@ git config --global --unset user.name
 git init
 ```
 
-连接远程库
+配置远程库
 ```bash
 # 查看
 git remote -v
 # 添加
 git remote add <alias> <address>
 git remote add origin http://...
+# 删除
+git remote rm origin
 ```
 
 添加到暂存区
@@ -60,6 +62,12 @@ git commit -m "message"
 ```bash
 git push -u <remote_name> <branch_name>
 git push -u origin master
+```
+
+拉取代码
+```Shell
+git pull <remote> <branch>
+git pull origin master
 ```
 
 日志
