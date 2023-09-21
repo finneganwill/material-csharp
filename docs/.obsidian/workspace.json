@@ -25,14 +25,38 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "teches/git/Git常用.md",
+                "file": "teches/adonet/05-连接数据源.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "72ee10d7170ccead",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "blogs/JWT 使用教程.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "618dff05a5f2602b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "quick/vue/Vue快速入门.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -106,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "teches/git/Git常用.md",
+                "file": "quick/vue/Vue快速入门.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "teches/git/Git常用.md",
+                "file": "quick/vue/Vue快速入门.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "teches/git/Git常用.md"
+                "file": "quick/vue/Vue快速入门.md"
               }
             }
           }
@@ -168,15 +192,21 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "d9cae640d83b0811",
+  "active": "618dff05a5f2602b",
   "lastOpenFiles": [
+    "blogs/JWT身份认证案例.md",
+    "quick/vue/Vue快速入门.md",
+    "teches/adonet/05-连接数据源.md",
+    "quick/vue",
+    "quick",
+    "quick.md",
+    "quick/git/Git常用.md",
     "teches/wpf/01-认识WPF.md",
     "teches/Abstract.md",
     "index.md",
     "teches/csharp/17-其他.md",
     "blogs/nav.md",
     "blogs/JWT 使用教程.md",
-    "blogs/JWT身份认证案例.md",
     "common/refers.md",
     "common/author.md",
     "blogs/img/Token组成.png",
@@ -184,7 +214,6 @@
     "blogs/img/携带Token进行请求.png",
     "blogs/img/请求Login获取Token.png",
     "blogs/Program.cs文件详解.md",
-    "未命名",
     "blogs/img/Token认证流程.png",
     "Pasted image 20230812172548.png.md",
     "Pasted image 20230812172548.png",
@@ -196,24 +225,19 @@
     "teches/adonet/01-认识ADO.NET.md",
     "blogs/img/JWT示例.png",
     "blogs/img",
-    "teches/adonet/05-连接数据源.md",
     "teches/adonet/03-数据集.md",
     "teches/adonet/04-数据类型映射.md",
     "teches/adonet/02-数据提供程序.md",
     "teches/csharp/01-数据类型.md",
     "blogs/WPF瀑布流.md",
     "teches/ef-core/01-认识EF Core.md",
-    "teches/git/Git常用.md",
     "teches/wpf",
     "blogs",
-    "teches/git",
+    "quick/git",
     "teches/csharp/04-数据结构.md",
     "teches/csharp/02-运算符.md",
     "teches/csharp/03-控制语句.md",
     "teches/razor/01-认识Razor.md",
-    "teches/linq/01-认识LINQ.md",
-    "teches/csharp/00-认识CSharp.md",
-    "teches/razor",
     "linq/img/Linq查询过程.png",
     "adonet/img/ADO.NET体系结构.png"
   ]

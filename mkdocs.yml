@@ -15,15 +15,17 @@ copyright: Copyright &copy; 2022 - 2023 Finnegan Will
 nav:
     - Home: 'index.md'
 
-    - Blog:
-      - blog/index.md
-
     - 博客:
       - 导航: 'blogs/nav.md'
       - 2023: 
         - Program.cs文件详解: 'blogs/Program.cs文件详解.md'
         - JWT 使用教程: 'blogs/JWT 使用教程.md'
         - JWT身份认证案例: 'blogs/JWT身份认证案例.md'
+
+    - 快速使用:
+      - Git常用操作: 'quick/git/Git常用.md'
+      - Vue快速入门: 'quick/vue/Vue快速入门.md'
+
 
     - C#: 
       - 认识 C#: 'teches/csharp/00-认识CSharp.md'
@@ -76,9 +78,6 @@ nav:
 
     - WPF:
       - 认识WPF: 'techs/wpf/01-认识WPF.md'
-
-    - Git:
-      - Git 常用操作: 'teches/git/Git常用.md'
 
     - 关于: 
       - Author: 'common/author.md'
