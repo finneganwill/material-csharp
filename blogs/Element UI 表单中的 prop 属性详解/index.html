@@ -5,12 +5,12 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
-<link href="https://finneganwill.github.io/material-dotnet/blogs/JWT%20%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="canonical"/>
-<link href="../Program.cs%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3/" rel="prev"/>
-<link href="../JWT%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E6%A1%88%E4%BE%8B/" rel="next"/>
+<link href="https://finneganwill.github.io/material-dotnet/blogs/Element%20UI%20%E8%A1%A8%E5%8D%95%E4%B8%AD%E7%9A%84%20prop%20%E5%B1%9E%E6%80%A7%E8%AF%A6%E8%A7%A3/" rel="canonical"/>
+<link href="../JWT%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E6%A1%88%E4%BE%8B/" rel="prev"/>
+<link href="../../quick/git/Git%E5%B8%B8%E7%94%A8/" rel="next"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.3" name="generator"/>
-<title>JWT 使用教程 - Finn Space</title>
+<title>Element UI 表单中的 prop 属性详解 - Finn Space</title>
 <link href="../../assets/stylesheets/main.c4a75a56.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -38,7 +38,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href="#jwt">
+<a class="md-skip" href="#element-ui-prop">
           跳转至
         </a>
 </div>
@@ -62,7 +62,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              JWT 使用教程
+              Element UI 表单中的 prop 属性详解
             
           </span>
 </div>
@@ -209,14 +209,24 @@
         Program.cs文件详解
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../JWT%20%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">
+        JWT 使用教程
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../JWT%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E6%A1%88%E4%BE%8B/">
+        JWT身份认证案例
+      </a>
+</li>
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          JWT 使用教程
+          Element UI 表单中的 prop 属性详解
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        JWT 使用教程
+        Element UI 表单中的 prop 属性详解
       </a>
 <nav aria-label="目录" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -225,55 +235,36 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#1-jwt">
-    1. 认识JWT
+<a class="md-nav__link" href="#prop">
+    prop 属性的作用
   </a>
-<nav aria-label="1. 认识JWT" class="md-nav">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prop_1">
+    prop 属性的应用
+  </a>
+<nav aria-label="prop 属性的应用" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#11-jwt">
-    1.1 JWT的功能
+<a class="md-nav__link" href="#1">
+    1. 表单验证
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+    2. 表单初始化
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+    3. 表单提交
   </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#2-jwt">
-    2. JWT原理
-  </a>
-<nav aria-label="2. JWT原理" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#21-jwt">
-    2.1 JWT组成
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#22-jwt">
-    2.2 JWT认证流程
-  </a>
-</li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#3-aspnetjwt">
-    3. ASP.NET配置JWT
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../JWT%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E6%A1%88%E4%BE%8B/">
-        JWT身份认证案例
-      </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Element%20UI%20%E8%A1%A8%E5%8D%95%E4%B8%AD%E7%9A%84%20prop%20%E5%B1%9E%E6%80%A7%E8%AF%A6%E8%A7%A3/">
-        Element UI 表单中的 prop 属性详解
-      </a>
 </li>
 </ul>
 </nav>
@@ -641,42 +632,33 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#1-jwt">
-    1. 认识JWT
+<a class="md-nav__link" href="#prop">
+    prop 属性的作用
   </a>
-<nav aria-label="1. 认识JWT" class="md-nav">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prop_1">
+    prop 属性的应用
+  </a>
+<nav aria-label="prop 属性的应用" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#11-jwt">
-    1.1 JWT的功能
+<a class="md-nav__link" href="#1">
+    1. 表单验证
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2">
+    2. 表单初始化
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3">
+    3. 表单提交
   </a>
 </li>
 </ul>
 </nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#2-jwt">
-    2. JWT原理
-  </a>
-<nav aria-label="2. JWT原理" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#21-jwt">
-    2.1 JWT组成
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#22-jwt">
-    2.2 JWT认证流程
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#3-aspnetjwt">
-    3. ASP.NET配置JWT
-  </a>
 </li>
 </ul>
 </nav>
@@ -685,185 +667,87 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1 id="jwt">JWT使用教程<a class="headerlink" href="#jwt" title="Permanent link">⚓︎</a></h1>
-<h2 id="1-jwt">1. 认识JWT<a class="headerlink" href="#1-jwt" title="Permanent link">⚓︎</a></h2>
-<blockquote>
-<p>JSON Web Token (JWT) 是一个开放标准(RFC 7519)，它定义了一种紧凑的、自包含的方式，用于作为 JSON 对象在各方之间安全地传输信息。该信息可以被验证和信任，因为它是<strong>数字签名</strong>的。</p>
-</blockquote>
-<p>快速访问：<a href="https://jwt.io/">JSON Web Tokens - jwt.io</a> </p>
-<h3 id="11-jwt">1.1 JWT的功能<a class="headerlink" href="#11-jwt" title="Permanent link">⚓︎</a></h3>
-<ul>
-<li>
-<p><strong>身份验证（Authentication）</strong>：JWT可以被用作身份验证机制，用于验证用户的身份信息。当用户成功登录并获得JWT后，他们可以在后续请求中通过将JWT附加到请求中来证明自己的身份。</p>
-</li>
-<li>
-<p><strong>授权（Authorization）</strong>：JWT还可以用于授权用户访问特定资源或执行特定操作。在JWT的负载中，可以包含用户的权限或角色信息，服务器可以根据这些信息来判断用户是否有权访问特定资源。</p>
-</li>
-<li>
-<p><strong>信息交换（Information Exchange）</strong>：由于JWT是基于JSON格式的，因此可以方便地在不同的系统之间传输和交换信息。JWT可以作为一种安全的机制，用于在不同的服务之间传递信息，而无需再次进行身份验证。</p>
-</li>
-</ul>
-<h2 id="2-jwt">2. JWT原理<a class="headerlink" href="#2-jwt" title="Permanent link">⚓︎</a></h2>
-<h3 id="21-jwt">2.1 JWT组成<a class="headerlink" href="#21-jwt" title="Permanent link">⚓︎</a></h3>
-<p>JWT令牌由三个部分组成，使用 <code>.</code> 进行分隔：</p>
-<ol>
-<li><strong>Header（头部）</strong>：包含描述 <strong>JWT的元数据</strong>，例如加密算法（例如HMAC、RSA等）和令牌类型（通常是JWT）。</li>
-<li><strong>Payload（负载）</strong>：包含要 <strong>传输的数据</strong>，以及一些预定义的声明（例如发行人、过期时间等）和自定义声明（根据需求添加）。</li>
-<li><strong>Signature（签名）</strong>：通过使用密钥对头部和负载进行加密生成的哈希值，用于 <strong>验证令牌</strong> 的完整性和真实性。</li>
-</ol>
-<p>下图是JWT官网提供的JWT令牌工具，其中显示了Token的组成示例：</p>
-<figure>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../img/JWT%E7%A4%BA%E4%BE%8B.png"><img alt="JWT示例" src="../img/JWT%E7%A4%BA%E4%BE%8B.png" width="750"/></a>
-<figcaption>JWT示例</figcaption></p>
-</figure>
-<p>JWT生成的Token是一串编码加密的字符串，格式形如  <code>XXX.YYY.ZZZ</code> 。<code>XXX</code> 部分是Header的Base64编码；<code>YYY</code> 部分是Payload的Base64编码；<code>ZZZ</code> 是将 <code>XXX</code> 和 <code>YYY</code> 拼接后通过加密秘钥（Secret Key）加密后形成的串。三者通过 <code>.</code> 拼接形成 Token .</p>
-<figure>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../img/Token%E7%BB%84%E6%88%90.png"><img alt="Token组成" src="../img/Token%E7%BB%84%E6%88%90.png" width="750"/></a>
-<figcaption></figcaption></p>
-</figure>
-<ul>
-<li>
-<p>Header
-<div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">{</span>
-</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="err">'</span><span class="kc">t</span><span class="err">yp'</span><span class="p">:</span><span class="w"> </span><span class="err">'JWT'</span><span class="p">,</span><span class="w"> </span><span class="c1">// 指定令牌的类型</span>
-</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="err">'alg'</span><span class="p">:</span><span class="w"> </span><span class="err">'HS</span><span class="mi">256</span><span class="err">'</span><span class="w"> </span><span class="c1">// 指定用于对JWT签名或加密的算法</span>
-</span><span id="__span-0-4"><a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="p">}</span>
-</span><span id="__span-0-5"><a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="c1">// 头部用来存储描述JWT的元数据，这些数据是与令牌相关的信息。</span>
-</span></code></pre></div></p>
-</li>
-<li>
-<p>Payload
-<div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">{</span>
-</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="nt">"sub"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1234567890"</span><span class="p">,</span><span class="w"> </span><span class="c1">// 标识JWT所代表的主体或用户</span>
-</span><span id="__span-1-3"><a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">  </span><span class="nt">"exp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1672417200</span><span class="p">,</span><span class="w"> </span><span class="c1">// 指定JWT的过期时间，用于限制JWT的有效期</span>
-</span><span id="__span-1-4"><a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">  </span><span class="nt">"roles"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"admin"</span><span class="p">,</span><span class="w"> </span><span class="s2">"editor"</span><span class="p">],</span><span class="w"> </span><span class="c1">// 自定义</span>
-</span><span id="__span-1-5"><a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">  </span><span class="nt">"settings"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"notifications"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nt">"privacy"</span><span class="p">:</span><span class="w"> </span><span class="s2">"private"</span><span class="p">,</span><span class="w"> </span><span class="nt">"theme"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dark"</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// 自定义</span>
-</span><span id="__span-1-6"><a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="p">}</span>
-</span><span id="__span-1-7"><a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="c1">// 负载用来存储要传输的数据，即希望发送方携带的数据信息。</span>
-</span></code></pre></div></p>
-</li>
-<li>
-<p>Signature
-<div class="language-json highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="err">HMACSHA</span><span class="mi">256</span><span class="err">(</span>
-</span><span id="__span-2-2"><a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="err">base</span><span class="mi">64</span><span class="err">UrlE</span><span class="kc">n</span><span class="err">code(header)</span><span class="w"> </span><span class="err">+</span><span class="w"> </span><span class="s2">"."</span><span class="w"> </span><span class="err">+</span>
-</span><span id="__span-2-3"><a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">  </span><span class="err">base</span><span class="mi">64</span><span class="err">UrlE</span><span class="kc">n</span><span class="err">code(payload)</span><span class="p">,</span>
-</span><span id="__span-2-4"><a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">  </span><span class="s2">"your_secret_key"</span>
-</span><span id="__span-2-5"><a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="err">)</span><span class="w"> </span>
-</span><span id="__span-2-6"><a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="c1">// 签名是基于秘密密钥（或公钥/私钥对）生成的一串字符串，用于确保JWT在传输过程中没有被篡改。</span>
-</span></code></pre></div></p>
-</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>负载中的字段被称为声明（Claim），可以分为三类：注册声明，公共声明，私有声明。<br/>
-- 注册声明：预定义的声明，推荐但不强制，例如 <code>sub</code> <code>iss</code> <code>aud</code> <code>exp</code> <code>nbf</code> <code>iat</code> <code>jti</code>；<br/>
-- 公共声明：自定义的用于在JWT中携带一些公开的信息（如用户角色、权限等）；<br/>
-- 私有声明：应用程序特定的声明，用于传递应用程序自定义的数据（如用户的自定义设置等）<br/>
-公共声明和私有声明都是自定义声明，二者没有明确界限，这只是一种约定，并不存在一定要按照这种方式使用的规定。</p>
+<h1 id="element-ui-prop">Element UI 表单中的 prop 属性详解<a class="headerlink" href="#element-ui-prop" title="Permanent link">⚓︎</a></h1>
+<p>在 Vue 中，通过使用 v-model 指令与表单组件实现表单数据的双向绑定。但是在 Element UI 中的 el-form 和 el-form-item 组件中，我们还需要使用 prop 属性来指定表单域对应的数据字段名。本篇文章将详细介绍 Element UI 中的 prop 属性。</p>
+<div class="admonition question">
+<p class="admonition-title">起源</p>
+<p><strong>为什么<code>el-input</code>绑定了数据，<code>el-form</code> 和 <code>el-form-item</code> 还需要绑定？</strong></p>
+<p>在 Vue 中，表单数据是通过 v-model 指令与组件进行绑定的。在示例中，el-input 组件通过 v-model="formData.name" 和 formData 对象中的 name 字段进行了双向绑定。</p>
+<p>但是，在 Element UI 的 el-form 和 el-form-item 组件中，需要显式地指定表单域对应的数据字段名（即 prop 属性），这是因为 el-form 和 el-form-item 组件主要用于表单验证和提交操作。</p>
+<p>通过指定 prop 属性，可以将表单域与数据模型之间建立起联系，方便进行表单验证、数据提交等操作。例如，在表单验证时，我们可以根据表单域的 prop 属性定义验证规则，从而确保用户输入的数据符合要求。</p>
+<p>此外，通过指定 prop 属性，还可以建立对应关系，方便进行表单数据的初始化、重置等操作。这使得我们能够更加方便地操作表单数据，提高了开发效率。</p>
+<p>综上所述，虽然 el-input 组件已经通过 v-model 与表单数据进行了绑定，但是为了方便表单验证、数据提交等操作，我们仍然需要在 el-form-item 中指定 prop 属性来建立表单域与数据模型之间的联系。</p>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">不要在JWT中携带敏感信息！</p>
-<p><strong><em>JWT提供了一种用于传输信息和验证的机制，但不适宜存放敏感的隐私数据</em></strong>。由于JWT是基于Base64编码的字符串，它是可解码的，因此不建议在JWT中存放敏感的隐私数据，例如密码、信用卡信息等。负载（Payload）部分通常用于存放一些非敏感的用户信息，如用户ID、角色、过期时间等。这些信息是公开的，并且也可以从JWT中解码和读取。<strong>因此，敏感的隐私数据应该避免存放在JWT中，以防止信息泄露或被篡改。</strong> </p>
-</div>
-<h3 id="22-jwt">2.2 JWT认证流程<a class="headerlink" href="#22-jwt" title="Permanent link">⚓︎</a></h3>
-<p>JWT认证流程总结起来就是前端通过发送身份信息给服务端，后端在接受到请求后会生成Token，并在响应中发送给前端。前端得到Token后保存在本地，在后续的请求中都会携带该Token，服务端对
-令牌进行验证和授权访问。</p>
-<p>下图显示了认证流程：</p>
-<figure>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../img/Token%E8%AE%A4%E8%AF%81%E6%B5%81%E7%A8%8B.png"><img alt="Token认证流程" src="../img/Token%E8%AE%A4%E8%AF%81%E6%B5%81%E7%A8%8B.png" width="750"/></a>
-<figcaption>Token认证流程</figcaption></p>
-</figure>
-<p>前端（客户端）：</p>
-<ol>
-<li>用户身份验证：用户通过提供凭据（例如用户名和密码）进行身份验证，通常通过登录页面或其他验证方式。</li>
-<li>发送身份验证请求：前端将用户的凭据发送到后端服务器，通常使用 POST 请求发送至特定的身份验证端点（如<code>/login</code>）。</li>
-<li>后端身份验证：后端服务器接收到身份验证请求后，对提供的凭据进行验证。如果验证成功，后端服务器将生成一个 JWT。</li>
-<li>接收和存储 JWT：后端服务器将生成的 JWT 作为响应返回给前端。前端通常会将 JWT 存储在客户端，例如使用浏览器的本地存储（LocalStorage）或移动应用的内存中。</li>
-<li>发送 JWT：前端在后续的请求中，将 JWT 添加到每次请求的 <code>Authorization</code> 头部中。可以使用 Bearer 认证方案，将 JWT 添加到头部中的 <code>Authorization</code> 字段值中。</li>
-</ol>
-<p>后端（服务器）：</p>
-<ol>
-<li>验证 JWT：后端服务器接收到请求时，从 <code>Authorization</code> 头部中解析出 JWT，并对其进行验。</li>
-<li>验证签名：后端使用密钥对 JWT 的头部和负载进行签名验证，确保令牌的完整性。</li>
-<li>验证声明：后端检查负载中的声明，包括验证令牌的过期时间、发行人等。</li>
-<li>授权访问：如果 JWT 验证成功并且负载中的声明满足要求，后端服务器将对请求进行授权，允许访问受保护的资源或执行特定操作。</li>
-</ol>
-<p>在验证 JWT 时，后端可以使用密钥来验证签名，并可以根据声明中的信息，确定用户的权限或角色。通常，JWT 包含有关用户身份的基本信息，如用户ID或用户名等。需要注意的是，为了防止 CSRF（跨站请求伪造）攻击，可以在生成的 JWT 中包含 CSRF Token，并在每个请求中进行验证。</p>
-<p>总结起来，前端通过用户身份验证获取 JWT，并在后续请求中发送 JWT，而后端进行 JWT 的验证和授权访问。</p>
-<h2 id="3-aspnetjwt">3. ASP.NET配置JWT<a class="headerlink" href="#3-aspnetjwt" title="Permanent link">⚓︎</a></h2>
-<p>下面的内容是在Webapi项目中配置JWT的基本步骤，更详细的代码可以关注博客【】。</p>
-<p>在 ASP.NET Core Web API 中使用 JWT，你可以按照以下步骤进行设置：</p>
-<ol>
-<li>
-<p>添加 NuGet 包：打开你的  Web API 项目，使用 NuGet 包管理器或在.csproj 文件中添加以下包引用，以添加一个 JWT 库（例如 <code>Microsoft.AspNetCore.Authentication.JwtBearer</code>）：
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nt">&lt;PackageReference</span><span class="w"> </span><span class="na">Include=</span><span class="s">"Microsoft.AspNetCore.Authentication.JwtBearer"</span><span class="w"> </span><span class="na">Version=</span><span class="s">"x.x.x"</span><span class="w"> </span><span class="nt">/&gt;</span>
-</span></code></pre></div></p>
-</li>
-<li>
-<p>在 Startup.cs 中配置身份验证服务和 JWT：
-    在 ConfigureServices 方法中添加以下代码来配置 JWT 身份验证服务：
-    <div class="language-csharp highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">Microsoft.AspNetCore.Authentication.JwtBearer</span><span class="p">;</span><span class="w"> </span>
-</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="k">using</span><span class="w"> </span><span class="nn">Microsoft.IdentityModel.Tokens</span><span class="p">;</span><span class="w">  </span>
-</span><span id="__span-4-3"><a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="c1">// ...  </span>
-</span><span id="__span-4-4"><a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">ConfigureServices</span><span class="p">(</span><span class="n">IServiceCollection</span><span class="w"> </span><span class="n">services</span><span class="p">)</span><span class="w"> </span>
-</span><span id="__span-4-5"><a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="p">{</span><span class="w">     </span>
-</span><span id="__span-4-6"><a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="c1">// 配置身份验证服务     </span>
-</span><span id="__span-4-7"><a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="n">services</span>
-</span><span id="__span-4-8"><a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">        </span><span class="p">.</span><span class="n">AddAuthentication</span><span class="p">(</span><span class="n">options</span><span class="w"> </span><span class="o">=&gt;</span><span class="w">     </span>
-</span><span id="__span-4-9"><a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">        </span><span class="p">{</span><span class="w">         </span>
-</span><span id="__span-4-10"><a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">            </span><span class="n">options</span><span class="p">.</span><span class="n">DefaultAuthenticateScheme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JwtBearerDefaults</span><span class="p">.</span><span class="n">AuthenticationScheme</span><span class="p">;</span>
-</span><span id="__span-4-11"><a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">            </span><span class="n">options</span><span class="p">.</span><span class="n">DefaultChallengeScheme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JwtBearerDefaults</span><span class="p">.</span><span class="n">AuthenticationScheme</span><span class="p">;</span>
-</span><span id="__span-4-12"><a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">        </span><span class="p">})</span>
-</span><span id="__span-4-13"><a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">        </span><span class="p">.</span><span class="n">AddJwtBearer</span><span class="p">(</span><span class="n">options</span><span class="w"> </span><span class="o">=&gt;</span><span class="w">     </span>
-</span><span id="__span-4-14"><a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">        </span><span class="p">{</span><span class="w">         </span>
-</span><span id="__span-4-15"><a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">            </span><span class="c1">// 设置 JWT Bearer 选项         </span>
-</span><span id="__span-4-16"><a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">            </span><span class="n">options</span><span class="p">.</span><span class="n">TokenValidationParameters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TokenValidationParameters</span>
-</span><span id="__span-4-17"><a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">            </span><span class="p">{</span><span class="w">             </span>
-</span><span id="__span-4-18"><a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">                </span><span class="n">ValidateIssuerSigningKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="p">,</span><span class="w">             </span>
-</span><span id="__span-4-19"><a href="#__codelineno-4-19" id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="w">                </span><span class="n">IssuerSigningKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span>
-</span><span id="__span-4-20"><a href="#__codelineno-4-20" id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="w">                </span><span class="n">SymmetricSecurityKey</span><span class="p">(</span><span class="n">Encoding</span><span class="p">.</span><span class="n">ASCII</span><span class="p">.</span><span class="n">GetBytes</span><span class="p">(</span><span class="s">"your_secret_key"</span><span class="p">)),</span><span class="w">  </span>
-</span><span id="__span-4-21"><a href="#__codelineno-4-21" id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="w">                </span><span class="n">ValidateIssuer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">false</span><span class="p">,</span><span class="w"> </span>
-</span><span id="__span-4-22"><a href="#__codelineno-4-22" id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="w">                </span><span class="n">ValidateAudience</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">false</span><span class="w">         </span>
-</span><span id="__span-4-23"><a href="#__codelineno-4-23" id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="w">        </span><span class="p">};</span><span class="w">     </span>
-</span><span id="__span-4-24"><a href="#__codelineno-4-24" id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="w">    </span><span class="p">});</span><span class="w">      </span>
-</span><span id="__span-4-25"><a href="#__codelineno-4-25" id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="w">    </span><span class="c1">// 添加其他服务配置    </span>
-</span><span id="__span-4-26"><a href="#__codelineno-4-26" id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="w">    </span><span class="c1">// ... </span>
-</span><span id="__span-4-27"><a href="#__codelineno-4-27" id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="p">}</span>
-</span></code></pre></div></p>
-</li>
-<li>
-<p>在 Configure 方法中启用身份验证：
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">Microsoft.AspNetCore.Authentication.JwtBearer</span><span class="p">;</span><span class="w">  </span>
-</span><span id="__span-5-2"><a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>
-</span><span id="__span-5-3"><a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="c1">// ...  </span>
-</span><span id="__span-5-4"><a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="k">public</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Configure</span><span class="p">(</span><span class="n">IApplicationBuilder</span><span class="w"> </span><span class="n">app</span><span class="p">,</span><span class="w"> </span><span class="n">IWebHostEnvironment</span><span class="w"> </span><span class="n">env</span><span class="p">)</span><span class="w"> </span>
-</span><span id="__span-5-5"><a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="p">{</span><span class="w">     </span>
-</span><span id="__span-5-6"><a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="c1">// 启用身份验证     </span>
-</span><span id="__span-5-7"><a href="#__codelineno-5-7" id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span><span class="n">app</span><span class="p">.</span><span class="n">UseAuthentication</span><span class="p">();</span><span class="w"> </span><span class="c1">// 添加其他中间件配置     </span>
-</span><span id="__span-5-8"><a href="#__codelineno-5-8" id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">    </span><span class="c1">// ... </span>
-</span><span id="__span-5-9"><a href="#__codelineno-5-9" id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="p">}</span>
-</span></code></pre></div></p>
-</li>
-<li>
-<p>保护控制器或路由： 在需要身份验证的控制器或路由上添加 <code>[Authorize]</code> 属性，这将确保只有经过身份验证的用户可以访问相应的资源。
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-6-1"><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">Microsoft.AspNetCore.Mvc</span><span class="p">;</span><span class="w">  </span>
-</span><span id="__span-6-2"><a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a>
-</span><span id="__span-6-3"><a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="na">[ApiController]</span>
-</span><span id="__span-6-4"><a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="na">[Route("api/[controller]</span><span class="s">")]</span>
-</span><span id="__span-6-5"><a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="na">[Authorize]</span><span class="w"> </span><span class="c1">// 添加身份验证属性 </span>
-</span><span id="__span-6-6"><a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">MyController</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ControllerBase</span><span class="w"> </span>
-</span><span id="__span-6-7"><a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="p">{</span><span class="w">     </span>
-</span><span id="__span-6-8"><a href="#__codelineno-6-8" id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">    </span><span class="c1">// ... </span>
-</span><span id="__span-6-9"><a href="#__codelineno-6-9" id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="p">}</span>
-</span></code></pre></div></p>
-</li>
-</ol>
-<p>至此，在你的 ASP.NET Core Web API 中已经集成了 JWT 身份验证。当客户端发送带有有效 JWT 的请求时，API 将进行身份验证，并允许访问受保护的资源。</p>
-<p>你还需要在登录或注册等适当的地方生成 JWT，并将其返回给客户端作为身份验证凭据。通常，你可以使用第三方库（如 <code>System.IdentityModel.Tokens.Jwt</code>）来生成和签名 JWT。</p>
-<div class="admonition danger">
-<p class="admonition-title">Danger</p>
-<p>请注意，上述示例中的密钥（<code>your_secret_key</code>）应该是一个长而安全的随机字符串，并且不应该在公共代码中硬编码。同时，请确保在生产环境中安全存储密钥。</p>
-</div>
+<h2 id="prop">prop 属性的作用<a class="headerlink" href="#prop" title="Permanent link">⚓︎</a></h2>
+<p>在 Element UI 的表单组件中，prop 属性用于建立表单域与数据模型之间的联系。它表示表单域对应的数据字段名，可以与 el-form 组件中的 model 属性配合使用，将表单数据与表单域进行绑定。</p>
+<p>例如，在 el-form-item 中指定 prop 属性如下：</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">&lt;</span><span class="nt">el-form</span> <span class="na">:model</span><span class="o">=</span><span class="s">"formData"</span> <span class="na">ref</span><span class="o">=</span><span class="s">"form"</span><span class="p">&gt;</span>   
+</span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>    <span class="p">&lt;</span><span class="nt">el-form-item</span> <span class="na">label</span><span class="o">=</span><span class="s">"姓名"</span> <span class="na">prop</span><span class="o">=</span><span class="s">"name"</span><span class="p">&gt;</span>     
+</span><span id="__span-0-3"><a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a>        <span class="p">&lt;</span><span class="nt">el-input</span> <span class="na">v-model</span><span class="o">=</span><span class="s">"formData.name"</span><span class="p">&gt;&lt;/</span><span class="nt">el-input</span><span class="p">&gt;</span>   
+</span><span id="__span-0-4"><a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a>    <span class="p">&lt;/</span><span class="nt">el-form-item</span><span class="p">&gt;</span> 
+</span><span id="__span-0-5"><a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="p">&lt;/</span><span class="nt">el-form</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<p>在这个例子中，prop 属性的值为 "name"，表示该表单域对应的数据字段是 formData 对象中的 name 字段。当用户在输入框中输入姓名时，<code>formData.name</code> 的值也会相应地更新。同时，如果  <code>formData.name</code>  发生变化，输入框中的内容也会自动更新。</p>
+<p>通过 prop 属性，我们可以为表单域建立与数据模型之间的联系，方便进行表单验证、数据提交等操作。</p>
+<h2 id="prop_1">prop 属性的应用<a class="headerlink" href="#prop_1" title="Permanent link">⚓︎</a></h2>
+<p>在 Element UI 中，prop 属性主要应用于以下几个方面：</p>
+<h3 id="1">1. 表单验证<a class="headerlink" href="#1" title="Permanent link">⚓︎</a></h3>
+<p>通过指定 prop 属性，我们可以为表单域定义验证规则，确保用户输入的数据符合要求。例如，以下是一个包含两个表单域的 el-form 组件：</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">el-form</span> <span class="na">:model</span><span class="o">=</span><span class="s">"formData"</span> <span class="na">:rules</span><span class="o">=</span><span class="s">"formRules"</span> <span class="na">ref</span><span class="o">=</span><span class="s">"form"</span><span class="p">&gt;</span>   
+</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="p">&lt;</span><span class="nt">el-form-item</span> <span class="na">label</span><span class="o">=</span><span class="s">"用户名"</span> <span class="na">prop</span><span class="o">=</span><span class="s">"username"</span><span class="p">&gt;</span>     
+</span><span id="__span-1-3"><a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a>        <span class="p">&lt;</span><span class="nt">el-input</span> <span class="na">v-model</span><span class="o">=</span><span class="s">"formData.username"</span><span class="p">&gt;&lt;/</span><span class="nt">el-input</span><span class="p">&gt;</span>   
+</span><span id="__span-1-4"><a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a>    <span class="p">&lt;/</span><span class="nt">el-form-item</span><span class="p">&gt;</span>   
+</span><span id="__span-1-5"><a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a>    <span class="p">&lt;</span><span class="nt">el-form-item</span> <span class="na">label</span><span class="o">=</span><span class="s">"密码"</span> <span class="na">prop</span><span class="o">=</span><span class="s">"password"</span><span class="p">&gt;</span>    
+</span><span id="__span-1-6"><a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a>        <span class="p">&lt;</span><span class="nt">el-input</span> <span class="na">type</span><span class="o">=</span><span class="s">"password"</span> <span class="na">v-model</span><span class="o">=</span><span class="s">"formData.password"</span><span class="p">&gt;&lt;/</span><span class="nt">el-input</span><span class="p">&gt;</span>   
+</span><span id="__span-1-7"><a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a>    <span class="p">&lt;/</span><span class="nt">el-form-item</span><span class="p">&gt;</span> 
+</span><span id="__span-1-8"><a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="p">&lt;/</span><span class="nt">el-form</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<p>在这个例子中，我们通过在 el-form 上指定 rules 属性来设置整个表单的验证规则。同时，在每个 el-form-item 中也通过 prop 属性分别指定了 username 和 password 这两个表单域的验证规则。</p>
+<h3 id="2">2. 表单初始化<a class="headerlink" href="#2" title="Permanent link">⚓︎</a></h3>
+<p>通过指定 prop 属性，我们可以建立表单域与数据模型之间的联系，方便进行表单数据的初始化。例如，以下是一个包含两个表单域的 el-form 组件：</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">el-form</span> <span class="na">:model</span><span class="o">=</span><span class="s">"formData"</span> <span class="na">ref</span><span class="o">=</span><span class="s">"form"</span><span class="p">&gt;</span>   
+</span><span id="__span-2-2"><a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="p">&lt;</span><span class="nt">el-form-item</span> <span class="na">label</span><span class="o">=</span><span class="s">"姓名"</span> <span class="na">prop</span><span class="o">=</span><span class="s">"name"</span><span class="p">&gt;</span>     
+</span><span id="__span-2-3"><a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>        <span class="p">&lt;</span><span class="nt">el-input</span> <span class="na">v-model</span><span class="o">=</span><span class="s">"formData.name"</span><span class="p">&gt;&lt;/</span><span class="nt">el-input</span><span class="p">&gt;</span>   
+</span><span id="__span-2-4"><a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a>    <span class="p">&lt;/</span><span class="nt">el-form-item</span><span class="p">&gt;</span>   
+</span><span id="__span-2-5"><a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a>    <span class="p">&lt;</span><span class="nt">el-form-item</span> <span class="na">label</span><span class="o">=</span><span class="s">"年龄"</span> <span class="na">prop</span><span class="o">=</span><span class="s">"age"</span><span class="p">&gt;</span>     
+</span><span id="__span-2-6"><a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a>        <span class="p">&lt;</span><span class="nt">el-input</span> <span class="na">type</span><span class="o">=</span><span class="s">"number"</span> <span class="na">v-model</span><span class="o">=</span><span class="s">"formData.age"</span><span class="p">&gt;&lt;/</span><span class="nt">el-input</span><span class="p">&gt;</span>   
+</span><span id="__span-2-7"><a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a>    <span class="p">&lt;/</span><span class="nt">el-form-item</span><span class="p">&gt;</span> 
+</span><span id="__span-2-8"><a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="p">&lt;/</span><span class="nt">el-form</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<p>在这个例子中，我们通过在 el-form 组件上指定 model 属性，将表单数据与 formData 对象进行了双向绑定。同时，在每个 el-form-item 中也通过 prop 属性分别指定了 name 和 age 这两个表单域对应的数据字段。</p>
+<p>在组件初始化时，可以通过设置 formData 的初始值，来自动为每个表单域初始化默认值。例如，以下是设置 formData 初始值的代码：</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">   </span>
+</span><span id="__span-3-2"><a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="w">     </span>
+</span><span id="__span-3-3"><a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">        </span><span class="nx">formData</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w">       </span>
+</span><span id="__span-3-4"><a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">            </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">'张三'</span><span class="p">,</span><span class="w">       </span>
+</span><span id="__span-3-5"><a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">            </span><span class="nx">age</span><span class="o">:</span><span class="w"> </span><span class="mf">18</span><span class="w">     </span>
+</span><span id="__span-3-6"><a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">        </span><span class="p">}</span><span class="w">   </span>
+</span><span id="__span-3-7"><a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span>
+</span><span id="__span-3-8"><a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="p">},</span>
+</span></code></pre></div>
+<h3 id="3">3. 表单提交<a class="headerlink" href="#3" title="Permanent link">⚓︎</a></h3>
+<p>通过指定 prop 属性，我们可以建立表单域与数据模型之间的联系，方便进行表单数据的提交。例如，以下是一个包含两个表单域的 el-form 组件：</p>
+<div class="language-html highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">&lt;</span><span class="nt">el-form</span> <span class="na">:model</span><span class="o">=</span><span class="s">"formData"</span> <span class="na">ref</span><span class="o">=</span><span class="s">"form"</span> <span class="err">@</span><span class="na">submit</span><span class="o">=</span><span class="s">"onSubmit"</span><span class="p">&gt;</span>   
+</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>    <span class="p">&lt;</span><span class="nt">el-form-item</span> <span class="na">label</span><span class="o">=</span><span class="s">"姓名"</span> <span class="na">prop</span><span class="o">=</span><span class="s">"name"</span><span class="p">&gt;</span>     
+</span><span id="__span-4-3"><a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>        <span class="p">&lt;</span><span class="nt">el-input</span> <span class="na">v-model</span><span class="o">=</span><span class="s">"formData.name"</span><span class="p">&gt;&lt;/</span><span class="nt">el-input</span><span class="p">&gt;</span>   
+</span><span id="__span-4-4"><a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>    <span class="p">&lt;/</span><span class="nt">el-form-item</span><span class="p">&gt;</span>   
+</span><span id="__span-4-5"><a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>    <span class="p">&lt;</span><span class="nt">el-form-item</span> <span class="na">label</span><span class="o">=</span><span class="s">"年龄"</span> <span class="na">prop</span><span class="o">=</span><span class="s">"age"</span><span class="p">&gt;</span>     
+</span><span id="__span-4-6"><a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>        <span class="p">&lt;</span><span class="nt">el-input</span> <span class="na">type</span><span class="o">=</span><span class="s">"number"</span> <span class="na">v-model</span><span class="o">=</span><span class="s">"formData.age"</span><span class="p">&gt;&lt;/</span><span class="nt">el-input</span><span class="p">&gt;</span>   
+</span><span id="__span-4-7"><a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a>    <span class="p">&lt;/</span><span class="nt">el-form-item</span><span class="p">&gt;</span>   
+</span><span id="__span-4-8"><a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a>    <span class="p">&lt;</span><span class="nt">el-form-item</span><span class="p">&gt;</span>     
+</span><span id="__span-4-9"><a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a>        <span class="p">&lt;</span><span class="nt">el-button</span> <span class="na">type</span><span class="o">=</span><span class="s">"primary"</span> <span class="na">native-type</span><span class="o">=</span><span class="s">"submit"</span><span class="p">&gt;</span>提交<span class="p">&lt;/</span><span class="nt">el-button</span><span class="p">&gt;</span>   
+</span><span id="__span-4-10"><a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a>    <span class="p">&lt;/</span><span class="nt">el-form-item</span><span class="p">&gt;</span> 
+</span><span id="__span-4-11"><a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="p">&lt;/</span><span class="nt">el-form</span><span class="p">&gt;</span>
+</span></code></pre></div>
+<p>在这个例子中，我们通过在 el-form 组件上指定 model 属性，将表单数据与 formData 对象进行了双向绑定。同时，在每个 el-form-item 中也通过 prop 属性分别指定了 name 和 age 这两个表单域对应的数据字段。</p>
+<p>当用户提交表单时，可以在 <code>onSubmit</code> 方法中获取 formData 中的数据，进行相关的数据处理和提交操作。例如，以下是 <code>onSubmit</code> 方法的代码：</p>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="nx">methods</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w">   </span>
+</span><span id="__span-5-2"><a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="nx">onSubmit</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">     </span>
+</span><span id="__span-5-3"><a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">formData</span><span class="p">)</span><span class="w"> </span><span class="c1">// 输出表单数据   </span>
+</span><span id="__span-5-4"><a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span>
+</span><span id="__span-5-5"><a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>通过以上三个方面的应用，我们可以更加方便地操作表单数据，提高开发效率。同时，通过学习和掌握 prop 属性的使用，可以更好地理解和运用 Vue 和 Element UI 的相关知识点。</p>
 <form class="md-feedback" hidden="" name="feedback">
 <fieldset>
 <legend class="md-feedback__title">
@@ -907,7 +791,7 @@
 </main>
 <footer class="md-footer">
 <nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: Program.cs文件详解" class="md-footer__link md-footer__link--prev" href="../Program.cs%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3/" rel="prev">
+<a aria-label="上一页: JWT身份认证案例" class="md-footer__link md-footer__link--prev" href="../JWT%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E6%A1%88%E4%BE%8B/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
 </div>
@@ -916,17 +800,17 @@
 <span class="md-footer__direction">
                   上一页
                 </span>
-                Program.cs文件详解
+                JWT身份认证案例
               </div>
 </div>
 </a>
-<a aria-label="下一页: JWT身份认证案例" class="md-footer__link md-footer__link--next" href="../JWT%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E6%A1%88%E4%BE%8B/" rel="next">
+<a aria-label="下一页: Git常用操作" class="md-footer__link md-footer__link--next" href="../../quick/git/Git%E5%B8%B8%E7%94%A8/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                   下一页
                 </span>
-                JWT身份认证案例
+                Git常用操作
               </div>
 </div>
 <div class="md-footer__button md-icon">
