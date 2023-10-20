@@ -21,6 +21,7 @@ nav:
         - Program.cs文件详解: 'blogs/Program.cs文件详解.md'
         - JWT 使用教程: 'blogs/JWT 使用教程.md'
         - JWT身份认证案例: 'blogs/JWT身份认证案例.md'
+        - Element UI 表单中的 prop 属性详解: 'blogs/Element UI 表单中的 prop 属性详解.md'
 
     - 快速使用:
       - Git常用操作: 'quick/git/Git常用.md'
