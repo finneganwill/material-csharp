@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "teches/javascript/JS.md",
+                "file": "blogs/nav.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "teches/javascript/JS.md",
+                "file": "blogs/nav.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "teches/javascript/JS.md",
+                "file": "blogs/nav.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "teches/javascript/JS.md"
+                "file": "blogs/nav.md"
               }
             }
           }
@@ -157,8 +157,8 @@
   },
   "active": "618dff05a5f2602b",
   "lastOpenFiles": [
-    "quick/vue/Vue快速入门.md",
     "teches/javascript/JS.md",
+    "quick/vue/Vue快速入门.md",
     "teches/javascript",
     "teches/css",
     "teches/html",
