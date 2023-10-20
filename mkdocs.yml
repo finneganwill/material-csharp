@@ -92,6 +92,9 @@ theme:
   # 语言 英文：language: en
   language: zh
 
+  font:
+    text: Montserrat
+
   # 图标
   icon:
     repo: fontawesome/brands/github
@@ -124,7 +127,7 @@ theme:
       # emphasize 强调颜色
       accent: deep orange
       # header 头
-      primary: teal
+      primary: white
       # switch 开关
       toggle:
         icon: material/brightness-7 

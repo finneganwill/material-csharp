@@ -3,15 +3,17 @@
 
 在 Vue 中，通过使用 v-model 指令与表单组件实现表单数据的双向绑定。但是在 Element UI 中的 el-form 和 el-form-item 组件中，我们还需要使用 prop 属性来指定表单域对应的数据字段名。本篇文章将详细介绍 Element UI 中的 prop 属性。
 
-!!! Question "起源 为什么`el-input`绑定了数据，`el-form` 和 `el-form-item` 还需要绑定？"
+!!! Question "起源"
+	**为什么`el-input`绑定了数据，`el-form` 和 `el-form-item` 还需要绑定？**
+	
 	在 Vue 中，表单数据是通过 v-model 指令与组件进行绑定的。在示例中，el-input 组件通过 v-model="formData.name" 和 formData 对象中的 name 字段进行了双向绑定。
-
+	
 	但是，在 Element UI 的 el-form 和 el-form-item 组件中，需要显式地指定表单域对应的数据字段名（即 prop 属性），这是因为 el-form 和 el-form-item 组件主要用于表单验证和提交操作。
-
+	
 	通过指定 prop 属性，可以将表单域与数据模型之间建立起联系，方便进行表单验证、数据提交等操作。例如，在表单验证时，我们可以根据表单域的 prop 属性定义验证规则，从而确保用户输入的数据符合要求。
-
+	
 	此外，通过指定 prop 属性，还可以建立对应关系，方便进行表单数据的初始化、重置等操作。这使得我们能够更加方便地操作表单数据，提高了开发效率。
-
+	
 	综上所述，虽然 el-input 组件已经通过 v-model 与表单数据进行了绑定，但是为了方便表单验证、数据提交等操作，我们仍然需要在 el-form-item 中指定 prop 属性来建立表单域与数据模型之间的联系。
 
 
