@@ -238,6 +238,9 @@ markdown_extensions:
 
 # 插件
 plugins:
+  # 博客插件
+  - blog
+
   # 时间插件
   - git-revision-date-localized:
       enabled: !ENV [CI, false]
@@ -247,3 +250,4 @@ plugins:
 
   # 图像缩放插件
   - glightbox
+

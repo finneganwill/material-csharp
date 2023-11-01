@@ -114,7 +114,7 @@ git branch -m <old_name> <new_name>
 
 ## 5 撤销
 
-## 附录：Commit 消息格式
+## 附录 A：Commit 消息格式
 
 格式：
 ```txt
@@ -137,3 +137,7 @@ git branch -m <old_name> <new_name>
 - `Perf`：性能优化，提高性能的代码更改
 - `Test`：添加或修改代码测试
 - `Chore`：对构建流程或辅助工具和依赖库（如文档生成等）的更改
+
+## 附录 B：忽略文件.gitignore
+
+[Git入门之.gitignore - 掘金 (juejin.cn)](https://juejin.cn/post/6998911250323390501)
