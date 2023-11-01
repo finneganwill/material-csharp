@@ -6,6 +6,7 @@
 !!! Question "起源"
 	**为什么`el-input`绑定了数据，`el-form` 和 `el-form-item` 还需要绑定？**
 	
+
 	在 Vue 中，表单数据是通过 v-model 指令与组件进行绑定的。在示例中，el-input 组件通过 v-model="formData.name" 和 formData 对象中的 name 字段进行了双向绑定。
 	
 	但是，在 Element UI 的 el-form 和 el-form-item 组件中，需要显式地指定表单域对应的数据字段名（即 prop 属性），这是因为 el-form 和 el-form-item 组件主要用于表单验证和提交操作。

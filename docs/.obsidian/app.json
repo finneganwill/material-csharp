@@ -1,5 +1,8 @@
 {
   "alwaysUpdateLinks": true,
-  "strictLineBreaks": false,
-  "showIndentGuide": true
+  "strictLineBreaks": true,
+  "showIndentGuide": false,
+  "showInlineTitle": false,
+  "readableLineLength": false,
+  "showLineNumber": true
 }
