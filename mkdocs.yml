@@ -20,7 +20,7 @@ nav:
 
     - HandBook:
       - Git常用操作: 'quick/git/Git常用.md'
-      - Vue快速入门: 'quick/vue/Vue快速入门.md'
+      # - Vue快速入门: 'quick/vue/Vue快速入门.md'
 
     - C#: 
       - 认识 C#: 'teches/csharp/00-认识CSharp.md'
@@ -118,21 +118,21 @@ theme:
       # emphasize 强调颜色
       accent: deep orange
       # header 头
-      primary: white
+      primary: blue grey
       # switch 开关
       toggle:
-        icon: material/brightness-7 
+        icon: material/toggle-switch-off-outline
         name: Switch to dark mode
 
     # dark
     - scheme: slate
       # emphasize
-      accent: teal
+      accent: deep orange
       # header
       primary: black
       # switch
       toggle:
-        icon: material/brightness-4
+        icon: material/toggle-switch
         name: Switch to light mode
 
 extra_css:
@@ -140,6 +140,12 @@ extra_css:
 
 # 附加组件
 extra:
+  # 多语言
+  alternate:
+    - name: English
+      link: blog/category/helloworld/
+      lang: en
+
   # 社交
   social:
     - icon: fontawesome/brands/bilibili
