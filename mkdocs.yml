@@ -15,18 +15,12 @@ copyright: Copyright &copy; 2022 - 2023 Finnegan Will
 nav:
     - Home: 'index.md'
 
-    - 博客:
-      - 导航: 'blogs/nav.md'
-      - 2023: 
-        - Program.cs文件详解: 'blogs/Program.cs文件详解.md'
-        - JWT 使用教程: 'blogs/JWT 使用教程.md'
-        - JWT身份认证案例: 'blogs/JWT身份认证案例.md'
-        - Element UI 表单中的 prop 属性详解: 'blogs/Element UI 表单中的 prop 属性详解.md'
+    - Blog: 
+      - Blog: 'blog/index.md'
 
     - 快速使用:
       - Git常用操作: 'quick/git/Git常用.md'
       - Vue快速入门: 'quick/vue/Vue快速入门.md'
-
 
     - C#: 
       - 认识 C#: 'teches/csharp/00-认识CSharp.md'
@@ -46,8 +40,8 @@ nav:
       - 反射: 'teches/csharp/14-反射.md'
       - 多线程: 'teches/csharp/15-多线程.md'
       - 文件处理: 'teches/csharp/16-文件处理.md'
-#      - 匿名函数: teches/csharp/
-#      - 指针变量: teches/csharp/
+      - 匿名函数: teches/csharp/
+      - 指针变量: teches/csharp/
 
     - LINQ:
       - 认识 LINQ: 'teches/linq/01-认识LINQ.md'
@@ -77,14 +71,10 @@ nav:
     - ASP.NET Core: 
       - 认识 ASP.NET Core: 'teches/aspnet-core/01-认识ASP.NET Core.md'
 
-    - WPF:
-      - 认识WPF: 'techs/wpf/01-认识WPF.md'
-
     - 关于: 
       - Author: 'common/author.md'
       - MkDocs: 'common/mkdocs.md'
       - Refers: 'common/refers.md'
-
 
 # 主题设置
 theme:
@@ -103,6 +93,7 @@ theme:
   features:
     # 导航选项卡
     - navigation.tabs
+    - navigation.sections
     # 返回顶部
     - navigation.top
     # 目录跟随
@@ -239,7 +230,19 @@ markdown_extensions:
 # 插件
 plugins:
   # 博客插件
-  - blog
+  - blog:
+      enabled: true
+      blog_dir: 'blog'
+      blog_toc: false
+      archive: true
+      archive_name: Archive
+      archive_toc: true
+      categories: true
+      categories_name: Categories
+      categories_toc: true
+
+  # 搜索插件
+  - search
 
   # 时间插件
   - git-revision-date-localized:
