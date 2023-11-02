@@ -4,5 +4,5 @@
   "showIndentGuide": false,
   "showInlineTitle": false,
   "readableLineLength": false,
-  "showLineNumber": true
+  "showLineNumber": false
 }

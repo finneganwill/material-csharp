@@ -18,7 +18,7 @@ nav:
     - Blog: 
       - Blog: 'blog/index.md'
 
-    - 快速使用:
+    - HandBook:
       - Git常用操作: 'quick/git/Git常用.md'
       - Vue快速入门: 'quick/vue/Vue快速入门.md'
 
@@ -231,15 +231,18 @@ markdown_extensions:
 plugins:
   # 博客插件
   - blog:
-      enabled: true
-      blog_dir: 'blog'
       blog_toc: false
+
       archive: true
       archive_name: Archive
       archive_toc: true
+
       categories: true
       categories_name: Categories
       categories_toc: true
+
+      authors: true
+      authors_file: '{blog}/.authors.yml'
 
   # 搜索插件
   - search

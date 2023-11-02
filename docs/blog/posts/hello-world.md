@@ -2,8 +2,7 @@
 draft: true
 date: 2022-01-01
 categories:
-  - Hello
-  - World
+  - HelloWorld
 ---
 
 # Hello World!
