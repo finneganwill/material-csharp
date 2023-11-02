@@ -83,7 +83,9 @@ theme:
   language: zh
 
   font:
-    text: Montserrat
+    # text: Montserrat
+    # text: Consolas
+    text: Courier New
 
   # 图标
   icon:
@@ -140,12 +142,6 @@ extra_css:
 
 # 附加组件
 extra:
-  # 多语言
-  alternate:
-    - name: English
-      link: blog/category/helloworld/
-      lang: en
-
   # 社交
   social:
     - icon: fontawesome/brands/bilibili
