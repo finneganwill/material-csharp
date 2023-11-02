@@ -6,7 +6,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://finneganwill.github.io/material-dotnet/2023-08-14/</loc>
+         <lastmod>2023-11-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://finneganwill.github.io/material-dotnet/blog/</loc>
+         <lastmod>2023-11-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://finneganwill.github.io/material-dotnet/blog/2023/08/14/jwt/</loc>
          <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -32,11 +42,6 @@
     </url>
     <url>
          <loc>https://finneganwill.github.io/material-dotnet/blogs/WPF%E7%80%91%E5%B8%83%E6%B5%81/</loc>
-         <lastmod>2023-11-02</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://finneganwill.github.io/material-dotnet/blogs/nav/</loc>
          <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -312,6 +317,16 @@
     </url>
     <url>
          <loc>https://finneganwill.github.io/material-dotnet/teches/wpf/01-%E8%AE%A4%E8%AF%86WPF/</loc>
+         <lastmod>2023-11-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://finneganwill.github.io/material-dotnet/blog/archive/2023/</loc>
+         <lastmod>2023-11-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://finneganwill.github.io/material-dotnet/blog/category/jwt/</loc>
          <lastmod>2023-11-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
