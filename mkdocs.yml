@@ -84,8 +84,7 @@ theme:
 
   font:
     # text: Montserrat
-    # text: Consolas
-    text: Courier New
+    text: Consolas
 
   # 图标
   icon:

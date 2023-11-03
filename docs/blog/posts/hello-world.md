@@ -3,6 +3,8 @@ draft: true
 date: 2022-01-01
 categories:
   - HelloWorld
+authors:
+  - finn
 ---
 
 # Hello World!
