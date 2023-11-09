@@ -1,12 +1,12 @@
 # 站点标题
-site_name: Finn Space
+site_name: Infinite Space
 
 # 站点URL
-site_url: https://finneganwill.github.io/material-dotnet
+site_url: https://finneganwill.github.io/infinite-space
 
 # 关联远程仓库
-repo_url: https://github.com/finneganwill/material-dotnet
-repo_name: finneganwill/material-dotnet
+repo_url: https://github.com/finneganwill/infinite-space
+repo_name: finneganwill/infinite-space
 
 # 版权声明
 copyright: Copyright &copy; 2022 - 2023 Finnegan Will
