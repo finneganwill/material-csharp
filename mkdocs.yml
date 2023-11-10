@@ -16,7 +16,7 @@ copyright: Copyright &copy; 2022 - 2023 Finnegan Will
 
 # 导航
 nav:
-    - Home: 'index.md'
+    # - Home: 'index.md'
 
     - Blog: 
       - Blog: 'blog/index.md'
