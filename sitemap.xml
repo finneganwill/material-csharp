@@ -6,21 +6,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://finneganwill.github.io/infinite-space/Common/author/</loc>
-         <lastmod>2023-11-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://finneganwill.github.io/infinite-space/Common/mkdocs/</loc>
-         <lastmod>2023-11-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://finneganwill.github.io/infinite-space/Common/refers/</loc>
-         <lastmod>2023-11-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://finneganwill.github.io/infinite-space/blog/</loc>
          <lastmod>2023-11-10</lastmod>
          <changefreq>daily</changefreq>
@@ -41,17 +26,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://finneganwill.github.io/infinite-space/quick/git/Git%E5%B8%B8%E7%94%A8/</loc>
+         <loc>https://finneganwill.github.io/infinite-space/common/author/</loc>
          <lastmod>2023-11-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://finneganwill.github.io/infinite-space/quick/vue/Vue%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</loc>
+         <loc>https://finneganwill.github.io/infinite-space/common/mkdocs/</loc>
          <lastmod>2023-11-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://finneganwill.github.io/infinite-space/teches/Abstract/</loc>
+         <loc>https://finneganwill.github.io/infinite-space/common/refers/</loc>
+         <lastmod>2023-11-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://finneganwill.github.io/infinite-space/handbook/Git%E5%B8%B8%E7%94%A8/</loc>
+         <lastmod>2023-11-10</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://finneganwill.github.io/infinite-space/handbook/Vue%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/</loc>
          <lastmod>2023-11-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -97,16 +92,6 @@
     </url>
     <url>
          <loc>https://finneganwill.github.io/infinite-space/teches/aspnet-core/01-%E8%AE%A4%E8%AF%86ASP.NET%20Core/</loc>
-         <lastmod>2023-11-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://finneganwill.github.io/infinite-space/teches/aspnet-core/02%20Razor/</loc>
-         <lastmod>2023-11-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://finneganwill.github.io/infinite-space/teches/aspnet-core/03%20MVC/</loc>
          <lastmod>2023-11-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -211,31 +196,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://finneganwill.github.io/infinite-space/teches/ef-core/03-%E5%88%9B%E5%BB%BA%E6%A8%A1%E5%9E%8B/</loc>
-         <lastmod>2023-11-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://finneganwill.github.io/infinite-space/teches/ef-core/04-%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE/</loc>
-         <lastmod>2023-11-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://finneganwill.github.io/infinite-space/teches/ef-core/05-%E4%BF%9D%E5%AD%98%E6%95%B0%E6%8D%AE/</loc>
-         <lastmod>2023-11-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://finneganwill.github.io/infinite-space/teches/ef-core/06-%E8%BF%81%E7%A7%BB/</loc>
-         <lastmod>2023-11-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://finneganwill.github.io/infinite-space/teches/javascript/JS/</loc>
-         <lastmod>2023-11-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://finneganwill.github.io/infinite-space/teches/linq/01-%E8%AE%A4%E8%AF%86LINQ/</loc>
          <lastmod>2023-11-10</lastmod>
          <changefreq>daily</changefreq>
@@ -277,26 +237,6 @@
     </url>
     <url>
          <loc>https://finneganwill.github.io/infinite-space/teches/linq/09-%E8%81%94%E6%8E%A5%E8%BF%90%E7%AE%97/</loc>
-         <lastmod>2023-11-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://finneganwill.github.io/infinite-space/teches/razor/01-%E8%AE%A4%E8%AF%86Razor/</loc>
-         <lastmod>2023-11-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://finneganwill.github.io/infinite-space/teches/razor/02-Razor%E4%BF%9D%E7%95%99%E5%85%B3%E9%94%AE%E5%AD%97/</loc>
-         <lastmod>2023-11-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://finneganwill.github.io/infinite-space/teches/razor/03-Razor%E8%A1%A8%E8%BE%BE%E5%BC%8F/</loc>
-         <lastmod>2023-11-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://finneganwill.github.io/infinite-space/teches/wpf/01-%E8%AE%A4%E8%AF%86WPF/</loc>
          <lastmod>2023-11-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
