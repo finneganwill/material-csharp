@@ -87,8 +87,7 @@ theme:
 
   font:
     # text: Montserrat
-    # text: Consolas
-    text: LocalConsolas
+    text: Consolas
 
   # 图标
   icon:
@@ -263,5 +262,5 @@ plugins:
   # 图像缩放插件
   - glightbox
 
-  - social
+  # - social
 
