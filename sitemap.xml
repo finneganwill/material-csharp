@@ -26,37 +26,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://finneganwill.github.io/infinite-space/blog/2023/08/14/jwt/</loc>
+         <loc>https://finneganwill.github.io/infinite-space/blog/2023/08/14/json-web-token/</loc>
          <lastmod>2023-11-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://finneganwill.github.io/infinite-space/blog/2023/11/09/elementui-table-el-input/</loc>
+         <loc>https://finneganwill.github.io/infinite-space/blog/2023/08/15/webapijwt/</loc>
          <lastmod>2023-11-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://finneganwill.github.io/infinite-space/blogs/Element%20UI%20%E8%A1%A8%E5%8D%95%E4%B8%AD%E7%9A%84%20prop%20%E5%B1%9E%E6%80%A7%E8%AF%A6%E8%A7%A3/</loc>
-         <lastmod>2023-11-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://finneganwill.github.io/infinite-space/blogs/JWT%20%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</loc>
-         <lastmod>2023-11-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://finneganwill.github.io/infinite-space/blogs/JWT%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E6%A1%88%E4%BE%8B/</loc>
-         <lastmod>2023-11-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://finneganwill.github.io/infinite-space/blogs/Program.cs%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3/</loc>
-         <lastmod>2023-11-10</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://finneganwill.github.io/infinite-space/blogs/WPF%E7%80%91%E5%B8%83%E6%B5%81/</loc>
+         <loc>https://finneganwill.github.io/infinite-space/blog/2023/11/04/elementuprop/</loc>
          <lastmod>2023-11-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
