@@ -1,4 +1,9 @@
 .md-grid {
-  max-width: calc(100vw * 0.8); /* 使用 80% 的屏幕宽度 */
+  max-width: calc(100vw * 0.8);
+  /* 使用 80% 的屏幕宽度 */
 }
 
+@font-face {
+  font-family: "LocalConsolas";
+  src: "../sources/Consolas.ttf";
+}

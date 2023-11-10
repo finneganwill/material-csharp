@@ -3,6 +3,9 @@ site_name: Infinite Space
 
 # 站点URL
 site_url: https://finneganwill.github.io/infinite-space
+site_description: >-
+  Write your documentation in Markdown and create a professional static site in
+  minutes – searchable, customizable, in 60+ languages, for all devices
 
 # 关联远程仓库
 repo_url: https://github.com/finneganwill/infinite-space
@@ -84,7 +87,8 @@ theme:
 
   font:
     # text: Montserrat
-    text: Consolas
+    # text: Consolas
+    text: LocalConsolas
 
   # 图标
   icon:
@@ -258,4 +262,6 @@ plugins:
 
   # 图像缩放插件
   - glightbox
+
+  - social
 
