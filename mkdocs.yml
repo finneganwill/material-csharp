@@ -22,8 +22,8 @@ nav:
       - Blog: 'blog/index.md'
 
     - HandBook:
-      - Git常用操作: 'quick/git/Git常用.md'
-      # - Vue快速入门: 'quick/vue/Vue快速入门.md'
+      - Git常用操作: 'handbook/Git常用.md'
+      # - Vue快速入门: 'handbook/Vue快速入门.md'
 
     - C#: 
       - 认识 C#: 'teches/csharp/00-认识CSharp.md'
@@ -43,8 +43,8 @@ nav:
       - 反射: 'teches/csharp/14-反射.md'
       - 多线程: 'teches/csharp/15-多线程.md'
       - 文件处理: 'teches/csharp/16-文件处理.md'
-      - 匿名函数: teches/csharp/
-      - 指针变量: teches/csharp/
+      # - 匿名函数: teches/csharp/
+      # - 指针变量: teches/csharp/
 
     - LINQ:
       - 认识 LINQ: 'teches/linq/01-认识LINQ.md'

@@ -39,7 +39,7 @@ git init
 # 查看
 git remote -v
 # 添加
-git remote add <alias> <address>
+git remote add <remote_name> <url>
 git remote add origin http://...
 # 删除
 git remote rm origin
@@ -66,7 +66,7 @@ git push -u origin master
 
 拉取代码
 ```Shell
-git pull <remote> <branch>
+git pull <remote_name> <branch_name>
 git pull origin master
 ```
 

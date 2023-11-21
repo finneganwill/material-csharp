@@ -167,10 +167,11 @@
   },
   "active": "618dff05a5f2602b",
   "lastOpenFiles": [
+    "handbook/Git常用.md",
+    "blog/posts/正确认识ElementU中prop的定位.md",
     "blog/posts/jwt身份认证案例.md",
     "blog/posts/jwt使用教程.md",
     "blog/posts/WPF瀑布流.md",
-    "blog/posts/正确认识ElementU中prop的定位.md",
     "blog/posts/hello-world.md",
     "blog/posts/el-input在table组件中的问题.md",
     "blogs/Program.cs文件详解.md",
