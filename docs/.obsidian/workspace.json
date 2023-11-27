@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/posts/正确认识ElementU中prop的定位.md",
+                "file": "common/author.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "blog/posts/正确认识ElementU中prop的定位.md",
+                "file": "common/author.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "blog/posts/正确认识ElementU中prop的定位.md",
+                "file": "common/author.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "blog/posts/正确认识ElementU中prop的定位.md"
+                "file": "common/author.md"
               }
             }
           },
@@ -156,7 +156,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -167,16 +166,18 @@
   },
   "active": "618dff05a5f2602b",
   "lastOpenFiles": [
-    "handbook/Git常用.md",
-    "blog/posts/正确认识ElementU中prop的定位.md",
-    "blog/posts/jwt身份认证案例.md",
-    "blog/posts/jwt使用教程.md",
+    "common/mkdocs.md",
+    "common/refers.md",
     "blog/posts/WPF瀑布流.md",
     "blog/posts/hello-world.md",
+    "blog/index.md",
+    "blog/posts/正确认识ElementU中prop的定位.md",
+    "handbook/Git常用.md",
+    "blog/posts/jwt身份认证案例.md",
+    "blog/posts/jwt使用教程.md",
     "blog/posts/el-input在table组件中的问题.md",
     "blogs/Program.cs文件详解.md",
     "blogs/JWT 使用教程.md",
-    "blog/index.md",
     "blog/posts/JWT 使用教程.md",
     "index.md",
     "en/blog/posts/img/请求Login获取Token.png",
@@ -207,8 +208,6 @@
     "teches/adonet/05-连接数据源.md",
     "quick.md",
     "teches/wpf/01-认识WPF.md",
-    "teches/Abstract.md",
-    "teches/csharp/17-其他.md",
     "blogs/img/Token组成.png",
     "blogs/img/不携带Token进行请求.png",
     "blogs/img/携带Token进行请求.png",

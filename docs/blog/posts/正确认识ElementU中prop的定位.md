@@ -6,7 +6,7 @@ categories:
   - ElementUI
 ---
 
-# 正确认识ElementU中prop的作用
+# 正确认识ElementUI中prop的作用
 
 在 Vue 中，通过使用 v-model 指令与表单组件实现表单数据的双向绑定。但是在 Element UI 中的 el-form 和 el-form-item 组件中，我们还需要使用 prop 属性来指定表单域对应的数据字段名。
 
