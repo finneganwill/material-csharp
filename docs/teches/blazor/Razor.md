@@ -122,9 +122,27 @@ finally
 指令：在隐式表达式用不能使用保留关键字，因为 `@保留关键字` 构成了指令。指令通常用于更改视图分析方式或启用不同的功能。
 
 
-| 指令 | 说明 | 示例 | 备注 |
-|:---- |:---- |:---- |:---- |
-| @     |      |      |      |
-|      |      |      |      |
-|      |      |      |      |
-|      |      |      |      |
+| 指令        | 说明                                                                                                             | 示例                                                          | 备注                                                                  |
+|:----------- |:---------------------------------------------------------------------------------------------------------------- |:------------------------------------------------------------- |:--------------------------------------------------------------------- |
+| @attribute  | 将给定的属性添加到生成的页或视图的类中                                                                           | `@attribute [Authorize]`                                      |                                                                       |
+| @code       | 允许 [Razor 组件](https://www.bookstack.cn/read/asp/88d032da6dc59ee9.md)将 C# 成员（字段、属性和方法）添加到组件 | `@code {// C# members (fields, properties, and methods)`      | 此方案仅适用于 Razor 组件 (.razor)                                    |
+| @functions  | 指令允许将 C# 成员（字段、属性和方法）添加到生成的类中                                                           | `@functions {// C# members (fields, properties, and methods)` | @code是@functions的别名，@code优先级更高，请使用@code而不是@functions |
+| @implements | 为生成的类实现接口                                                                                               | `@implements IDisposable`                                     |                                                                       |
+| @inherits   | 对视图继承的类提供完全控制                                                                                       | `@inherits TypeNameOfClassToInheritFrom`                      |                                                                       |
+| @inject     | 允许 Razor 页面将服务从[服务容器](https://www.bookstack.cn/read/asp/cc76df56cd0b1de2.md)注入到视图               | `@inject IConfiguration Configuration`                        |                                                                       |
+| @layout     | 指定 Razor 组件的布局。布局组件用于避免代码重复和不一致                                                          | `@layout MasterLayout`                                        | 此方案仅适用于 Razor 组件 (.razor)                                    |
+| @model      | 指定传递到视图或页面的模型类型                                                                                   | `@model TypeNameOfModel`                                      | 此方案仅适用于 MVC 视图和 Razor Pages (.cshtml)                       |
+| @namespace  | 设置生成的 Razor 页面、MVC 视图或 Razor 组件的类的命名空间                                                       | `@namespace Your.Namespace.Here`                              |                                                                       |
+| @page       | 在 .cshtml 文件中表示该文件是 Razor Page; 指定 Razor 组件应直接处理请求（路由）                                  | `@page "/BlazorRoute"`                                        |                                                                       |
+| @section    | 允许视图或页面将内容呈现在 HTML 页面的不同部分                                                                   |                                                               | 此方案仅适用于 MVC 视图和 Razor Pages (.cshtml)                       |
+| @using      | 用于向生成的视图添加 C# `using` 指令                                                                             |  `@using System.IO`                                                              |                                                                       |
+
+指令属性：指令格式的HTML元素属性。以下指令尽在Razor组件（.razor）中使用。
+
+| 指令        | 说明                                  | 示例 | 备注 |
+|:----------- |:------------------------------------- |:---- |:---- |
+| @attributes | 允许组件呈现未声明的属性              |      |      |
+| @bind       | 组件中的数据绑定通过 `@bind` 属性实现 |      |      |
+| @on{EVENT}  | Razor 为组件提供事件处理功能          |      |      |
+|             |                                       |      |      |
+|             |                                       |      |      |
