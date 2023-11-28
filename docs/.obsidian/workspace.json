@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "3604f804afe50430",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "blog/posts/程序集成Autofac的姿势.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "teches/blazor/Razor.md",
+                "file": "blog/posts/程序集成Autofac的姿势.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "teches/blazor/Razor.md",
+                "file": "blog/posts/程序集成Autofac的姿势.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "teches/blazor/Razor.md"
+                "file": "blog/posts/程序集成Autofac的姿势.md"
               }
             }
           },
@@ -165,20 +178,21 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "618dff05a5f2602b",
+  "active": "3604f804afe50430",
   "lastOpenFiles": [
-    "handbook/Git常用.md",
+    "blog/posts/jwt使用教程.md",
+    "blog/posts/WPF瀑布流.md",
+    "blog/posts/程序集成Autofac的姿势.md",
+    "blog/posts/正确认识ElementU中prop的定位.md",
+    "blog/posts/jwt身份认证案例.md",
+    "blog/posts/hello-world.md",
     "teches/blazor/Razor.md",
+    "handbook/Git常用.md",
     "common/author.md",
     "teches/blazor",
     "common/mkdocs.md",
     "common/refers.md",
-    "blog/posts/WPF瀑布流.md",
-    "blog/posts/hello-world.md",
     "blog/index.md",
-    "blog/posts/正确认识ElementU中prop的定位.md",
-    "blog/posts/jwt身份认证案例.md",
-    "blog/posts/jwt使用教程.md",
     "blog/posts/el-input在table组件中的问题.md",
     "blogs/Program.cs文件详解.md",
     "blogs/JWT 使用教程.md",
@@ -208,7 +222,6 @@
     "quick/vue/Vue快速入门.md",
     "teches/javascript",
     "teches/css",
-    "teches/adonet/05-连接数据源.md",
     "blogs/img/Token组成.png",
     "blogs/img/不携带Token进行请求.png",
     "blogs/img/携带Token进行请求.png",
