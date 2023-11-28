@@ -180,11 +180,12 @@
   },
   "active": "3604f804afe50430",
   "lastOpenFiles": [
-    "blog/posts/jwt使用教程.md",
-    "blog/posts/WPF瀑布流.md",
+    "blog/posts/img/AutofacPackages.png",
     "blog/posts/程序集成Autofac的姿势.md",
-    "blog/posts/正确认识ElementU中prop的定位.md",
+    "blog/posts/jwt使用教程.md",
     "blog/posts/jwt身份认证案例.md",
+    "blog/posts/正确认识ElementU中prop的定位.md",
+    "blog/posts/WPF瀑布流.md",
     "blog/posts/hello-world.md",
     "teches/blazor/Razor.md",
     "handbook/Git常用.md",
@@ -219,12 +220,10 @@
     "quick/git/Git常用.md",
     "blogs/JWT身份认证案例.md",
     "teches/javascript/JS.md",
-    "quick/vue/Vue快速入门.md",
     "teches/javascript",
     "teches/css",
     "blogs/img/Token组成.png",
     "blogs/img/不携带Token进行请求.png",
-    "blogs/img/携带Token进行请求.png",
-    "blogs/img/请求Login获取Token.png"
+    "blogs/img/携带Token进行请求.png"
   ]
 }
