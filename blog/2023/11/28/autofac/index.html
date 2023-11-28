@@ -10,28 +10,26 @@
       
       
       
-        <link rel="canonical" href="https://finneganwill.github.io/infinite-space/common/author/">
+        <link rel="canonical" href="https://finneganwill.github.io/infinite-space/blog/2023/11/28/autofac/">
       
       
-        <link rel="prev" href="../../teches/aspnet-core/01-%E8%AE%A4%E8%AF%86ASP.NET%20Core/">
+        <link rel="prev" href="../../04/elementuiprop/">
       
       
-        <link rel="next" href="../mkdocs/">
       
-      
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8">
     
     
       
-        <title>Author - Infinite Space</title>
+        <title>程序集成Autofac的姿势 - Infinite Space</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.4b4a2bd9.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.4b4a2bd9.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.356b1318.min.css">
       
       
 
@@ -50,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -69,7 +67,7 @@
     
     
     
-   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
         html.glightbox-open { overflow: initial; height: 100%; }
         .gslide-title { margin-top: 0px; user-select: text; }
         .gslide-desc { color: #666; user-select: text; }
@@ -80,7 +78,7 @@
             body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
             body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
             body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+            </style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -101,6 +99,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#autofac" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -111,7 +114,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="Infinite Space" class="md-header__button md-logo" aria-label="Infinite Space" data-md-component="logo">
+    <a href="../../../../.." title="Infinite Space" class="md-header__button md-logo" aria-label="Infinite Space" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -131,7 +134,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Author
+              程序集成Autofac的姿势
             
           </span>
         </div>
@@ -233,11 +236,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../blog/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../" class="md-tabs__link">
           
   
   Blog
@@ -255,7 +260,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../handbook/Git%E5%B8%B8%E7%94%A8/" class="md-tabs__link">
+        <a href="../../../../../handbook/Git%E5%B8%B8%E7%94%A8/" class="md-tabs__link">
           
   
   HandBook
@@ -273,7 +278,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../teches/csharp/00-%E8%AE%A4%E8%AF%86CSharp/" class="md-tabs__link">
+        <a href="../../../../../teches/csharp/00-%E8%AE%A4%E8%AF%86CSharp/" class="md-tabs__link">
           
   
   C#
@@ -291,7 +296,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../teches/linq/01-%E8%AE%A4%E8%AF%86LINQ/" class="md-tabs__link">
+        <a href="../../../../../teches/linq/01-%E8%AE%A4%E8%AF%86LINQ/" class="md-tabs__link">
           
   
   LINQ
@@ -309,7 +314,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../teches/adonet/01-%E8%AE%A4%E8%AF%86ADO.NET/" class="md-tabs__link">
+        <a href="../../../../../teches/adonet/01-%E8%AE%A4%E8%AF%86ADO.NET/" class="md-tabs__link">
           
   
   ADO.NET
@@ -327,7 +332,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../teches/ef-core/01-%E8%AE%A4%E8%AF%86EF%20Core/" class="md-tabs__link">
+        <a href="../../../../../teches/ef-core/01-%E8%AE%A4%E8%AF%86EF%20Core/" class="md-tabs__link">
           
   
   EF Core
@@ -345,7 +350,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../teches/aspnet-core/01-%E8%AE%A4%E8%AF%86ASP.NET%20Core/" class="md-tabs__link">
+        <a href="../../../../../teches/aspnet-core/01-%E8%AE%A4%E8%AF%86ASP.NET%20Core/" class="md-tabs__link">
           
   
   ASP.NET Core
@@ -359,13 +364,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../../../common/author/" class="md-tabs__link">
           
   
   关于
@@ -389,7 +392,7 @@
               
                 
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -400,7 +403,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Infinite Space" class="md-nav__button md-logo" aria-label="Infinite Space" data-md-component="logo">
+    <a href="../../../../.." title="Infinite Space" class="md-nav__button md-logo" aria-label="Infinite Space" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -427,6 +430,8 @@
       
   
   
+    
+  
   
     
     
@@ -436,12 +441,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
@@ -455,7 +460,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Blog
@@ -466,9 +471,11 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../blog/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      <a href="../../../../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -527,7 +534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/archive/2023/" class="md-nav__link">
+      <a href="../../../../archive/2023/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -594,7 +601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/category/autofac/" class="md-nav__link">
+      <a href="../../../../category/autofac/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -614,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/category/elementui/" class="md-nav__link">
+      <a href="../../../../category/elementui/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -634,7 +641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/category/jwt/" class="md-nav__link">
+      <a href="../../../../category/jwt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -708,7 +715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../handbook/Git%E5%B8%B8%E7%94%A8/" class="md-nav__link">
+      <a href="../../../../../handbook/Git%E5%B8%B8%E7%94%A8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -774,7 +781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/csharp/00-%E8%AE%A4%E8%AF%86CSharp/" class="md-nav__link">
+      <a href="../../../../../teches/csharp/00-%E8%AE%A4%E8%AF%86CSharp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -794,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/csharp/01-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="md-nav__link">
+      <a href="../../../../../teches/csharp/01-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -814,7 +821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/csharp/02-%E8%BF%90%E7%AE%97%E7%AC%A6/" class="md-nav__link">
+      <a href="../../../../../teches/csharp/02-%E8%BF%90%E7%AE%97%E7%AC%A6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -834,7 +841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/csharp/03-%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5/" class="md-nav__link">
+      <a href="../../../../../teches/csharp/03-%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -854,7 +861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/csharp/04-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="md-nav__link">
+      <a href="../../../../../teches/csharp/04-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -874,7 +881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/csharp/05-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/" class="md-nav__link">
+      <a href="../../../../../teches/csharp/05-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -894,7 +901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/csharp/06-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%8E%E6%8E%A5%E5%8F%A3/" class="md-nav__link">
+      <a href="../../../../../teches/csharp/06-%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%8E%E6%8E%A5%E5%8F%A3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -914,7 +921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/csharp/07-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" class="md-nav__link">
+      <a href="../../../../../teches/csharp/07-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -934,7 +941,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/csharp/08-%E5%B8%B8%E7%94%A8%E7%B1%BB/" class="md-nav__link">
+      <a href="../../../../../teches/csharp/08-%E5%B8%B8%E7%94%A8%E7%B1%BB/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -954,7 +961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/csharp/09-%E7%B4%A2%E5%BC%95%E5%99%A8/" class="md-nav__link">
+      <a href="../../../../../teches/csharp/09-%E7%B4%A2%E5%BC%95%E5%99%A8/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -974,7 +981,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/csharp/10-%E5%A7%94%E6%89%98%E4%B8%8E%E4%BA%8B%E4%BB%B6/" class="md-nav__link">
+      <a href="../../../../../teches/csharp/10-%E5%A7%94%E6%89%98%E4%B8%8E%E4%BA%8B%E4%BB%B6/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -994,7 +1001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/csharp/11-%E6%B3%9B%E5%9E%8B/" class="md-nav__link">
+      <a href="../../../../../teches/csharp/11-%E6%B3%9B%E5%9E%8B/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1014,7 +1021,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/csharp/12-%E9%9B%86%E5%90%88/" class="md-nav__link">
+      <a href="../../../../../teches/csharp/12-%E9%9B%86%E5%90%88/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1034,7 +1041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/csharp/13-%E7%89%B9%E6%80%A7/" class="md-nav__link">
+      <a href="../../../../../teches/csharp/13-%E7%89%B9%E6%80%A7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1054,7 +1061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/csharp/14-%E5%8F%8D%E5%B0%84/" class="md-nav__link">
+      <a href="../../../../../teches/csharp/14-%E5%8F%8D%E5%B0%84/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1074,7 +1081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/csharp/15-%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="md-nav__link">
+      <a href="../../../../../teches/csharp/15-%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1094,7 +1101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/csharp/16-%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/" class="md-nav__link">
+      <a href="../../../../../teches/csharp/16-%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1160,7 +1167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/linq/01-%E8%AE%A4%E8%AF%86LINQ/" class="md-nav__link">
+      <a href="../../../../../teches/linq/01-%E8%AE%A4%E8%AF%86LINQ/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1180,7 +1187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/linq/02-%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/" class="md-nav__link">
+      <a href="../../../../../teches/linq/02-%E6%9F%A5%E8%AF%A2%E8%AF%AD%E6%B3%95/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1200,7 +1207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/linq/03-%E6%96%B9%E6%B3%95%E8%AF%AD%E6%B3%95/" class="md-nav__link">
+      <a href="../../../../../teches/linq/03-%E6%96%B9%E6%B3%95%E8%AF%AD%E6%B3%95/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1259,7 +1266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/linq/04-%E6%A0%87%E5%87%86%E6%9F%A5%E8%AF%A2%E8%BF%90%E7%AE%97%E7%AC%A6%E6%96%B9%E6%B3%95/" class="md-nav__link">
+      <a href="../../../../../teches/linq/04-%E6%A0%87%E5%87%86%E6%9F%A5%E8%AF%A2%E8%BF%90%E7%AE%97%E7%AC%A6%E6%96%B9%E6%B3%95/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1279,7 +1286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/linq/05-%E6%8A%95%E5%BD%B1%E8%BF%90%E7%AE%97/" class="md-nav__link">
+      <a href="../../../../../teches/linq/05-%E6%8A%95%E5%BD%B1%E8%BF%90%E7%AE%97/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1299,7 +1306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/linq/06-%E7%AD%9B%E9%80%89%E8%BF%90%E7%AE%97/" class="md-nav__link">
+      <a href="../../../../../teches/linq/06-%E7%AD%9B%E9%80%89%E8%BF%90%E7%AE%97/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1319,7 +1326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/linq/07-%E6%8E%92%E5%BA%8F%E8%BF%90%E7%AE%97/" class="md-nav__link">
+      <a href="../../../../../teches/linq/07-%E6%8E%92%E5%BA%8F%E8%BF%90%E7%AE%97/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1339,7 +1346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/linq/08-%E6%95%B0%E6%8D%AE%E5%88%86%E7%BB%84/" class="md-nav__link">
+      <a href="../../../../../teches/linq/08-%E6%95%B0%E6%8D%AE%E5%88%86%E7%BB%84/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1413,7 +1420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/adonet/01-%E8%AE%A4%E8%AF%86ADO.NET/" class="md-nav__link">
+      <a href="../../../../../teches/adonet/01-%E8%AE%A4%E8%AF%86ADO.NET/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1433,7 +1440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/adonet/02-%E6%95%B0%E6%8D%AE%E6%8F%90%E4%BE%9B%E7%A8%8B%E5%BA%8F/" class="md-nav__link">
+      <a href="../../../../../teches/adonet/02-%E6%95%B0%E6%8D%AE%E6%8F%90%E4%BE%9B%E7%A8%8B%E5%BA%8F/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1453,7 +1460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/adonet/03-%E6%95%B0%E6%8D%AE%E9%9B%86/" class="md-nav__link">
+      <a href="../../../../../teches/adonet/03-%E6%95%B0%E6%8D%AE%E9%9B%86/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1473,7 +1480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/adonet/04-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%98%A0%E5%B0%84/" class="md-nav__link">
+      <a href="../../../../../teches/adonet/04-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%98%A0%E5%B0%84/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1493,7 +1500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/adonet/05-%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E6%BA%90/" class="md-nav__link">
+      <a href="../../../../../teches/adonet/05-%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E6%BA%90/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1513,7 +1520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/adonet/06-%E5%88%9B%E5%BB%BA%E5%91%BD%E4%BB%A4%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0/" class="md-nav__link">
+      <a href="../../../../../teches/adonet/06-%E5%88%9B%E5%BB%BA%E5%91%BD%E4%BB%A4%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%8F%82%E6%95%B0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1533,7 +1540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/adonet/07-%E6%A3%80%E7%B4%A2%E5%92%8C%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE/" class="md-nav__link">
+      <a href="../../../../../teches/adonet/07-%E6%A3%80%E7%B4%A2%E5%92%8C%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1553,7 +1560,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/adonet/08-%E4%BA%8B%E5%8A%A1%E4%B8%8E%E5%B9%B6%E5%8F%91%E6%80%A7/" class="md-nav__link">
+      <a href="../../../../../teches/adonet/08-%E4%BA%8B%E5%8A%A1%E4%B8%8E%E5%B9%B6%E5%8F%91%E6%80%A7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1619,7 +1626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/ef-core/01-%E8%AE%A4%E8%AF%86EF%20Core/" class="md-nav__link">
+      <a href="../../../../../teches/ef-core/01-%E8%AE%A4%E8%AF%86EF%20Core/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1639,7 +1646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/ef-core/02-DbContext/" class="md-nav__link">
+      <a href="../../../../../teches/ef-core/02-DbContext/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1705,7 +1712,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../teches/aspnet-core/01-%E8%AE%A4%E8%AF%86ASP.NET%20Core/" class="md-nav__link">
+      <a href="../../../../../teches/aspnet-core/01-%E8%AE%A4%E8%AF%86ASP.NET%20Core/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1730,8 +1737,6 @@
       
   
   
-    
-  
   
     
     
@@ -1741,12 +1746,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
@@ -1760,7 +1765,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             关于
@@ -1771,16 +1776,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../../../common/author/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1789,7 +1787,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1801,7 +1798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mkdocs/" class="md-nav__link">
+      <a href="../../../../../common/mkdocs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1821,7 +1818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../refers/" class="md-nav__link">
+      <a href="../../../../../common/refers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1852,7 +1849,7 @@
               
                 
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -1861,6 +1858,50 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#autofac_1" class="md-nav__link">
+    为什么使用Autofac?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    集成
+  </a>
+  
+    <nav class="md-nav" aria-label="集成">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-nuget" class="md-nav__link">
+    1. 下载 Nuget 包
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-programcs" class="md-nav__link">
+    2. 在Program.cs中更换默认容器
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1869,37 +1910,226 @@
             
           
           
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../../../../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+                  <span class="md-ellipsis">
+                    回到主页
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
                 
-                  
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://avatars.githubusercontent.com/u/45530306" alt="Finnegan Will">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>Finnegan Will</strong><br>
+                      Nothing
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    元数据
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
+                        <time datetime="2023-11-28 00:00:00" class="md-ellipsis">2023年11月28日</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3H9m3 2 4 13 3-1-4-13-3 1M5 5v13h3V5H5M3 19v2h18v-2H3Z"/></svg>
+                          <span class="md-ellipsis">
+                            分类于
+                            
+                              <a href="../../../../category/autofac/">Autofac</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              需要 2 分钟阅读时间
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
 
   
   
 
 
-  <h1>Author</h1>
+<h1 id="autofac">程序集成Autofac的姿势<a class="headerlink" href="#autofac" title="Permanent link">⚓︎</a></h1>
+<p>在 .NET 6 中，官方对 <a href="http://asp.net/">ASP.NET</a> Core 应用程序的项目结构进行了调整和简化，生成的项目默认删除了传统的 <code>Startup.cs</code> 文件。对于某些项目（如 ASP.NET Core 3.x，Blazor Server等）较曾经集成第三方服务的方式发生了一些变化。</p>
+<p>本文就 .NET 6 及更高版本的项目（没有Startup.cs文件）提供集成 Autofac 库的示例程序。本文包含示例代码。</p>
+<!-- more -->
 
+<p><a href="http://asp.net/">ASP.NET</a> Core 项目的早期版本中，<code>Startup.cs</code> 文件用于配置应用程序的启动过程、服务和中间件。然而，随着时间的推移，这个文件变得越来越臃肿，配置代码变得复杂且不易维护。</p>
+<p>为了改进这个问题，.NET 6 引入了一个更现代化的方式来组织和配置应用程序。现在，主要的配置代码被移到了 <code>Program.cs</code> 文件中，这样可以更清晰地定义应用程序的启动逻辑。</p>
+<p>通过将配置代码集中到 <code>Program.cs</code> 文件中，可以使应用程序的启动逻辑更加简洁和易于理解。此外，使用 .NET 6 的新特性，如 <code>WebApplication.CreateBuilder</code> 方法和 <code>app.MapControllers</code> 方法，可以更便捷地进行应用程序的配置和路由。虽然 <code>.NET 6</code> 删除了传统的 <code>Startup.cs</code> 文件，但你仍然可以在 <code>Program.cs</code> 文件中进行应用程序的配置和服务的注册，以满足你的需求。</p>
+<blockquote>
+<p>另外，你仍然可以在新项目中手动更改使用Startup.cs</p>
+</blockquote>
+<h2 id="autofac_1">为什么使用Autofac?<a class="headerlink" href="#autofac_1" title="Permanent link">⚓︎</a></h2>
+<p>.NET 5 之后，Microsoft提供了内置的依赖注入容器，尽管官方声称推荐使用内置容器，但面对一些场景它仍然不能满足要求。下面一段内容来源与 Microsoft <a href="https://learn.microsoft.com/zh-cn/dotnet/core/extensions/dependency-injection-guidelines#default-service-container-replacement">依赖关系注入指南 - .NET | Microsoft Learn</a>  ：</p>
+<blockquote>
+<p>内置的服务容器旨在满足框架和大多数消费者应用的需求。 我们建议使用内置容器，除非你需要的特定功能不受它支持，例如：</p>
 <ul>
-<li>Github: <a href="https://github.com/finneganwill">https://github.com/finneganwill</a> </li>
-<li>Email: <a href="https://mail.163.com">finneganwill@163.com</a> </li>
-<li>QQ: <a href="https://imqq.com">1833302285</a> </li>
+<li><em>属性注入</em></li>
+<li><em>基于名称的注入</em></li>
+<li><em>子容器</em></li>
+<li><em>自定义生存期管理</em></li>
+<li><em>对迟缓初始化的 <code>Func&lt;T&gt;</code> 支持</em></li>
+<li><em>基于约定的注册</em></li>
 </ul>
+<p>以下第三方容器可用于 ASP.NET Core 应用：</p>
+<ul>
+<li><a href="https://autofac.readthedocs.io/en/latest/integration/aspnetcore.html">Autofac</a> </li>
+<li><a href="https://www.nuget.org/packages/DryIoc.Microsoft.DependencyInjection">DryIoc</a> </li>
+<li><a href="https://www.nuget.org/packages/Grace.DependencyInjection.Extensions">Grace</a> </li>
+<li><a href="https://github.com/seesharper/LightInject.Microsoft.DependencyInjection">LightInject</a> </li>
+<li><a href="https://jasperfx.github.io/lamar/">Lamar</a> </li>
+<li><a href="https://github.com/z4kn4fein/stashbox-extensions-dependencyinjection">Stashbox</a> </li>
+<li><a href="https://docs.simpleinjector.org/en/latest/aspnetintegration.html">Simple Injector</a> </li>
+</ul>
+</blockquote>
+<p>而Autofac是一个开源的轻量级的依赖注入容器，也是.net下比较流行的实现依赖注入的工具之一。</p>
+<p>关于Autofac的一些链接：</p>
+<ul>
+<li>官网：<a href="https://autofac.org/">Autofac: Home</a></li>
+<li>英文文档：<a href="https://autofac.readthedocs.io/en/latest/getting-started/index.html">Getting Started — Autofac 7.0.0 documentation</a> </li>
+<li>中文文档：<a href="https://autofac-.readthedocs.io/en/latest/">欢迎来到 Autofac 中文文档! — Autofac 4.0 documentation (autofac-.readthedocs.io)</a> </li>
+</ul>
+<h2 id="_1">集成<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h2>
+<p>在官方文档中已经提供了一些程序集的集成指南，你可以在这里浏览它们 <a href="https://autofac.readthedocs.io/en/latest/integration/index.html">Application Integration — Autofac 7.0.0 documentation</a> .</p>
+<h3 id="1-nuget">1. 下载 Nuget 包<a class="headerlink" href="#1-nuget" title="Permanent link">⚓︎</a></h3>
+<p>如果你使用的 Visual Studio，你可以使用Nuget包管理器进行下载，这是最简单的方式。请下载安装以下两个包</p>
+<figure>
+<p><a class="glightbox" href="../../../../img/AutofacPackages.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Autofac Packages" src="../../../../img/AutofacPackages.png" width="750" /></a>
+    <figcaption>Autofac Packages</figcaption></p>
+</figure>
+<h3 id="2-programcs">2. 在Program.cs中更换默认容器<a class="headerlink" href="#2-programcs" title="Permanent link">⚓︎</a></h3>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">     </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">     </span><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="c1">//  var builder = WebApplication.CreateBuilder(args);</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="cm">/* Configure Autofac and register services. */</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="c1">// 更换容器为autofac</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="n">builder</span><span class="p">.</span><span class="n">Host</span><span class="p">.</span><span class="n">UseServiceProviderFactory</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">AutofacServiceProviderFactory</span><span class="p">());</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="c1">// 注册服务</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="n">builder</span><span class="p">.</span><span class="n">Host</span><span class="p">.</span><span class="n">ConfigureContainer</span><span class="o">&lt;</span><span class="n">ContainerBuilder</span><span class="o">&gt;</span><span class="p">(</span><span class="n">containerBuilder</span><span class="w"> </span><span class="o">=&gt;</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">            </span><span class="c1">// 注册一个泛型类</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">            </span><span class="n">containerBuilder</span><span class="p">.</span><span class="n">RegisterGeneric</span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="n">Repository</span><span class="o">&lt;&gt;</span><span class="p">))</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">                            </span><span class="p">.</span><span class="n">AsSelf</span><span class="p">()</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">                            </span><span class="p">.</span><span class="n">InstancePerLifetimeScope</span><span class="p">();</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">            </span><span class="c1">// 程序集扫描注册：对于程序集中以Service结尾的服务类都会被注册进容器</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">            </span><span class="n">containerBuilder</span><span class="p">.</span><span class="n">RegisterAssemblyTypes</span><span class="p">(</span><span class="n">Assembly</span><span class="p">.</span><span class="n">GetExecutingAssembly</span><span class="p">())</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">                            </span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">t</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">Name</span><span class="p">.</span><span class="n">EndsWith</span><span class="p">(</span><span class="s">&quot;Service&quot;</span><span class="p">))</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">                            </span><span class="p">.</span><span class="n">AsImplementedInterfaces</span><span class="p">()</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">                            </span><span class="p">.</span><span class="n">InstancePerLifetimeScope</span><span class="p">();</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">        </span><span class="p">});</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">     </span><span class="p">}</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><code>builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory())</code> 是使用 Autofac 作为依赖注入容器的一种配置方式。它是在 .NET Generic Host 中使用 Autofac 的方法之一。在这个配置中，<code>builder</code> 是 <code>WebApplicationBuilder</code> 类型的实例，而 <code>Host</code> 属性是用于访问底层的 <code>IHostBuilder</code> 对象的。</p>
+<p><code>UseServiceProviderFactory()</code> 方法用于指定使用特定的依赖注入容器工厂。在这里，<code>new AutofacServiceProviderFactory()</code> 创建了一个 Autofac 的服务提供程序工厂。这将告诉主机使用 Autofac 作为依赖注入容器。</p>
+<p>上述仅提供了两个注册服务组件的示例，更多的使用方式请参考官方文档。</p>
 
 
   
 
 
   
-    
-  
 
 
-
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        本文章对您是否有帮助？
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="感谢帮助！" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81Z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="有待提升！" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14Z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
                 
-              </article>
+              
+              Thanks for your feedback!
             </div>
           
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Thanks for your feedback! Help us improve this page by using our <a href="" target="_blank" rel="noopener">feedback form</a>.
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+      
+    </article>
+  </div>
+
           
         </div>
         
@@ -1920,7 +2150,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../../teches/aspnet-core/01-%E8%AE%A4%E8%AF%86ASP.NET%20Core/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 认识 ASP.NET Core">
+          <a href="../../04/elementuiprop/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 正确认识ElementUI中prop的作用">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1930,27 +2160,11 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                认识 ASP.NET Core
+                正确认识ElementUI中prop的作用
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../mkdocs/" class="md-footer__link md-footer__link--next" aria-label="下一页: MkDocs">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                下一页
-              </span>
-              <div class="md-ellipsis">
-                MkDocs
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
@@ -2001,10 +2215,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "toc.follow", "content.code.copy", "content.code.annotate", "navigation.tracking", "navigation.footer"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "toc.follow", "content.code.copy", "content.code.annotate", "navigation.tracking", "navigation.footer"], "search": "../../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.81fa17fe.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.81fa17fe.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
