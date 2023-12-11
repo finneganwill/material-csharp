@@ -597,11 +597,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/category/autofac/" class="md-nav__link">
+      <a href="../../../blog/category/dotnet/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Autofac
+    dotnet
   </span>
   
 
@@ -617,11 +617,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/category/elementui/" class="md-nav__link">
+      <a href="../../../blog/category/vue/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    ElementUI
+    vue
   </span>
   
 
@@ -637,11 +637,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../blog/category/jwt/" class="md-nav__link">
+      <a href="../../../blog/category/web/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    JWT
+    web
   </span>
   
 
@@ -2340,7 +2340,7 @@
 <li>使用：<code>using</code> 关键字用来引入命名空间。</li>
 </ul>
 <p>示例：
-<div class="language-Csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span>
+<div class="language-Csharp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">// 命名空间</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">HelloWorld</span>
@@ -2360,7 +2360,7 @@
 <h3 id="02">02 顶级语句<a class="headerlink" href="#02" title="Permanent link">⚓︎</a></h3>
 <p>C#10允许顶级语句，可以省略大括号，用分号代替，称为文件范围的命名空间。</p>
 <p>示例：
-<div class="language-Csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span>
+<div class="language-Csharp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1">// 命名空间</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">HelloWorld</span><span class="p">;</span>
@@ -2778,7 +2778,7 @@
 <h3 id="02_3">02 引用传递<a class="headerlink" href="#02_3" title="Permanent link">⚓︎</a></h3>
 <p>当引用类型作参数时，会将实参的地址传递给形参，方法内对形参的修改会直接影响实参本身。</p>
 <p><mark>string和array都是引用类型，但string会有值传递的效果。</mark> </p>
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
 </span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>
 </span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">RefTest</span>
 </span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="p">{</span>
@@ -2814,7 +2814,7 @@
 </span></code></pre></div>
 <h3 id="03-ref">03 ref : 按引用传递的值类型<a class="headerlink" href="#03-ref" title="Permanent link">⚓︎</a></h3>
 <p>想要将值类型按引用传递，即传递变量的地址，可以使用<code>ref</code>关键字实现按引用类型传递值类型。
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
 </span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
 </span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">RefTest</span>
 </span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="p">{</span>
@@ -2856,7 +2856,7 @@
 </span></code></pre></div></p>
 <h3 id="04-in">04 in : 只读的引用传递<a class="headerlink" href="#04-in" title="Permanent link">⚓︎</a></h3>
 <p><code>in</code> 关键字会导致参数按引用传递，但方法内不允许对该参数进行修改。
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
 </span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">InTest</span>
 </span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="p">{</span>
 </span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">In</span>
@@ -2879,7 +2879,7 @@
 <h3 id="05-out">05 out : 必写的引用传递<a class="headerlink" href="#05-out" title="Permanent link">⚓︎</a></h3>
 <p><code>out</code>关键字会导致参数按引用传递，但是方法内必须对该参数进行修改。</p>
 <p>示例：
-<div class="language-csharp highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span>
+<div class="language-csharp highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
 </span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">OutTest</span>
 </span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="p">{</span>
 </span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Out</span>

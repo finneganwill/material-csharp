@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://finneganwill.github.io/infinite-space/blog/category/autofac/">
+        <link rel="canonical" href="https://finneganwill.github.io/infinite-space/blog/category/web/">
       
       
-        <link rel="prev" href="../../">
+        <link rel="prev" href="../vue/">
       
       
-        <link rel="next" href="../elementui/">
+        <link rel="next" href="../../archive/2023/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Autofac - Infinite Space</title>
+        <title>web - Infinite Space</title>
       
     
     
@@ -102,7 +102,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#autofac" class="md-skip">
+        <a href="#web" class="md-skip">
           跳转至
         </a>
       
@@ -136,7 +136,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Autofac
+              web
             
           </span>
         </div>
@@ -599,6 +599,46 @@
                 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../dotnet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dotnet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    vue
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -614,7 +654,7 @@
           
   
   <span class="md-ellipsis">
-    Autofac
+    web
   </span>
   
 
@@ -625,7 +665,7 @@
         
   
   <span class="md-ellipsis">
-    Autofac
+    web
   </span>
   
 
@@ -647,8 +687,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#autofac" class="md-nav__link">
-    程序集成Autofac的姿势
+  <a href="#webapijwt" class="md-nav__link">
+    Webapi配置JWT身份认证案例
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json-web-token" class="md-nav__link">
+    JSON Web Token使用教程
   </a>
   
 </li>
@@ -657,46 +704,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../elementui/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    ElementUI
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../jwt/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    JWT
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1913,8 +1920,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#autofac" class="md-nav__link">
-    程序集成Autofac的姿势
+  <a href="#webapijwt" class="md-nav__link">
+    Webapi配置JWT身份认证案例
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json-web-token" class="md-nav__link">
+    JSON Web Token使用教程
   </a>
   
 </li>
@@ -1931,7 +1945,7 @@
   <div class="md-content" data-md-component="content">
     <div class="md-content__inner">
       <header class="md-typeset">
-        <h1 id="autofac">Autofac<a class="headerlink" href="#autofac" title="Permanent link">⚓︎</a></h1>
+        <h1 id="web">web<a class="headerlink" href="#web" title="Permanent link">⚓︎</a></h1>
       </header>
       
         <article class="md-post md-post--excerpt">
@@ -1948,18 +1962,18 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
-          <time datetime="2023-11-28 00:00:00">2023年11月28日</time></li>
+          <time datetime="2023-08-15 00:00:00">2023年8月15日</time></li>
         
           <li class="md-meta__item">
             分类于
             
-              <a href="./" class="md-meta__link">Autofac</a></li>
+              <a href="./" class="md-meta__link">web</a></li>
         
         
           
           <li class="md-meta__item">
             
-              需要 2 分钟阅读时间
+              需要 3 分钟阅读时间
             
           </li>
         
@@ -1968,12 +1982,59 @@
     </div>
   </header>
   <div class="md-post__content md-typeset">
-    <h2 id="autofac"><a class="toclink" href="../../2023/11/28/autofac/">程序集成Autofac的姿势</a></h2>
-<p>在 .NET 6 中，官方对 <a href="http://asp.net/">ASP.NET</a> Core 应用程序的项目结构进行了调整和简化，生成的项目默认删除了传统的 <code>Startup.cs</code> 文件。对于某些项目（如 ASP.NET Core 3.x，Blazor Server等）较曾经集成第三方服务的方式发生了一些变化。</p>
-<p>本文就 .NET 6 及更高版本的项目（没有Startup.cs文件）提供集成 Autofac 库的示例程序。本文包含示例代码。</p>
+    <h2 id="webapijwt"><a class="toclink" href="../../2023/08/15/webapijwt/">Webapi配置JWT身份认证案例</a></h2>
+<p>本文将介绍如何在Webapi中配置JWT身份认证，包括生成令牌、验证令牌和拦截器实现。通过使用JWT令牌，我们可以实现用户身份的验证和授权，以确保只有经过授权的用户才能访问受保护的资源。</p>
+<p>此外，文中还提供了代码示例和详细步骤，帮助读者快速实现Webapi的JWT身份认证。您可以通过本篇文章掌握这些技巧，这对于构建安全可靠的Web应用程序至关重要。</p>
 
     <nav class="md-post__action">
-      <a href="../../2023/11/28/autofac/">
+      <a href="../../2023/08/15/webapijwt/">
+        继续阅读
+      </a>
+    </nav>
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://avatars.githubusercontent.com/u/45530306" alt="Finnegan Will">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2023-08-14 00:00:00">2023年8月14日</time></li>
+        
+          <li class="md-meta__item">
+            分类于
+            
+              <a href="./" class="md-meta__link">web</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              需要 3 分钟阅读时间
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="json-web-token"><a class="toclink" href="../../2023/08/14/json-web-token/">JSON Web Token使用教程</a></h2>
+<p>JSON Web Token（JWT）作为一种流行的开放标准，为网络传递声明提供了一种简洁、安全的解决方案。无论是在单页应用程序、移动应用程序还是服务端应用程序中，JWT都发挥着重要的作用。</p>
+<p>本博客将介绍JWT的原理、使用场景以及如何在应用程序中实现安全的身份验证和授权。无论您是开发人员、安全专家还是对网络安全感兴趣的读者，相信本文能够为您解答关于JWT的疑问，并帮助您更好地应用于实际项目中。</p>
+<p>通过了解JWT，我们可以为我们的应用程序提供更加可靠和安全的身份验证解决方案，为用户提供更好的使用体验。让我们开始这段令人兴奋的旅程，深入了解JWT的精髓吧！</p>
+
+    <nav class="md-post__action">
+      <a href="../../2023/08/14/json-web-token/">
         继续阅读
       </a>
     </nav>
@@ -2012,7 +2073,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../../" class="md-footer__link md-footer__link--prev" aria-label="上一页: Blog">
+          <a href="../vue/" class="md-footer__link md-footer__link--prev" aria-label="上一页: vue">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2022,20 +2083,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                Blog
+                vue
               </div>
             </div>
           </a>
         
         
           
-          <a href="../elementui/" class="md-footer__link md-footer__link--next" aria-label="下一页: ElementUI">
+          <a href="../../archive/2023/" class="md-footer__link md-footer__link--next" aria-label="下一页: 2023">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                ElementUI
+                2023
               </div>
             </div>
             <div class="md-footer__button md-icon">
