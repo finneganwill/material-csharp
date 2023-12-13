@@ -812,15 +812,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#acommit" class="md-nav__link">
-    附录 A：Commit 消息格式
+  <a href="#aformat-commit" class="md-nav__link">
+    附录A：Format Commit
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bgitignore" class="md-nav__link">
-    附录 B：忽略文件.gitignore
+  <a href="#bgit-emoji" class="md-nav__link">
+    附录B：Git Emoji
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cgitignore" class="md-nav__link">
+    附录 C：忽略文件.gitignore
   </a>
   
 </li>
@@ -2072,15 +2079,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#acommit" class="md-nav__link">
-    附录 A：Commit 消息格式
+  <a href="#aformat-commit" class="md-nav__link">
+    附录A：Format Commit
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#bgitignore" class="md-nav__link">
-    附录 B：忽略文件.gitignore
+  <a href="#bgit-emoji" class="md-nav__link">
+    附录B：Git Emoji
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cgitignore" class="md-nav__link">
+    附录 C：忽略文件.gitignore
   </a>
   
 </li>
@@ -2180,7 +2194,7 @@
 </span></code></pre></div></p>
 <h2 id="4">4 标签<a class="headerlink" href="#4" title="Permanent link">⚓︎</a></h2>
 <h2 id="5">5 撤销<a class="headerlink" href="#5" title="Permanent link">⚓︎</a></h2>
-<h2 id="acommit">附录 A：Commit 消息格式<a class="headerlink" href="#acommit" title="Permanent link">⚓︎</a></h2>
+<h2 id="aformat-commit">附录A：Format Commit<a class="headerlink" href="#aformat-commit" title="Permanent link">⚓︎</a></h2>
 <p>格式：
 <div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>&lt;关键字&gt;：&lt;标题&gt;
 </span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
@@ -2201,7 +2215,98 @@
 <li><code>Test</code>：添加或修改代码测试</li>
 <li><code>Chore</code>：对构建流程或辅助工具和依赖库（如文档生成等）的更改</li>
 </ul>
-<h2 id="bgitignore">附录 B：忽略文件.gitignore<a class="headerlink" href="#bgitignore" title="Permanent link">⚓︎</a></h2>
+<h2 id="bgit-emoji">附录B：Git Emoji<a class="headerlink" href="#bgit-emoji" title="Permanent link">⚓︎</a></h2>
+<p>使用 Emoji 提交 Message，相关的项目：<a href="https://gitmoji.dev/">gitmoji | An emoji guide for your commit messages</a> </p>
+<p>格式：
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>&lt;Emoji&gt; : &lt;Main Message&gt;
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>- &lt;detail&gt;
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>- &lt;detail&gt;
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>- ...
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>[Footer]
+</span></code></pre></div></p>
+<p>常用的 Emoji 说明：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Emoji</th>
+<th style="text-align: left;">Code</th>
+<th style="text-align: left;">Remark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">🎉</td>
+<td style="text-align: left;"><code>:tada:</code></td>
+<td style="text-align: left;">初始提交/新的项目</td>
+</tr>
+<tr>
+<td style="text-align: left;">✨</td>
+<td style="text-align: left;"><code>:sparkles:</code></td>
+<td style="text-align: left;">增加新功能</td>
+</tr>
+<tr>
+<td style="text-align: left;">🐛</td>
+<td style="text-align: left;"><code>:bug:</code></td>
+<td style="text-align: left;">修改Bug</td>
+</tr>
+<tr>
+<td style="text-align: left;">⚡️</td>
+<td style="text-align: left;"><code>:zap:</code></td>
+<td style="text-align: left;">提升性能</td>
+</tr>
+<tr>
+<td style="text-align: left;">💄</td>
+<td style="text-align: left;"><code>:lipstick:</code></td>
+<td style="text-align: left;">增加或更新UI或样式文件</td>
+</tr>
+<tr>
+<td style="text-align: left;">📝</td>
+<td style="text-align: left;"><code>:memo:</code></td>
+<td style="text-align: left;">添加或更新文档</td>
+</tr>
+<tr>
+<td style="text-align: left;">✅</td>
+<td style="text-align: left;"><code>:white_check_mark:</code></td>
+<td style="text-align: left;">添加，更新或通过某项测试</td>
+</tr>
+<tr>
+<td style="text-align: left;">🎨</td>
+<td style="text-align: left;"><code>:art:</code></td>
+<td style="text-align: left;">改进代码结构</td>
+</tr>
+<tr>
+<td style="text-align: left;">🔥</td>
+<td style="text-align: left;"><code>:fire:</code></td>
+<td style="text-align: left;">移除代码或文件</td>
+</tr>
+<tr>
+<td style="text-align: left;">🔖</td>
+<td style="text-align: left;"><code>:bookmark:</code></td>
+<td style="text-align: left;">发布/新版本</td>
+</tr>
+<tr>
+<td style="text-align: left;">♻️</td>
+<td style="text-align: left;"><code>:recycle:</code></td>
+<td style="text-align: left;">代码重构</td>
+</tr>
+<tr>
+<td style="text-align: left;">➕</td>
+<td style="text-align: left;"><code>:heavy_plus_sign:</code></td>
+<td style="text-align: left;">添加依赖</td>
+</tr>
+<tr>
+<td style="text-align: left;">➖</td>
+<td style="text-align: left;"><code>:heavy_minus_sign:</code></td>
+<td style="text-align: left;">移除依赖</td>
+</tr>
+</tbody>
+</table>
+<p>可以通过复制Emoji图片来提交，也可以使用 emoji 代码提交，但是使用代码需要安装依赖包:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>gitmoji-cli
+</span></code></pre></div>
+<h2 id="cgitignore">附录 C：忽略文件.gitignore<a class="headerlink" href="#cgitignore" title="Permanent link">⚓︎</a></h2>
 <p><a href="https://juejin.cn/post/6998911250323390501">Git入门之.gitignore - 掘金 (juejin.cn)</a></p>
 
 
