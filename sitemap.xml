@@ -11,7 +11,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://finneganwill.github.io/infinite-space/blog/2024/02/18/vuecss/</loc>
+         <loc>https://finneganwill.github.io/infinite-space/blog/2024/02/18/vue/</loc>
+         <lastmod>2024-02-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://finneganwill.github.io/infinite-space/blog/2022/01/01/hello-world/</loc>
          <lastmod>2024-02-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -271,6 +276,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://finneganwill.github.io/infinite-space/blog/archive/2022/</loc>
+         <lastmod>2024-02-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://finneganwill.github.io/infinite-space/blog/category/vue/</loc>
          <lastmod>2024-02-20</lastmod>
          <changefreq>daily</changefreq>
@@ -287,6 +297,11 @@
     </url>
     <url>
          <loc>https://finneganwill.github.io/infinite-space/blog/category/web/</loc>
+         <lastmod>2024-02-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://finneganwill.github.io/infinite-space/blog/category/helloworld/</loc>
          <lastmod>2024-02-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
