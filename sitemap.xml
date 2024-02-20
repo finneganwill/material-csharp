@@ -36,6 +36,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://finneganwill.github.io/infinite-space/blog/2024/02/20/vue-web/</loc>
+         <lastmod>2024-02-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://finneganwill.github.io/infinite-space/common/author/</loc>
          <lastmod>2024-02-20</lastmod>
          <changefreq>daily</changefreq>
@@ -267,6 +272,11 @@
     </url>
     <url>
          <loc>https://finneganwill.github.io/infinite-space/blog/category/vue/</loc>
+         <lastmod>2024-02-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://finneganwill.github.io/infinite-space/blog/category/codemirror/</loc>
          <lastmod>2024-02-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
