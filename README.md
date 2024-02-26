@@ -4,7 +4,7 @@ This is a native blogging system built using Mkdocs.
 
 Its theme is Material for MkDocs and you can find it int the link https://squidfunk.github.io/mkdocs-material/.
 
-Dictionaries And Files Introduction
+## Dictionaries And Files Introduction
 
 - `docs` : This folder contains all the documents and blogs.
 - `docs/blog` : This folder contains all the blogs.
