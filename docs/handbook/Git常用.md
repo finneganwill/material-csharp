@@ -45,6 +45,9 @@ git remote add origin http://... # 示例
 
 # 删除
 git remote rm origin
+
+# 修改地址
+git remote set-url origin <new_url>
 ```
 
 添加到暂存区

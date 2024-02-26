@@ -6,4 +6,4 @@ hide:
 
 
 - Github: [https://github.com/finneganwill](https://github.com/finneganwill) 
-- Email: [will-finnegan@outlook.com](mailto:will-finnegan@outlook.com) 
+- Email: [finneganwx@outlook.com](mailto:finneganwx@outlook.com) 
