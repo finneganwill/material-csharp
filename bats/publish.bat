@@ -1,0 +1,1 @@
+cmd /k "cd /d ../&&git add .&&git commit -m 'Update'&&git push&&mkdocs build&&mkdocs gh-deploy"
