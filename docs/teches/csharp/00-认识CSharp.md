@@ -37,7 +37,7 @@ Microsoft Visual Studio Code（VSC）是 Microsoft 在2015年4月30日 Build 开
 ## 三、HelloWorld
 ```C# title="HelloWorld.cs"
 // 导入其他命名空间
-using System
+using System;
 
 // 命名空间
 namespace HelloWorld

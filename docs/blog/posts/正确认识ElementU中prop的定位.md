@@ -3,7 +3,9 @@ authors:
   - finn
 date: 2023-11-04
 categories:
-  - ElementUI
+  - vue
+tags:
+  - element-ui
 ---
 
 # 正确认识ElementUI中prop的作用

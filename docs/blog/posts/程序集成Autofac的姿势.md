@@ -3,7 +3,10 @@ date: 2023-11-28
 authors:
   - finn
 categories:
-  - Autofac
+  - dotnet
+tags:
+  - autofac
+  - aspdotnet
 ---
 # 程序集成Autofac的姿势
 

@@ -4,7 +4,7 @@ date: 2023-08-08
 authors:
   - finn
 categories:
-  - WPF
+  - wpf
 ---
 
 # WPF瀑布流

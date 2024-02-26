@@ -1,6 +1,10 @@
 .md-grid {
-  max-width: calc(100vw * 0.8);
+  max-width: calc(100vw * 0.9);
   /* 使用 80% 的屏幕宽度 */
+}
+
+:root {
+  font-size: 1.25em;
 }
 
 @font-face {

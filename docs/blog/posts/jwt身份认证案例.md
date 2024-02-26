@@ -3,7 +3,9 @@ authors:
   - finn
 date: 2023-08-15
 categories:
-  - JWT
+  - web
+tags:
+  - jwt
 ---
 # Webapi配置JWT身份认证案例
 

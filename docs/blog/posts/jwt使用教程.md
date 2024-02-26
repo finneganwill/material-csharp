@@ -1,9 +1,11 @@
 ---
 date: 2023-08-14
 categories:
-  - JWT
+  - web
 authors:
   - finn
+tags:
+  - jwt
 ---
 # JSON Web Token使用教程
 

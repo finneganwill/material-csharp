@@ -12,7 +12,7 @@ repo_url: https://github.com/finneganwill/infinite-space
 repo_name: finneganwill/infinite-space
 
 # 版权声明
-copyright: Copyright &copy; 2022 - 2023 Finnegan Will
+copyright: Copyright &copy; 2022 - 2023 Finn
 
 # 导航
 nav:
@@ -74,10 +74,12 @@ nav:
     - ASP.NET Core: 
       - 认识 ASP.NET Core: 'teches/aspnet-core/01-认识ASP.NET Core.md'
 
-    - 关于: 
+    - Blazor:
+      - Razor: 'teches/blazor/Razor.md'
+
+    - About: 
       - Author: 'common/author.md'
       - MkDocs: 'common/mkdocs.md'
-      - Refers: 'common/refers.md'
 
 # 主题设置
 theme:
@@ -262,5 +264,6 @@ plugins:
   # 图像缩放插件
   - glightbox
 
-  # - social
+  # - social:
+  #    enabled: true
 
