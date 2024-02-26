@@ -1,0 +1,1 @@
+cmd /k "cd /d D:\My\infinite-space&&git add .&&git commit -m 'Update'&&git push"
