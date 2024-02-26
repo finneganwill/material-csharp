@@ -1,1 +1,0 @@
-cmd /k "cd /d D:\My\infinite-space&&mkdocs serve"
