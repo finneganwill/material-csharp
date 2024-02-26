@@ -7,18 +7,38 @@ hide:
 
 # Welcome!
 
-!!! Info "语言"
-	- [x] C# - 编程语言
-	- [ ] Razor - 服务端标记语言
+<div class="grid cards" markdown>
 
+-   :fontawesome-solid-blog:{ .lg .middle } __Blog System__
 
-!!! Info "技术"
-	- [x] LINQ - 语言集成查询技术
-	- [ ] Git - 分布式版本控制
+    ---
 
-!!! Info "框架"
-	- [x] EF Core - 对象关系映射框架
-	- [x] ASP.NET Core - WEB应用框架
+    A platform to record and share captivating words and ideas.
 
-!!! Info "类库"
-	- [x] ADO.NET - 数据访问服务类
+    [:octicons-arrow-right-24: Getting browse](./blog/index.md)
+
+-   :books:{ .lg .middle } __Portable Handbook__
+
+    ---
+
+    Your go-to guide always at your fingertips.
+
+    [:octicons-arrow-right-24: Reference](#)
+
+-   :material-file-key:{ .lg .middle } __Tutorial and Technical__
+
+    ---
+
+    Your one-stop destination for learning and expertise.
+
+    [:octicons-arrow-right-24: Getting Study](#)
+
+-   :material-scale-balance:{ .lg .middle } __Misc__
+
+    ---
+
+    Something wonderful or surprising.
+
+    [:octicons-arrow-right-24: Explore](#)
+
+</div>

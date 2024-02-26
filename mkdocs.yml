@@ -124,7 +124,7 @@ theme:
       # emphasize 强调颜色
       accent: deep orange
       # header 头
-      primary: blue grey
+      primary: black
       # switch 开关
       toggle:
         icon: material/toggle-switch-off-outline
@@ -219,7 +219,7 @@ markdown_extensions:
       # 标题
       # title: Content
 
-  # 图像
+  # 网格
   - attr_list
   - md_in_html
 
