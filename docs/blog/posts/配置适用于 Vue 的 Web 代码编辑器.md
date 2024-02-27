@@ -3,8 +3,8 @@ authors:
   - finn
 date: 2024-02-20
 categories:
-  - vue
-  - codemirror
+  - Vue
+  - CodeMirror
 tags:
   - vue2
   - vue-codemirror

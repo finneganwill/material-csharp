@@ -4,7 +4,7 @@ authors:
   - finn
 date: 2023-12-11
 categories:
-  - vue
+  - Vue
 tags:
   - element-ui
   - vue3

@@ -253,6 +253,8 @@ plugins:
       authors: true
       authors_file: '{blog}/.authors.yml'
 
+      pagination_per_page: 5
+
   # 搜索插件
   - search
 

@@ -1,9 +1,9 @@
 ---
-date: 2023-08-14
-categories:
-  - web
 authors:
   - finn
+date: 2023-08-14
+categories:
+  - Web
 tags:
   - jwt
 ---

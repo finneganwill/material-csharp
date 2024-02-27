@@ -3,7 +3,7 @@ authors:
   - finn
 date: 2023-08-15
 categories:
-  - web
+  - Web
 tags:
   - jwt
 ---

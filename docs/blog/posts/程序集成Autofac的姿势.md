@@ -3,7 +3,7 @@ date: 2023-11-28
 authors:
   - finn
 categories:
-  - dotnet
+  - DotNet
 tags:
   - autofac
   - aspdotnet

@@ -3,7 +3,7 @@ authors:
   - finn
 date: 2023-11-04
 categories:
-  - vue
+  - Vue
 tags:
   - element-ui
 ---

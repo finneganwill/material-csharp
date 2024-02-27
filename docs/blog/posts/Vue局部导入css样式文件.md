@@ -4,7 +4,7 @@ authors:
   - finn
 date: 2024-02-18
 categories:
-  - vue
+  - Vue
 tags:
   - vue2
   - style
