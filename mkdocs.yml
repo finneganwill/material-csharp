@@ -16,7 +16,7 @@ copyright: Copyright &copy; 2022 - 2023 Finn
 
 # 导航
 nav:
-    # - Home: 'index.md'
+    - Home: 'index.md'
 
     - Blog: 
       - Blog: 'blog/index.md'
@@ -108,6 +108,8 @@ theme:
     - content.code.copy
     # 代码注释
     - content.code.annotate
+    # Improved tooltips
+    - content.tooltips
     # 标题栏移动隐藏
     # - header.autohide
     # Ajax加载，大型网站可开启
@@ -119,24 +121,21 @@ theme:
 
   # 调色板
   palette: 
-    # light 明亮模式
+    # light mode
     - scheme: default
-      # emphasize 强调颜色
+      # 主色调：header / sidebar / link
+      primary: indigo
+      # 强调色：hovered links buttons and scrollbars.
       accent: deep orange
-      # header 头
-      primary: black
       # switch 开关
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
 
-    # dark
+    # dark mode
     - scheme: slate
-      # emphasize
-      accent: deep orange
-      # header
       primary: black
-      # switch
+      accent: indigo
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
@@ -196,10 +195,16 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
 
-  # 文本标记：下划线，高亮，删除
+  # 文本标记：下划线，高亮，删除，添加等
   - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
+  # 内容选项卡
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
 
   # emoji
   - pymdownx.emoji:
@@ -228,10 +233,7 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
 
-  # 内容选项卡
-  - pymdownx.superfences
-  - pymdownx.tabbed:
-      alternate_style: true 
+
 
 
 # 插件

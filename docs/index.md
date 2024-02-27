@@ -26,6 +26,10 @@ hide:
 
     [:octicons-arrow-right-24: Reference](#)
 
+</div>
+
+<div class="grid cards" markdown>
+
 -   :material-file-key:{ .lg .middle } __Tutorial and Technical__
 
     ---
