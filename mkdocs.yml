@@ -84,6 +84,9 @@ nav:
 # 主题设置
 theme:
   name: material
+
+  logo: assets/logo.png
+  
   # 语言 英文：language: en
   language: zh
 
