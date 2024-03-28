@@ -5,5 +5,5 @@ hide:
 ---
 
 
-- Github: [https://github.com/finneganwill](https://github.com/finneganwill) 
+- Github: [https://github.com/finneganwx](https://github.com/finneganwx) 
 - Email: [finneganwx@outlook.com](mailto:finneganwx@outlook.com) 

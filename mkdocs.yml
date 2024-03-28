@@ -66,16 +66,6 @@ nav:
       - 检索和修改数据: 'teches/adonet/07-检索和修改数据.md'
       - 事务与并发性: 'teches/adonet/08-事务与并发性.md'
 
-    - EF Core:
-      - 认识 EF Core: 'teches/ef-core/01-认识EF Core.md'
-      - DbContext: 'teches/ef-core/02-DbContext.md'
-
-    - ASP.NET Core: 
-      - 认识 ASP.NET Core: 'teches/aspnet-core/01-认识ASP.NET Core.md'
-
-    - Blazor:
-      - Razor: 'teches/blazor/Razor.md'
-
     - About: 
       - Author: 'common/author.md'
       - MkDocs: 'common/mkdocs.md'
