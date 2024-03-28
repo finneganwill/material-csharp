@@ -2,7 +2,7 @@
 
 This is a native blogging system built using Mkdocs. 
 
-Its theme is Material for MkDocs and you can find it int the link https://squidfunk.github.io/mkdocs-material/.
+Its theme is *Material for MkDocs* and you can learn it by the link https://squidfunk.github.io/mkdocs-material/.
 
 ## Dictionaries And Files Introduction
 
