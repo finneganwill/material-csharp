@@ -2,10 +2,10 @@
 draft: true
 authors:
   - finnegan
-date: 2023-12-11
+date: 2024-03-13
 categories:
   - Vue
 tags:
-  - element-ui
-  - vue3
+  - vetur
+  - vue
 ---

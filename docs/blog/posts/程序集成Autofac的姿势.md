@@ -1,7 +1,7 @@
 ---
 date: 2023-11-28
 authors:
-  - finn
+  - finnegan
 categories:
   - DotNet
 tags:

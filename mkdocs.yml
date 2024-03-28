@@ -23,7 +23,6 @@ nav:
 
     - HandBook:
       - Git常用操作: 'handbook/Git常用.md'
-      # - Vue快速入门: 'handbook/Vue快速入门.md'
 
     - C#: 
       - 认识 C#: 'teches/csharp/00-认识CSharp.md'
@@ -273,6 +272,7 @@ plugins:
   # pip install mkdocs-glightbox
   - glightbox
 
-  # - social:
-  #    enabled: true
+  # - social
+
+  # - privacy
 

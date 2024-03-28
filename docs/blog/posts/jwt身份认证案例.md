@@ -1,6 +1,6 @@
 ---
 authors:
-  - finn
+  - finnegan
 date: 2023-08-15
 categories:
   - Web
