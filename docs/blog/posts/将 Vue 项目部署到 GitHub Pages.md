@@ -76,6 +76,7 @@ git subtree push --prefix dist origin gh-pages
 	<figcaption>gh-pages</figcaption>
 </figure>
 	
+
 ## 访问
 
 登录 GitHub 远程仓库, 在该仓库下选择 Setting -> Pages 进入 GitHub Pages 的配置页面。上面部署一步完成后，GitHub 会默认设置好访问地址，在这里可以进行其他配置，也可以直接查看并点击链接访问网页。
@@ -84,3 +85,19 @@ git subtree push --prefix dist origin gh-pages
 	![gh-pages](img/Pasted image 20240328163246.png){ width="750" }
 	<figcaption>gh-pages</figcaption>
 </figure>
+
+## 内容更新
+
+当网站内容更新后，重新 **==打包推送==** 以及 **==部署==** :
+
+```bash
+npm run build
+
+git push
+
+git subtree push --prefix dist origin gh-pages
+```
+
+> 你可以按需要把它们编辑到 bat 脚本中，只需运行脚本即可
+
+
