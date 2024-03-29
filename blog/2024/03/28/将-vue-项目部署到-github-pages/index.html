@@ -1914,6 +1914,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      内容更新
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2092,6 +2101,17 @@
 <p><a class="glightbox" href="../../../../img/Pasted%20image%2020240328163246.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="gh-pages" src="../../../../img/Pasted%20image%2020240328163246.png" width="750" /></a>
     <figcaption>gh-pages</figcaption></p>
 </figure>
+<h2 id="_5">内容更新<a class="headerlink" href="#_5" title="Permanent link">⚓︎</a></h2>
+<p>当网站内容更新后，重新 <strong><mark>打包推送</mark></strong> 以及 <strong><mark>部署</mark></strong> :</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>npm<span class="w"> </span>run<span class="w"> </span>build
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>git<span class="w"> </span>push
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>git<span class="w"> </span>subtree<span class="w"> </span>push<span class="w"> </span>--prefix<span class="w"> </span>dist<span class="w"> </span>origin<span class="w"> </span>gh-pages
+</span></code></pre></div>
+<blockquote>
+<p>你可以按需要把它们编辑到 bat 脚本中，只需运行脚本即可</p>
+</blockquote>
 
 
 
