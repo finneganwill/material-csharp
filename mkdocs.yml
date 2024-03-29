@@ -22,7 +22,19 @@ nav:
       - Blog: 'blog/index.md'
 
     - HandBook:
-      - Git常用操作: 'handbook/Git常用.md'
+      - Git常用操作: 'handbook/git.md'
+
+    - OpenSource:
+      - vhip-easybuild-api: 
+        - Install && Import: 'myos/vhip/install&import.md'
+        - API: 
+          - Intro: 'myos/vhip/api list.md'
+          - Build: 'myos/vhip/api/build.md'
+          - Print: 'myos/vhip/api/print.md'
+          - Assist: 'myos/vhip/api/assist.md'
+          - Util: 'myos/vhip/api/util.md'
+        - Tutorial:
+          - Eaxmple: 'myos/vhip/tutorial.md'
 
     - Notes:
       - C#: 
@@ -66,18 +78,6 @@ nav:
         - 创建命令与配置参数: 'teches/adonet/06-创建命令与配置参数.md'
         - 检索和修改数据: 'teches/adonet/07-检索和修改数据.md'
         - 事务与并发性: 'teches/adonet/08-事务与并发性.md'
-
-    - MyDocs:
-      - vhip-easybuild-api: 
-        - Install && Import: 'teches/vhip/install&import.md'
-        - API: 
-          - Intro: 'teches/vhip/api list.md'
-          - Build: 'teches/vhip/api/build.md'
-          - Print: 'teches/vhip/api/print.md'
-          - Assist: 'teches/vhip/api/assist.md'
-          - Util: 'teches/vhip/api/util.md'
-        - Tutorial:
-          - Eaxmple: 'teches/vhip/tutorial.md'
 
     - About: 
       - Author: 'common/author.md'
@@ -124,27 +124,39 @@ theme:
     # footer 页面底部
     - navigation.footer
 
+  # # 调色板
+  # palette: 
+  #   # light mode
+  #   - scheme: default
+  #     # 主色调：header / sidebar / link
+  #     primary: indigo
+  #     # 强调色：hovered links buttons and scrollbars.
+  #     accent: deep orange
+  #     # switch 开关
+  #     toggle:
+  #       icon: material/toggle-switch-off-outline
+  #       name: Switch to dark mode
+
+  #   # dark mode
+  #   - scheme: slate
+  #     primary: black
+  #     accent: indigo
+  #     toggle:
+  #       icon: material/toggle-switch
+  #       name: Switch to light mode
+
   # 调色板
   palette: 
     # light mode
-    - scheme: default
-      # 主色调：header / sidebar / link
-      primary: indigo
-      # 强调色：hovered links buttons and scrollbars.
-      accent: deep orange
-      # switch 开关
+    - scheme: finnegan
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
 
-    # dark mode
-    - scheme: slate
-      primary: black
-      accent: indigo
+    - scheme: finnegan-dark
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
-
 extra_css:
   - stylesheets/extra.css
 

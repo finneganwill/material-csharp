@@ -6,17 +6,17 @@ hide:
   - toc
 ---
 
-# Welcome!
+# :beach_umbrella: 欢迎来到我的主页
 
 <div class="grid cards" markdown>
 
--   :fontawesome-solid-blog:{ .lg .middle } __Blog System__
+-   :pie:{ .lg .middle } __Blog System__
 
     ---
 
     A platform to record and share captivating words and ideas.
 
-    [:octicons-arrow-right-24: Getting browse](./blog/index.md)
+    [Browse :simple-quicklook:](./blog/index.md){ .md-button }
 
 -   :books:{ .lg .middle } __Portable Handbook__
 
@@ -24,26 +24,26 @@ hide:
 
     Your go-to guide always at your fingertips.
 
-    [:octicons-arrow-right-24: Reference](#)
+    [Browse :simple-quicklook:](./handbook/git.md){ .md-button }
 
 </div>
 
 <div class="grid cards" markdown>
 
--   :material-file-key:{ .lg .middle } __Tutorial and Technical__
+-   :feather:{ .lg .middle } __My Open Source__
 
     ---
 
     Your one-stop destination for learning and expertise.
 
-    [:octicons-arrow-right-24: Getting Study](#)
+    [Browse :simple-quicklook:](./handbook/git.md){ .md-button }
 
--   :material-scale-balance:{ .lg .middle } __Misc__
+-   :card_box:{ .lg .middle } __Misc__
 
     ---
 
     Something wonderful or surprising.
 
-    [:octicons-arrow-right-24: Explore](#)
+    [Browse :simple-quicklook:](./handbook/git.md){ .md-button }
 
 </div>

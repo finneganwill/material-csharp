@@ -1,5 +1,5 @@
 .md-grid {
-  max-width: calc(100vw * 0.9);
+  max-width: calc(100vw * 0.7);
   /* 使用 80% 的屏幕宽度 */
 }
 
@@ -10,4 +10,12 @@
 @font-face {
   font-family: "LocalConsolas";
   src: "../sources/Consolas.ttf";
+}
+
+[data-md-color-scheme="finnegan"] {
+  --md-primary-fg-color: #367784;
+}
+
+[data-md-color-scheme="finnegan-dark"] {
+  --md-primary-fg-color:        #182d34;
 }
