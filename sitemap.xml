@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://finneganwill.github.io/infinite-space/api/build.md/</loc>
+         <lastmod>2024-03-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://finneganwill.github.io/infinite-space/blog/</loc>
          <lastmod>2024-03-29</lastmod>
          <changefreq>daily</changefreq>
@@ -257,6 +262,41 @@
     </url>
     <url>
          <loc>https://finneganwill.github.io/infinite-space/teches/linq/09-%E8%81%94%E6%8E%A5%E8%BF%90%E7%AE%97/</loc>
+         <lastmod>2024-03-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://finneganwill.github.io/infinite-space/teches/vhip/api%20list/</loc>
+         <lastmod>2024-03-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://finneganwill.github.io/infinite-space/teches/vhip/install%26import/</loc>
+         <lastmod>2024-03-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://finneganwill.github.io/infinite-space/teches/vhip/tutorial/</loc>
+         <lastmod>2024-03-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://finneganwill.github.io/infinite-space/teches/vhip/api/assist/</loc>
+         <lastmod>2024-03-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://finneganwill.github.io/infinite-space/teches/vhip/api/build/</loc>
+         <lastmod>2024-03-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://finneganwill.github.io/infinite-space/teches/vhip/api/print/</loc>
+         <lastmod>2024-03-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://finneganwill.github.io/infinite-space/teches/vhip/api/util/</loc>
          <lastmod>2024-03-29</lastmod>
          <changefreq>daily</changefreq>
     </url>
