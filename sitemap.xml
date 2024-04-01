@@ -71,17 +71,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://finneganwx.github.io/infinite-space/myos/vhip/api%20list/</loc>
-         <lastmod>2024-04-01</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://finneganwx.github.io/infinite-space/myos/vhip/install%26import/</loc>
-         <lastmod>2024-04-01</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://finneganwx.github.io/infinite-space/myos/vhip/tutorial/</loc>
+         <loc>https://finneganwx.github.io/infinite-space/myos/vhip/api/</loc>
          <lastmod>2024-04-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -102,6 +92,21 @@
     </url>
     <url>
          <loc>https://finneganwx.github.io/infinite-space/myos/vhip/api/util/</loc>
+         <lastmod>2024-04-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://finneganwx.github.io/infinite-space/myos/vhip/tutorial/</loc>
+         <lastmod>2024-04-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://finneganwx.github.io/infinite-space/myos/vhip/tutorial/example/</loc>
+         <lastmod>2024-04-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://finneganwx.github.io/infinite-space/myos/vhip/tutorial/install%26import/</loc>
          <lastmod>2024-04-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
