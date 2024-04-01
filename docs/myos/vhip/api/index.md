@@ -27,13 +27,13 @@
 
 ## Build
 
-- [:octicons-link-16: buildElemsByHtml](./api/build.md/#buildelemsbyhtml)
-- [:octicons-link-16: buildElemsByUlist](./api/build.md/#buildelemsbyulist)
-- [:octicons-link-16: createCoreObj](./api/build.md/#createcoreobj)
-- [:octicons-link-16: createElemsGroup](./api/build.md/#createelemsgroup)
-- [:octicons-link-16: createProvider](./api/build.md/#createprovider)
-- [:octicons-link-16: design](./api/build.md/#design)
-- [:octicons-link-16: initProviders](./api/build.md/#initproviders)
+- [:octicons-link-16: buildElemsByHtml](./build.md/#buildelemsbyhtml)
+- [:octicons-link-16: buildElemsByUlist](./build.md/#buildelemsbyulist)
+- [:octicons-link-16: createCoreObj](./build.md/#createcoreobj)
+- [:octicons-link-16: createElemsGroup](./build.md/#createelemsgroup)
+- [:octicons-link-16: createProvider](./build.md/#createprovider)
+- [:octicons-link-16: design](./build.md/#design)
+- [:octicons-link-16: initProviders](./build.md/#initproviders)
 
 
 ## Print

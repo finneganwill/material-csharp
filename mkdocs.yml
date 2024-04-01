@@ -26,15 +26,16 @@ nav:
 
     - 🍻 OpenSource:
       - VHIP-EASYBUILD-API: 
-        - Install && Import: 'myos/vhip/install&import.md'
+        - Tutorial:
+          - Install && Import: 'myos/vhip/tutorial/install&import.md'
+          - Eaxmple: 'myos/vhip/tutorial/example.md'
         - API: 
-          - Intro: 'myos/vhip/api list.md'
+          - Intro: 'myos/vhip/api/index.md'
           - Build: 'myos/vhip/api/build.md'
           - Print: 'myos/vhip/api/print.md'
           - Assist: 'myos/vhip/api/assist.md'
           - Util: 'myos/vhip/api/util.md'
-        - Tutorial:
-          - Eaxmple: 'myos/vhip/tutorial.md'
+        
 
     - ✨ Notes:
       - C#: 

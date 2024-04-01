@@ -63,10 +63,14 @@ export default {
 
 ## 使用 Use
 
+!!! warning
+
+	请确保你的项目已经配置好 [vue-plugin-hiprint](https://gitee.com/CcSimple/vue-plugin-hiprint#%E5%85%B3%E4%BA%8E%E6%AD%A4%E6%8F%92%E4%BB%B6) 插件，保证它的正常工作。
+
 导入后就可以使用这些函数了，需要注意的是：
 
 1. 对于 Build 函数通常需要在 **mounted** 中使用
 2. 对于 ==全局== 引入方式，其引用方式为 **`this.$functionName()`**, 即需要添加 $ 前缀
 3. 对于 ==局部== 引入方式，其引用方式为 **`ModuleName.functionName()`**, 即通过模块名调用
 
-你可以通过 Api Detail 或 Tutorial 了解.
+你可以通过 Api 或 Tutorial 了解更多.
