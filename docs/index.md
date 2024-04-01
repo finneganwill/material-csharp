@@ -36,7 +36,7 @@ hide:
 
     Your one-stop destination for learning and expertise.
 
-    [Browse :simple-quicklook:](./myos/vhip/install&import.md){ .md-button }
+    [Browse :simple-quicklook:](./myos/vhip/tutorial/install&import.md){ .md-button }
 
 -   :card_box:{ .lg .middle } __Misc__
 
