@@ -36,7 +36,7 @@ hide:
 
     Your one-stop destination for learning and expertise.
 
-    [Browse :simple-quicklook:](./handbook/git.md){ .md-button }
+    [Browse :simple-quicklook:](./myos/vhip/install&import.md){ .md-button }
 
 -   :card_box:{ .lg .middle } __Misc__
 
@@ -44,6 +44,6 @@ hide:
 
     Something wonderful or surprising.
 
-    [Browse :simple-quicklook:](./handbook/git.md){ .md-button }
+    [Browse :simple-quicklook:](./teches/csharp/00-认识CSharp.md){ .md-button }
 
 </div>

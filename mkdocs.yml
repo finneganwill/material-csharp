@@ -2,30 +2,30 @@
 site_name: Infinite Space
 
 # 站点URL
-site_url: https://finneganwill.github.io/infinite-space
+site_url: https://finneganwx.github.io/infinite-space
 site_description: >-
   Write your documentation in Markdown and create a professional static site in
   minutes - searchable, customizable, in 60+ languages, for all devices
 
 # 关联远程仓库
-repo_url: https://github.com/finneganwill/infinite-space
-repo_name: finneganwill/infinite-space
+repo_url: https://github.com/finneganwx/infinite-space
+repo_name: finneganwx/infinite-space
 
 # 版权声明
 copyright: Copyright &copy; 2022 - 2023 Finn
 
 # 导航
 nav:
-    - Home: 'index.md'
+    - 🧑‍💻 Home: 'index.md'
 
-    - Blog: 
+    - 📝 Blog: 
       - Blog: 'blog/index.md'
 
-    - HandBook:
+    - 📌 HandBook:
       - Git常用操作: 'handbook/git.md'
 
-    - OpenSource:
-      - vhip-easybuild-api: 
+    - 🍻 OpenSource:
+      - VHIP-EASYBUILD-API: 
         - Install && Import: 'myos/vhip/install&import.md'
         - API: 
           - Intro: 'myos/vhip/api list.md'
@@ -36,7 +36,7 @@ nav:
         - Tutorial:
           - Eaxmple: 'myos/vhip/tutorial.md'
 
-    - Notes:
+    - ✨ Notes:
       - C#: 
         - 认识 C#: 'teches/csharp/00-认识CSharp.md'
         - 数据类型: 'teches/csharp/01-数据类型.md'
@@ -79,7 +79,7 @@ nav:
         - 检索和修改数据: 'teches/adonet/07-检索和修改数据.md'
         - 事务与并发性: 'teches/adonet/08-事务与并发性.md'
 
-    - About: 
+    - 🤡 About: 
       - Author: 'common/author.md'
       - MkDocs: 'common/mkdocs.md'
 
@@ -124,38 +124,21 @@ theme:
     # footer 页面底部
     - navigation.footer
 
-  # # 调色板
-  # palette: 
-  #   # light mode
-  #   - scheme: default
-  #     # 主色调：header / sidebar / link
-  #     primary: indigo
-  #     # 强调色：hovered links buttons and scrollbars.
-  #     accent: deep orange
-  #     # switch 开关
-  #     toggle:
-  #       icon: material/toggle-switch-off-outline
-  #       name: Switch to dark mode
-
-  #   # dark mode
-  #   - scheme: slate
-  #     primary: black
-  #     accent: indigo
-  #     toggle:
-  #       icon: material/toggle-switch
-  #       name: Switch to light mode
-
   # 调色板
   palette: 
     # light mode
-    - scheme: finnegan
+    - scheme: default
+      primary: custom
+      accent: custom
       toggle:
-        icon: material/toggle-switch-off-outline
+        icon: material/brightness-7
         name: Switch to dark mode
 
-    - scheme: finnegan-dark
+    - scheme: slate
+      primary: black
+      accent: custom
       toggle:
-        icon: material/toggle-switch
+        icon: material/brightness-4
         name: Switch to light mode
 extra_css:
   - stylesheets/extra.css
