@@ -5,17 +5,21 @@
 
 :root {
   font-size: 1.3em;
+  /* primary 主题色 导航主题 侧边栏 博客 按钮  */
+  /* 背景颜色 */
+  --md-primary-fg-color: #367784;
+  /* 文字颜色 默认计算，不需要设置*/
+  /* --md-primary-bg-color:               #FFFFFF;
+  --md-primary-bg-color--light:        #FFFFFF; */
+
+   /* accent 强调色 链接Hover 侧边栏Hover 博客Hover 按钮Hover */
+   /* 背景颜色 */
+  --md-accent-fg-color:                #FF6E42;
+  /* 文字颜色 */
+  --md-accent-bg-color:                #FFFFFF;
 }
 
 @font-face {
   font-family: "LocalConsolas";
   src: "../sources/Consolas.ttf";
-}
-
-[data-md-color-scheme="finnegan"] {
-  --md-primary-fg-color: #367784;
-}
-
-[data-md-color-scheme="finnegan-dark"] {
-  --md-primary-fg-color:        #182d34;
 }
