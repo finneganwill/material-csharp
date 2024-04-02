@@ -6,6 +6,9 @@
 
 ## 安装 Install
 
+!!! warning "版本说明"
+	v2.0.0 版本开始支持 Vue3，如果你使用的是 Vue3，请使用 v2.x.x 版本。Vue2 不受版本限制。
+
 使用 npm 进行安装，执行以下命令：
 
 ```bash
@@ -27,7 +30,7 @@ Vue.use(EasyVhip, { autoConnect: false }); // autoConnect 是否自动连接打�
 
 // 2. 按需导入：有选择地导入需要使用地模块
 // 可用模块名：VhipBuilder, VhipPrinter, VhipAsst, VhipUtil
-import { VhipBuilder,VhipPrinter } from 'vhip-easybuild-api';
+import { VhipBuilder, VhipPrinter } from 'vhip-easybuild-api';
 Vue.use(VhipBuilder);
 Vue.use(VhipPrinter);
 
@@ -63,7 +66,7 @@ export default {
 
 ## 使用 Use
 
-!!! warning
+!!! tips
 
 	请确保你的项目已经配置好 [vue-plugin-hiprint](https://gitee.com/CcSimple/vue-plugin-hiprint#%E5%85%B3%E4%BA%8E%E6%AD%A4%E6%8F%92%E4%BB%B6) 插件，保证它的正常工作。
 

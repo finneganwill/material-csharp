@@ -145,7 +145,7 @@ None
 	import myElement from "myElement.js";
 	export default(){
 		mounted(){
-			const myGroup = this.$createElemsGroup('我的分组',elements);
+			const myGroup = this.$createElemsGroup('我的分组', elements);
 			// next steps
 		}
 	}
@@ -161,7 +161,7 @@ None
 	import { VhipBuild } from 'vhip-easybuild-api'
 	export default(){
 		mounted(){
-			const myGroup = VhipBuild.createElemsGroup('我的分组',elements);
+			const myGroup = VhipBuild.createElemsGroup('我的分组', elements);
 			// next steps
 		}
 	}
@@ -207,9 +207,9 @@ None
 	<script>
 	export default(){
 		mounted(){
-			const myGroup1 = this.$createElemsGroup('我的分组1',elements);
-			const myGroup2 = this.$createElemsGroup('我的分组2',elements);
-			const myProvider = this.$createProvider("myProvider", myGroup1,myGroup2);
+			const myGroup1 = this.$createElemsGroup('我的分组1', elements);
+			const myGroup2 = this.$createElemsGroup('我的分组2', elements);
+			const myProvider = this.$createProvider("myProvider", myGroup1, myGroup2);
 			// next steps
 		}
 	}
@@ -223,9 +223,9 @@ None
 	import { VhipBuild } from 'vhip-easybuild-api'
 	export default(){
 		mounted(){
-			const myGroup1 = this.$createElemsGroup('我的分组1',elements);
-			const myGroup2 = this.$createElemsGroup('我的分组2',elements);
-			const myProvider = VhipBuild.createProvider("myProvider", myGroup1,myGroup2);
+			const myGroup1 = this.$createElemsGroup('我的分组1', elements);
+			const myGroup2 = this.$createElemsGroup('我的分组2', elements);
+			const myProvider = VhipBuild.createProvider("myProvider", myGroup1, myGroup2);
 			// next steps
 		}
 	}

@@ -27,16 +27,19 @@
 
 ## Build
 
-- [:octicons-link-16: buildElemsByHtml](./build.md/#buildelemsbyhtml)
-- [:octicons-link-16: buildElemsByUlist](./build.md/#buildelemsbyulist)
-- [:octicons-link-16: createCoreObj](./build.md/#createcoreobj)
-- [:octicons-link-16: createElemsGroup](./build.md/#createelemsgroup)
-- [:octicons-link-16: createProvider](./build.md/#createprovider)
-- [:octicons-link-16: design](./build.md/#design)
-- [:octicons-link-16: initProviders](./build.md/#initproviders)
-
+| 函数                                                                                                | 参数                                                                                   | 返回值                   | 备注                                |
+| :------------------------------------------------------------------------------------------------ | :----------------------------------------------------------------------------------- | :-------------------- | :-------------------------------- |
+| [:octicons-link-16: buildElemsByHtml()](./build.md/#buildelemsbyhtml)                             | -                                                                                    | -                     | 使用自定义HTML构建元素                     |
+| [:octicons-link-16: buildElemsByUlist(providerName, containerKey)](./build.md/#buildelemsbyulist) | providerName: 提供程序的名称；containerKey: 用来构建元素的容器标识，可以是 id 或 class，应带有符号                 | -                     | 使用无序列表形式构建元素                      |
+| [:octicons-link-16: createCoreObj(options)](./build.md/#createcoreobj)                            | options: 配置选项                                                                        | HiprintTemplate       | 创建核心对象，可以通过 options 传入配置选项        |
+| [:octicons-link-16: createElemsGroup(groupName, elements)](./build.md/#createelemsgroup)<br>      | groupName: 分组名称；elements: 分组下的元素数组                                                   | PrintElementTypeGroup | 创建元素分组                            |
+| [:octicons-link-16: createProvider(providerName, ...groups)](./build.md/#createprovider)<br>      | providerName: 提供程序的名称；groups: 可变长参数，创建的元素分组对象                                        | Provider              | 创建初始化可用的 Provider                 |
+| [:octicons-link-16: design(hpt, containerKey, showGrid)](./build.md/#design)<br>                  | hpt: 打印核心对象；containerKey: 用来构建画布的容器标识，可以是 id 或 class，应带有符号；showGrid: 是否显示网格，默认值 true | -                     | 画布设计                              |
+| [:octicons-link-16: initProviders(providers, initDefault)](./build.md/#initproviders)             | providers: 提供程序，多个时使用数组；initDefault: 是否初始化默认元素，默认值 true                              | -                     | 初始化元素提供程序，initDefault 控制是否初始化默认元素 |
 
 ## Print
+
+
 
 ## Assist
 
