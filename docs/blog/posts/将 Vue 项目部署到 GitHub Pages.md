@@ -27,25 +27,38 @@ tags:
 
 ## 项目配置
 
-针对部署后的访问地址需要配置项目的publicPath, 不同的配置会产生不同的访问地址，详细见下表：
+针对部署后的访问地址需要配置项目的 *公共基础路径*, 不同的配置会产生不同的访问地址，详细见下表：
 
-| publicPath | 地址格式 | 示例 |
-| :--- | :--- | :--- |
-| `/` | `https://<your_github_username>.github.io/` | https://finneganwx.github.io/ |
+| 基础路径          | 地址格式                                                   | 示例                                     |
+| :------------ | :----------------------------------------------------- | :------------------------------------- |
+| `/`           | `https://<your_github_username>.github.io/`            | https://finneganwx.github.io/          |
 | `/sub_route/` | `https://<your_github_username>.github.io/<sub_route>` | https://finneganwx.github.io/testpages |
 
-下面是一个 vue.config.js 中配置 publicPath 的代码示例：
-```js title="vue.config.js"
-const { defineConfig } = require('@vue/cli-service')
+下面是使用 vite 构建的项目的 vue.config.js 的代码示例，在 vue2 和 vue3 中配置项关键字略有不同：
 
-module.exports = defineConfig({
+=== "vue2"
 
-  transpileDependencies: true,
+	```js title="vue.config.js" hl_lines="5"
+	const { defineConfig } = require('@vue/cli-service')
+	
+	module.exports = defineConfig({
+	  transpileDependencies: true,
+	  publicPath: '/vhip-demo/'
+	})
+	```
 
-  publicPath: '/vhip-demo-vue2/'
+=== "vue3"
 
-})
-```
+	```js title="vue.config.js" hl_lines="7"
+	import { defineConfig } from 'vite'
+	import vue from '@vitejs/plugin-vue'
+	
+	// https://vitejs.dev/config/
+	export default defineConfig({
+	  plugins: [vue()],
+	  base: '/vhip-demo/',
+	})
+	```
 
 ## 项目打包并推送
 
