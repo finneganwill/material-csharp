@@ -2436,11 +2436,11 @@
 </ul>
 </div>
 <h2 id="_1">项目配置<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h2>
-<p>针对部署后的访问地址需要配置项目的publicPath, 不同的配置会产生不同的访问地址，详细见下表：</p>
+<p>针对部署后的访问地址需要配置项目的 <em>公共基础路径</em>, 不同的配置会产生不同的访问地址，详细见下表：</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">publicPath</th>
+<th style="text-align: left;">基础路径</th>
 <th style="text-align: left;">地址格式</th>
 <th style="text-align: left;">示例</th>
 </tr>
@@ -2458,17 +2458,31 @@
 </tr>
 </tbody>
 </table>
-<p>下面是一个 vue.config.js 中配置 publicPath 的代码示例：
+<p>下面是使用 vite 构建的项目的 vue.config.js 的代码示例，在 vue2 和 vue3 中配置项关键字略有不同：</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">vue2</label><label for="__tabbed_1_2">vue3</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <div class="language-js highlight"><span class="filename">vue.config.js</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">defineConfig</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@vue/cli-service&#39;</span><span class="p">)</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">defineConfig</span><span class="p">({</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nx">transpileDependencies</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nx">publicPath</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/vhip-demo-vue2/&#39;</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">})</span>
-</span></code></pre></div></p>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nx">transpileDependencies</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="hll"><span class="w">  </span><span class="nx">publicPath</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/vhip-demo/&#39;</span>
+</span></span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">})</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-js highlight"><span class="filename">vue.config.js</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">defineConfig</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;vite&#39;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">import</span><span class="w"> </span><span class="nx">vue</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@vitejs/plugin-vue&#39;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">// https://vitejs.dev/config/</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">defineConfig</span><span class="p">({</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="nx">plugins</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">vue</span><span class="p">()],</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="hll"><span class="w">  </span><span class="nx">base</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/vhip-demo/&#39;</span><span class="p">,</span>
+</span></span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">})</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="_2">项目打包并推送<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h2>
 <ol>
 <li>
@@ -2486,7 +2500,7 @@
 </ol>
 <h2 id="_3">部署<a class="headerlink" href="#_3" title="Permanent link">⚓︎</a></h2>
 <p>使用如下命令将 <code>dist</code> 目录的内容推送到仓库的新分支 <code>gh-pages</code> </p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>subtree<span class="w"> </span>push<span class="w"> </span>--prefix<span class="w"> </span>dist<span class="w"> </span>origin<span class="w"> </span>gh-pages
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>subtree<span class="w"> </span>push<span class="w"> </span>--prefix<span class="w"> </span>dist<span class="w"> </span>origin<span class="w"> </span>gh-pages
 </span></code></pre></div>
 <figure>
 <p><a class="glightbox" href="../../../../img/Pasted%20image%2020240328162835.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="gh-pages" src="../../../../img/Pasted%20image%2020240328162835.png" width="350" /></a>
@@ -2500,11 +2514,11 @@
 </figure>
 <h2 id="_5">内容更新<a class="headerlink" href="#_5" title="Permanent link">⚓︎</a></h2>
 <p>当网站内容更新后，重新 <strong><mark>打包推送</mark></strong> 以及 <strong><mark>部署</mark></strong> :</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>npm<span class="w"> </span>run<span class="w"> </span>build
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>git<span class="w"> </span>push
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>git<span class="w"> </span>subtree<span class="w"> </span>push<span class="w"> </span>--prefix<span class="w"> </span>dist<span class="w"> </span>origin<span class="w"> </span>gh-pages
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>npm<span class="w"> </span>run<span class="w"> </span>build
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>git<span class="w"> </span>push
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>git<span class="w"> </span>subtree<span class="w"> </span>push<span class="w"> </span>--prefix<span class="w"> </span>dist<span class="w"> </span>origin<span class="w"> </span>gh-pages
 </span></code></pre></div>
 <blockquote>
 <p>你可以按需要把它们编辑到 bat 脚本中，只需运行脚本即可</p>

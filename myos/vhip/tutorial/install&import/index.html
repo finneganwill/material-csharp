@@ -2442,6 +2442,10 @@
 <p>vhip-easybuild-api 是对打印套件 <a href="https://gitee.com/CcSimple/vue-plugin-hiprint#%E5%85%B3%E4%BA%8E%E6%AD%A4%E6%8F%92%E4%BB%B6">vue-plugin-hiprint</a> 构建过程进行二次封装的函数库，你可以使用该包来简化代码，避免项目代码的冗长。</p>
 </div>
 <h2 id="install">安装 Install<a class="headerlink" href="#install" title="Permanent link">⚓︎</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">版本说明</p>
+<p>v2.0.0 版本开始支持 Vue3，如果你使用的是 Vue3，请使用 v2.x.x 版本。Vue2 不受版本限制。</p>
+</div>
 <p>使用 npm 进行安装，执行以下命令：</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>npm<span class="w"> </span>install<span class="w"> </span>vhip-easybuild-api
 </span></code></pre></div>
@@ -2454,7 +2458,7 @@
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1">// 2. 按需导入：有选择地导入需要使用地模块</span>
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1">// 可用模块名：VhipBuilder, VhipPrinter, VhipAsst, VhipUtil</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">VhipBuilder</span><span class="p">,</span><span class="nx">VhipPrinter</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;vhip-easybuild-api&#39;</span><span class="p">;</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">VhipBuilder</span><span class="p">,</span><span class="w"> </span><span class="nx">VhipPrinter</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;vhip-easybuild-api&#39;</span><span class="p">;</span>
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">VhipBuilder</span><span class="p">);</span>
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="nx">Vue</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">VhipPrinter</span><span class="p">);</span>
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
@@ -2482,8 +2486,8 @@
 <code>import { EasyVhip } from 'vhip-easybuild-api';</code> </p>
 </blockquote>
 <h2 id="use">使用 Use<a class="headerlink" href="#use" title="Permanent link">⚓︎</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
+<div class="admonition tips">
+<p class="admonition-title">Tips</p>
 <p>请确保你的项目已经配置好 <a href="https://gitee.com/CcSimple/vue-plugin-hiprint#%E5%85%B3%E4%BA%8E%E6%AD%A4%E6%8F%92%E4%BB%B6">vue-plugin-hiprint</a> 插件，保证它的正常工作。</p>
 </div>
 <p>导入后就可以使用这些函数了，需要注意的是：</p>
