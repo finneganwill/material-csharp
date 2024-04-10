@@ -18,7 +18,7 @@ CodeMirror 是一种非常强大的代码编辑器，它提供了许多对于 Vu
 
 !!! note ""
 
-	CodeMirror 是一个基于Web技术的开源代码编辑器，为编写和编辑各种编程语言的代码提供了丰富的功能和工具。它可以用来替代浏览器默认的 textarea 元素，支持语法高亮、自动完成、括号匹配、代码折叠、多光标编辑等功能，同时还具有可扩展性和易于定制的 API 接口。CodeMirror 适用于许多不同的应用场景，如网站开发、代码编辑器、在线代码演示、博客编辑器等。CodeMirror 已被广泛应用于众多开源项目中，并得到了广大开发人员的青睐和喜爱。
+	CodeMirror 是一个基于Web技术的开源代码编辑器，为编写和编辑各种编程语言的代码提供了丰富的功能和工具。它可以用来替代浏览器默认的 textarea 元素，支持语法高亮、自动完成、括号匹配、代码折叠、多光标编辑等功能，同时还具有可扩展性和易于定制的 API 接口。CodeMirror 适用于许多不同的应用场景，如网站开发、代码编辑器、在线代码演示、博客编辑器等。CodeMirror 已被广泛应用于众多开源项目中，并得到了广大开发人员的青睐和喜爱。本文示例采用 vue2 与 vue-codemirror 4.x 。
 	
 	- CodeMirror 6 ：[CodeMirror](https://codemirror.net/) 
 	- CodeMirror 5 ：[CodeMirror 5](https://codemirror.net/5/index.html) 
@@ -38,13 +38,11 @@ CodeMirror 是一种非常强大的代码编辑器，它提供了许多对于 Vu
 
 ```shell
 // 直接安装会安装最新版本，仅支持Vue3.0 
-npm i vue-codemirror --save
+npm i codemirror vue-codemirror --save
 
 // Vue2.0 中需要指定安装4.x版本 
-npm i vue-codemirror@4.x --save
+npm i codemirror vue-codemirror@4.x --save
 ```
-
-> 安装 vue-codemirror 后会附带安装 codemirror，无需再次独立安装. 你可以在 node_modules 下找到它们.
 
 ### :pushpin: 引入
 

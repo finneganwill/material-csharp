@@ -6,6 +6,7 @@
 
 :seedling: **参数** 
 
+
 - `hpt`: 打印核心对象
 - `printData`: object, 打印数据
 - `batchNum`: number, 批量数量，默认为 1
