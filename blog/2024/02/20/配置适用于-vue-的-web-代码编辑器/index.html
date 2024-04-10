@@ -2453,7 +2453,7 @@
 <!-- more -->
 <h2 id="_1">工具简介<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h2>
 <div class="admonition note">
-<p>CodeMirror 是一个基于Web技术的开源代码编辑器，为编写和编辑各种编程语言的代码提供了丰富的功能和工具。它可以用来替代浏览器默认的 textarea 元素，支持语法高亮、自动完成、括号匹配、代码折叠、多光标编辑等功能，同时还具有可扩展性和易于定制的 API 接口。CodeMirror 适用于许多不同的应用场景，如网站开发、代码编辑器、在线代码演示、博客编辑器等。CodeMirror 已被广泛应用于众多开源项目中，并得到了广大开发人员的青睐和喜爱。</p>
+<p>CodeMirror 是一个基于Web技术的开源代码编辑器，为编写和编辑各种编程语言的代码提供了丰富的功能和工具。它可以用来替代浏览器默认的 textarea 元素，支持语法高亮、自动完成、括号匹配、代码折叠、多光标编辑等功能，同时还具有可扩展性和易于定制的 API 接口。CodeMirror 适用于许多不同的应用场景，如网站开发、代码编辑器、在线代码演示、博客编辑器等。CodeMirror 已被广泛应用于众多开源项目中，并得到了广大开发人员的青睐和喜爱。本文示例采用 vue2 与 vue-codemirror 4.x 。</p>
 <ul>
 <li>CodeMirror 6 ：<a href="https://codemirror.net/">CodeMirror</a> </li>
 <li>CodeMirror 5 ：<a href="https://codemirror.net/5/index.html">CodeMirror 5</a> </li>
@@ -2469,14 +2469,11 @@
 <h2 id="vue-codemirror">vue-codemirror 的使用<a class="headerlink" href="#vue-codemirror" title="Permanent link">⚓︎</a></h2>
 <h3 id="_2"><img alt="🔨" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f528.svg" title=":hammer:" /> 安装<a class="headerlink" href="#_2" title="Permanent link">⚓︎</a></h3>
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>//<span class="w"> </span>直接安装会安装最新版本，仅支持Vue3.0<span class="w"> </span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>npm<span class="w"> </span>i<span class="w"> </span>vue-codemirror<span class="w"> </span>--save
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>npm<span class="w"> </span>i<span class="w"> </span>codemirror<span class="w"> </span>vue-codemirror<span class="w"> </span>--save
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>//<span class="w"> </span>Vue2.0<span class="w"> </span>中需要指定安装4.x版本<span class="w"> </span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>npm<span class="w"> </span>i<span class="w"> </span>vue-codemirror@4.x<span class="w"> </span>--save
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>npm<span class="w"> </span>i<span class="w"> </span>codemirror<span class="w"> </span>vue-codemirror@4.x<span class="w"> </span>--save
 </span></code></pre></div>
-<blockquote>
-<p>安装 vue-codemirror 后会附带安装 codemirror，无需再次独立安装. 你可以在 node_modules 下找到它们.</p>
-</blockquote>
 <h3 id="_3"><img alt="📌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f4cc.svg" title=":pushpin:" /> 引入<a class="headerlink" href="#_3" title="Permanent link">⚓︎</a></h3>
 <p><strong>全局引入</strong> </p>
 <div class="language-javascript highlight"><span class="filename">main.js</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">import</span><span class="w"> </span><span class="nx">Vue</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;vue&quot;</span><span class="p">;</span><span class="w"> </span>
